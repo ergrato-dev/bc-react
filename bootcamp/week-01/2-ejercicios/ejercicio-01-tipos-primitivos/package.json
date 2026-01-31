@@ -1,0 +1,19 @@
+{
+  "name": "ejercicio-01-tipos-primitivos",
+  "version": "1.0.0",
+  "description": "Ejercicio guiado: Tipos primitivos y anotaciones en TypeScript",
+  "type": "module",
+  "scripts": {
+    "start": "tsx starter/index.ts",
+    "solution": "tsx solution/index.ts"
+  },
+  "keywords": [
+    "typescript",
+    "bootcamp",
+    "tipos-primitivos"
+  ],
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

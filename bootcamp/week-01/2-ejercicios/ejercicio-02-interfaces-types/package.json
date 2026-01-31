@@ -1,0 +1,20 @@
+{
+  "name": "ejercicio-02-interfaces-types",
+  "version": "1.0.0",
+  "description": "Ejercicio guiado: Interfaces y Types en TypeScript",
+  "type": "module",
+  "scripts": {
+    "start": "tsx starter/index.ts",
+    "solution": "tsx solution/index.ts"
+  },
+  "keywords": [
+    "typescript",
+    "bootcamp",
+    "interfaces",
+    "types"
+  ],
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
