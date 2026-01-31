@@ -670,42 +670,166 @@ Debe incluir:
 
 ## 🌐 Idioma y Nomenclatura
 
-### Código y Comentarios Técnicos
+### ⚠️ REGLA CRÍTICA: Inglés Técnico + Español Educativo
 
-- ✅ **Nomenclatura en inglés** (variables, funciones, componentes, interfaces)
-- ✅ **Comentarios de código en inglés**
-- ✅ Usar términos técnicos estándar de la industria
+**NOMENCLATURA TÉCNICA: SIEMPRE EN INGLÉS**
 
-```typescript
-// ✅ CORRECTO - inglés
-const getUserData = async (userId: string): Promise<User> => {
-  // Fetch user data from API
-  const response = await fetch(`/api/users/${userId}`);
-  return response.json();
-};
+- ✅ Variables, constantes, funciones
+- ✅ Componentes React (PascalCase)
+- ✅ Interfaces y Types de TypeScript
+- ✅ Nombres de archivos (.tsx, .ts, .css)
+- ✅ Props, hooks personalizados
+- ✅ Clases CSS y IDs
 
-// ❌ INCORRECTO - español en código
-const obtenerDatosUsuario = async (idUsuario: string): Promise<Usuario> => {
-  // Obtener datos del usuario desde la API
-  const respuesta = await fetch(`/api/usuarios/${idUsuario}`);
-  return respuesta.json();
-};
-```
+**COMENTARIOS Y DOCUMENTACIÓN: SIEMPRE EN ESPAÑOL**
 
-### Documentación
+- ✅ Comentarios de código (`// comentario`)
+- ✅ Comentarios JSDoc (`/** @param */`)
+- ✅ READMEs y documentación
+- ✅ Mensajes de error y validación
+- ✅ Textos de interfaz (UI)
+- ✅ Explicaciones educativas
 
-- ✅ **Documentación en español** (READMEs, teoría, guías)
-- ✅ Explicaciones y tutoriales en español
-- ✅ Comentarios educativos en español cuando expliquen conceptos
+### Ejemplos Correctos
 
 ```typescript
-// ✅ CORRECTO - código en inglés, explicación en español
+// ✅ CORRECTO - Nomenclatura en inglés, comentarios en español
+interface UserCardProps {
+  user: User;
+  onDelete: (id: number) => void;
+}
+
+/**
+ * Componente que muestra la información de un usuario
+ * @param user - Datos del usuario a mostrar
+ * @param onDelete - Callback para eliminar usuario
+ */
+const UserCard: React.FC<UserCardProps> = ({ user, onDelete }) => {
+  // Manejador para el evento de click en el botón eliminar
+  const handleDelete = () => {
+    if (window.confirm('¿Seguro que deseas eliminar este usuario?')) {
+      onDelete(user.id);
+    }
+  };
+
+  return (
+    <div className="user-card">
+      <h3>{user.name}</h3>
+      <p>{user.email}</p>
+      <button onClick={handleDelete}>Eliminar</button>
+    </div>
+  );
+};
+
+// ✅ CORRECTO - Función con nombre técnico en inglés
 const calculateDiscount = (price: number, percentage: number): number => {
   // En TypeScript, los tipos garantizan que price y percentage sean números
   // Esto previene errores comunes en JavaScript
   return price * (1 - percentage / 100);
 };
 ```
+
+### Ejemplos Incorrectos
+
+```typescript
+// ❌ INCORRECTO - Nomenclatura en español
+interface PropsTarjetaUsuario {
+  usuario: Usuario;
+  alEliminar: (id: number) => void;
+}
+
+const TarjetaUsuario: React.FC<PropsTarjetaUsuario> = ({ usuario, alEliminar }) => {
+  // Comentarios en inglés también está mal
+  // Handle delete button click
+  const manejarEliminar = () => {
+    if (window.confirm('¿Seguro que deseas eliminar este usuario?')) {
+      alEliminar(usuario.id);
+    }
+  };
+
+  return (
+    <div className="tarjeta-usuario">
+      <h3>{usuario.nombre}</h3>
+      <button onClick={manejarEliminar}>Eliminar</button>
+    </div>
+  );
+};
+
+// ❌ INCORRECTO - Mezcla inconsistente
+const obtenerDatosUsuario = async (userId: string): Promise<User> => {
+  // Fetch user data from API
+  const respuesta = await fetch(`/api/usuarios/${userId}`);
+  return respuesta.json();
+};
+```
+
+### Casos Especiales
+
+**Dominios de negocio en props/interfaces**:
+
+```typescript
+// ✅ CORRECTO - Usar inglés incluso para conceptos del dominio
+interface Book {
+  id: number;
+  title: string; // NO: titulo
+  author: string; // NO: autor
+  isbn: string;
+  category: Category;
+  available: boolean; // NO: disponible
+}
+
+interface BookFormProps {
+  onAdd: (book: Omit<Book, 'id'>) => void;
+  onUpdate: (id: number, updates: Partial<Book>) => void;
+  editingBook?: Book; // NO: libroEnEdicion
+  onCancelEdit: () => void;
+}
+```
+
+**Mensajes de usuario en español**:
+
+```typescript
+// ✅ CORRECTO - Mensajes en español, lógica en inglés
+const validateForm = (title: string, author: string): string | null => {
+  if (!title.trim()) {
+    return 'El título es requerido'; // ← Mensaje en español
+  }
+  if (!author.trim()) {
+    return 'El autor es requerido'; // ← Mensaje en español
+  }
+  return null;
+};
+
+// ✅ CORRECTO - Confirmaciones en español
+const handleDelete = (id: number) => {
+  if (window.confirm('¿Seguro que deseas eliminar este libro?')) {
+    deleteBook(id);
+  }
+};
+```
+
+**Comentarios educativos estructurados**:
+
+```typescript
+// QUÉ: definir la forma de un objeto Student
+// PARA: especificar qué propiedades tiene un estudiante del bootcamp
+// IMPACTO: TypeScript valida que los objetos cumplan esta estructura
+interface Student {
+  id: number;
+  name: string;
+  email: string;
+  enrolledAt: string;
+}
+```
+
+### Razón de Esta Convención
+
+1. **Estándar de la industria**: El código profesional se escribe en inglés
+2. **Colaboración internacional**: Facilita trabajo con equipos globales
+3. **Librerías y frameworks**: React, TypeScript, etc. están en inglés
+4. **Búsquedas y documentación**: Stack Overflow, GitHub, docs oficiales
+5. **Educación bilingüe**: Aprender sintaxis en inglés + conceptos en español
+6. **Preparación laboral**: 99% de empresas requieren código en inglés
 
 ---
 

@@ -458,5 +458,88 @@ Al crear nuevas semanas, aplicar estas lecciones:
 
 ---
 
+## 🌐 Convención de Idiomas (CRÍTICO)
+
+### ⚠️ Regla de Oro: Inglés Técnico + Español Educativo
+
+**NOMENCLATURA: SIEMPRE EN INGLÉS** ✅
+
+- Variables, constantes, funciones
+- Componentes React (PascalCase)
+- Interfaces y Types de TypeScript
+- Props, callbacks, event handlers
+- Clases CSS, IDs HTML
+- Nombres de archivos
+
+**COMENTARIOS Y DOCS: SIEMPRE EN ESPAÑOL** ✅
+
+- Comentarios en código (`//`, `/* */`)
+- Documentación JSDoc (`/** */`)
+- READMEs, teoría, guías
+- Mensajes de error/validación
+- Textos de UI para usuarios
+- Explicaciones educativas
+
+### Ejemplo Correcto
+
+```typescript
+// ✅ CORRECTO - Código en inglés, comentarios en español
+interface BookFormProps {
+  book?: Book;
+  onSubmit: (book: Book) => void;
+  onCancel: () => void;
+}
+
+/**
+ * Formulario para agregar o editar libros
+ * @param book - Libro a editar (opcional)
+ * @param onSubmit - Callback al guardar
+ * @param onCancel - Callback al cancelar
+ */
+const BookForm: React.FC<BookFormProps> = ({ book, onSubmit, onCancel }) => {
+  // Estado local para manejar los campos del formulario
+  const [title, setTitle] = useState<string>(book?.title || '');
+  const [author, setAuthor] = useState<string>(book?.author || '');
+
+  // Validar que los campos no estén vacíos
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!title.trim() || !author.trim()) {
+      alert('Todos los campos son requeridos'); // ← Mensaje en español
+      return;
+    }
+
+    onSubmit({ title, author });
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        placeholder="Título del libro"
+      />
+      <button type="submit">Guardar</button>
+    </form>
+  );
+};
+```
+
+### Verificación en Code Review
+
+Al revisar código, validar:
+
+- [ ] Variables/funciones en inglés
+- [ ] Componentes React en inglés (PascalCase)
+- [ ] Interfaces/Types en inglés
+- [ ] Comentarios explicativos en español
+- [ ] Mensajes de usuario en español
+- [ ] Consistencia en todo el código
+
+**Razón**: Estándar de industria + preparación laboral + colaboración internacional
+
+---
+
 **Última actualización**: Week 02 optimizada - Enero 2026  
 **Próxima revisión**: Después de Week 03
