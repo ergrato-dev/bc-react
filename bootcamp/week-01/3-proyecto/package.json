@@ -1,0 +1,13 @@
+{
+  "name": "proyecto-semana-01",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsx starter/index.ts",
+    "solution": "tsx solution/index.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
