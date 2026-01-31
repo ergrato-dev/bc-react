@@ -1,0 +1,146 @@
+<svg viewBox="0 0 1400 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f7df1e"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="700" fill="#0a0a14"/>
+
+  <!-- Title -->
+  <text x="700" y="50" font-family="sans-serif" font-size="32" font-weight="bold" fill="#e8e8e8" text-anchor="middle">JSX Compilation</text>
+
+  <!-- LEFT: JSX Input -->
+  <g id="jsx">
+    <rect x="50" y="100" width="500" height="550" fill="#1a1a2e" stroke="#61dafb" stroke-width="3" rx="12"/>
+    <text x="300" y="140" font-family="sans-serif" font-size="20" font-weight="bold" fill="#61dafb" text-anchor="middle">JSX / TSX</text>
+    
+    <rect x="80" y="170" width="440" height="440" fill="#0a0a14" stroke="#61dafb" stroke-width="1" rx="6"/>
+    
+    <!-- Code -->
+    <text x="100" y="210" font-family="monospace" font-size="15" fill="#c792ea">const</text>
+    <text x="160" y="210" font-family="monospace" font-size="15" fill="#e8e8e8"> App</text>
+    <text x="210" y="210" font-family="monospace" font-size="15" fill="#89ddff"> = () =&gt; {</text>
+    
+    <text x="120" y="245" font-family="monospace" font-size="15" fill="#c792ea">return</text>
+    <text x="200" y="245" font-family="monospace" font-size="15" fill="#89ddff"> (</text>
+    
+    <text x="140" y="280" font-family="monospace" font-size="15" fill="#89ddff">&lt;</text>
+    <text x="152" y="280" font-family="monospace" font-size="15" fill="#f07178">div</text>
+    <text x="188" y="280" font-family="monospace" font-size="15" fill="#c3e88d"> className</text>
+    <text x="290" y="280" font-family="monospace" font-size="15" fill="#89ddff">=</text>
+    <text x="302" y="280" font-family="monospace" font-size="15" fill="#c3e88d">"card"</text>
+    <text x="362" y="280" font-family="monospace" font-size="15" fill="#89ddff">&gt;</text>
+    
+    <text x="160" y="315" font-family="monospace" font-size="15" fill="#89ddff">&lt;</text>
+    <text x="172" y="315" font-family="monospace" font-size="15" fill="#f07178">h1</text>
+    <text x="196" y="315" font-family="monospace" font-size="15" fill="#89ddff">&gt;</text>
+    <text x="208" y="315" font-family="monospace" font-size="15" fill="#c3e88d">Hello</text>
+    <text x="268" y="315" font-family="monospace" font-size="15" fill="#89ddff">&lt;/</text>
+    <text x="292" y="315" font-family="monospace" font-size="15" fill="#f07178">h1</text>
+    <text x="316" y="315" font-family="monospace" font-size="15" fill="#89ddff">&gt;</text>
+    
+    <text x="160" y="350" font-family="monospace" font-size="15" fill="#89ddff">&lt;</text>
+    <text x="172" y="350" font-family="monospace" font-size="15" fill="#f07178">p</text>
+    <text x="184" y="350" font-family="monospace" font-size="15" fill="#89ddff">&gt;</text>
+    <text x="196" y="350" font-family="monospace" font-size="15" fill="#ffcb6b">{</text>
+    <text x="208" y="350" font-family="monospace" font-size="15" fill="#e8e8e8">user</text>
+    <text x="256" y="350" font-family="monospace" font-size="15" fill="#89ddff">.</text>
+    <text x="268" y="350" font-family="monospace" font-size="15" fill="#e8e8e8">name</text>
+    <text x="316" y="350" font-family="monospace" font-size="15" fill="#ffcb6b">}</text>
+    <text x="328" y="350" font-family="monospace" font-size="15" fill="#89ddff">&lt;/</text>
+    <text x="352" y="350" font-family="monospace" font-size="15" fill="#f07178">p</text>
+    <text x="364" y="350" font-family="monospace" font-size="15" fill="#89ddff">&gt;</text>
+    
+    <text x="140" y="385" font-family="monospace" font-size="15" fill="#89ddff">&lt;/</text>
+    <text x="164" y="385" font-family="monospace" font-size="15" fill="#f07178">div</text>
+    <text x="200" y="385" font-family="monospace" font-size="15" fill="#89ddff">&gt;</text>
+    
+    <text x="120" y="420" font-family="monospace" font-size="15" fill="#89ddff">);</text>
+    <text x="100" y="455" font-family="monospace" font-size="15" fill="#89ddff">};</text>
+    
+    <!-- Benefits -->
+    <text x="100" y="510" font-family="sans-serif" font-size="14" fill="#51cf66">✓ Legible</text>
+    <text x="100" y="535" font-family="sans-serif" font-size="14" fill="#51cf66">✓ Familiar (HTML)</text>
+    <text x="100" y="560" font-family="sans-serif" font-size="14" fill="#51cf66">✓ Intuitivo</text>
+    <text x="100" y="585" font-family="sans-serif" font-size="14" fill="#51cf66">✓ TypeScript</text>
+  </g>
+
+  <!-- CENTER: Babel -->
+  <g id="babel">
+    <circle cx="700" cy="375" r="80" fill="#f7df1e" opacity="0.2" stroke="#f7df1e" stroke-width="3"/>
+    <text x="700" y="370" font-family="sans-serif" font-size="24" font-weight="bold" fill="#f7df1e" text-anchor="middle">Babel</text>
+    <text x="700" y="395" font-family="sans-serif" font-size="14" fill="#888" text-anchor="middle">Transpiler</text>
+    
+    <!-- Arrow -->
+    <path d="M 560 375 L 610 375" stroke="#f7df1e" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M 790 375 L 840 375" stroke="#f7df1e" stroke-width="4" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- RIGHT: JavaScript Output -->
+  <g id="js">
+    <rect x="850" y="100" width="500" height="550" fill="#1a1a2e" stroke="#f7df1e" stroke-width="3" rx="12"/>
+    <text x="1100" y="140" font-family="sans-serif" font-size="20" font-weight="bold" fill="#f7df1e" text-anchor="middle">JavaScript</text>
+    
+    <rect x="880" y="170" width="440" height="440" fill="#0a0a14" stroke="#f7df1e" stroke-width="1" rx="6"/>
+    
+    <!-- Code -->
+    <text x="900" y="210" font-family="monospace" font-size="14" fill="#c792ea">const</text>
+    <text x="950" y="210" font-family="monospace" font-size="14" fill="#e8e8e8"> App</text>
+    <text x="990" y="210" font-family="monospace" font-size="14" fill="#89ddff"> = () =&gt; {</text>
+    
+    <text x="920" y="240" font-family="monospace" font-size="14" fill="#c792ea">return</text>
+    <text x="980" y="240" font-family="monospace" font-size="14" fill="#e8e8e8"> React</text>
+    <text x="1034" y="240" font-family="monospace" font-size="14" fill="#89ddff">.</text>
+    <text x="1046" y="240" font-family="monospace" font-size="14" fill="#82aaff">createElement</text>
+    <text x="1178" y="240" font-family="monospace" font-size="14" fill="#89ddff">(</text>
+    
+    <text x="940" y="270" font-family="monospace" font-size="14" fill="#c3e88d">'div'</text>
+    <text x="982" y="270" font-family="monospace" font-size="14" fill="#89ddff">,</text>
+    
+    <text x="940" y="300" font-family="monospace" font-size="14" fill="#89ddff">{</text>
+    <text x="952" y="300" font-family="monospace" font-size="14" fill="#e8e8e8"> className</text>
+    <text x="1048" y="300" font-family="monospace" font-size="14" fill="#89ddff">:</text>
+    <text x="1060" y="300" font-family="monospace" font-size="14" fill="#c3e88d"> 'card'</text>
+    <text x="1120" y="300" font-family="monospace" font-size="14" fill="#89ddff"> },</text>
+    
+    <text x="940" y="330" font-family="monospace" font-size="14" fill="#e8e8e8">React</text>
+    <text x="988" y="330" font-family="monospace" font-size="14" fill="#89ddff">.</text>
+    <text x="1000" y="330" font-family="monospace" font-size="14" fill="#82aaff">createElement</text>
+    <text x="1132" y="330" font-family="monospace" font-size="14" fill="#89ddff">(</text>
+    
+    <text x="960" y="360" font-family="monospace" font-size="14" fill="#c3e88d">'h1'</text>
+    <text x="1002" y="360" font-family="monospace" font-size="14" fill="#89ddff">,</text>
+    <text x="1014" y="360" font-family="monospace" font-size="14" fill="#ff5370">null</text>
+    <text x="1050" y="360" font-family="monospace" font-size="14" fill="#89ddff">,</text>
+    <text x="1062" y="360" font-family="monospace" font-size="14" fill="#c3e88d"> 'Hello'</text>
+    
+    <text x="940" y="390" font-family="monospace" font-size="14" fill="#89ddff">),</text>
+    
+    <text x="940" y="420" font-family="monospace" font-size="14" fill="#e8e8e8">React</text>
+    <text x="988" y="420" font-family="monospace" font-size="14" fill="#89ddff">.</text>
+    <text x="1000" y="420" font-family="monospace" font-size="14" fill="#82aaff">createElement</text>
+    <text x="1132" y="420" font-family="monospace" font-size="14" fill="#89ddff">(</text>
+    
+    <text x="960" y="450" font-family="monospace" font-size="14" fill="#c3e88d">'p'</text>
+    <text x="984" y="450" font-family="monospace" font-size="14" fill="#89ddff">,</text>
+    <text x="996" y="450" font-family="monospace" font-size="14" fill="#ff5370">null</text>
+    <text x="1032" y="450" font-family="monospace" font-size="14" fill="#89ddff">,</text>
+    <text x="1044" y="450" font-family="monospace" font-size="14" fill="#e8e8e8"> user</text>
+    <text x="1092" y="450" font-family="monospace" font-size="14" fill="#89ddff">.</text>
+    <text x="1104" y="450" font-family="monospace" font-size="14" fill="#e8e8e8">name</text>
+    
+    <text x="940" y="480" font-family="monospace" font-size="14" fill="#89ddff">)</text>
+    
+    <text x="920" y="510" font-family="monospace" font-size="14" fill="#89ddff">);</text>
+    <text x="900" y="540" font-family="monospace" font-size="14" fill="#89ddff">};</text>
+    
+    <!-- Drawbacks -->
+    <text x="900" y="585" font-family="sans-serif" font-size="14" fill="#ff6b6b">✗ Verboso</text>
+  </g>
+
+  <!-- Bottom note -->
+  <rect x="50" y="665" width="1300" height="30" fill="#1a1a2e" rx="4"/>
+  <text x="700" y="687" font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle">JSX es azúcar sintáctico para React.createElement() • Ambos generan el mismo resultado</text>
+</svg>

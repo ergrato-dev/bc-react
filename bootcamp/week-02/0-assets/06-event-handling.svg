@@ -1,0 +1,165 @@
+<svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="eventArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#0a0a14"/>
+
+  <!-- Title -->
+  <text x="700" y="50" font-family="sans-serif" font-size="32" font-weight="bold" fill="#e8e8e8" text-anchor="middle">Event Handling</text>
+  <text x="700" y="80" font-family="sans-serif" font-size="16" fill="#888" text-anchor="middle">Manejo de eventos sintéticos en React</text>
+
+  <!-- Browser -->
+  <g id="browser">
+    <rect x="50" y="120" width="350" height="600" fill="#1a1a2e" stroke="#888" stroke-width="2" rx="10"/>
+    <text x="225" y="160" font-family="sans-serif" font-size="18" font-weight="bold" fill="#888" text-anchor="middle">Browser</text>
+    
+    <!-- User interaction -->
+    <circle cx="225" cy="250" r="60" fill="#2d2d44" stroke="#f59e0b" stroke-width="3"/>
+    <text x="225" y="245" font-family="sans-serif" font-size="40" text-anchor="middle">👆</text>
+    <text x="225" y="275" font-family="sans-serif" font-size="14" fill="#f59e0b" text-anchor="middle" font-weight="bold">User Click</text>
+    
+    <!-- Native event -->
+    <rect x="100" y="350" width="250" height="80" fill="#2d2d44" stroke="#666" stroke-width="2" rx="6"/>
+    <text x="225" y="380" font-family="sans-serif" font-size="16" font-weight="bold" fill="#666" text-anchor="middle">Native Event</text>
+    <text x="225" y="405" font-family="monospace" font-size="12" fill="#888" text-anchor="middle">MouseEvent</text>
+    <text x="225" y="422" font-family="monospace" font-size="11" fill="#666" text-anchor="middle">target, clientX, clientY...</text>
+    
+    <!-- DOM element -->
+    <rect x="100" y="480" width="250" height="80" fill="#1a3a52" stroke="#61dafb" stroke-width="2" rx="6"/>
+    <text x="225" y="510" font-family="sans-serif" font-size="16" font-weight="bold" fill="#61dafb" text-anchor="middle">DOM Element</text>
+    <text x="225" y="535" font-family="monospace" font-size="13" fill="#e8e8e8" text-anchor="middle">&lt;button&gt;Click&lt;/button&gt;</text>
+    
+    <!-- Info -->
+    <text x="225" y="630" font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle">Eventos nativos del navegador</text>
+    <text x="225" y="650" font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle">pueden variar entre browsers</text>
+  </g>
+
+  <!-- Arrow Browser to React -->
+  <path d="M 410 390 L 480 390" stroke="#f59e0b" stroke-width="4" marker-end="url(#eventArrow)"/>
+  <text x="445" y="375" font-family="sans-serif" font-size="12" fill="#f59e0b" text-anchor="middle" font-weight="bold">captura</text>
+
+  <!-- React -->
+  <g id="react">
+    <rect x="500" y="120" width="450" height="600" fill="#1a3a52" stroke="#61dafb" stroke-width="3" rx="10"/>
+    <text x="725" y="160" font-family="sans-serif" font-size="18" font-weight="bold" fill="#61dafb" text-anchor="middle">React Synthetic Events</text>
+    
+    <!-- Synthetic event wrapper -->
+    <rect x="540" y="190" width="370" height="110" fill="#2d2d44" stroke="#61dafb" stroke-width="2" rx="6"/>
+    <text x="725" y="220" font-family="sans-serif" font-size="16" font-weight="bold" fill="#61dafb" text-anchor="middle">SyntheticEvent</text>
+    <text x="725" y="245" font-family="monospace" font-size="12" fill="#e8e8e8" text-anchor="middle">Wrapper del evento nativo</text>
+    <text x="725" y="268" font-family="sans-serif" font-size="11" fill="#51cf66" text-anchor="middle">✓ Consistente entre navegadores</text>
+    <text x="725" y="288" font-family="sans-serif" font-size="11" fill="#51cf66" text-anchor="middle">✓ Misma interfaz que eventos nativos</text>
+    
+    <!-- Event types -->
+    <text x="725" y="340" font-family="sans-serif" font-size="16" font-weight="bold" fill="#646cff" text-anchor="middle">Tipos de Eventos</text>
+    
+    <!-- Mouse events -->
+    <rect x="540" y="360" width="170" height="100" fill="#1a1a2e" stroke="#646cff" stroke-width="2" rx="6"/>
+    <text x="625" y="385" font-family="sans-serif" font-size="14" font-weight="bold" fill="#646cff" text-anchor="middle">Mouse</text>
+    <text x="625" y="408" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">onClick</text>
+    <text x="625" y="426" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">onDoubleClick</text>
+    <text x="625" y="444" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">onMouseEnter</text>
+    
+    <!-- Keyboard events -->
+    <rect x="740" y="360" width="170" height="100" fill="#1a1a2e" stroke="#646cff" stroke-width="2" rx="6"/>
+    <text x="825" y="385" font-family="sans-serif" font-size="14" font-weight="bold" fill="#646cff" text-anchor="middle">Keyboard</text>
+    <text x="825" y="408" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">onKeyDown</text>
+    <text x="825" y="426" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">onKeyUp</text>
+    <text x="825" y="444" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">onKeyPress</text>
+    
+    <!-- Form events -->
+    <rect x="540" y="480" width="170" height="100" fill="#1a1a2e" stroke="#646cff" stroke-width="2" rx="6"/>
+    <text x="625" y="505" font-family="sans-serif" font-size="14" font-weight="bold" fill="#646cff" text-anchor="middle">Form</text>
+    <text x="625" y="528" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">onChange</text>
+    <text x="625" y="546" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">onSubmit</text>
+    <text x="625" y="564" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">onFocus</text>
+    
+    <!-- Focus events -->
+    <rect x="740" y="480" width="170" height="100" fill="#1a1a2e" stroke="#646cff" stroke-width="2" rx="6"/>
+    <text x="825" y="505" font-family="sans-serif" font-size="14" font-weight="bold" fill="#646cff" text-anchor="middle">Focus/Blur</text>
+    <text x="825" y="528" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">onFocus</text>
+    <text x="825" y="546" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">onBlur</text>
+    <text x="825" y="564" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">onFocusIn</text>
+    
+    <!-- TypeScript -->
+    <text x="725" y="630" font-family="sans-serif" font-size="13" fill="#3178c6" text-anchor="middle" font-weight="bold">TypeScript: Tipos específicos</text>
+    <text x="725" y="650" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">React.MouseEvent&lt;HTMLButtonElement&gt;</text>
+    <text x="725" y="668" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">React.ChangeEvent&lt;HTMLInputElement&gt;</text>
+  </g>
+
+  <!-- Arrow React to Handler -->
+  <path d="M 960 390 L 1030 390" stroke="#f59e0b" stroke-width="4" marker-end="url(#eventArrow)"/>
+  <text x="995" y="375" font-family="sans-serif" font-size="12" fill="#f59e0b" text-anchor="middle" font-weight="bold">ejecuta</text>
+
+  <!-- Handler -->
+  <g id="handler">
+    <rect x="1050" y="120" width="300" height="600" fill="#1a2332" stroke="#51cf66" stroke-width="3" rx="10"/>
+    <text x="1200" y="160" font-family="sans-serif" font-size="18" font-weight="bold" fill="#51cf66" text-anchor="middle">Event Handler</text>
+    
+    <!-- Code example -->
+    <rect x="1070" y="190" width="260" height="380" fill="#0a0a14" stroke="#51cf66" stroke-width="1" rx="6"/>
+    
+    <text x="1090" y="220" font-family="monospace" font-size="12" fill="#c792ea">const</text>
+    <text x="1135" y="220" font-family="monospace" font-size="12" fill="#82aaff"> handleClick</text>
+    <text x="1090" y="240" font-family="monospace" font-size="12" fill="#89ddff">  = (</text>
+    <text x="1126" y="240" font-family="monospace" font-size="12" fill="#e8e8e8">e</text>
+    <text x="1138" y="240" font-family="monospace" font-size="12" fill="#89ddff">:</text>
+    <text x="1150" y="240" font-family="monospace" font-size="12" fill="#3178c6"> React</text>
+    <text x="1204" y="240" font-family="monospace" font-size="12" fill="#89ddff">.</text>
+    
+    <text x="1090" y="260" font-family="monospace" font-size="12" fill="#3178c6">    MouseEvent</text>
+    <text x="1090" y="280" font-family="monospace" font-size="12" fill="#89ddff">  ) =&gt; {</text>
+    
+    <text x="1110" y="310" font-family="monospace" font-size="12" fill="#888">// Prevenir default</text>
+    <text x="1110" y="330" font-family="monospace" font-size="12" fill="#e8e8e8">e</text>
+    <text x="1122" y="330" font-family="monospace" font-size="12" fill="#89ddff">.</text>
+    <text x="1134" y="330" font-family="monospace" font-size="12" fill="#82aaff">preventDefault</text>
+    <text x="1254" y="330" font-family="monospace" font-size="12" fill="#89ddff">();</text>
+    
+    <text x="1110" y="360" font-family="monospace" font-size="12" fill="#888">// Stop propagation</text>
+    <text x="1110" y="380" font-family="monospace" font-size="12" fill="#e8e8e8">e</text>
+    <text x="1122" y="380" font-family="monospace" font-size="12" fill="#89ddff">.</text>
+    <text x="1134" y="380" font-family="monospace" font-size="12" fill="#82aaff">stopPropagation</text>
+    <text x="1266" y="380" font-family="monospace" font-size="12" fill="#89ddff">();</text>
+    
+    <text x="1110" y="410" font-family="monospace" font-size="12" fill="#888">// Access target</text>
+    <text x="1110" y="430" font-family="monospace" font-size="12" fill="#c792ea">const</text>
+    <text x="1155" y="430" font-family="monospace" font-size="12" fill="#e8e8e8"> value</text>
+    <text x="1203" y="430" font-family="monospace" font-size="12" fill="#89ddff"> =</text>
+    <text x="1110" y="450" font-family="monospace" font-size="12" fill="#e8e8e8">  e</text>
+    <text x="1134" y="450" font-family="monospace" font-size="12" fill="#89ddff">.</text>
+    <text x="1146" y="450" font-family="monospace" font-size="12" fill="#e8e8e8">currentTarget</text>
+    <text x="1254" y="450" font-family="monospace" font-size="12" fill="#89ddff">.</text>
+    <text x="1266" y="450" font-family="monospace" font-size="12" fill="#e8e8e8">value;</text>
+    
+    <text x="1110" y="480" font-family="monospace" font-size="12" fill="#888">// Update state</text>
+    <text x="1110" y="500" font-family="monospace" font-size="12" fill="#82aaff">setState</text>
+    <text x="1170" y="500" font-family="monospace" font-size="12" fill="#89ddff">(</text>
+    <text x="1182" y="500" font-family="monospace" font-size="12" fill="#e8e8e8">value</text>
+    <text x="1230" y="500" font-family="monospace" font-size="12" fill="#89ddff">);</text>
+    
+    <text x="1090" y="530" font-family="monospace" font-size="12" fill="#89ddff">};</text>
+    
+    <!-- Benefits -->
+    <text x="1200" y="600" font-family="sans-serif" font-size="13" fill="#51cf66" text-anchor="middle">✓ Type-safe con TS</text>
+    <text x="1200" y="620" font-family="sans-serif" font-size="13" fill="#51cf66" text-anchor="middle">✓ Acceso al evento</text>
+    <text x="1200" y="640" font-family="sans-serif" font-size="13" fill="#51cf66" text-anchor="middle">✓ Control completo</text>
+    <text x="1200" y="660" font-family="sans-serif" font-size="13" fill="#51cf66" text-anchor="middle">✓ Puede actualizar estado</text>
+  </g>
+
+  <!-- Bottom note -->
+  <rect x="50" y="750" width="1300" height="130" fill="#1a1a2e" stroke="#f59e0b" stroke-width="2" rx="8"/>
+  <text x="700" y="785" font-family="sans-serif" font-size="18" font-weight="bold" fill="#f59e0b" text-anchor="middle">Características de Eventos Sintéticos</text>
+  
+  <text x="100" y="820" font-family="sans-serif" font-size="14" fill="#e8e8e8">• Normalizados entre navegadores (cross-browser compatibility)</text>
+  <text x="100" y="845" font-family="sans-serif" font-size="14" fill="#e8e8e8">• Pool de eventos para performance (event pooling - React 16)</text>
+  <text x="100" y="870" font-family="sans-serif" font-size="14" fill="#e8e8e8">• Delegación de eventos en el root para eficiencia</text>
+  
+  <text x="800" y="820" font-family="sans-serif" font-size="14" fill="#e8e8e8">• camelCase: onClick, onChange, onSubmit</text>
+  <text x="800" y="845" font-family="sans-serif" font-size="14" fill="#e8e8e8">• Acceso al evento nativo: e.nativeEvent</text>
+  <text x="800" y="870" font-family="sans-serif" font-size="14" fill="#e8e8e8">• Async access requires e.persist() (React 16)</text>
+</svg>

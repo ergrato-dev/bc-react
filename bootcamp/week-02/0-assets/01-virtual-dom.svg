@@ -1,0 +1,97 @@
+<svg viewBox="0 0 1400 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#51cf66"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ff6b6b"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#61dafb"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="800" fill="#0a0a14"/>
+
+  <!-- Title -->
+  <text x="700" y="50" font-family="sans-serif" font-size="32" font-weight="bold" fill="#e8e8e8" text-anchor="middle">Virtual DOM vs Real DOM</text>
+
+  <!-- LEFT SIDE: Direct manipulation (slow) -->
+  <g id="direct">
+    <rect x="50" y="100" width="600" height="650" fill="#1a1a2e" stroke="#ff6b6b" stroke-width="3" rx="12"/>
+    <text x="350" y="140" font-family="sans-serif" font-size="20" font-weight="bold" fill="#ff6b6b" text-anchor="middle">❌ Manipulación Directa</text>
+    
+    <!-- State change -->
+    <circle cx="350" cy="220" r="50" fill="#2d2d44" stroke="#ff6b6b" stroke-width="2"/>
+    <text x="350" y="230" font-family="sans-serif" font-size="16" fill="#e8e8e8" text-anchor="middle">State</text>
+    
+    <!-- Arrow down -->
+    <path d="M 350 280 L 350 340" stroke="#ff6b6b" stroke-width="3" marker-end="url(#arrowRed)"/>
+    
+    <!-- Real DOM (multiple updates) -->
+    <rect x="200" y="360" width="300" height="300" fill="#2d2d44" stroke="#ff6b6b" stroke-width="2" rx="8"/>
+    <text x="350" y="390" font-family="sans-serif" font-size="18" fill="#ff6b6b" text-anchor="middle">Real DOM</text>
+    
+    <!-- Many elements being updated -->
+    <rect x="220" y="420" width="260" height="40" fill="#ff6b6b" opacity="0.3" rx="4"/>
+    <text x="350" y="445" font-family="sans-serif" font-size="14" fill="#e8e8e8" text-anchor="middle">&lt;header /&gt;</text>
+    
+    <rect x="220" y="470" width="260" height="40" fill="#ff6b6b" opacity="0.3" rx="4"/>
+    <text x="350" y="495" font-family="sans-serif" font-size="14" fill="#e8e8e8" text-anchor="middle">&lt;nav /&gt;</text>
+    
+    <rect x="220" y="520" width="260" height="40" fill="#ff6b6b" opacity="0.3" rx="4"/>
+    <text x="350" y="545" font-family="sans-serif" font-size="14" fill="#e8e8e8" text-anchor="middle">&lt;main /&gt;</text>
+    
+    <rect x="220" y="570" width="260" height="40" fill="#ff6b6b" opacity="0.3" rx="4"/>
+    <text x="350" y="595" font-family="sans-serif" font-size="14" fill="#e8e8e8" text-anchor="middle">&lt;footer /&gt;</text>
+    
+    <rect x="220" y="620" width="260" height="40" fill="#ff6b6b" opacity="0.3" rx="4"/>
+    <text x="350" y="645" font-family="sans-serif" font-size="14" fill="#e8e8e8" text-anchor="middle">&lt;sidebar /&gt;</text>
+    
+    <!-- Warning -->
+    <text x="350" y="710" font-family="sans-serif" font-size="14" fill="#ff6b6b" text-anchor="middle" font-weight="bold">Todo se actualiza</text>
+    <text x="350" y="730" font-family="sans-serif" font-size="12" fill="#888" text-anchor="middle">Lento y costoso</text>
+  </g>
+
+  <!-- RIGHT SIDE: Virtual DOM (fast) -->
+  <g id="virtual">
+    <rect x="750" y="100" width="600" height="650" fill="#1a1a2e" stroke="#51cf66" stroke-width="3" rx="12"/>
+    <text x="1050" y="140" font-family="sans-serif" font-size="20" font-weight="bold" fill="#51cf66" text-anchor="middle">✅ Virtual DOM</text>
+    
+    <!-- State change -->
+    <circle cx="1050" cy="220" r="50" fill="#2d2d44" stroke="#51cf66" stroke-width="2"/>
+    <text x="1050" y="230" font-family="sans-serif" font-size="16" fill="#e8e8e8" text-anchor="middle">State</text>
+    
+    <!-- Arrow to Virtual DOM -->
+    <path d="M 1050 280 L 1050 340" stroke="#61dafb" stroke-width="3" marker-end="url(#arrowBlue)"/>
+    
+    <!-- Virtual DOM -->
+    <rect x="900" y="360" width="300" height="140" fill="#1a3a52" stroke="#61dafb" stroke-width="2" rx="8"/>
+    <text x="1050" y="390" font-family="sans-serif" font-size="18" fill="#61dafb" text-anchor="middle">Virtual DOM</text>
+    <text x="1050" y="430" font-family="sans-serif" font-size="14" fill="#888" text-anchor="middle">Copia en memoria</text>
+    <text x="1050" y="455" font-family="sans-serif" font-size="14" fill="#888" text-anchor="middle">Diff algorithm</text>
+    <text x="1050" y="480" font-family="sans-serif" font-size="14" fill="#51cf66" text-anchor="middle" font-weight="bold">Calcula cambios mínimos</text>
+    
+    <!-- Arrow to Real DOM -->
+    <path d="M 1050 510 L 1050 550" stroke="#51cf66" stroke-width="3" marker-end="url(#arrowGreen)"/>
+    
+    <!-- Real DOM (minimal update) -->
+    <rect x="900" y="570" width="300" height="140" fill="#2d2d44" stroke="#51cf66" stroke-width="2" rx="8"/>
+    <text x="1050" y="600" font-family="sans-serif" font-size="18" fill="#51cf66" text-anchor="middle">Real DOM</text>
+    
+    <!-- Only one element updated -->
+    <rect x="920" y="620" width="260" height="40" fill="#2d2d44" opacity="0.3" rx="4"/>
+    <text x="1050" y="645" font-family="sans-serif" font-size="14" fill="#666" text-anchor="middle">&lt;header /&gt;</text>
+    
+    <rect x="920" y="665" width="260" height="40" fill="#51cf66" opacity="0.5" rx="4"/>
+    <text x="1050" y="690" font-family="sans-serif" font-size="14" fill="#e8e8e8" text-anchor="middle" font-weight="bold">&lt;main /&gt; ⚡</text>
+    
+    <!-- Success -->
+    <text x="1050" y="735" font-family="sans-serif" font-size="14" fill="#51cf66" text-anchor="middle" font-weight="bold">Solo lo necesario</text>
+  </g>
+
+  <!-- Bottom comparison -->
+  <rect x="50" y="760" width="1300" height="35" fill="#1a1a2e" rx="4"/>
+  <text x="700" y="783" font-family="sans-serif" font-size="14" fill="#61dafb" text-anchor="middle">React compara el Virtual DOM con el Real DOM y aplica solo los cambios necesarios</text>
+</svg>

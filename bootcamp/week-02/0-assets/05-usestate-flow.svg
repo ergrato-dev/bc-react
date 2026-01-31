@@ -1,0 +1,107 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="flowArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#61dafb"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#0a0a14"/>
+
+  <!-- Title -->
+  <text x="600" y="50" font-family="sans-serif" font-size="32" font-weight="bold" fill="#e8e8e8" text-anchor="middle">useState Flow</text>
+  <text x="600" y="80" font-family="sans-serif" font-size="16" fill="#888" text-anchor="middle">Ciclo de vida del estado local</text>
+
+  <!-- Step 1: Declaration -->
+  <g id="step1">
+    <rect x="400" y="120" width="400" height="100" fill="#1a3a52" stroke="#61dafb" stroke-width="3" rx="10"/>
+    <text x="600" y="155" font-family="sans-serif" font-size="18" font-weight="bold" fill="#61dafb" text-anchor="middle">① Declaración</text>
+    <rect x="420" y="170" width="360" height="35" fill="#0a0a14" stroke="#61dafb" stroke-width="1" rx="4"/>
+    <text x="440" y="193" font-family="monospace" font-size="14" fill="#c792ea">const</text>
+    <text x="485" y="193" font-family="monospace" font-size="14" fill="#e8e8e8"> [count, setCount]</text>
+    <text x="655" y="193" font-family="monospace" font-size="14" fill="#89ddff"> =</text>
+    <text x="675" y="193" font-family="monospace" font-size="14" fill="#82aaff"> useState</text>
+    <text x="750" y="193" font-family="monospace" font-size="14" fill="#89ddff">(</text>
+    <text x="762" y="193" font-family="monospace" font-size="14" fill="#f78c6c">0</text>
+    <text x="774" y="193" font-family="monospace" font-size="14" fill="#89ddff">);</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 600 230 L 600 280" stroke="#61dafb" stroke-width="3" marker-end="url(#flowArrow)"/>
+
+  <!-- Step 2: Component renders -->
+  <g id="step2">
+    <rect x="400" y="290" width="400" height="100" fill="#2d2d44" stroke="#646cff" stroke-width="3" rx="10"/>
+    <text x="600" y="325" font-family="sans-serif" font-size="18" font-weight="bold" fill="#646cff" text-anchor="middle">② Render Inicial</text>
+    <rect x="420" y="340" width="360" height="35" fill="#0a0a14" stroke="#646cff" stroke-width="1" rx="4"/>
+    <text x="440" y="363" font-family="monospace" font-size="14" fill="#89ddff">&lt;</text>
+    <text x="452" y="363" font-family="monospace" font-size="14" fill="#e8e8e8">div</text>
+    <text x="488" y="363" font-family="monospace" font-size="14" fill="#89ddff">&gt;</text>
+    <text x="500" y="363" font-family="monospace" font-size="14" fill="#e8e8e8">Count:</text>
+    <text x="575" y="363" font-family="monospace" font-size="14" fill="#89ddff"> {</text>
+    <text x="599" y="363" font-family="monospace" font-size="14" fill="#f78c6c">count</text>
+    <text x="647" y="363" font-family="monospace" font-size="14" fill="#89ddff">}</text>
+    <text x="659" y="363" font-family="monospace" font-size="14" fill="#89ddff"> &lt;/</text>
+    <text x="695" y="363" font-family="monospace" font-size="14" fill="#e8e8e8">div</text>
+    <text x="731" y="363" font-family="monospace" font-size="14" fill="#89ddff">&gt;</text>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 600 400 L 600 450" stroke="#61dafb" stroke-width="3" marker-end="url(#flowArrow)"/>
+
+  <!-- Step 3: User interaction -->
+  <g id="step3">
+    <rect x="400" y="460" width="400" height="100" fill="#1a2332" stroke="#f59e0b" stroke-width="3" rx="10"/>
+    <text x="600" y="495" font-family="sans-serif" font-size="18" font-weight="bold" fill="#f59e0b" text-anchor="middle">③ Interacción</text>
+    <rect x="420" y="510" width="360" height="35" fill="#0a0a14" stroke="#f59e0b" stroke-width="1" rx="4"/>
+    <text x="440" y="533" font-family="monospace" font-size="14" fill="#89ddff">&lt;</text>
+    <text x="452" y="533" font-family="monospace" font-size="14" fill="#e8e8e8">button</text>
+    <text x="512" y="533" font-family="monospace" font-size="14" fill="#c792ea"> onClick</text>
+    <text x="589" y="533" font-family="monospace" font-size="14" fill="#89ddff">={() =&gt;</text>
+    <text x="649" y="533" font-family="monospace" font-size="14" fill="#82aaff"> setCount</text>
+    <text x="733" y="533" font-family="monospace" font-size="14" fill="#89ddff">(</text>
+    <text x="745" y="533" font-family="monospace" font-size="14" fill="#e8e8e8">1</text>
+    <text x="757" y="533" font-family="monospace" font-size="14" fill="#89ddff">)}&gt;</text>
+  </g>
+
+  <!-- Arrow 3 to 4 -->
+  <path d="M 600 570 L 600 620" stroke="#61dafb" stroke-width="3" marker-end="url(#flowArrow)"/>
+
+  <!-- Step 4: State update -->
+  <g id="step4">
+    <rect x="400" y="630" width="400" height="100" fill="#2d2244" stroke="#c792ea" stroke-width="3" rx="10"/>
+    <text x="600" y="665" font-family="sans-serif" font-size="18" font-weight="bold" fill="#c792ea" text-anchor="middle">④ Actualización de Estado</text>
+    <text x="600" y="690" font-family="sans-serif" font-size="14" fill="#888" text-anchor="middle">count: 0 → 1</text>
+    <text x="600" y="712" font-family="sans-serif" font-size="13" fill="#f59e0b" text-anchor="middle">⚠️ Asíncrono - React programa el re-render</text>
+  </g>
+
+  <!-- Arrow 4 back to 2 (cycle) -->
+  <path d="M 810 680 Q 900 680, 900 340 T 810 340" stroke="#51cf66" stroke-width="3" fill="none" marker-end="url(#flowArrow)"/>
+  <text x="920" y="510" font-family="sans-serif" font-size="14" fill="#51cf66" font-weight="bold">Re-render</text>
+
+  <!-- Key concepts box -->
+  <g id="concepts">
+    <rect x="50" y="770" width="1100" height="110" fill="#1a1a2e" stroke="#61dafb" stroke-width="2" rx="8"/>
+    <text x="600" y="800" font-family="sans-serif" font-size="18" font-weight="bold" fill="#61dafb" text-anchor="middle">Conceptos Clave</text>
+    
+    <g id="concept-items">
+      <circle cx="90" cy="833" r="8" fill="#61dafb"/>
+      <text x="110" y="838" font-family="sans-serif" font-size="14" fill="#e8e8e8">Estado persiste entre renders</text>
+
+      <circle cx="450" cy="833" r="8" fill="#646cff"/>
+      <text x="470" y="838" font-family="sans-serif" font-size="14" fill="#e8e8e8">setCount es asíncrono</text>
+
+      <circle cx="750" cy="833" r="8" fill="#c792ea"/>
+      <text x="770" y="838" font-family="sans-serif" font-size="14" fill="#e8e8e8">No mutar estado directamente</text>
+
+      <circle cx="90" cy="863" r="8" fill="#51cf66"/>
+      <text x="110" y="868" font-family="sans-serif" font-size="14" fill="#e8e8e8">Cada setCount causa re-render</text>
+
+      <circle cx="450" cy="863" r="8" fill="#f59e0b"/>
+      <text x="470" y="868" font-family="sans-serif" font-size="14" fill="#e8e8e8">React batch updates automáticamente</text>
+
+      <circle cx="750" cy="863" r="8" fill="#ff6b6b"/>
+      <text x="770" y="868" font-family="sans-serif" font-size="14" fill="#e8e8e8">Usar función updater para estado previo</text>
+    </g>
+  </g>
+</svg>

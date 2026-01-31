@@ -1,0 +1,122 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="propsArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#61dafb"/>
+    </marker>
+    <marker id="callbackArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#0a0a14"/>
+
+  <!-- Title -->
+  <text x="600" y="50" font-family="sans-serif" font-size="32" font-weight="bold" fill="#e8e8e8" text-anchor="middle">Props Flow</text>
+  <text x="600" y="80" font-family="sans-serif" font-size="16" fill="#888" text-anchor="middle">Flujo unidireccional de datos</text>
+
+  <!-- Parent Component -->
+  <g id="parent">
+    <rect x="350" y="130" width="500" height="150" fill="#1a3a52" stroke="#61dafb" stroke-width="3" rx="10"/>
+    <text x="600" y="170" font-family="sans-serif" font-size="22" font-weight="bold" fill="#61dafb" text-anchor="middle">Parent Component</text>
+    
+    <!-- Parent state -->
+    <rect x="400" y="190" width="400" height="70" fill="#0a0a14" stroke="#61dafb" stroke-width="1" rx="6"/>
+    <text x="420" y="215" font-family="monospace" font-size="13" fill="#c792ea">const</text>
+    <text x="470" y="215" font-family="monospace" font-size="13" fill="#e8e8e8"> [count, setCount]</text>
+    <text x="650" y="215" font-family="monospace" font-size="13" fill="#89ddff"> =</text>
+    <text x="420" y="238" font-family="monospace" font-size="13" fill="#82aaff">  useState</text>
+    <text x="506" y="238" font-family="monospace" font-size="13" fill="#89ddff">&lt;</text>
+    <text x="518" y="238" font-family="monospace" font-size="13" fill="#3178c6">number</text>
+    <text x="578" y="238" font-family="monospace" font-size="13" fill="#89ddff">&gt;(</text>
+    <text x="614" y="238" font-family="monospace" font-size="13" fill="#f78c6c">0</text>
+    <text x="626" y="238" font-family="monospace" font-size="13" fill="#89ddff">);</text>
+  </g>
+
+  <!-- Props arrows -->
+  <path d="M 480 290 L 350 380" stroke="#61dafb" stroke-width="3" marker-end="url(#propsArrow)"/>
+  <path d="M 600 290 L 600 380" stroke="#61dafb" stroke-width="3" marker-end="url(#propsArrow)"/>
+  <path d="M 720 290 L 850 380" stroke="#61dafb" stroke-width="3" marker-end="url(#propsArrow)"/>
+
+  <!-- Props labels -->
+  <rect x="360" y="320" width="80" height="25" fill="#0a0a14" rx="4"/>
+  <text x="400" y="337" font-family="sans-serif" font-size="12" fill="#61dafb" text-anchor="middle" font-weight="bold">count</text>
+  
+  <rect x="540" y="320" width="120" height="25" fill="#0a0a14" rx="4"/>
+  <text x="600" y="337" font-family="sans-serif" font-size="12" fill="#61dafb" text-anchor="middle" font-weight="bold">count + onClick</text>
+  
+  <rect x="760" y="320" width="80" height="25" fill="#0a0a14" rx="4"/>
+  <text x="800" y="337" font-family="sans-serif" font-size="12" fill="#61dafb" text-anchor="middle" font-weight="bold">count</text>
+
+  <!-- Child Components -->
+  <g id="children">
+    <!-- Child 1 -->
+    <rect x="150" y="390" width="300" height="120" fill="#2d2d44" stroke="#646cff" stroke-width="2" rx="8"/>
+    <text x="300" y="425" font-family="sans-serif" font-size="18" font-weight="bold" fill="#646cff" text-anchor="middle">&lt;Display /&gt;</text>
+    <rect x="180" y="440" width="240" height="50" fill="#1a1a2e" stroke="#646cff" stroke-width="1" rx="4"/>
+    <text x="200" y="465" font-family="monospace" font-size="12" fill="#e8e8e8">props</text>
+    <text x="242" y="465" font-family="monospace" font-size="12" fill="#89ddff">.</text>
+    <text x="254" y="465" font-family="monospace" font-size="12" fill="#e8e8e8">count</text>
+    <text x="200" y="485" font-family="monospace" font-size="12" fill="#51cf66">// Solo lectura ✓</text>
+
+    <!-- Child 2 -->
+    <rect x="500" y="390" width="300" height="120" fill="#2d2d44" stroke="#646cff" stroke-width="2" rx="8"/>
+    <text x="650" y="425" font-family="sans-serif" font-size="18" font-weight="bold" fill="#646cff" text-anchor="middle">&lt;Button /&gt;</text>
+    <rect x="530" y="440" width="240" height="50" fill="#1a1a2e" stroke="#646cff" stroke-width="1" rx="4"/>
+    <text x="550" y="460" font-family="monospace" font-size="12" fill="#e8e8e8">onClick</text>
+    <text x="610" y="460" font-family="monospace" font-size="12" fill="#89ddff">={</text>
+    <text x="634" y="460" font-family="monospace" font-size="12" fill="#e8e8e8">props</text>
+    <text x="682" y="460" font-family="monospace" font-size="12" fill="#89ddff">.</text>
+    <text x="550" y="480" font-family="monospace" font-size="12" fill="#e8e8e8">  onClick</text>
+    <text x="622" y="480" font-family="monospace" font-size="12" fill="#89ddff">}</text>
+
+    <!-- Child 3 -->
+    <rect x="850" y="390" width="300" height="120" fill="#2d2d44" stroke="#646cff" stroke-width="2" rx="8"/>
+    <text x="1000" y="425" font-family="sans-serif" font-size="18" font-weight="bold" fill="#646cff" text-anchor="middle">&lt;Counter /&gt;</text>
+    <rect x="880" y="440" width="240" height="50" fill="#1a1a2e" stroke="#646cff" stroke-width="1" rx="4"/>
+    <text x="900" y="465" font-family="monospace" font-size="12" fill="#e8e8e8">Valor:</text>
+    <text x="960" y="465" font-family="monospace" font-size="12" fill="#89ddff"> {</text>
+    <text x="984" y="465" font-family="monospace" font-size="12" fill="#e8e8e8">count</text>
+    <text x="1032" y="465" font-family="monospace" font-size="12" fill="#89ddff">}</text>
+  </g>
+
+  <!-- Callback arrow (from Button back to Parent) -->
+  <path d="M 650 390 L 600 310" stroke="#f59e0b" stroke-width="3" stroke-dasharray="5,5" marker-end="url(#callbackArrow)"/>
+  <rect x="610" y="338" width="80" height="25" fill="#0a0a14" rx="4"/>
+  <text x="650" y="355" font-family="sans-serif" font-size="12" fill="#f59e0b" text-anchor="middle" font-weight="bold">callback</text>
+
+  <!-- Props characteristics box -->
+  <g id="characteristics">
+    <rect x="50" y="570" width="1100" height="200" fill="#1a1a2e" stroke="#61dafb" stroke-width="2" rx="8"/>
+    <text x="600" y="605" font-family="sans-serif" font-size="20" font-weight="bold" fill="#61dafb" text-anchor="middle">Características de Props</text>
+    
+    <g id="props-items">
+      <!-- Row 1 -->
+      <rect x="80" y="630" width="30" height="30" fill="#61dafb" rx="4"/>
+      <text x="95" y="652" font-family="sans-serif" font-size="18" text-anchor="middle">↓</text>
+      <text x="125" y="652" font-family="sans-serif" font-size="15" fill="#e8e8e8">Unidireccionales: Padre → Hijo</text>
+
+      <rect x="620" y="630" width="30" height="30" fill="#646cff" rx="4"/>
+      <text x="635" y="652" font-family="sans-serif" font-size="18" text-anchor="middle">🔒</text>
+      <text x="665" y="652" font-family="sans-serif" font-size="15" fill="#e8e8e8">Inmutables (read-only)</text>
+
+      <!-- Row 2 -->
+      <rect x="80" y="680" width="30" height="30" fill="#3178c6" rx="4"/>
+      <text x="95" y="702" font-family="sans-serif" font-size="18" text-anchor="middle">TS</text>
+      <text x="125" y="702" font-family="sans-serif" font-size="15" fill="#e8e8e8">Tipadas con TypeScript</text>
+
+      <rect x="620" y="680" width="30" height="30" fill="#51cf66" rx="4"/>
+      <text x="635" y="702" font-family="sans-serif" font-size="18" text-anchor="middle">⚡</text>
+      <text x="665" y="702" font-family="sans-serif" font-size="15" fill="#e8e8e8">Flexibles (primitivos, objetos, funciones)</text>
+
+      <!-- Row 3 -->
+      <rect x="80" y="730" width="30" height="30" fill="#f59e0b" rx="4"/>
+      <text x="95" y="752" font-family="sans-serif" font-size="18" text-anchor="middle">↑</text>
+      <text x="125" y="752" font-family="sans-serif" font-size="15" fill="#e8e8e8">Callbacks para comunicación Hijo → Padre</text>
+
+      <rect x="620" y="730" width="30" height="30" fill="#c792ea" rx="4"/>
+      <text x="635" y="752" font-family="sans-serif" font-size="18" text-anchor="middle">📦</text>
+      <text x="665" y="752" font-family="sans-serif" font-size="15" fill="#e8e8e8">Composición sobre herencia</text>
+    </g>
+  </g>
+</svg>

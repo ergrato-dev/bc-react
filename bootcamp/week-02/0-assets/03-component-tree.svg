@@ -1,0 +1,129 @@
+<svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowDown" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#61dafb"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#0a0a14"/>
+
+  <!-- Title -->
+  <text x="700" y="50" font-family="sans-serif" font-size="32" font-weight="bold" fill="#e8e8e8" text-anchor="middle">Component Tree</text>
+  <text x="700" y="80" font-family="sans-serif" font-size="16" fill="#888" text-anchor="middle">Composición y jerarquía de componentes</text>
+
+  <!-- Level 0: App Root -->
+  <g id="root">
+    <rect x="575" y="120" width="250" height="80" fill="#1a3a52" stroke="#61dafb" stroke-width="3" rx="8"/>
+    <text x="700" y="155" font-family="sans-serif" font-size="20" font-weight="bold" fill="#61dafb" text-anchor="middle">&lt;App /&gt;</text>
+    <text x="700" y="180" font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle">Componente raíz</text>
+  </g>
+
+  <!-- Arrows to Level 1 -->
+  <path d="M 640 210 L 300 280" stroke="#61dafb" stroke-width="2" marker-end="url(#arrowDown)"/>
+  <path d="M 700 210 L 700 280" stroke="#61dafb" stroke-width="2" marker-end="url(#arrowDown)"/>
+  <path d="M 760 210 L 1100 280" stroke="#61dafb" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- Level 1: Main Components -->
+  <g id="level1">
+    <!-- Header -->
+    <rect x="150" y="290" width="300" height="80" fill="#2d2d44" stroke="#646cff" stroke-width="2" rx="8"/>
+    <text x="300" y="320" font-family="sans-serif" font-size="18" font-weight="bold" fill="#646cff" text-anchor="middle">&lt;Header /&gt;</text>
+    <text x="300" y="345" font-family="sans-serif" font-size="12" fill="#888" text-anchor="middle">Logo + Navegación</text>
+    <text x="300" y="362" font-family="sans-serif" font-size="11" fill="#666" text-anchor="middle">Reutilizable</text>
+
+    <!-- Main -->
+    <rect x="550" y="290" width="300" height="80" fill="#2d2d44" stroke="#646cff" stroke-width="2" rx="8"/>
+    <text x="700" y="320" font-family="sans-serif" font-size="18" font-weight="bold" fill="#646cff" text-anchor="middle">&lt;Main /&gt;</text>
+    <text x="700" y="345" font-family="sans-serif" font-size="12" fill="#888" text-anchor="middle">Contenido principal</text>
+    <text x="700" y="362" font-family="sans-serif" font-size="11" fill="#666" text-anchor="middle">Composición</text>
+
+    <!-- Footer -->
+    <rect x="950" y="290" width="300" height="80" fill="#2d2d44" stroke="#646cff" stroke-width="2" rx="8"/>
+    <text x="1100" y="320" font-family="sans-serif" font-size="18" font-weight="bold" fill="#646cff" text-anchor="middle">&lt;Footer /&gt;</text>
+    <text x="1100" y="345" font-family="sans-serif" font-size="12" fill="#888" text-anchor="middle">Links + Copyright</text>
+    <text x="1100" y="362" font-family="sans-serif" font-size="11" fill="#666" text-anchor="middle">Reutilizable</text>
+  </g>
+
+  <!-- Arrows to Level 2 from Header -->
+  <path d="M 250 380 L 150 450" stroke="#61dafb" stroke-width="2" marker-end="url(#arrowDown)"/>
+  <path d="M 350 380 L 390 450" stroke="#61dafb" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- Arrows to Level 2 from Main -->
+  <path d="M 650 380 L 630 450" stroke="#61dafb" stroke-width="2" marker-end="url(#arrowDown)"/>
+  <path d="M 750 380 L 870 450" stroke="#61dafb" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- Arrows to Level 2 from Footer -->
+  <path d="M 1100 380 L 1110 450" stroke="#61dafb" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- Level 2: Sub-components -->
+  <g id="level2">
+    <!-- Logo -->
+    <rect x="50" y="460" width="200" height="70" fill="#1a1a2e" stroke="#3178c6" stroke-width="2" rx="6"/>
+    <text x="150" y="490" font-family="sans-serif" font-size="16" fill="#3178c6" text-anchor="middle">&lt;Logo /&gt;</text>
+    <text x="150" y="512" font-family="sans-serif" font-size="11" fill="#666" text-anchor="middle">SVG + Link</text>
+
+    <!-- Navigation -->
+    <rect x="290" y="460" width="200" height="70" fill="#1a1a2e" stroke="#3178c6" stroke-width="2" rx="6"/>
+    <text x="390" y="490" font-family="sans-serif" font-size="16" fill="#3178c6" text-anchor="middle">&lt;Nav /&gt;</text>
+    <text x="390" y="512" font-family="sans-serif" font-size="11" fill="#666" text-anchor="middle">Menu items</text>
+
+    <!-- Sidebar -->
+    <rect x="530" y="460" width="200" height="70" fill="#1a1a2e" stroke="#3178c6" stroke-width="2" rx="6"/>
+    <text x="630" y="490" font-family="sans-serif" font-size="16" fill="#3178c6" text-anchor="middle">&lt;Sidebar /&gt;</text>
+    <text x="630" y="512" font-family="sans-serif" font-size="11" fill="#666" text-anchor="middle">Filtros</text>
+
+    <!-- Posts -->
+    <rect x="770" y="460" width="200" height="70" fill="#1a1a2e" stroke="#3178c6" stroke-width="2" rx="6"/>
+    <text x="870" y="490" font-family="sans-serif" font-size="16" fill="#3178c6" text-anchor="middle">&lt;Posts /&gt;</text>
+    <text x="870" y="512" font-family="sans-serif" font-size="11" fill="#666" text-anchor="middle">Lista</text>
+
+    <!-- Social Links -->
+    <rect x="1010" y="460" width="200" height="70" fill="#1a1a2e" stroke="#3178c6" stroke-width="2" rx="6"/>
+    <text x="1110" y="490" font-family="sans-serif" font-size="16" fill="#3178c6" text-anchor="middle">&lt;Social /&gt;</text>
+    <text x="1110" y="512" font-family="sans-serif" font-size="11" fill="#666" text-anchor="middle">Iconos</text>
+  </g>
+
+  <!-- Arrows to Level 3 from Posts -->
+  <path d="M 820 540 L 700 610" stroke="#61dafb" stroke-width="2" marker-end="url(#arrowDown)"/>
+  <path d="M 870 540 L 870 610" stroke="#61dafb" stroke-width="2" marker-end="url(#arrowDown)"/>
+  <path d="M 920 540 L 1040 610" stroke="#61dafb" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- Level 3: Leaf components (reusable) -->
+  <g id="level3">
+    <!-- PostCard 1 -->
+    <rect x="600" y="620" width="200" height="70" fill="#0a0a14" stroke="#51cf66" stroke-width="2" rx="6"/>
+    <text x="700" y="650" font-family="sans-serif" font-size="15" fill="#51cf66" text-anchor="middle">&lt;PostCard /&gt;</text>
+    <text x="700" y="672" font-family="sans-serif" font-size="10" fill="#666" text-anchor="middle">Reutilizable</text>
+
+    <!-- PostCard 2 -->
+    <rect x="770" y="620" width="200" height="70" fill="#0a0a14" stroke="#51cf66" stroke-width="2" rx="6"/>
+    <text x="870" y="650" font-family="sans-serif" font-size="15" fill="#51cf66" text-anchor="middle">&lt;PostCard /&gt;</text>
+    <text x="870" y="672" font-family="sans-serif" font-size="10" fill="#666" text-anchor="middle">Reutilizable</text>
+
+    <!-- PostCard 3 -->
+    <rect x="940" y="620" width="200" height="70" fill="#0a0a14" stroke="#51cf66" stroke-width="2" rx="6"/>
+    <text x="1040" y="650" font-family="sans-serif" font-size="15" fill="#51cf66" text-anchor="middle">&lt;PostCard /&gt;</text>
+    <text x="1040" y="672" font-family="sans-serif" font-size="10" fill="#666" text-anchor="middle">Reutilizable</text>
+  </g>
+
+  <!-- Legend -->
+  <g id="legend">
+    <rect x="50" y="750" width="1300" height="130" fill="#1a1a2e" stroke="#61dafb" stroke-width="2" rx="8"/>
+    <text x="700" y="780" font-family="sans-serif" font-size="18" font-weight="bold" fill="#61dafb" text-anchor="middle">Principios de Composición</text>
+    
+    <g id="legend-items">
+      <rect x="100" y="800" width="20" height="20" fill="#61dafb" rx="3"/>
+      <text x="130" y="815" font-family="sans-serif" font-size="14" fill="#e8e8e8">Props fluyen de arriba hacia abajo (unidireccional)</text>
+
+      <rect x="700" y="800" width="20" height="20" fill="#646cff" rx="3"/>
+      <text x="730" y="815" font-family="sans-serif" font-size="14" fill="#e8e8e8">Cada componente tiene una responsabilidad única</text>
+
+      <rect x="100" y="840" width="20" height="20" fill="#3178c6" rx="3"/>
+      <text x="130" y="855" font-family="sans-serif" font-size="14" fill="#e8e8e8">Componentes reutilizables en múltiples lugares</text>
+
+      <rect x="700" y="840" width="20" height="20" fill="#51cf66" rx="3"/>
+      <text x="730" y="855" font-family="sans-serif" font-size="14" fill="#e8e8e8">Hojas del árbol: componentes sin hijos (leaf nodes)</text>
+    </g>
+  </g>
+</svg>
