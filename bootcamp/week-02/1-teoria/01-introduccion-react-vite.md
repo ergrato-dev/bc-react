@@ -78,16 +78,17 @@ const Counter: React.FC = () => {
 
 ## 🆚 React vs Otros Frameworks
 
-| Característica | React | Vue | Angular |
-|----------------|-------|-----|---------|
-| **Tipo** | Biblioteca | Framework progresivo | Framework completo |
-| **Tamaño** | ~45 KB | ~34 KB | ~167 KB |
-| **Curva de aprendizaje** | Media | Baja | Alta |
-| **TypeScript** | Opcional (pero muy común) | Opcional | Nativo |
-| **Estado** | Hooks, Redux, Zustand | Composition API, Vuex | RxJS, NgRx |
-| **Renderizado** | Virtual DOM | Virtual DOM | Real DOM + Change Detection |
+| Característica           | React                     | Vue                   | Angular                     |
+| ------------------------ | ------------------------- | --------------------- | --------------------------- |
+| **Tipo**                 | Biblioteca                | Framework progresivo  | Framework completo          |
+| **Tamaño**               | ~45 KB                    | ~34 KB                | ~167 KB                     |
+| **Curva de aprendizaje** | Media                     | Baja                  | Alta                        |
+| **TypeScript**           | Opcional (pero muy común) | Opcional              | Nativo                      |
+| **Estado**               | Hooks, Redux, Zustand     | Composition API, Vuex | RxJS, NgRx                  |
+| **Renderizado**          | Virtual DOM               | Virtual DOM           | Real DOM + Change Detection |
 
 **¿Por qué elegir React?**
+
 - ✅ Ecosistema gigante y comunidad activa
 - ✅ Demanda laboral alta (más ofertas de trabajo)
 - ✅ Flexibilidad para elegir herramientas
@@ -102,14 +103,14 @@ const Counter: React.FC = () => {
 
 ### Ventajas de Vite sobre CRA
 
-| Aspecto | Create React App | Vite |
-|---------|------------------|------|
-| **Inicio del servidor** | 20-60 segundos | <1 segundo |
-| **Hot Module Replacement (HMR)** | Lento (3-5 seg) | Instantáneo (<100ms) |
-| **Build para producción** | Webpack (lento) | Rollup (rápido) |
-| **Tamaño del bundle** | Más grande | Optimizado |
-| **ES Modules** | No nativo | Nativo del navegador |
-| **Mantenimiento** | Bajo (semi-abandonado) | Activo |
+| Aspecto                          | Create React App       | Vite                 |
+| -------------------------------- | ---------------------- | -------------------- |
+| **Inicio del servidor**          | 20-60 segundos         | <1 segundo           |
+| **Hot Module Replacement (HMR)** | Lento (3-5 seg)        | Instantáneo (<100ms) |
+| **Build para producción**        | Webpack (lento)        | Rollup (rápido)      |
+| **Tamaño del bundle**            | Más grande             | Optimizado           |
+| **ES Modules**                   | No nativo              | Nativo del navegador |
+| **Mantenimiento**                | Bajo (semi-abandonado) | Activo               |
 
 ```typescript
 // QUÉ: Configuración básica de Vite para React + TypeScript
@@ -197,15 +198,22 @@ mi-app-react/
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/vite.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>Mi App React</title>
   </head>
   <body>
     <!-- Div donde React montará toda la aplicación -->
     <div id="root"></div>
     <!-- Script que inicia la aplicación React -->
-    <script type="module" src="/src/main.tsx"></script>
+    <script
+      type="module"
+      src="/src/main.tsx"></script>
   </body>
 </html>
 ```
@@ -305,6 +313,7 @@ pnpm tsc           # Verifica tipos sin generar archivos
 ```
 
 **Comportamiento en StrictMode:**
+
 - ⚠️ Los componentes se renderizan **dos veces** en desarrollo (no en producción)
 - ⚠️ Los efectos (useEffect) se ejecutan **dos veces**
 - ⚠️ Se detectan APIs deprecadas de React
@@ -333,6 +342,7 @@ pnpm tsc           # Verifica tipos sin generar archivos
 ```
 
 **Notas importantes:**
+
 - `react` y `react-dom` son las librerías core
 - `@types/*` son definiciones de tipos para TypeScript
 - `@vitejs/plugin-react` habilita JSX/TSX y Fast Refresh
@@ -409,6 +419,7 @@ const UserCard: React.FC<UserCardProps> = ({ user, onDelete }) => {
 ## 🌐 Árbol de Componentes
 
 En React, la UI es un **árbol de componentes** donde:
+
 - Hay un componente raíz (`App`)
 - Los componentes pueden contener otros componentes
 - Los datos fluyen de arriba hacia abajo (props)
@@ -508,7 +519,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  
+
   // Alias para imports más limpios
   resolve: {
     alias: {
@@ -517,7 +528,7 @@ export default defineConfig({
       '@utils': path.resolve(__dirname, './src/utils'),
     },
   },
-  
+
   // Configuración del servidor de desarrollo
   server: {
     port: 3000,
@@ -531,7 +542,7 @@ export default defineConfig({
       },
     },
   },
-  
+
   // Configuración de build
   build: {
     outDir: 'dist',
