@@ -52,63 +52,52 @@ Tu aplicación debe permitir:
 
 - Mostrar todos los elementos en tarjetas o tabla
 - Cada elemento debe mostrar sus propiedades principales
-- Indicador visual de estado (activo/inactivo, disponible/no disponible, etc.)
+- Indicador visual de estado (si aplica: activo/inactivo, disponible/no disponible)
 
 ### 2. **Agregar Nuevos Elementos** ➕
 
 - Formulario con todos los campos necesarios
-- Validación de campos requeridos
-- Feedback visual al usuario (éxito/error)
+- Validación básica de campos requeridos
 - Limpiar formulario después de agregar
 
 ### 3. **Eliminar Elementos** 🗑️
 
 - Botón de eliminar en cada elemento
-- Confirmación antes de eliminar (opcional pero recomendado)
 - Actualización inmediata de la lista
 
 ### 4. **Actualizar Elementos** ✏️
 
 - Editar propiedades de elementos existentes
 - Pre-llenar formulario con datos actuales
-- Validación al actualizar
-- Cancelar edición
+- Botón para cancelar edición
 
-### 5. **Búsqueda/Filtrado** 🔍
-
-- Buscar elementos por algún criterio
-- Filtrar por categoría/tipo/estado
-- Actualización en tiempo real
-
-### 6. **Contador/Estadísticas** 📊
-
-- Total de elementos
-- Elementos por categoría/estado
-- Estadísticas relevantes a tu dominio
+**Nota**: Las funcionalidades de **búsqueda/filtrado** y **estadísticas** se implementarán en semanas posteriores para mantener el proyecto dentro de las 2-2.5 horas de dedicación.
 
 ---
 
-## 🏗️ Estructura de Componentes Sugerida
+## 🏗️ Estructura de Componentes Requerida
 
 ```
-App
-├── Header (título, descripción)
-├── Form (agregar/editar elemento)
-│   ├── Input fields
-│   └── Submit button
-├── FilterBar (búsqueda y filtros)
+App (componente principal con estado)
+├── Header (título y descripción del dominio)
+├── ItemForm (formulario agregar/editar)
+│   ├── Input fields tipados
+│   ├── Submit button
+│   └── Cancel button (al editar)
 ├── ItemList (lista de elementos)
 │   └── ItemCard × N (tarjeta individual)
-│       ├── Item info
-│       ├── Edit button
-│       └── Delete button
-└── Stats (contador y estadísticas)
+│       ├── Información del elemento
+│       ├── Botón editar
+│       └── Botón eliminar
 ```
+
+**Total**: 4 componentes principales (Header, ItemForm, ItemList, ItemCard)
 
 **Adapta esta estructura a tu dominio**:
 
 - `ItemCard` → `BookCard`, `MedicineCard`, `MemberCard`, etc.
 - `ItemList` → `BookList`, `MedicineList`, `MemberList`, etc.
+- `ItemForm` → `BookForm`, `MedicineForm`, `MemberForm`, etc.
 - Props y state según las propiedades de tu dominio
 
 ---
@@ -124,15 +113,10 @@ interface Book {
   author: string;
   isbn: string;
   available: boolean;
-  category: 'fiction' | 'non-fiction' | 'science' | 'history';
 }
 
-// Componentes:
-// - BookCard: muestra info del libro
-// - BookList: lista de libros
-// - AddBookForm: formulario para agregar
-// - SearchBar: buscar por título/autor
-// - Stats: total libros, disponibles, por categoría
+// Componentes: Header, BookForm, BookList, BookCard
+// CRUD básico: agregar libro, editar libro, eliminar libro, listar libros
 ```
 
 ### Ejemplo 2: Farmacia 💊
@@ -144,15 +128,10 @@ interface Medicine {
   price: number;
   stock: number;
   requiresPrescription: boolean;
-  category: 'analgésico' | 'antibiótico' | 'vitamina';
 }
 
-// Componentes:
-// - MedicineCard: muestra info del medicamento
-// - MedicineList: lista de medicamentos
-// - AddMedicineForm: formulario para agregar
-// - FilterBar: filtrar por categoría, con/sin receta
-// - Stats: total medicamentos, bajo stock, por categoría
+// Componentes: Header, MedicineForm, MedicineList, MedicineCard
+// CRUD básico: agregar medicamento, editar, eliminar, listar
 ```
 
 ### Ejemplo 3: Gimnasio 🏋️
@@ -167,13 +146,11 @@ interface Member {
   active: boolean;
 }
 
-// Componentes:
-// - MemberCard: muestra info del miembro
-// - MemberList: lista de miembros
-// - AddMemberForm: formulario para agregar
-// - SearchBar: buscar por nombre/email
-// - Stats: total miembros, activos, por plan
+// Componentes: Header, MemberForm, MemberList, MemberCard
+// CRUD básico: agregar miembro, editar, eliminar, listar
 ```
+
+**Nota**: Las features de búsqueda, filtros y estadísticas se agregarán en semanas posteriores.
 
 ---
 

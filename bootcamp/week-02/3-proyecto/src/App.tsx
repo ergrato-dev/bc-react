@@ -3,8 +3,6 @@ import { Item } from './types';
 import Header from './components/Header';
 import ItemForm from './components/ItemForm';
 import ItemList from './components/ItemList';
-import SearchBar from './components/SearchBar';
-import Stats from './components/Stats';
 
 /**
  * COMPONENTE PRINCIPAL: App
@@ -20,10 +18,6 @@ function App() {
   // TODO: Estado para la lista de elementos
   // Tip: Usa useState<Item[]>([])
   const [items, setItems] = useState<Item[]>([]);
-
-  // TODO: Estado para búsqueda/filtrado
-  // Tip: Usa useState<string>('')
-  const [searchTerm, setSearchTerm] = useState<string>('');
 
   // TODO: Estado para edición (id del elemento siendo editado)
   // Tip: Usa useState<number | null>(null)
@@ -101,17 +95,6 @@ function App() {
   };
 
   // ============================================
-  // DATOS FILTRADOS
-  // ============================================
-
-  // TODO: Filtrar items basado en searchTerm
-  // Tip: Usa filter() y includes() para buscar en el nombre
-  // Ejemplo: items.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()))
-  const filteredItems = items.filter((item) =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase()),
-  );
-
-  // ============================================
   // ELEMENTO SIENDO EDITADO
   // ============================================
 
@@ -139,18 +122,9 @@ function App() {
           onCancelEdit={cancelEdit}
         />
 
-        {/* Barra de búsqueda */}
-        <SearchBar
-          searchTerm={searchTerm}
-          onSearchChange={setSearchTerm}
-        />
-
-        {/* Estadísticas */}
-        <Stats items={items} />
-
         {/* Lista de elementos */}
         <ItemList
-          items={filteredItems}
+          items={items}
           onDelete={deleteItem}
           onEdit={startEdit}
         />
