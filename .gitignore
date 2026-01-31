@@ -108,6 +108,9 @@ Desktop.ini
 # (descomenta si no quieres trackear las soluciones)
 # */2-ejercicios/**/solution/
 
+# Ignorar soluciones de proyectos semanales (solo para instructor)
+bootcamp/week-*/3-proyecto/solution/
+
 # Ignorar proyectos compilados de estudiantes
 # bootcamp/week-*/3-proyecto/student-work/
 
