@@ -47,12 +47,11 @@ week-02/
 
 ### 1️⃣ Teoría (1-teoria/)
 
-- [01 - Introducción a React y Vite](1-teoria/01-introduccion-react-vite.md)
-- [02 - JSX y TSX: Sintaxis y Diferencias](1-teoria/02-jsx-tsx-sintaxis.md)
-- [03 - Componentes Funcionales con TypeScript](1-teoria/03-componentes-funcionales-typescript.md)
-- [04 - Props: Tipado y Validación](1-teoria/04-props-tipado-validacion.md)
-- [05 - Estado Local con useState](1-teoria/05-estado-local-usestate.md)
-- [06 - Eventos Sintéticos en React](1-teoria/06-eventos-sinteticos-react.md)
+- [01 - React, Vite y JSX/TSX](1-teoria/01-react-vite-jsx.md) **(consolidado)**
+- [02 - Componentes Funcionales con TypeScript](1-teoria/02-componentes-funcionales-typescript.md)
+- [03 - Props: Tipado y Validación](1-teoria/03-props-tipado-validacion.md)
+- [04 - Estado Local con useState](1-teoria/04-estado-local-usestate.md)
+- [05 - Eventos Sintéticos en React](1-teoria/05-eventos-sinteticos-react.md)
 
 ### 2️⃣ Ejercicios (2-ejercicios/)
 
@@ -64,9 +63,17 @@ week-02/
 
 ### 3️⃣ Proyecto Semanal (3-proyecto/)
 
-**Proyecto**: Interfaz Interactiva con Componentes
+**Proyecto**: Sistema CRUD Básico
 
-Crea una interfaz con múltiples componentes, estado local y manejo de eventos, adaptada a tu dominio asignado (dashboard de biblioteca, panel de farmacia, sistema de gimnasio, etc.).
+Crea una interfaz con **4 componentes** (Header, Form, List, Card), estado local y manejo de eventos básicos, adaptada a tu dominio asignado.
+
+**Alcance optimizado para 2-2.5h**:
+
+- ✅ CRUD básico: Agregar, listar, eliminar
+- ✅ 4 componentes esenciales
+- ✅ Validación simple (campos vacíos)
+- ❌ Sin búsqueda/filtrado (mover a semana 3+)
+- ❌ Sin estadísticas complejas (mover a semana 3+)
 
 ### 4️⃣ Recursos Adicionales (4-recursos/)
 
@@ -80,15 +87,22 @@ Crea una interfaz con múltiples componentes, estado local y manejo de eventos, 
 
 ---
 
-## ⏱️ Distribución del Tiempo (8 horas)
+## ⏱️ Distribución del Tiempo (8 horas) ✅ OPTIMIZADO
 
-| Actividad  | Tiempo | Descripción                      |
-| ---------- | ------ | -------------------------------- |
-| Teoría     | 2-2.5h | Leer material teórico y ejemplos |
-| Ejercicios | 3-3.5h | Completar 5 ejercicios guiados   |
-| Proyecto   | 2-2.5h | Implementar interfaz interactiva |
+| Actividad  | Tiempo | Descripción                                            |
+| ---------- | ------ | ------------------------------------------------------ |
+| Teoría     | 2-2.5h | 5 archivos consolidados (~3,000 líneas vs 5,000 antes) |
+| Ejercicios | 2.5h   | 5 ejercicios guiados (20+25+30+35+40 min)              |
+| Proyecto   | 2-2.5h | CRUD básico con 4 componentes (simplificado)           |
 
-**Total**: ~8 horas
+**Total**: **~7.5-8.5h** ✅
+
+**Cambios vs versión anterior**:
+
+- ✅ Teoría reducida 40% (consolidado 01+02)
+- ✅ Proyecto simplificado (de 6 a 4 componentes)
+- ✅ Features reducidas (sin búsqueda/stats)
+- ✅ Alineado con meta de 8 horas
 
 ---
 
