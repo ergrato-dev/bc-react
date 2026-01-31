@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #ecf0f1; }
+      .subtitle { font: 16px sans-serif; fill: #bdc3c7; }
+      .label { font: 14px sans-serif; fill: #ecf0f1; }
+      .code { font: 11px monospace; fill: #ecf0f1; }
+      .box { fill: #3178C6; stroke: #61DAFB; stroke-width: 2; }
+    </style>
+  </defs>
+  
+  <!-- Dark Background -->
+  <rect width="800" height="700" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" class="title">Casos de Uso Comunes de useEffect</text>
+  
+  <!-- Use Case 1: Data Fetching -->
+  <rect x="50" y="80" width="340" height="140" rx="10" class="box"/>
+  <text x="220" y="110" text-anchor="middle" class="label" fill="white" font-weight="bold">1. Fetch de Datos Inicial</text>
+  <rect x="60" y="125" width="320" height="85" rx="5" fill="#2d2d2d"/>
+  <text x="70" y="145" class="code">useEffect(() => {</text>
+  <text x="80" y="165" class="code">fetchUsers().then(setUsers);</text>
+  <text x="70" y="185" class="code">}, []);</text>
+  <text x="70" y="205" class="code" font-weight="bold" fill="#7f8c8d">// Una vez al montar</text>
+  
+  <!-- Use Case 2: Title -->
+  <rect x="410" y="80" width="340" height="140" rx="10" class="box"/>
+  <text x="580" y="110" text-anchor="middle" class="label" fill="white" font-weight="bold">2. Actualizar Document Title</text>
+  <rect x="420" y="125" width="320" height="85" rx="5" fill="#2d2d2d"/>
+  <text x="430" y="145" class="code">useEffect(() => {</text>
+  <text x="440" y="165" class="code">document.title = `Count: ${count}`;</text>
+  <text x="430" y="185" class="code">}, [count]);</text>
+  <text x="430" y="205" class="code" font-weight="bold" fill="#7f8c8d">// Cuando count cambia</text>
+  
+  <!-- Use Case 3: Timers -->
+  <rect x="50" y="240" width="340" height="160" rx="10" class="box"/>
+  <text x="220" y="270" text-anchor="middle" class="label" fill="white" font-weight="bold">3. Timers (setInterval)</text>
+  <rect x="60" y="285" width="320" height="105" rx="5" fill="#2d2d2d"/>
+  <text x="70" y="305" class="code">useEffect(() => {</text>
+  <text x="80" y="325" class="code">const id = setInterval(() => {</text>
+  <text x="90" y="345" class="code">setCount(prev => prev + 1);</text>
+  <text x="80" y="365" class="code">}, 1000);</text>
+  <text x="80" y="385" class="code" fill="#2ecc71">return () => clearInterval(id);</text>
+  <text x="70" y="405" class="code">}, []);</text>
+  
+  <!-- Use Case 4: Event Listeners -->
+  <rect x="410" y="240" width="340" height="160" rx="10" class="box"/>
+  <text x="580" y="270" text-anchor="middle" class="label" fill="white" font-weight="bold">4. Event Listeners</text>
+  <rect x="420" y="285" width="320" height="105" rx="5" fill="#2d2d2d"/>
+  <text x="430" y="305" class="code">useEffect(() => {</text>
+  <text x="440" y="325" class="code">const handler = () => setY(window.scrollY);</text>
+  <text x="440" y="345" class="code">window.addEventListener('scroll', handler);</text>
+  <text x="440" y="365" class="code" fill="#2ecc71">return () => {</text>
+  <text x="450" y="385" class="code" fill="#2ecc71">window.removeEventListener('scroll', handler);</text>
+  <text x="440" y="405" class="code" fill="#2ecc71">};</text>
+  <text x="430" y="425" class="code">}, []);</text>
+  
+  <!-- Use Case 5: LocalStorage Sync -->
+  <rect x="50" y="420" width="340" height="140" rx="10" class="box"/>
+  <text x="220" y="450" text-anchor="middle" class="label" fill="white" font-weight="bold">5. Sync con LocalStorage</text>
+  <rect x="60" y="465" width="320" height="85" rx="5" fill="#2d2d2d"/>
+  <text x="70" y="485" class="code">useEffect(() => {</text>
+  <text x="80" y="505" class="code">localStorage.setItem('user', user);</text>
+  <text x="70" y="525" class="code">}, [user]);</text>
+  <text x="70" y="545" class="code" font-weight="bold" fill="#bdc3c7">// Guardar al cambiar user</text>
+  
+  <!-- Use Case 6: WebSocket -->
+  <rect x="410" y="420" width="340" height="160" rx="10" class="box"/>
+  <text x="580" y="450" text-anchor="middle" class="label" fill="white" font-weight="bold">6. WebSocket Connection</text>
+  <rect x="420" y="465" width="320" height="105" rx="5" fill="#2d2d2d"/>
+  <text x="430" y="485" class="code">useEffect(() => {</text>
+  <text x="440" y="505" class="code">const ws = new WebSocket(url);</text>
+  <text x="440" y="525" class="code">ws.onmessage = (e) => setData(e.data);</text>
+  <text x="440" y="545" class="code" fill="#2ecc71">return () => ws.close();</text>
+  <text x="430" y="565" class="code">}, [url]);</text>
+  
+  <!-- Best Practices -->
+  <rect x="50" y="600" width="700" height="80" rx="10" fill="#3d3416" stroke="#f39c12" stroke-width="2"/>
+  <text x="60" y="625" class="label" fill="#ffc107" font-weight="bold">💡 Mejores Prácticas:</text>
+  <text x="60" y="645" class="code" fill="#ffc107">• Siempre incluye cleanup para recursos (timers, listeners, connections)</text>
+  <text x="60" y="665" class="code" fill="#ffc107">• Usa [] para efectos que solo deben ejecutarse una vez</text>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 700">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #ecf0f1; }
+      .subtitle { font: 16px sans-serif; fill: #bdc3c7; }
+      .label { font: 14px sans-serif; fill: #ecf0f1; }
+      .code { font: 11px monospace; fill: #ecf0f1; }
+      .step { font: bold 14px sans-serif; fill: #61DAFB; }
+      .box { fill: #3178C6; stroke: #61DAFB; stroke-width: 2; }
+      .error { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+      .success { fill: #27ae60; stroke: #2ecc71; stroke-width: 2; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#61DAFB"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2ecc71"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c"/>
+    </marker>
+  </defs>
+  
+  <!-- Dark Background -->
+  <rect width="850" height="700" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="425" y="40" text-anchor="middle" class="title">Fetch de Datos con useEffect</text>
+  <text x="425" y="65" text-anchor="middle" class="subtitle">Pattern completo: Loading → Error → Data</text>
+  
+  <!-- Flow Diagram -->
+  <rect x="50" y="100" width="180" height="80" rx="10" class="box"/>
+  <text x="140" y="135" text-anchor="middle" class="label" fill="white" font-weight="bold">1. LOADING</text>
+  <text x="140" y="155" text-anchor="middle" class="label" fill="white">setLoading(true)</text>
+  
+  <path d="M 230 140 L 290 140" stroke="#61DAFB" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  
+  <rect x="290" y="100" width="180" height="80" rx="10" class="box"/>
+  <text x="380" y="135" text-anchor="middle" class="label" fill="white" font-weight="bold">2. FETCH</text>
+  <text x="380" y="155" text-anchor="middle" class="label" fill="white">await fetch(...)</text>
+  
+  <!-- Success path -->
+  <path d="M 380 180 L 380 240 L 470 240" stroke="#2ecc71" stroke-width="3" fill="none" marker-end="url(#arrow-green)"/>
+  <text x="385" y="215" class="label" fill="#27ae60" font-weight="bold">✅ Success</text>
+  
+  <rect x="470" y="200" width="180" height="80" rx="10" class="success"/>
+  <text x="560" y="235" text-anchor="middle" class="label" fill="white" font-weight="bold">3. DATA</text>
+  <text x="560" y="255" text-anchor="middle" class="label" fill="white">setData(result)</text>
+  
+  <!-- Error path -->
+  <path d="M 380 180 L 380 350 L 470 350" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#arrow-red)"/>
+  <text x="385" y="275" class="label" fill="#e74c3c" font-weight="bold">❌ Error</text>
+  
+  <rect x="470" y="310" width="180" height="80" rx="10" class="error"/>
+  <text x="560" y="345" text-anchor="middle" class="label" fill="white" font-weight="bold">3. ERROR</text>
+  <text x="560" y="365" text-anchor="middle" class="label" fill="white">setError(message)</text>
+  
+  <!-- Code Example -->
+  <rect x="50" y="420" width="750" height="260" rx="10" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="60" y="445" class="label" font-weight="bold" font-size="18">Implementación Completa:</text>
+  
+  <text x="60" y="470" class="code">const [data, setData] = useState(null);</text>
+  <text x="60" y="490" class="code">const [loading, setLoading] = useState(false);</text>
+  <text x="60" y="510" class="code">const [error, setError] = useState(null);</text>
+  
+  <text x="60" y="540" class="code">useEffect(() => {</text>
+  <text x="70" y="560" class="code" fill="#61DAFB">const controller = new AbortController();</text>
+  
+  <text x="70" y="585" class="code">const fetchData = async () => {</text>
+  <text x="80" y="605" class="code">try {</text>
+  <text x="90" y="625" class="code" fill="#61DAFB">setLoading(true);</text>
+  <text x="450" y="470" class="code" fill="#bdc3c7">// 1. Estado loading</text>
+  
+  <text x="90" y="645" class="code">const response = await fetch('/api/data', {</text>
+  <text x="100" y="665" class="code" fill="#61DAFB">signal: controller.signal</text>
+  <text x="450" y="560" class="code" fill="#bdc3c7">// 2. AbortController para cleanup</text>
+  
+  <rect x="60" y="420" width="740" height="1" fill="#bdc3c7"/>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#3498db"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#27ae60"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c"/>
+    </marker>
+  </defs>
+</svg>

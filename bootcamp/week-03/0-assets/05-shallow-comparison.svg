@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #ecf0f1; }
+      .subtitle { font: 16px sans-serif; fill: #bdc3c7; }
+      .label { font: 14px sans-serif; fill: #ecf0f1; }
+      .code { font: 11px monospace; fill: #ecf0f1; }
+      .bad { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+      .good { fill: #27ae60; stroke: #2ecc71; stroke-width: 2; }
+    </style>
+  </defs>
+  
+  <!-- Dark Background -->
+  <rect width="900" height="600" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" class="title">Comparación Superficial en Dependencias</text>
+  <text x="450" y="65" text-anchor="middle" class="subtitle">Por qué objetos/arrays causan loops infinitos</text>
+  
+  <!-- Bad Example -->
+  <rect x="50" y="100" width="390" height="220" rx="10" class="bad"/>
+  <text x="245" y="130" text-anchor="middle" class="label" fill="white" font-weight="bold">❌ LOOP INFINITO</text>
+  
+  <rect x="60" y="145" width="370" height="165" rx="5" fill="#2d2d2d"/>
+  <text x="70" y="165" class="code">const [users, setUsers] = useState([]);</text>
+  
+  <text x="70" y="195" class="code">useEffect(() => {</text>
+  <text x="80" y="215" class="code">fetch('/api/users')</text>
+  <text x="90" y="235" class="code">.then(res => res.json())</text>
+  <text x="90" y="255" class="code" fill="#e74c3c">.then(data => setUsers(data));</text>
+  <text x="70" y="275" class="code" fill="#e74c3c">}, [users]);</text>
+  
+  <text x="70" y="295" class="code" fill="#e74c3c" font-weight="bold">// ⚠️ setUsers crea nuevo array → users cambia</text>
+  
+  <!-- Good Example -->
+  <rect x="460" y="100" width="390" height="220" rx="10" class="good"/>
+  <text x="655" y="130" text-anchor="middle" class="label" fill="white" font-weight="bold">✅ CORRECTO</text>
+  
+  <rect x="470" y="145" width="370" height="165" rx="5" fill="#2d2d2d"/>
+  <text x="480" y="165" class="code">const [users, setUsers] = useState([]);</text>
+  
+  <text x="480" y="195" class="code">useEffect(() => {</text>
+  <text x="490" y="215" class="code">fetch('/api/users')</text>
+  <text x="500" y="235" class="code">.then(res => res.json())</text>
+  <text x="500" y="255" class="code">.then(data => setUsers(data));</text>
+  <text x="480" y="275" class="code" fill="#27ae60">}, []);</text>
+  
+  <text x="480" y="295" class="code" fill="#27ae60" font-weight="bold">// ✅ Array vacío: solo se ejecuta una vez</text>
+  
+  <!-- Explanation -->
+  <rect x="50" y="350" width="800" height="230" rx="10" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="60" y="380" class="label" font-weight="bold" font-size="18">¿Por qué sucede?</text>
+  
+  <text x="60" y="410" class="code" font-weight="bold" fill="#61DAFB">Comparación Superficial (===):</text>
+  <text x="60" y="435" class="code">const arr1 = [1, 2, 3];</text>
+  <text x="60" y="455" class="code">const arr2 = [1, 2, 3];</text>
+  <text x="60" y="475" class="code" fill="#e74c3c">arr1 === arr2  // false (diferentes referencias)</text>
+  
+  <text x="450" y="410" class="code" font-weight="bold" fill="#61DAFB">En useEffect:</text>
+  <text x="450" y="435" class="code">1. Render inicial: users = []</text>
+  <text x="450" y="455" class="code">2. Fetch ejecuta → setUsers([...])</text>
+  <text x="450" y="475" class="code" fill="#e74c3c">3. Nuevo array → users cambió → efecto de nuevo</text>
+  <text x="450" y="495" class="code" fill="#e74c3c">4. Loop infinito ♾️</text>
+  
+  <text x="60" y="520" class="label" font-weight="bold" fill="#2ecc71">Soluciones:</text>
+  <text x="60" y="540" class="code" fill="#2ecc71">1. Usar array vacío [] si no necesitas re-fetch</text>
+  <text x="60" y="560" class="code" fill="#2ecc71">2. Usar valores primitivos (id, count, etc.) como deps</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #ecf0f1; }
+      .subtitle { font: 16px sans-serif; fill: #bdc3c7; }
+      .label { font: 14px sans-serif; fill: #ecf0f1; }
+      .code { font: 11px monospace; fill: #ecf0f1; }
+      .good { fill: #27ae60; stroke: #2ecc71; stroke-width: 2; }
+      .bad { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+    </style>
+  </defs>
+  
+  <!-- Dark Background -->
+  <rect width="800" height="650" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" class="title">Cleanup Functions: Prevenir Memory Leaks</text>
+  
+  <!-- Bad Example -->
+  <rect x="50" y="70" width="340" height="260" rx="10" class="bad"/>
+  <text x="220" y="95" text-anchor="middle" class="label" fill="white" font-weight="bold">❌ SIN CLEANUP (Memory Leak)</text>
+  
+  <rect x="60" y="110" width="320" height="210" rx="5" fill="#2d2d2d"/>
+  <text x="70" y="130" class="code">useEffect(() => {</text>
+  <text x="80" y="150" class="code">const timer = setInterval(() => {</text>
+  <text x="90" y="170" class="code">console.log('Tick');</text>
+  <text x="80" y="190" class="code">}, 1000);</text>
+  <text x="70" y="210" class="code">}, []);</text>
+  
+  <text x="70" y="240" class="code" fill="#e74c3c" font-weight="bold">// ⚠️ PROBLEMA:</text>
+  <text x="70" y="260" class="code" fill="#e74c3c">// Timer sigue corriendo después</text>
+  <text x="70" y="280" class="code" fill="#e74c3c">// de desmontar el componente</text>
+  <text x="70" y="300" class="code" fill="#e74c3c">// → MEMORY LEAK</text>
+  
+  <!-- Good Example -->
+  <rect x="410" y="70" width="340" height="260" rx="10" class="good"/>
+  <text x="580" y="95" text-anchor="middle" class="label" fill="white" font-weight="bold">✅ CON CLEANUP (Correcto)</text>
+  
+  <rect x="420" y="110" width="320" height="210" rx="5" fill="#2d2d2d"/>
+  <text x="430" y="130" class="code">useEffect(() => {</text>
+  <text x="440" y="150" class="code">const timer = setInterval(() => {</text>
+  <text x="450" y="170" class="code">console.log('Tick');</text>
+  <text x="440" y="190" class="code">}, 1000);</text>
+  
+  <text x="440" y="220" class="code" fill="#27ae60" font-weight="bold">return () => {</text>
+  <text x="450" y="240" class="code" fill="#27ae60">clearInterval(timer);</text>
+  <text x="440" y="260" class="code" fill="#27ae60">};</text>
+  <text x="430" y="280" class="code">}, []);</text>
+  
+  <text x="430" y="310" class="code" fill="#27ae60">// ✅ Timer se limpia correctamente</text>
+  
+  <!-- Common Cleanup Patterns -->
+  <rect x="50" y="360" width="700" height="270" rx="10" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="60" y="385" class="label" font-weight="bold" font-size="18">Patrones Comunes de Cleanup:</text>
+  
+  <!-- Pattern 1: Timers -->
+  <text x="60" y="415" class="code" font-weight="bold" fill="#61DAFB">1. Timers (setTimeout/setInterval)</text>
+  <text x="70" y="435" class="code">const id = setInterval(fn, 1000);</text>
+  <text x="70" y="455" class="code" fill="#2ecc71">return () => clearInterval(id);</text>
+  
+  <!-- Pattern 2: Event Listeners -->
+  <text x="60" y="485" class="code" font-weight="bold" fill="#61DAFB">2. Event Listeners</text>
+  <text x="70" y="505" class="code">window.addEventListener('scroll', handler);</text>
+  <text x="70" y="525" class="code" fill="#2ecc71">return () => window.removeEventListener('scroll', handler);</text>
+  
+  <!-- Pattern 3: Fetch with AbortController -->
+  <text x="60" y="555" class="code" font-weight="bold" fill="#61DAFB">3. Fetch con AbortController</text>
+  <text x="70" y="575" class="code">const controller = new AbortController();</text>
+  <text x="70" y="595" class="code">fetch('/api', { signal: controller.signal });</text>
+  <text x="70" y="615" class="code" fill="#2ecc71">return () => controller.abort();</text>
+</svg>

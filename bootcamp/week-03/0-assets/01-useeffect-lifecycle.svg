@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <style>
+      .title { font: bold 24px Inter, Roboto, Arial, sans-serif; fill: #ecf0f1; }
+      .subtitle { font: 16px Inter, Roboto, Arial, sans-serif; fill: #bdc3c7; }
+      .label { font: 13px Inter, Roboto, Arial, sans-serif; fill: #ecf0f1; }
+      .label-small { font: 11px Inter, Roboto, Arial, sans-serif; fill: #ecf0f1; }
+      .code { font: 12px 'Fira Code', 'Cascadia Code', Consolas, monospace; fill: #ecf0f1; }
+      .phase { font: bold 14px Inter, Roboto, Arial, sans-serif; fill: #1a1a1a; }
+      .note { font: 13px Inter, Roboto, Arial, sans-serif; fill: #bdc3c7; font-weight: bold; }
+      .arrow { stroke: #61DAFB; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .box { fill: #3178C6; stroke: #61DAFB; stroke-width: 2; }
+      .cleanup-box { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+      .mount-box { fill: #2ecc71; stroke: #27ae60; stroke-width: 2; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#61DAFB" />
+    </marker>
+  </defs>
+  
+  <!-- Dark Background -->
+  <rect width="900" height="600" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" class="title">Ciclo de Vida de useEffect</text>
+  <text x="450" y="65" text-anchor="middle" class="subtitle">Mount → Update → Unmount</text>
+  
+  <!-- Mount Phase -->
+  <rect x="50" y="100" width="220" height="120" rx="10" class="mount-box"/>
+  <text x="160" y="125" text-anchor="middle" class="phase">1. MONTAJE</text>
+  <text x="160" y="148" text-anchor="middle" class="label">Componente se agrega</text>
+  <text x="160" y="165" text-anchor="middle" class="label">al DOM</text>
+  <text x="60" y="190" class="label-small">• useEffect se ejecuta</text>
+  <text x="60" y="207" class="label-small">• Después del primer render</text>
+  
+  <!-- Arrow 1 -->
+  <path d="M 270 160 L 330 160" class="arrow"/>
+  
+  <!-- Update Phase -->
+  <rect x="340" y="100" width="220" height="120" rx="10" class="box"/>
+  <text x="450" y="125" text-anchor="middle" class="phase">2. ACTUALIZACIÓN</text>
+  <text x="450" y="148" text-anchor="middle" class="label">Dependencias cambian</text>
+  <text x="350" y="175" class="label-small">• Cleanup anterior (si hay)</text>
+  <text x="350" y="192" class="label-small">• useEffect se ejecuta</text>
+  <text x="350" y="209" class="label-small">  de nuevo</text>
+  
+  <!-- Arrow 2 -->
+  <path d="M 560 160 L 620 160" class="arrow"/>
+  
+  <!-- Unmount Phase -->
+  <rect x="630" y="100" width="220" height="120" rx="10" class="cleanup-box"/>
+  <text x="740" y="125" text-anchor="middle" class="phase">3. DESMONTAJE</text>
+  <text x="740" y="148" text-anchor="middle" class="label">Componente se remueve</text>
+  <text x="640" y="175" class="label-small">• Cleanup se ejecuta</text>
+  <text x="640" y="192" class="label-small">• Limpieza de recursos</text>
+  
+  <!-- Code Examples -->
+  <rect x="50" y="260" width="800" height="300" rx="10" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="60" y="285" class="code">useEffect(() =&gt; {</text>
+  <text x="80" y="305" class="code" fill="#2ecc71">// 1. MONTAJE + 2. ACTUALIZACIÓN</text>
+  <text x="80" y="325" class="code">console.log('Efecto ejecutado');</text>
+  <text x="80" y="345" class="code">const timer = setInterval(() =&gt; {</text>
+  <text x="100" y="365" class="code">console.log('Tick');</text>
+  <text x="80" y="385" class="code">}, 1000);</text>
+  <text x="480" y="285" class="note">← Se ejecuta después del render</text>
+  
+  <text x="80" y="420" class="code" fill="#e74c3c">// 3. DESMONTAJE (Cleanup)</text>
+  <text x="80" y="440" class="code">return () =&gt; {</text>
+  <text x="100" y="460" class="code">console.log('Limpieza');</text>
+  <text x="100" y="480" class="code">clearInterval(timer);</text>
+  <text x="80" y="500" class="code">};</text>
+  <text x="480" y="440" class="note">← Antes de nuevo efecto o desmontaje</text>
+  
+  <text x="60" y="530" class="code">}, [count]);</text>
+  <text x="200" y="530" class="note" fill="#61DAFB">← Dependencias: si cambian, se re-ejecuta</text>
+</svg>

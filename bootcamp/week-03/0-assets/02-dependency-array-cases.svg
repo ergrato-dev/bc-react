@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <defs>
+    <style>
+      .title { font: bold 24px Inter, Roboto, Arial, sans-serif; fill: #ecf0f1; }
+      .subtitle { font: 16px Inter, Roboto, Arial, sans-serif; fill: #bdc3c7; }
+      .label { font: 14px Inter, Roboto, Arial, sans-serif; fill: #ecf0f1; }
+      .code { font: 12px 'Fira Code', 'Cascadia Code', Consolas, monospace; fill: #ecf0f1; }
+      .highlight { font: bold 14px Inter, Roboto, Arial, sans-serif; fill: #e74c3c; }
+      .good { fill: #2ecc71; stroke: #27ae60; stroke-width: 2; }
+      .warning { fill: #f39c12; stroke: #e67e22; stroke-width: 2; }
+      .bad { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+    </style>
+  </defs>
+  
+  <!-- Dark Background -->
+  <rect width="1000" height="700" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" class="title">Array de Dependencias: 3 Casos</text>
+  
+  <!-- Case 1: No array -->
+  <rect x="50" y="80" width="280" height="180" rx="10" class="bad"/>
+  <text x="190" y="110" text-anchor="middle" class="label" fill="white" font-weight="bold">❌ SIN ARRAY</text>
+  <rect x="60" y="125" width="260" height="130" rx="5" fill="#2d2d2d"/>
+  <text x="70" y="145" class="code">useEffect(() =&gt; {</text>
+  <text x="80" y="165" class="code">console.log('Efecto');</text>
+  <text x="70" y="185" class="code">});</text>
+  <text x="70" y="215" class="highlight" font-size="12">⚠️ Se ejecuta después</text>
+  <text x="70" y="235" class="highlight" font-size="12">de CADA render</text>
+  
+  <!-- Case 2: Empty array -->
+  <rect x="360" y="80" width="280" height="180" rx="10" class="good"/>
+  <text x="500" y="110" text-anchor="middle" class="label" fill="white" font-weight="bold">✅ ARRAY VACÍO []</text>
+  <rect x="370" y="125" width="260" height="130" rx="5" fill="#2d2d2d"/>
+  <text x="380" y="145" class="code">useEffect(() =&gt; {</text>
+  <text x="390" y="165" class="code">console.log('Mount');</text>
+  <text x="380" y="185" class="code">}, []);</text>
+  <text x="380" y="215" class="label" fill="#2ecc71" font-size="12">✅ Solo en montaje</text>
+  <text x="380" y="235" class="label" fill="#2ecc71" font-size="12">(una sola vez)</text>
+  
+  <!-- Case 3: With dependencies -->
+  <rect x="670" y="80" width="280" height="180" rx="10" class="warning"/>
+  <text x="810" y="110" text-anchor="middle" class="label" fill="white" font-weight="bold">⚠️ CON DEPENDENCIAS</text>
+  <rect x="680" y="125" width="260" height="130" rx="5" fill="#2d2d2d"/>
+  <text x="690" y="145" class="code">useEffect(() =&gt; {</text>
+  <text x="700" y="165" class="code">console.log(count);</text>
+  <text x="690" y="185" class="code">}, [count]);</text>
+  <text x="690" y="215" class="label" fill="#f39c12" font-size="12">⚠️ Cuando count cambia</text>
+  <text x="690" y="235" class="label" fill="#f39c12" font-size="12">+ montaje inicial</text>
+  
+  <!-- Comparison Table -->
+  <rect x="50" y="300" width="900" height="350" rx="10" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  
+  <!-- Table Header -->
+  <rect x="60" y="310" width="880" height="40" fill="#3178C6"/>
+  <text x="70" y="335" class="label" fill="white" font-weight="bold">Caso</text>
+  <text x="200" y="335" class="label" fill="white" font-weight="bold">Código</text>
+  <text x="420" y="335" class="label" fill="white" font-weight="bold">¿Cuándo se ejecuta?</text>
+  <text x="720" y="335" class="label" fill="white" font-weight="bold">Uso común</text>
+  
+  <!-- Row 1: No array -->
+  <text x="70" y="375" class="code" fill="#e74c3c" font-weight="bold">Sin array</text>
+  <text x="200" y="375" class="code">}); // nada</text>
+  <text x="420" y="375" class="code">Después de cada render</text>
+  <text x="720" y="375" class="code" fill="#e74c3c">❌ Evitar (casi nunca)</text>
+  
+  <!-- Row 2: Empty array -->
+  <rect x="60" y="390" width="880" height="80" fill="#1e4d2b"/>
+  <text x="70" y="415" class="code" fill="#2ecc71" font-weight="bold">Array vacío</text>
+  <text x="200" y="415" class="code">}, []);</text>
+  <text x="420" y="415" class="code">Solo al montar</text>
+  <text x="720" y="415" class="code">✅ Fetch inicial</text>
+  <text x="420" y="435" class="code" font-style="italic">(= componentDidMount)</text>
+  <text x="720" y="435" class="code">✅ Subscripciones</text>
+  <text x="720" y="455" class="code">✅ Listeners globales</text>
+  
+  <!-- Row 3: With dependencies -->
+  <text x="70" y="495" class="code" fill="#f39c12" font-weight="bold">Con deps</text>
+  <text x="200" y="495" class="code">}, [a, b]);</text>
+  <text x="420" y="495" class="code">Montar + al cambiar deps</text>
+  <text x="720" y="495" class="code">✅ Filtros / búsqueda</text>
+  <text x="420" y="515" class="code" font-style="italic">(comparación shallow)</text>
+  <text x="720" y="515" class="code">✅ Fetch con params</text>
+  <text x="720" y="535" class="code">✅ Sincronizar state</text>
+  
+  <!-- Important Notes -->
+  <rect x="60" y="560" width="880" height="80" fill="#3d3416" stroke="#f39c12" stroke-width="2"/>
+  <text x="70" y="585" class="label" fill="#ffc107" font-weight="bold">⚠️ Reglas Importantes:</text>
+  <text x="70" y="605" class="code" fill="#ffc107">1. ESLint advertirá si faltan dependencias (usa eslint-plugin-react-hooks)</text>
+  <text x="70" y="625" class="code" fill="#ffc107">2. Comparación superficial: objetos/arrays nuevos siempre son "diferentes"</text>
+</svg>
