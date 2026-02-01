@@ -12,7 +12,13 @@
 
 ---
 
-## 📋 ¿Qué es el Estado?
+## � Diagrama: Flujo de useState
+
+![Flujo de useState](../0-assets/05-usestate-flow.svg)
+
+---
+
+## �📋 ¿Qué es el Estado?
 
 El **estado** (state) es información que el componente puede recordar y que, cuando cambia, provoca que el componente se re-renderice.
 

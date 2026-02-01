@@ -12,7 +12,13 @@
 
 ---
 
-## 📋 ¿Qué son los Eventos Sintéticos?
+## � Diagrama: Manejo de Eventos
+
+![Manejo de Eventos](../0-assets/06-event-handling.svg)
+
+---
+
+## �📋 ¿Qué son los Eventos Sintéticos?
 
 Los **eventos sintéticos** (SyntheticEvent) son objetos que React crea para envolver eventos nativos del navegador, proporcionando una API consistente entre navegadores.
 

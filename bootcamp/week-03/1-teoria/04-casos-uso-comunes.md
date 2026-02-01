@@ -10,7 +10,19 @@
 
 ---
 
-## 💡 Caso 1: Fetching de Datos
+## � Diagramas
+
+### Casos de Uso Comunes
+
+![Casos de Uso Comunes](../0-assets/06-common-use-cases.svg)
+
+### Patrón de Fetch con Estados
+
+![Patrón de Fetch](../0-assets/04-fetch-pattern.svg)
+
+---
+
+## �💡 Caso 1: Fetching de Datos
 
 El caso de uso más común: obtener datos desde una API.
 

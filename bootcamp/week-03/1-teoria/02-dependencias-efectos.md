@@ -10,7 +10,13 @@
 
 ---
 
-## 📋 Array de Dependencias
+## � Diagrama: Los 3 Casos del Array de Dependencias
+
+![Array de Dependencias: 3 Casos](../0-assets/02-dependency-array-cases.svg)
+
+---
+
+## �📋 Array de Dependencias
 
 El segundo parámetro de useEffect es un **array de dependencias** que controla **cuándo** se ejecuta el efecto.
 
@@ -454,6 +460,10 @@ const Fixed3: React.FC = () => {
 ---
 
 ## 🔍 Dependencias con Objetos y Arrays
+
+### 📊 Diagrama: Comparación Superficial
+
+![Comparación Superficial](../0-assets/05-shallow-comparison.svg)
 
 **Problema**: Objetos y arrays se comparan por referencia, no por valor.
 

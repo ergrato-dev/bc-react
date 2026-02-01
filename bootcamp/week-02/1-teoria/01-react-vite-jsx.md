@@ -10,7 +10,19 @@
 
 ---
 
-## 📋 ¿Qué es React?
+## � Diagramas
+
+### Virtual DOM
+
+![Virtual DOM](../0-assets/01-virtual-dom.svg)
+
+### Compilación de JSX
+
+![Compilación de JSX](../0-assets/02-jsx-compilation.svg)
+
+---
+
+## �📋 ¿Qué es React?
 
 **React** es una biblioteca de JavaScript (desarrollada por Facebook/Meta) para construir interfaces de usuario. Se centra en la **capa de vista** (UI) y es declarativo, basado en componentes y multiplataforma.
 

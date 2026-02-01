@@ -1076,14 +1076,30 @@ Cuando trabajes en este proyecto:
 
 Cuando crees contenido para una nueva semana:
 
+### 📋 Orden de Creación (OBLIGATORIO)
+
+Seguir este orden exacto para cada semana:
+
+1. **README.md** - Descripción y objetivos de la semana
+2. **rubrica-evaluacion.md** - Criterios de evaluación detallados
+3. **1-teoria/** - Material teórico (archivos .md)
+4. **0-assets/** - Diagramas SVG (tema dark, sin degradés)
+5. **2-ejercicios/** - Ejercicios guiados (starter + solution)
+6. **3-proyecto/** - Proyecto semanal (README + starter + solution)
+7. **4-recursos/** - Recursos adicionales (ebooks, videos, webgrafia)
+8. **5-glosario/** - Términos clave de la semana (A-Z)
+
+### ✔️ Verificaciones Finales
+
 - [ ] Crear estructura de carpetas completa
 - [ ] README.md con objetivos y estructura
+- [ ] Rúbrica de evaluación con criterios claros
 - [ ] Material teórico en 1-teoria/
+- [ ] Assets SVG con tema dark (#1a1a1a, sin gradientes)
 - [ ] Ejercicios prácticos en 2-ejercicios/
 - [ ] Proyecto integrador en 3-proyecto/
 - [ ] Recursos adicionales en 4-recursos/
 - [ ] Glosario de términos en 5-glosario/
-- [ ] Rúbrica de evaluación
 - [ ] Verificar coherencia con semanas anteriores
 - [ ] Revisar progresión de dificultad
 - [ ] Probar código de ejemplos

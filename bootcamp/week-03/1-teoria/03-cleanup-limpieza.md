@@ -10,7 +10,13 @@
 
 ---
 
-## 📋 ¿Qué es una Función de Cleanup?
+## � Diagrama: Patrones de Cleanup
+
+![Patrones de Cleanup](../0-assets/03-cleanup-patterns.svg)
+
+---
+
+## �📋 ¿Qué es una Función de Cleanup?
 
 Una **función de cleanup** (limpieza) es código que se ejecuta para **deshacer** o **limpiar** lo que hizo tu efecto.
 

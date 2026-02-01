@@ -12,7 +12,13 @@
 
 ---
 
-## 📋 ¿Qué son las Props?
+## � Diagrama: Flujo de Props
+
+![Flujo de Props](../0-assets/04-props-flow.svg)
+
+---
+
+## �📋 ¿Qué son las Props?
 
 **Props** (abreviatura de "properties") son argumentos que se pasan a los componentes React, similar a los parámetros de una función.
 

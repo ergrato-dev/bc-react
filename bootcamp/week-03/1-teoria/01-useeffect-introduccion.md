@@ -10,7 +10,13 @@
 
 ---
 
-## 📋 ¿Qué es useEffect?
+## � Diagrama: Ciclo de Vida de useEffect
+
+![Ciclo de Vida de useEffect](../0-assets/01-useeffect-lifecycle.svg)
+
+---
+
+## �📋 ¿Qué es useEffect?
 
 **useEffect** es un hook de React que permite ejecutar **efectos secundarios** (side effects) en componentes funcionales.
 

@@ -11,7 +11,13 @@
 
 ---
 
-## 📋 ¿Qué es un Componente?
+## � Diagrama: Árbol de Componentes
+
+![Árbol de Componentes](../0-assets/03-component-tree.svg)
+
+---
+
+## �📋 ¿Qué es un Componente?
 
 Un **componente** es una pieza reutilizable de UI que puede tener su propia lógica y estado.
 
