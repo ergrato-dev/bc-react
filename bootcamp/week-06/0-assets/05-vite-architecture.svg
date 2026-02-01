@@ -1,0 +1,85 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowVite" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="800" height="450" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">
+    Arquitectura de Vite + React
+  </text>
+  
+  <!-- Logo Vite -->
+  <rect x="350" y="55" width="100" height="40" rx="6" fill="#646CFF"/>
+  <text x="400" y="82" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Vite</text>
+  
+  <!-- Desarrollo -->
+  <rect x="50" y="120" width="320" height="310" rx="8" fill="#2d2d2d" stroke="#4ade80" stroke-width="2"/>
+  <text x="210" y="150" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">⚡ DESARROLLO</text>
+  
+  <!-- ESBuild -->
+  <rect x="70" y="170" width="130" height="60" rx="6" fill="#252525" stroke="#f59e0b" stroke-width="1"/>
+  <text x="135" y="195" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">ESBuild</text>
+  <text x="135" y="215" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">Transpilación</text>
+  <text x="135" y="227" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">ultra-rápida</text>
+  
+  <!-- Native ESM -->
+  <rect x="220" y="170" width="130" height="60" rx="6" fill="#252525" stroke="#61DAFB" stroke-width="1"/>
+  <text x="285" y="195" text-anchor="middle" fill="#61DAFB" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Native ESM</text>
+  <text x="285" y="215" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">Sin bundling</text>
+  <text x="285" y="227" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">en desarrollo</text>
+  
+  <!-- HMR -->
+  <rect x="70" y="250" width="280" height="50" rx="6" fill="#252525" stroke="#f472b6" stroke-width="1"/>
+  <text x="210" y="275" text-anchor="middle" fill="#f472b6" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">🔥 Hot Module Replacement (HMR)</text>
+  <text x="210" y="292" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">Actualización instantánea sin perder estado</text>
+  
+  <!-- Dev Server -->
+  <rect x="70" y="315" width="280" height="50" rx="6" fill="#252525" stroke="#3178C6" stroke-width="1"/>
+  <text x="210" y="340" text-anchor="middle" fill="#3178C6" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Dev Server</text>
+  <text x="210" y="357" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">localhost:3000 • Proxy API • CORS handling</text>
+  
+  <!-- Tiempos desarrollo -->
+  <text x="210" y="400" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="12">Inicio: &lt; 1s • HMR: &lt; 50ms</text>
+  
+  <!-- Producción -->
+  <rect x="430" y="120" width="320" height="310" rx="8" fill="#2d2d2d" stroke="#f59e0b" stroke-width="2"/>
+  <text x="590" y="150" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">📦 PRODUCCIÓN</text>
+  
+  <!-- Rollup -->
+  <rect x="450" y="170" width="130" height="60" rx="6" fill="#252525" stroke="#ef4444" stroke-width="1"/>
+  <text x="515" y="195" text-anchor="middle" fill="#ef4444" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Rollup</text>
+  <text x="515" y="215" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">Bundling</text>
+  <text x="515" y="227" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">optimizado</text>
+  
+  <!-- Terser -->
+  <rect x="600" y="170" width="130" height="60" rx="6" fill="#252525" stroke="#a855f7" stroke-width="1"/>
+  <text x="665" y="195" text-anchor="middle" fill="#a855f7" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Terser</text>
+  <text x="665" y="215" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">Minificación</text>
+  <text x="665" y="227" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">código</text>
+  
+  <!-- Code Splitting -->
+  <rect x="450" y="250" width="280" height="50" rx="6" fill="#252525" stroke="#4ade80" stroke-width="1"/>
+  <text x="590" y="275" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Code Splitting Automático</text>
+  <text x="590" y="292" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">vendor.js • main.js • lazy chunks</text>
+  
+  <!-- Output -->
+  <rect x="450" y="315" width="280" height="50" rx="6" fill="#252525" stroke="#61DAFB" stroke-width="1"/>
+  <text x="590" y="340" text-anchor="middle" fill="#61DAFB" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">dist/</text>
+  <text x="590" y="357" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">index.html • assets/ • chunks/</text>
+  
+  <!-- Tiempos producción -->
+  <text x="590" y="400" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="12">Build: ~10s • Bundle: optimizado</text>
+  
+  <!-- Flechas -->
+  <path d="M 370 95 L 210 120" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowVite)"/>
+  <path d="M 430 95 L 590 120" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#arrowVite)"/>
+  
+  <!-- Comandos -->
+  <text x="210" y="420" text-anchor="middle" fill="#61DAFB" font-family="monospace" font-size="12">pnpm dev</text>
+  <text x="590" y="420" text-anchor="middle" fill="#61DAFB" font-family="monospace" font-size="12">pnpm build</text>
+</svg>

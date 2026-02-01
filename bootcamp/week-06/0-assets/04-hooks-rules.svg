@@ -1,0 +1,78 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo -->
+  <rect width="800" height="400" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">
+    Reglas de los Hooks
+  </text>
+  
+  <!-- Regla 1 -->
+  <rect x="50" y="60" width="340" height="150" rx="8" fill="#2d2d2d" stroke="#ef4444" stroke-width="2"/>
+  <text x="220" y="90" text-anchor="middle" fill="#ef4444" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">
+    ❌ Regla 1: Solo en Nivel Superior
+  </text>
+  
+  <text x="70" y="120" fill="#C586C0" font-family="monospace" font-size="11">// ❌ MAL: dentro de condicional</text>
+  <text x="70" y="140" fill="#C586C0" font-family="monospace" font-size="11">if</text>
+  <text x="90" y="140" fill="#ffffff" font-family="monospace" font-size="11">(condition) {</text>
+  <text x="80" y="158" fill="#DCDCAA" font-family="monospace" font-size="11">useState</text>
+  <text x="140" y="158" fill="#ffffff" font-family="monospace" font-size="11">(0);</text>
+  <text x="175" y="158" fill="#ef4444" font-family="monospace" font-size="11">// ERROR</text>
+  <text x="70" y="176" fill="#ffffff" font-family="monospace" font-size="11">}</text>
+  
+  <text x="70" y="198" fill="#6A9955" font-family="monospace" font-size="11">// ❌ MAL: dentro de loop</text>
+  
+  <!-- Regla 1 Correcta -->
+  <rect x="410" y="60" width="340" height="150" rx="8" fill="#2d2d2d" stroke="#4ade80" stroke-width="2"/>
+  <text x="580" y="90" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">
+    ✅ Correcto: Nivel Superior
+  </text>
+  
+  <text x="430" y="120" fill="#6A9955" font-family="monospace" font-size="11">// ✅ BIEN: siempre se ejecuta</text>
+  <text x="430" y="140" fill="#C586C0" font-family="monospace" font-size="11">const</text>
+  <text x="470" y="140" fill="#ffffff" font-family="monospace" font-size="11">[value, setValue] =</text>
+  <text x="620" y="140" fill="#DCDCAA" font-family="monospace" font-size="11">useState</text>
+  <text x="690" y="140" fill="#ffffff" font-family="monospace" font-size="11">(0);</text>
+  
+  <text x="430" y="165" fill="#6A9955" font-family="monospace" font-size="11">// Condición en la lógica</text>
+  <text x="430" y="185" fill="#C586C0" font-family="monospace" font-size="11">const</text>
+  <text x="470" y="185" fill="#9CDCFE" font-family="monospace" font-size="11">result</text>
+  <text x="515" y="185" fill="#ffffff" font-family="monospace" font-size="11">= condition ? value : 0;</text>
+  
+  <!-- Regla 2 -->
+  <rect x="50" y="225" width="340" height="160" rx="8" fill="#2d2d2d" stroke="#ef4444" stroke-width="2"/>
+  <text x="220" y="255" text-anchor="middle" fill="#ef4444" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">
+    ❌ Regla 2: Solo en React
+  </text>
+  
+  <text x="70" y="285" fill="#C586C0" font-family="monospace" font-size="11">// ❌ MAL: función regular</text>
+  <text x="70" y="305" fill="#C586C0" font-family="monospace" font-size="11">function</text>
+  <text x="140" y="305" fill="#DCDCAA" font-family="monospace" font-size="11">helper</text>
+  <text x="185" y="305" fill="#ffffff" font-family="monospace" font-size="11">() {</text>
+  <text x="80" y="325" fill="#DCDCAA" font-family="monospace" font-size="11">useState</text>
+  <text x="145" y="325" fill="#ffffff" font-family="monospace" font-size="11">();</text>
+  <text x="175" y="325" fill="#ef4444" font-family="monospace" font-size="11">// ERROR</text>
+  <text x="70" y="345" fill="#ffffff" font-family="monospace" font-size="11">}</text>
+  
+  <text x="70" y="370" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">No es componente ni custom hook</text>
+  
+  <!-- Regla 2 Correcta -->
+  <rect x="410" y="225" width="340" height="160" rx="8" fill="#2d2d2d" stroke="#4ade80" stroke-width="2"/>
+  <text x="580" y="255" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">
+    ✅ Correcto: En React
+  </text>
+  
+  <text x="430" y="285" fill="#6A9955" font-family="monospace" font-size="11">// ✅ BIEN: en componente</text>
+  <text x="430" y="305" fill="#C586C0" font-family="monospace" font-size="11">const</text>
+  <text x="470" y="305" fill="#DCDCAA" font-family="monospace" font-size="11">MyComponent</text>
+  <text x="560" y="305" fill="#ffffff" font-family="monospace" font-size="11">= () =&gt; {</text>
+  <text x="440" y="325" fill="#DCDCAA" font-family="monospace" font-size="11">useState</text>
+  <text x="505" y="325" fill="#ffffff" font-family="monospace" font-size="11">();</text>
+  <text x="535" y="325" fill="#4ade80" font-family="monospace" font-size="11">// OK</text>
+  
+  <text x="430" y="350" fill="#6A9955" font-family="monospace" font-size="11">// ✅ BIEN: en custom hook</text>
+  <text x="430" y="370" fill="#C586C0" font-family="monospace" font-size="11">const</text>
+  <text x="470" y="370" fill="#DCDCAA" font-family="monospace" font-size="11">useMyHook</text>
+  <text x="550" y="370" fill="#ffffff" font-family="monospace" font-size="11">= () =&gt; ...</text>
+</svg>
