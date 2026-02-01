@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+    <marker id="ar-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981"/>
+    </marker>
+    <marker id="ar-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="600" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Patrones Avanzados</text>
+  
+  <!-- Optimistic Updates Section -->
+  <rect x="30" y="55" width="420" height="250" rx="8" fill="#2d2d2d" stroke="#f59e0b" stroke-width="2"/>
+  <text x="240" y="80" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Optimistic Updates</text>
+  
+  <!-- Steps -->
+  <rect x="50" y="100" width="90" height="55" rx="4" fill="#61DAFB" fill-opacity="0.2" stroke="#61DAFB" stroke-width="1"/>
+  <text x="95" y="120" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">1. Click</text>
+  <text x="95" y="140" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="middle">User action</text>
+  
+  <line x1="140" y1="127" x2="160" y2="127" stroke="#61DAFB" stroke-width="1" marker-end="url(#ar)"/>
+  
+  <rect x="160" y="100" width="90" height="55" rx="4" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1"/>
+  <text x="205" y="120" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">2. onMutate</text>
+  <text x="205" y="135" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="middle">Update cache</text>
+  <text x="205" y="148" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="middle">Save snapshot</text>
+  
+  <line x1="250" y1="127" x2="270" y2="127" stroke="#f59e0b" stroke-width="1" marker-end="url(#ar)"/>
+  
+  <rect x="270" y="100" width="90" height="55" rx="4" fill="#3178C6" fill-opacity="0.2" stroke="#3178C6" stroke-width="1"/>
+  <text x="315" y="120" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">3. API Call</text>
+  <text x="315" y="140" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="middle">Background</text>
+  
+  <line x1="360" y1="127" x2="380" y2="127" stroke="#10b981" stroke-width="1" marker-end="url(#ar-green)"/>
+  
+  <rect x="380" y="100" width="50" height="55" rx="4" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1"/>
+  <text x="405" y="120" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">✓</text>
+  <text x="405" y="140" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="middle">Done</text>
+  
+  <!-- Error path -->
+  <line x1="315" y1="155" x2="315" y2="180" stroke="#ef4444" stroke-width="1"/>
+  <line x1="315" y1="180" x2="205" y2="180" stroke="#ef4444" stroke-width="1" marker-end="url(#ar-red)"/>
+  <text x="260" y="175" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="9">Error → Rollback</text>
+  
+  <rect x="160" y="170" width="90" height="35" rx="4" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1"/>
+  <text x="205" y="192" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="middle">Restore snapshot</text>
+  
+  <!-- Code snippet -->
+  <rect x="50" y="215" width="380" height="75" rx="4" fill="#1a1a1a" stroke="#444444" stroke-width="1"/>
+  <text x="70" y="235" fill="#f59e0b" font-family="monospace" font-size="10">onMutate: async (newData) =&gt; {</text>
+  <text x="80" y="250" fill="#888888" font-family="monospace" font-size="10">const prev = queryClient.getQueryData(key)</text>
+  <text x="80" y="265" fill="#888888" font-family="monospace" font-size="10">queryClient.setQueryData(key, newData)</text>
+  <text x="80" y="280" fill="#10b981" font-family="monospace" font-size="10">return { prev } // for rollback</text>
+  <text x="70" y="285" fill="#f59e0b" font-family="monospace" font-size="10">}</text>
+  
+  <!-- Infinite Queries Section -->
+  <rect x="470" y="55" width="400" height="250" rx="8" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="670" y="80" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Infinite Queries</text>
+  
+  <!-- Pages visualization -->
+  <rect x="490" y="100" width="80" height="50" rx="4" fill="#61DAFB" fill-opacity="0.3" stroke="#61DAFB" stroke-width="1"/>
+  <text x="530" y="130" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" text-anchor="middle">Page 1</text>
+  
+  <rect x="580" y="100" width="80" height="50" rx="4" fill="#61DAFB" fill-opacity="0.2" stroke="#61DAFB" stroke-width="1"/>
+  <text x="620" y="130" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" text-anchor="middle">Page 2</text>
+  
+  <rect x="670" y="100" width="80" height="50" rx="4" fill="#61DAFB" fill-opacity="0.1" stroke="#61DAFB" stroke-width="1"/>
+  <text x="710" y="130" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" text-anchor="middle">Page 3</text>
+  
+  <rect x="760" y="100" width="80" height="50" rx="4" fill="#888888" fill-opacity="0.1" stroke="#888888" stroke-width="1" stroke-dasharray="4"/>
+  <text x="800" y="130" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="11" text-anchor="middle">...</text>
+  
+  <!-- Hook info -->
+  <rect x="490" y="165" width="360" height="125" rx="4" fill="#1a1a1a" stroke="#444444" stroke-width="1"/>
+  <text x="510" y="185" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">useInfiniteQuery()</text>
+  
+  <text x="510" y="210" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">data.pages[]</text>
+  <text x="620" y="210" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="10">Array de páginas</text>
+  
+  <text x="510" y="230" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">fetchNextPage()</text>
+  <text x="630" y="230" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="10">Cargar siguiente</text>
+  
+  <text x="510" y="250" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">hasNextPage</text>
+  <text x="610" y="250" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="10">¿Hay más datos?</text>
+  
+  <text x="510" y="270" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">getNextPageParam()</text>
+  <text x="645" y="270" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="10">Cursor/offset</text>
+  
+  <!-- Suspense Section -->
+  <rect x="30" y="320" width="420" height="135" rx="8" fill="#2d2d2d" stroke="#ec4899" stroke-width="2"/>
+  <text x="240" y="345" fill="#ec4899" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Suspense Mode</text>
+  
+  <rect x="50" y="365" width="180" height="75" rx="4" fill="#1a1a1a" stroke="#444444" stroke-width="1"/>
+  <text x="70" y="385" fill="#ec4899" font-family="monospace" font-size="10">&lt;Suspense fallback={...}&gt;</text>
+  <text x="80" y="405" fill="#888888" font-family="monospace" font-size="10">&lt;Component /&gt;</text>
+  <text x="70" y="425" fill="#ec4899" font-family="monospace" font-size="10">&lt;/Suspense&gt;</text>
+  
+  <rect x="250" y="365" width="180" height="75" rx="4" fill="#1a1a1a" stroke="#444444" stroke-width="1"/>
+  <text x="270" y="385" fill="#61DAFB" font-family="monospace" font-size="10">useSuspenseQuery()</text>
+  <text x="270" y="410" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9">• No isLoading state</text>
+  <text x="270" y="425" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9">• data always defined</text>
+  
+  <!-- Parallel Queries Section -->
+  <rect x="470" y="320" width="400" height="135" rx="8" fill="#2d2d2d" stroke="#10b981" stroke-width="2"/>
+  <text x="670" y="345" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Parallel &amp; Dependent Queries</text>
+  
+  <!-- Parallel -->
+  <rect x="490" y="365" width="170" height="75" rx="4" fill="#1a1a1a" stroke="#10b981" stroke-width="1"/>
+  <text x="575" y="385" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Parallel</text>
+  <text x="510" y="405" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9">useQueries()</text>
+  <text x="510" y="420" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9">Multiple simultaneous</text>
+  <text x="510" y="433" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9">requests</text>
+  
+  <!-- Dependent -->
+  <rect x="680" y="365" width="170" height="75" rx="4" fill="#1a1a1a" stroke="#f59e0b" stroke-width="1"/>
+  <text x="765" y="385" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Dependent</text>
+  <text x="700" y="405" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9">enabled: !!data</text>
+  <text x="700" y="420" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9">Query waits for</text>
+  <text x="700" y="433" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9">another query</text>
+  
+  <!-- Error Handling Section -->
+  <rect x="30" y="470" width="840" height="115" rx="8" fill="#2d2d2d" stroke="#ef4444" stroke-width="2"/>
+  <text x="450" y="495" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Advanced Error Handling</text>
+  
+  <rect x="50" y="515" width="200" height="55" rx="4" fill="#1a1a1a" stroke="#444444" stroke-width="1"/>
+  <text x="150" y="535" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">ErrorBoundary</text>
+  <text x="150" y="555" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="middle">Catch errors declaratively</text>
+  
+  <rect x="270" y="515" width="200" height="55" rx="4" fill="#1a1a1a" stroke="#444444" stroke-width="1"/>
+  <text x="370" y="535" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">retry: (count, error)</text>
+  <text x="370" y="555" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="middle">Custom retry logic</text>
+  
+  <rect x="490" y="515" width="200" height="55" rx="4" fill="#1a1a1a" stroke="#444444" stroke-width="1"/>
+  <text x="590" y="535" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">QueryCache.onError</text>
+  <text x="590" y="555" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="middle">Global error handler</text>
+  
+  <rect x="710" y="515" width="140" height="55" rx="4" fill="#1a1a1a" stroke="#444444" stroke-width="1"/>
+  <text x="780" y="535" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">retryDelay</text>
+  <text x="780" y="555" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9" text-anchor="middle">Exp. backoff</text>
+</svg>

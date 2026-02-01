@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3178C6"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="600" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Arquitectura de React Query</text>
+  
+  <!-- React Components Section -->
+  <rect x="30" y="80" width="260" height="200" rx="8" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="160" y="110" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">React Components</text>
+  
+  <rect x="50" y="130" width="100" height="50" rx="4" fill="#1a1a1a" stroke="#61DAFB" stroke-width="1"/>
+  <text x="100" y="160" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle">useQuery</text>
+  
+  <rect x="170" y="130" width="100" height="50" rx="4" fill="#1a1a1a" stroke="#61DAFB" stroke-width="1"/>
+  <text x="220" y="160" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle">useMutation</text>
+  
+  <rect x="50" y="200" width="100" height="50" rx="4" fill="#1a1a1a" stroke="#61DAFB" stroke-width="1"/>
+  <text x="100" y="230" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle">useQueryClient</text>
+  
+  <rect x="170" y="200" width="100" height="50" rx="4" fill="#1a1a1a" stroke="#61DAFB" stroke-width="1"/>
+  <text x="220" y="230" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle">useQueries</text>
+  
+  <!-- QueryClient Section -->
+  <rect x="320" y="80" width="260" height="200" rx="8" fill="#2d2d2d" stroke="#3178C6" stroke-width="2"/>
+  <text x="450" y="110" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">QueryClient</text>
+  
+  <rect x="340" y="130" width="220" height="60" rx="4" fill="#1a1a1a" stroke="#3178C6" stroke-width="1"/>
+  <text x="450" y="155" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle">Query Cache</text>
+  <text x="450" y="175" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Almacena datos de queries</text>
+  
+  <rect x="340" y="200" width="220" height="60" rx="4" fill="#1a1a1a" stroke="#3178C6" stroke-width="1"/>
+  <text x="450" y="225" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle">Mutation Cache</text>
+  <text x="450" y="245" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Almacena estado de mutations</text>
+  
+  <!-- Server Section -->
+  <rect x="610" y="80" width="260" height="200" rx="8" fill="#2d2d2d" stroke="#10b981" stroke-width="2"/>
+  <text x="740" y="110" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Server / API</text>
+  
+  <rect x="630" y="140" width="220" height="40" rx="4" fill="#1a1a1a" stroke="#10b981" stroke-width="1"/>
+  <text x="740" y="165" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle">REST API / GraphQL</text>
+  
+  <rect x="630" y="195" width="220" height="40" rx="4" fill="#1a1a1a" stroke="#10b981" stroke-width="1"/>
+  <text x="740" y="220" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle">Database</text>
+  
+  <!-- Arrows between sections -->
+  <line x1="290" y1="180" x2="320" y2="180" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="580" y1="180" x2="610" y2="180" stroke="#3178C6" stroke-width="2" marker-end="url(#arrowhead-blue)"/>
+  
+  <!-- Data Flow Section -->
+  <rect x="30" y="320" width="840" height="250" rx="8" fill="#2d2d2d" stroke="#444444" stroke-width="1"/>
+  <text x="450" y="350" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Flujo de Datos</text>
+  
+  <!-- Query Flow -->
+  <rect x="60" y="380" width="120" height="60" rx="4" fill="#61DAFB" fill-opacity="0.2" stroke="#61DAFB" stroke-width="1"/>
+  <text x="120" y="405" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">1. useQuery</text>
+  <text x="120" y="425" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Solicita datos</text>
+  
+  <line x1="180" y1="410" x2="220" y2="410" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <rect x="220" y="380" width="120" height="60" rx="4" fill="#3178C6" fill-opacity="0.2" stroke="#3178C6" stroke-width="1"/>
+  <text x="280" y="405" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">2. Check Cache</text>
+  <text x="280" y="425" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">¿Datos frescos?</text>
+  
+  <line x1="340" y1="410" x2="380" y2="410" stroke="#3178C6" stroke-width="2" marker-end="url(#arrowhead-blue)"/>
+  
+  <rect x="380" y="380" width="120" height="60" rx="4" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1"/>
+  <text x="440" y="405" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">3. Fetch</text>
+  <text x="440" y="425" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Si stale o no hay</text>
+  
+  <line x1="500" y1="410" x2="540" y2="410" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <rect x="540" y="380" width="120" height="60" rx="4" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1"/>
+  <text x="600" y="405" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">4. Update Cache</text>
+  <text x="600" y="425" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Guardar datos</text>
+  
+  <line x1="660" y1="410" x2="700" y2="410" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <rect x="700" y="380" width="120" height="60" rx="4" fill="#61DAFB" fill-opacity="0.2" stroke="#61DAFB" stroke-width="1"/>
+  <text x="760" y="405" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">5. Re-render</text>
+  <text x="760" y="425" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Actualizar UI</text>
+  
+  <!-- Query States -->
+  <rect x="60" y="470" width="150" height="80" rx="4" fill="#1a1a1a" stroke="#61DAFB" stroke-width="1"/>
+  <text x="135" y="495" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Query States</text>
+  <text x="135" y="515" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">pending → success</text>
+  <text x="135" y="530" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">pending → error</text>
+  
+  <!-- Cache States -->
+  <rect x="230" y="470" width="150" height="80" rx="4" fill="#1a1a1a" stroke="#3178C6" stroke-width="1"/>
+  <text x="305" y="495" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Cache States</text>
+  <text x="305" y="515" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">fresh → stale</text>
+  <text x="305" y="530" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">active → inactive</text>
+  
+  <!-- Key Features -->
+  <rect x="400" y="470" width="150" height="80" rx="4" fill="#1a1a1a" stroke="#10b981" stroke-width="1"/>
+  <text x="475" y="495" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Auto Features</text>
+  <text x="475" y="515" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Refetch on focus</text>
+  <text x="475" y="530" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Retry on error</text>
+  
+  <!-- Benefits -->
+  <rect x="570" y="470" width="150" height="80" rx="4" fill="#1a1a1a" stroke="#f59e0b" stroke-width="1"/>
+  <text x="645" y="495" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Benefits</text>
+  <text x="645" y="515" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Deduplication</text>
+  <text x="645" y="530" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Background updates</text>
+  
+  <!-- DevTools -->
+  <rect x="740" y="470" width="130" height="80" rx="4" fill="#1a1a1a" stroke="#ec4899" stroke-width="1"/>
+  <text x="805" y="495" fill="#ec4899" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">DevTools</text>
+  <text x="805" y="515" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Inspect queries</text>
+  <text x="805" y="530" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Debug cache</text>
+</svg>

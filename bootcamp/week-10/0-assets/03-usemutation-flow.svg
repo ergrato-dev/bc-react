@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+    <marker id="arw-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981"/>
+    </marker>
+    <marker id="arw-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="550" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Flujo de useMutation</text>
+  
+  <!-- Trigger -->
+  <rect x="50" y="90" width="150" height="80" rx="8" fill="#61DAFB" fill-opacity="0.15" stroke="#61DAFB" stroke-width="2"/>
+  <text x="125" y="120" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">User Action</text>
+  <text x="125" y="145" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" text-anchor="middle">Click, Submit</text>
+  <text x="125" y="160" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">mutate(data)</text>
+  
+  <line x1="200" y1="130" x2="250" y2="130" stroke="#61DAFB" stroke-width="2" marker-end="url(#arw)"/>
+  
+  <!-- onMutate -->
+  <rect x="250" y="90" width="150" height="80" rx="8" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="2"/>
+  <text x="325" y="115" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">onMutate</text>
+  <text x="325" y="140" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" text-anchor="middle">Optimistic Update</text>
+  <text x="325" y="155" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">return context</text>
+  
+  <line x1="400" y1="130" x2="450" y2="130" stroke="#f59e0b" stroke-width="2" marker-end="url(#arw)"/>
+  
+  <!-- mutationFn -->
+  <rect x="450" y="90" width="150" height="80" rx="8" fill="#3178C6" fill-opacity="0.15" stroke="#3178C6" stroke-width="2"/>
+  <text x="525" y="115" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">mutationFn</text>
+  <text x="525" y="140" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" text-anchor="middle">API Request</text>
+  <text x="525" y="155" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">isPending: true</text>
+  
+  <!-- Success Path -->
+  <line x1="525" y1="170" x2="525" y2="220" stroke="#10b981" stroke-width="2" marker-end="url(#arw-green)"/>
+  <text x="545" y="200" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="10">Success</text>
+  
+  <!-- onSuccess -->
+  <rect x="450" y="220" width="150" height="80" rx="8" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="2"/>
+  <text x="525" y="245" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">onSuccess</text>
+  <text x="525" y="270" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" text-anchor="middle">Invalidate queries</text>
+  <text x="525" y="285" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">isSuccess: true</text>
+  
+  <!-- Error Path -->
+  <line x1="600" y1="130" x2="700" y2="130" stroke="#ef4444" stroke-width="2" marker-end="url(#arw-red)"/>
+  <text x="650" y="120" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="10">Error</text>
+  
+  <!-- onError -->
+  <rect x="700" y="90" width="150" height="80" rx="8" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="2"/>
+  <text x="775" y="115" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">onError</text>
+  <text x="775" y="140" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" text-anchor="middle">Rollback cache</text>
+  <text x="775" y="155" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">isError: true</text>
+  
+  <!-- onSettled -->
+  <line x1="525" y1="300" x2="525" y2="350" stroke="#888888" stroke-width="2" marker-end="url(#arw)"/>
+  <line x1="850" y1="170" x2="850" y2="400" stroke="#888888" stroke-width="2"/>
+  <line x1="850" y1="400" x2="680" y2="400" stroke="#888888" stroke-width="2"/>
+  <line x1="525" y1="400" x2="550" y2="400" stroke="#888888" stroke-width="2"/>
+  
+  <rect x="550" y="365" width="130" height="70" rx="8" fill="#888888" fill-opacity="0.15" stroke="#888888" stroke-width="2"/>
+  <text x="615" y="390" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">onSettled</text>
+  <text x="615" y="415" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" text-anchor="middle">Always runs</text>
+  
+  <!-- Mutation States Box -->
+  <rect x="50" y="220" width="350" height="200" rx="8" fill="#2d2d2d" stroke="#444444" stroke-width="1"/>
+  <text x="225" y="250" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Mutation States &amp; Returns</text>
+  
+  <text x="70" y="285" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">mutate()</text>
+  <text x="165" y="285" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="11">Fire and forget</text>
+  
+  <text x="70" y="310" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">mutateAsync()</text>
+  <text x="185" y="310" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="11">Returns Promise</text>
+  
+  <text x="70" y="340" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="12">isPending</text>
+  <text x="155" y="340" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="11">Mutation in progress</text>
+  
+  <text x="70" y="365" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="12">isSuccess</text>
+  <text x="145" y="365" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="11">Mutation succeeded</text>
+  
+  <text x="70" y="390" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="12">isError</text>
+  <text x="130" y="390" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="11">Mutation failed</text>
+  
+  <text x="70" y="405" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="12">reset()</text>
+  <text x="125" y="405" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="11">Reset state to idle</text>
+  
+  <!-- Callback Parameters -->
+  <rect x="50" y="440" width="800" height="90" rx="8" fill="#2d2d2d" stroke="#444444" stroke-width="1"/>
+  <text x="450" y="465" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Callback Parameters</text>
+  
+  <text x="70" y="495" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">onMutate(variables)</text>
+  <text x="220" y="495" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">→ return context for rollback</text>
+  
+  <text x="70" y="515" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">onSuccess(data, variables, context)</text>
+  <text x="295" y="515" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">→ data from server</text>
+  
+  <text x="450" y="495" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">onError(error, variables, context)</text>
+  <text x="675" y="495" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">→ rollback with context</text>
+  
+  <text x="450" y="515" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">onSettled(data, error, variables, context)</text>
+  <text x="720" y="515" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">→ always runs</text>
+  
+  <!-- Invalidation flow -->
+  <rect x="700" y="220" width="150" height="80" rx="8" fill="#3178C6" fill-opacity="0.15" stroke="#3178C6" stroke-width="2"/>
+  <text x="775" y="245" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">invalidateQueries</text>
+  <text x="775" y="270" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" text-anchor="middle">Refetch related</text>
+  <text x="775" y="285" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">queries</text>
+  
+  <line x1="600" y1="260" x2="700" y2="260" stroke="#3178C6" stroke-width="2" stroke-dasharray="4" marker-end="url(#arw)"/>
+</svg>

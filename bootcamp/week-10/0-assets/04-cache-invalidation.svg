@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="550" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Cache e Invalidación</text>
+  
+  <!-- Cache Timeline -->
+  <rect x="50" y="70" width="800" height="180" rx="8" fill="#2d2d2d" stroke="#444444" stroke-width="1"/>
+  <text x="450" y="95" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Ciclo de Vida del Cache</text>
+  
+  <!-- Timeline line -->
+  <line x1="100" y1="180" x2="800" y2="180" stroke="#444444" stroke-width="2"/>
+  
+  <!-- Fresh -->
+  <rect x="100" y="120" width="150" height="45" rx="4" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="2"/>
+  <text x="175" y="148" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">FRESH</text>
+  <text x="175" y="200" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">0 - staleTime</text>
+  <text x="175" y="215" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">No refetch</text>
+  
+  <!-- Stale -->
+  <rect x="270" y="120" width="200" height="45" rx="4" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="2"/>
+  <text x="370" y="148" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">STALE</text>
+  <text x="370" y="200" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">staleTime - gcTime</text>
+  <text x="370" y="215" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Refetch on trigger</text>
+  
+  <!-- Inactive -->
+  <rect x="490" y="120" width="150" height="45" rx="4" fill="#3178C6" fill-opacity="0.2" stroke="#3178C6" stroke-width="2"/>
+  <text x="565" y="148" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">INACTIVE</text>
+  <text x="565" y="200" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">No observers</text>
+  <text x="565" y="215" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Kept in cache</text>
+  
+  <!-- Garbage Collected -->
+  <rect x="660" y="120" width="130" height="45" rx="4" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="2"/>
+  <text x="725" y="148" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">GC</text>
+  <text x="725" y="200" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">After gcTime</text>
+  <text x="725" y="215" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle">Removed</text>
+  
+  <!-- Invalidation Methods -->
+  <rect x="50" y="270" width="380" height="260" rx="8" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="240" y="300" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Invalidation Methods</text>
+  
+  <!-- invalidateQueries -->
+  <rect x="70" y="320" width="340" height="55" rx="4" fill="#1a1a1a" stroke="#61DAFB" stroke-width="1"/>
+  <text x="90" y="345" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">invalidateQueries()</text>
+  <text x="90" y="365" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">Marca como stale → refetch si activa</text>
+  
+  <!-- setQueryData -->
+  <rect x="70" y="385" width="340" height="55" rx="4" fill="#1a1a1a" stroke="#10b981" stroke-width="1"/>
+  <text x="90" y="410" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">setQueryData()</text>
+  <text x="90" y="430" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">Actualiza cache directamente (sin fetch)</text>
+  
+  <!-- removeQueries -->
+  <rect x="70" y="450" width="340" height="55" rx="4" fill="#1a1a1a" stroke="#ef4444" stroke-width="1"/>
+  <text x="90" y="475" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">removeQueries()</text>
+  <text x="90" y="495" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">Elimina del cache completamente</text>
+  
+  <!-- Cache Operations -->
+  <rect x="470" y="270" width="380" height="260" rx="8" fill="#2d2d2d" stroke="#3178C6" stroke-width="2"/>
+  <text x="660" y="300" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Query Key Matching</text>
+  
+  <!-- Exact match -->
+  <rect x="490" y="320" width="340" height="45" rx="4" fill="#1a1a1a" stroke="#444444" stroke-width="1"/>
+  <text x="510" y="340" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">exact: true</text>
+  <text x="510" y="357" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">['users', 1] → solo esa key exacta</text>
+  
+  <!-- Prefix match -->
+  <rect x="490" y="375" width="340" height="45" rx="4" fill="#1a1a1a" stroke="#444444" stroke-width="1"/>
+  <text x="510" y="395" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">prefix (default)</text>
+  <text x="510" y="412" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">['users'] → ['users'], ['users', 1], etc.</text>
+  
+  <!-- Predicate -->
+  <rect x="490" y="430" width="340" height="45" rx="4" fill="#1a1a1a" stroke="#444444" stroke-width="1"/>
+  <text x="510" y="450" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">predicate: (query) =&gt; boolean</text>
+  <text x="510" y="467" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">Lógica personalizada de matching</text>
+  
+  <!-- Type filter -->
+  <rect x="490" y="485" width="340" height="35" rx="4" fill="#1a1a1a" stroke="#444444" stroke-width="1"/>
+  <text x="510" y="507" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="11">type: 'active' | 'inactive' | 'all'</text>
+  
+  <!-- Time configurations box -->
+  <rect x="50" y="535" width="800" height="10" rx="4" fill="#2d2d2d"/>
+  <text x="100" y="545" fill="#10b981" font-family="Inter, system-ui, sans-serif" font-size="10">staleTime: 0 (default)</text>
+  <text x="300" y="545" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="10">gcTime: 5 min (default)</text>
+  <text x="500" y="545" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="10">refetchOnWindowFocus: true</text>
+  <text x="720" y="545" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">retry: 3</text>
+</svg>
