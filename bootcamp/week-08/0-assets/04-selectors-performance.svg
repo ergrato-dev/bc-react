@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420">
   <defs>
     <marker id="arrowhead4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
@@ -12,7 +12,7 @@
   </defs>
   
   <!-- Background -->
-  <rect width="560" height="400" fill="#1a1a1a"/>
+  <rect width="560" height="420" fill="#1a1a1a"/>
   
   <!-- Title -->
   <text x="280" y="25" fill="#ffffff" font-family="Inter, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Selectores y Performance</text>
@@ -76,9 +76,9 @@
   <rect x="40" y="300" width="480" height="90" rx="8" fill="#2d2d2d" stroke="#a855f7" stroke-width="2"/>
   <text x="280" y="325" fill="#a855f7" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">shallow - Comparación Superficial</text>
   
-  <text x="60" y="350" fill="#ef4444" font-family="monospace" font-size="10">❌ {a, b} !== {a, b}</text>
-  <text x="60" y="370" fill="#888888" font-family="Inter, sans-serif" font-size="9">Siempre diferente (nueva ref)</text>
+  <text x="150" y="350" fill="#ef4444" font-family="monospace" font-size="10" text-anchor="middle">❌ {a, b} !== {a, b}</text>
+  <text x="150" y="370" fill="#888888" font-family="Inter, sans-serif" font-size="9" text-anchor="middle">Siempre diferente (nueva ref)</text>
   
-  <text x="320" y="350" fill="#22c55e" font-family="monospace" font-size="10">✓ shallow({a, b}, {a, b}) === true</text>
-  <text x="320" y="370" fill="#888888" font-family="Inter, sans-serif" font-size="9">Compara valores, no referencias</text>
+  <text x="410" y="350" fill="#22c55e" font-family="monospace" font-size="10" text-anchor="middle">✓ shallow({a,b}, {a,b})</text>
+  <text x="410" y="370" fill="#888888" font-family="Inter, sans-serif" font-size="9" text-anchor="middle">Compara valores, no referencias</text>
 </svg>
