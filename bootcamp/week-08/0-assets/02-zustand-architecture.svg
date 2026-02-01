@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380">
+  <defs>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="560" height="380" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="280" y="28" fill="#ffffff" font-family="Inter, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Arquitectura de Zustand</text>
+  
+  <!-- Store Central -->
+  <rect x="200" y="55" width="160" height="80" rx="10" fill="#3178C6" stroke="#61DAFB" stroke-width="3"/>
+  <text x="280" y="85" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Zustand Store</text>
+  <text x="280" y="105" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" text-anchor="middle">create&lt;StoreType&gt;()</text>
+  <text x="280" y="120" fill="#61DAFB" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Estado + Acciones</text>
+  
+  <!-- State Box -->
+  <rect x="40" y="170" width="140" height="90" rx="8" fill="#2d2d2d" stroke="#22c55e" stroke-width="2"/>
+  <text x="110" y="195" fill="#22c55e" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">State</text>
+  <text x="110" y="215" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">{ count: 0,</text>
+  <text x="110" y="230" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">user: null,</text>
+  <text x="110" y="245" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">items: [] }</text>
+  
+  <!-- Actions Box -->
+  <rect x="210" y="170" width="140" height="90" rx="8" fill="#2d2d2d" stroke="#f59e0b" stroke-width="2"/>
+  <text x="280" y="195" fill="#f59e0b" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Actions</text>
+  <text x="280" y="215" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">increment()</text>
+  <text x="280" y="230" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">setUser(user)</text>
+  <text x="280" y="245" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">addItem(item)</text>
+  
+  <!-- Selectors Box -->
+  <rect x="380" y="170" width="140" height="90" rx="8" fill="#2d2d2d" stroke="#a855f7" stroke-width="2"/>
+  <text x="450" y="195" fill="#a855f7" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Selectors</text>
+  <text x="450" y="215" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">(state) =&gt; state.count</text>
+  <text x="450" y="230" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">(state) =&gt; state.user</text>
+  <text x="450" y="245" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">(state) =&gt; state.total</text>
+  
+  <!-- Components -->
+  <rect x="70" y="295" width="100" height="40" rx="6" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="120" y="320" fill="#61DAFB" font-family="Inter, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Component A</text>
+  
+  <rect x="230" y="295" width="100" height="40" rx="6" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="280" y="320" fill="#61DAFB" font-family="Inter, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Component B</text>
+  
+  <rect x="390" y="295" width="100" height="40" rx="6" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="440" y="320" fill="#61DAFB" font-family="Inter, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Component C</text>
+  
+  <!-- Arrows -->
+  <line x1="240" y1="135" x2="110" y2="170" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <line x1="280" y1="135" x2="280" y2="170" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <line x1="320" y1="135" x2="450" y2="170" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  
+  <line x1="110" y1="260" x2="120" y2="295" stroke="#22c55e" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <line x1="280" y1="260" x2="280" y2="295" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <line x1="450" y1="260" x2="440" y2="295" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  
+  <!-- Key Features -->
+  <text x="90" y="360" fill="#22c55e" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Suscripción</text>
+  <text x="280" y="360" fill="#f59e0b" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Dispatches</text>
+  <text x="470" y="360" fill="#a855f7" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Re-render selectivo</text>
+</svg>
