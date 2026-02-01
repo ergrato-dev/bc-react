@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .card { fill: #16213e; stroke: #0f3460; stroke-width: 2; rx: 12; }
+      .title { fill: #e94560; font-family: system-ui, sans-serif; font-size: 20px; font-weight: bold; }
+      .subtitle { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 14px; }
+      .label { fill: #f8fafc; font-family: system-ui, sans-serif; font-size: 13px; }
+      .label-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 11px; }
+      .code { fill: #e2e8f0; font-family: 'Fira Code', monospace; font-size: 10px; }
+      .component { fill: #82aaff; font-family: 'Fira Code', monospace; font-size: 11px; }
+      .layout-box { fill: #1e3a5f; stroke: #8b5cf6; stroke-width: 2; rx: 8; }
+      .outlet-box { fill: #2d1f4e; stroke: #e94560; stroke-width: 3; rx: 6; }
+      .page-box { fill: #1e4035; stroke: #10b981; stroke-width: 2; rx: 6; }
+      .arrow { stroke: #e94560; stroke-width: 2; fill: none; }
+      .arrow-head { fill: #e94560; }
+      .dashed { stroke-dasharray: 5,5; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="900" height="520"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="title">Layouts y Outlet: Rutas Anidadas</text>
+  
+  <!-- Layout Structure -->
+  <rect x="30" y="55" width="400" height="280" class="card"/>
+  <text x="230" y="80" text-anchor="middle" class="subtitle">Estructura del Layout</text>
+  
+  <!-- Layout Container -->
+  <rect x="50" y="95" width="360" height="225" class="layout-box"/>
+  <text x="70" y="115" class="component">&lt;MainLayout&gt;</text>
+  
+  <!-- Header -->
+  <rect x="65" y="125" width="330" height="35" style="fill: #374151; rx: 4;"/>
+  <text x="230" y="147" text-anchor="middle" class="label">Header (común)</text>
+  
+  <!-- Sidebar + Content -->
+  <rect x="65" y="170" width="80" height="100" style="fill: #374151; rx: 4;"/>
+  <text x="105" y="195" text-anchor="middle" class="label-sm">Sidebar</text>
+  <text x="105" y="210" text-anchor="middle" class="label-sm">(común)</text>
+  
+  <!-- Outlet -->
+  <rect x="155" y="170" width="240" height="100" class="outlet-box"/>
+  <text x="275" y="205" text-anchor="middle" class="component">&lt;Outlet /&gt;</text>
+  <text x="275" y="225" text-anchor="middle" class="label-sm">Contenido dinámico</text>
+  <text x="275" y="245" text-anchor="middle" class="label-sm">(cambia según ruta)</text>
+  
+  <!-- Footer -->
+  <rect x="65" y="280" width="330" height="30" style="fill: #374151; rx: 4;"/>
+  <text x="230" y="300" text-anchor="middle" class="label">Footer (común)</text>
+  
+  <!-- Routes Configuration -->
+  <rect x="460" y="55" width="410" height="280" class="card"/>
+  <text x="665" y="80" text-anchor="middle" class="subtitle">Configuración de Rutas</text>
+  
+  <!-- Code block -->
+  <rect x="480" y="95" width="370" height="225" style="fill: #0d1117; rx: 6;"/>
+  
+  <text x="495" y="115" class="code">&lt;Routes&gt;</text>
+  <text x="510" y="132" class="code">&lt;Route element={&lt;MainLayout /&gt;}&gt;</text>
+  <text x="525" y="149" class="code">&lt;Route index element={&lt;Home /&gt;} /&gt;</text>
+  <text x="525" y="166" class="code">&lt;Route path="about" element={&lt;About /&gt;} /&gt;</text>
+  <text x="525" y="183" class="code">&lt;Route path="contact" element={&lt;Contact /&gt;} /&gt;</text>
+  <text x="510" y="200" class="code">&lt;/Route&gt;</text>
+  <text x="495" y="217" class="code">&lt;/Routes&gt;</text>
+  
+  <!-- Explanation -->
+  <text x="495" y="250" class="label-sm">• Layout wrapper sin path propio</text>
+  <text x="495" y="268" class="label-sm">• Rutas hijas se renderizan en &lt;Outlet /&gt;</text>
+  <text x="495" y="286" class="label-sm">• index = ruta por defecto ("/")</text>
+  <text x="495" y="304" class="label-sm">• Header/Sidebar/Footer siempre visibles</text>
+  
+  <!-- URL to Component Flow -->
+  <rect x="30" y="350" width="840" height="155" class="card"/>
+  <text x="450" y="375" text-anchor="middle" class="subtitle">Flujo: URL → Componente Renderizado</text>
+  
+  <!-- Flow examples -->
+  <!-- URL 1 -->
+  <rect x="50" y="395" width="180" height="30" style="fill: #1e3a5f; stroke: #3b82f6; rx: 4;"/>
+  <text x="140" y="415" text-anchor="middle" class="code">/</text>
+  
+  <path d="M235 410 L265 410" class="arrow" marker-end="url(#arrowhead)"/>
+  
+  <rect x="270" y="390" width="250" height="40" class="layout-box"/>
+  <text x="395" y="407" text-anchor="middle" class="label-sm">MainLayout +</text>
+  <rect x="355" y="410" width="80" height="18" class="page-box"/>
+  <text x="395" y="423" text-anchor="middle" class="code">Home</text>
+  
+  <!-- URL 2 -->
+  <rect x="50" y="440" width="180" height="30" style="fill: #1e3a5f; stroke: #3b82f6; rx: 4;"/>
+  <text x="140" y="460" text-anchor="middle" class="code">/about</text>
+  
+  <path d="M235 455 L265 455" class="arrow" marker-end="url(#arrowhead)"/>
+  
+  <rect x="270" y="435" width="250" height="40" class="layout-box"/>
+  <text x="395" y="452" text-anchor="middle" class="label-sm">MainLayout +</text>
+  <rect x="355" y="455" width="80" height="18" class="page-box"/>
+  <text x="395" y="468" text-anchor="middle" class="code">About</text>
+  
+  <!-- Visual Legend -->
+  <rect x="550" y="395" width="300" height="85" style="fill: #0f172a; rx: 6;"/>
+  <text x="700" y="415" text-anchor="middle" class="label">Leyenda</text>
+  
+  <rect x="570" y="425" width="40" height="15" class="layout-box"/>
+  <text x="620" y="437" class="label-sm">Layout (común)</text>
+  
+  <rect x="570" y="448" width="40" height="15" class="outlet-box"/>
+  <text x="620" y="460" class="label-sm">Outlet (slot dinámico)</text>
+  
+  <rect x="570" y="465" width="40" height="15" class="page-box"/>
+  <text x="620" y="477" class="label-sm">Página (cambia)</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="arrow-head"/>
+    </marker>
+  </defs>
+</svg>

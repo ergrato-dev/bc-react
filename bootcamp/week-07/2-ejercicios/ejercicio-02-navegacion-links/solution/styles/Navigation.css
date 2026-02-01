@@ -1,0 +1,31 @@
+/* ============================================
+   SOLUCIÓN: Estilos de Navigation
+   ============================================ */
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #1a1a2e;
+  border-bottom: 2px solid #0f3460;
+}
+
+.nav-link {
+  color: #94a3b8;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #e2e8f0;
+  background-color: #0f3460;
+}
+
+/* Estilo para el link activo */
+.nav-link.active {
+  color: #e94560;
+  background-color: #16213e;
+  font-weight: bold;
+}
