@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 550">
+  <defs>
+    <style>
+      .bg { fill: #1a1a1a; }
+      .title { font-family: Inter, Roboto, Arial, sans-serif; font-size: 24px; fill: #ffffff; font-weight: bold; }
+      .subtitle { font-family: Inter, Roboto, Arial, sans-serif; font-size: 14px; fill: #9ca3af; }
+      .box { rx: 12; ry: 12; }
+      .loading-box { fill: #1e293b; stroke: #475569; stroke-width: 2; }
+      .empty-box { fill: #1e3a5f; stroke: #3b82f6; stroke-width: 2; }
+      .no-results-box { fill: #3d3d1a; stroke: #eab308; stroke-width: 2; }
+      .error-box { fill: #3d1a1a; stroke: #ef4444; stroke-width: 2; }
+      .success-box { fill: #1a3a2f; stroke: #22c55e; stroke-width: 2; }
+      .label { font-family: Inter, Roboto, Arial, sans-serif; font-size: 18px; fill: #ffffff; font-weight: 600; }
+      .label-small { font-family: Inter, Roboto, Arial, sans-serif; font-size: 13px; fill: #d1d5db; }
+      .emoji { font-family: Inter, Roboto, Arial, sans-serif; font-size: 36px; fill: #ffffff; }
+      .code { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; font-size: 11px; fill: #9ca3af; }
+      .button { fill: #3b82f6; rx: 6; ry: 6; }
+      .button-text { font-family: Inter, Roboto, Arial, sans-serif; font-size: 12px; fill: #ffffff; }
+      .section-title { font-family: Inter, Roboto, Arial, sans-serif; font-size: 12px; fill: #6b7280; text-transform: uppercase; letter-spacing: 1px; }
+      .spinner { fill: none; stroke: #3b82f6; stroke-width: 3; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="950" height="550"/>
+
+  <!-- Title -->
+  <text x="475" y="35" class="title" text-anchor="middle">Estados de UI para Listas</text>
+  <text x="475" y="55" class="subtitle" text-anchor="middle">Diferentes estados que debe manejar una lista</text>
+
+  <!-- State 1: Loading -->
+  <text x="120" y="95" class="section-title" text-anchor="middle">CARGANDO</text>
+  <rect x="30" y="110" width="180" height="200" class="box loading-box"/>
+  <text x="120" y="150" class="emoji" text-anchor="middle">⏳</text>
+  <text x="120" y="185" class="label" text-anchor="middle">Cargando...</text>
+  <text x="120" y="210" class="label-small" text-anchor="middle">Por favor espera</text>
+  
+  <!-- Spinner animation representation -->
+  <circle cx="120" cy="260" r="20" class="spinner" stroke-dasharray="100" stroke-dashoffset="25"/>
+  
+  <text x="120" y="300" class="code" text-anchor="middle">isLoading &amp;&amp; &lt;Spinner/&gt;</text>
+
+  <!-- State 2: Empty (no data) -->
+  <text x="310" y="95" class="section-title" text-anchor="middle">SIN DATOS</text>
+  <rect x="220" y="110" width="180" height="200" class="box empty-box"/>
+  <text x="310" y="150" class="emoji" text-anchor="middle">📦</text>
+  <text x="310" y="185" class="label" text-anchor="middle">Sin elementos</text>
+  <text x="310" y="210" class="label-small" text-anchor="middle">Agrega tu primer item</text>
+  
+  <rect x="255" y="235" width="110" height="35" class="button"/>
+  <text x="310" y="258" class="button-text" text-anchor="middle">+ Agregar</text>
+  
+  <text x="310" y="300" class="code" text-anchor="middle">data.length === 0</text>
+
+  <!-- State 3: No results (search) -->
+  <text x="500" y="95" class="section-title" text-anchor="middle">SIN RESULTADOS</text>
+  <rect x="410" y="110" width="180" height="200" class="box no-results-box"/>
+  <text x="500" y="150" class="emoji" text-anchor="middle">🔍</text>
+  <text x="500" y="185" class="label" text-anchor="middle">Sin resultados</text>
+  <text x="500" y="210" class="label-small" text-anchor="middle">No hay coincidencias</text>
+  
+  <rect x="440" y="235" width="120" height="35" class="button"/>
+  <text x="500" y="258" class="button-text" text-anchor="middle">Limpiar filtros</text>
+  
+  <text x="500" y="300" class="code" text-anchor="middle">filtered.length === 0</text>
+
+  <!-- State 4: Error -->
+  <text x="690" y="95" class="section-title" text-anchor="middle">ERROR</text>
+  <rect x="600" y="110" width="180" height="200" class="box error-box"/>
+  <text x="690" y="150" class="emoji" text-anchor="middle">❌</text>
+  <text x="690" y="185" class="label" text-anchor="middle">Error al cargar</text>
+  <text x="690" y="210" class="label-small" text-anchor="middle">Algo salió mal</text>
+  
+  <rect x="630" y="235" width="120" height="35" class="button"/>
+  <text x="690" y="258" class="button-text" text-anchor="middle">Reintentar</text>
+  
+  <text x="690" y="300" class="code" text-anchor="middle">error &amp;&amp; &lt;Error/&gt;</text>
+
+  <!-- State 5: Success with data -->
+  <text x="880" y="95" class="section-title" text-anchor="middle">CON DATOS</text>
+  <rect x="790" y="110" width="150" height="200" class="box success-box"/>
+  <text x="865" y="150" class="emoji" text-anchor="middle">✅</text>
+  <text x="865" y="180" class="label" text-anchor="middle">3 items</text>
+  
+  <!-- Mini list items -->
+  <rect x="805" y="195" width="120" height="22" rx="4" fill="#2d2d2d"/>
+  <text x="815" y="211" class="label-small">Item 1</text>
+  <rect x="805" y="222" width="120" height="22" rx="4" fill="#2d2d2d"/>
+  <text x="815" y="238" class="label-small">Item 2</text>
+  <rect x="805" y="249" width="120" height="22" rx="4" fill="#2d2d2d"/>
+  <text x="815" y="265" class="label-small">Item 3</text>
+  
+  <text x="865" y="300" class="code" text-anchor="middle">data.map(...)</text>
+
+  <!-- Code pattern at bottom -->
+  <rect x="50" y="350" width="850" height="170" class="box loading-box"/>
+  <text x="475" y="380" class="label" text-anchor="middle">Patrón de Implementación</text>
+  
+  <text x="80" y="415" class="code" style="fill: #f472b6;">const</text>
+  <text x="115" y="415" class="code"> List = () =&gt; {</text>
+  
+  <text x="100" y="440" class="code" style="fill: #9ca3af;">// 1. Loading</text>
+  <text x="100" y="460" class="code"><tspan style="fill: #f472b6;">if</tspan> (isLoading) <tspan style="fill: #f472b6;">return</tspan> &lt;Loading /&gt;;</text>
+  
+  <text x="340" y="440" class="code" style="fill: #9ca3af;">// 2. Error</text>
+  <text x="340" y="460" class="code"><tspan style="fill: #f472b6;">if</tspan> (error) <tspan style="fill: #f472b6;">return</tspan> &lt;Error msg={error} /&gt;;</text>
+  
+  <text x="620" y="440" class="code" style="fill: #9ca3af;">// 3. Empty</text>
+  <text x="620" y="460" class="code"><tspan style="fill: #f472b6;">if</tspan> (!data.length) <tspan style="fill: #f472b6;">return</tspan> &lt;Empty /&gt;;</text>
+  
+  <text x="100" y="490" class="code" style="fill: #9ca3af;">// 4. Success - renderizar lista</text>
+  <text x="100" y="510" class="code"><tspan style="fill: #f472b6;">return</tspan> &lt;ul&gt;{data.map(item =&gt; &lt;Item key={item.id} {...item} /&gt;)}&lt;/ul&gt;;</text>
+</svg>

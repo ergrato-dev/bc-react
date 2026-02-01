@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 550">
+  <defs>
+    <style>
+      .bg { fill: #1a1a1a; }
+      .title { font-family: Inter, Roboto, Arial, sans-serif; font-size: 24px; fill: #ffffff; font-weight: bold; }
+      .subtitle { font-family: Inter, Roboto, Arial, sans-serif; font-size: 14px; fill: #9ca3af; }
+      .box { rx: 8; ry: 8; }
+      .data-box { fill: #1e293b; stroke: #475569; stroke-width: 2; }
+      .filter-box { fill: #3d1a3d; stroke: #a855f7; stroke-width: 2; }
+      .sort-box { fill: #1e3a5f; stroke: #3b82f6; stroke-width: 2; }
+      .result-box { fill: #1a3a2f; stroke: #22c55e; stroke-width: 2; }
+      .state-box { fill: #3d3d1a; stroke: #eab308; stroke-width: 2; }
+      .label { font-family: Inter, Roboto, Arial, sans-serif; font-size: 16px; fill: #ffffff; font-weight: 600; }
+      .label-small { font-family: Inter, Roboto, Arial, sans-serif; font-size: 13px; fill: #d1d5db; }
+      .code { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; font-size: 12px; fill: #e5e7eb; }
+      .code-small { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; font-size: 11px; fill: #9ca3af; }
+      .keyword { fill: #f472b6; }
+      .method { fill: #a5f3fc; }
+      .string { fill: #fbbf24; }
+      .arrow { fill: none; stroke: #6b7280; stroke-width: 2; marker-end: url(#arrowhead); }
+      .arrow-data { fill: none; stroke: #3b82f6; stroke-width: 3; marker-end: url(#arrowhead-blue); }
+      .item-box { fill: #2d2d2d; stroke: #4b5563; stroke-width: 1; rx: 4; ry: 4; }
+      .item-filtered { fill: #1a2f1a; stroke: #22c55e; stroke-width: 1; rx: 4; ry: 4; }
+      .item-excluded { fill: #2d2d2d; stroke: #4b5563; stroke-width: 1; rx: 4; ry: 4; opacity: 0.4; }
+      .step-circle { fill: #3b82f6; }
+      .step-text { font-family: Inter, Roboto, Arial, sans-serif; font-size: 14px; fill: #ffffff; font-weight: bold; }
+      .section-title { font-family: Inter, Roboto, Arial, sans-serif; font-size: 12px; fill: #6b7280; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1000" height="550"/>
+
+  <!-- Title -->
+  <text x="500" y="35" class="title" text-anchor="middle">Pipeline: Filtrado, Ordenamiento y Búsqueda</text>
+  <text x="500" y="55" class="subtitle" text-anchor="middle">Flujo de datos desde el array original hasta el resultado</text>
+
+  <!-- Step 1: Original Data -->
+  <circle cx="65" cy="100" r="18" class="step-circle"/>
+  <text x="65" y="106" class="step-text" text-anchor="middle">1</text>
+  <text x="100" y="106" class="label">Datos Originales</text>
+  <text x="65" y="125" class="section-title" text-anchor="middle">INMUTABLES</text>
+
+  <rect x="30" y="140" width="180" height="170" class="box data-box"/>
+  <text x="50" y="165" class="code"><tspan class="keyword">const</tspan> products = [...]</text>
+  <rect x="45" y="175" width="150" height="25" class="item-box"/>
+  <text x="55" y="193" class="code-small">Laptop - $999</text>
+  <rect x="45" y="205" width="150" height="25" class="item-box"/>
+  <text x="55" y="223" class="code-small">Mouse - $50</text>
+  <rect x="45" y="235" width="150" height="25" class="item-box"/>
+  <text x="55" y="253" class="code-small">Teclado - $120</text>
+  <rect x="45" y="265" width="150" height="25" class="item-box"/>
+  <text x="55" y="283" class="code-small">Monitor - $350</text>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 220 225 L 260 225" class="arrow-data"/>
+
+  <!-- Step 2: Filter States -->
+  <circle cx="305" cy="100" r="18" class="step-circle"/>
+  <text x="305" y="106" class="step-text" text-anchor="middle">2</text>
+  <text x="340" y="106" class="label">Estados de Filtros</text>
+  <text x="305" y="125" class="section-title" text-anchor="middle">REACTIVOS</text>
+
+  <rect x="270" y="140" width="180" height="170" class="box state-box"/>
+  <text x="290" y="165" class="code-small"><tspan class="keyword">const</tspan> [search, setSearch]</text>
+  <text x="300" y="185" class="code-small">= useState(<tspan class="string">''</tspan>)</text>
+  <text x="290" y="210" class="code-small"><tspan class="keyword">const</tspan> [category, ...]</text>
+  <text x="300" y="230" class="code-small">= useState(<tspan class="string">'all'</tspan>)</text>
+  <text x="290" y="255" class="code-small"><tspan class="keyword">const</tspan> [sortBy, ...]</text>
+  <text x="300" y="275" class="code-small">= useState(<tspan class="string">'name'</tspan>)</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 460 225 L 500 225" class="arrow-data"/>
+
+  <!-- Step 3: Filter/Sort Logic -->
+  <circle cx="545" cy="100" r="18" class="step-circle"/>
+  <text x="545" y="106" class="step-text" text-anchor="middle">3</text>
+  <text x="580" y="106" class="label">Procesamiento</text>
+  <text x="545" y="125" class="section-title" text-anchor="middle">PIPELINE</text>
+
+  <rect x="510" y="140" width="210" height="170" class="box filter-box"/>
+  <text x="530" y="165" class="code"><tspan class="keyword">let</tspan> result = [...products]</text>
+  <text x="530" y="190" class="code-small comment">// 1. Buscar</text>
+  <text x="530" y="210" class="code">result = result.<tspan class="method">filter</tspan>(...)</text>
+  <text x="530" y="235" class="code-small comment">// 2. Filtrar categoría</text>
+  <text x="530" y="255" class="code">result = result.<tspan class="method">filter</tspan>(...)</text>
+  <text x="530" y="280" class="code-small comment">// 3. Ordenar</text>
+  <text x="530" y="300" class="code">result.<tspan class="method">sort</tspan>(...)</text>
+
+  <!-- Arrow 3 to 4 -->
+  <path d="M 730 225 L 770 225" class="arrow-data"/>
+
+  <!-- Step 4: Result -->
+  <circle cx="815" cy="100" r="18" class="step-circle"/>
+  <text x="815" y="106" class="step-text" text-anchor="middle">4</text>
+  <text x="850" y="106" class="label">Resultado</text>
+  <text x="815" y="125" class="section-title" text-anchor="middle">RENDERIZAR</text>
+
+  <rect x="780" y="140" width="190" height="170" class="box result-box"/>
+  <text x="800" y="165" class="code">filteredProducts</text>
+  <rect x="795" y="175" width="160" height="25" class="item-filtered"/>
+  <text x="805" y="193" class="code-small">✓ Mouse - $50</text>
+  <rect x="795" y="205" width="160" height="25" class="item-filtered"/>
+  <text x="805" y="223" class="code-small">✓ Teclado - $120</text>
+  <rect x="795" y="235" width="160" height="25" class="item-excluded"/>
+  <text x="805" y="253" class="code-small">✗ Monitor (excluido)</text>
+  <rect x="795" y="265" width="160" height="25" class="item-excluded"/>
+  <text x="805" y="283" class="code-small">✗ Laptop (excluido)</text>
+
+  <!-- Bottom section: Key concepts -->
+  <rect x="30" y="350" width="940" height="170" class="box sort-box"/>
+  <text x="500" y="380" class="label" text-anchor="middle">⚠️ Principios Clave</text>
+
+  <!-- Principle 1 -->
+  <text x="70" y="415" class="label-small">1. NO MUTAR ORIGINAL</text>
+  <text x="70" y="440" class="code-small">❌ products.sort(...)</text>
+  <text x="70" y="460" class="code-small">✅ [...products].sort(...)</text>
+  <text x="70" y="485" class="code-small">✅ products.filter(...)</text>
+  <text x="85" y="505" class="code-small">// filter ya crea copia</text>
+
+  <!-- Principle 2 -->
+  <text x="320" y="415" class="label-small">2. ENCADENAR OPERACIONES</text>
+  <text x="320" y="440" class="code-small">products</text>
+  <text x="330" y="460" class="code-small">.<tspan class="method">filter</tspan>(p =&gt; p.inStock)</text>
+  <text x="330" y="480" class="code-small">.<tspan class="method">filter</tspan>(p =&gt; p.price &lt; 200)</text>
+  <text x="330" y="500" class="code-small">.<tspan class="method">sort</tspan>((a,b) =&gt; a.price - b.price)</text>
+
+  <!-- Principle 3 -->
+  <text x="620" y="415" class="label-small">3. useMemo PARA OPTIMIZAR</text>
+  <text x="620" y="440" class="code-small"><tspan class="keyword">const</tspan> result = useMemo(() =&gt; {</text>
+  <text x="630" y="460" class="code-small"><tspan class="keyword">return</tspan> products</text>
+  <text x="640" y="480" class="code-small">.filter(...).sort(...);</text>
+  <text x="620" y="500" class="code-small">}, [products, search, sortBy]);</text>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <style>
+      .bg { fill: #1a1a1a; }
+      .title { font-family: Inter, Roboto, Arial, sans-serif; font-size: 24px; fill: #ffffff; font-weight: bold; }
+      .subtitle { font-family: Inter, Roboto, Arial, sans-serif; font-size: 14px; fill: #9ca3af; }
+      .box { rx: 8; ry: 8; }
+      .box-ternary { fill: #1e3a5f; stroke: #3b82f6; stroke-width: 2; }
+      .box-and { fill: #1a3a2f; stroke: #22c55e; stroke-width: 2; }
+      .box-or { fill: #3d2a1a; stroke: #f97316; stroke-width: 2; }
+      .box-nullish { fill: #3d1a3d; stroke: #a855f7; stroke-width: 2; }
+      .box-early { fill: #3d3d1a; stroke: #eab308; stroke-width: 2; }
+      .label { font-family: Inter, Roboto, Arial, sans-serif; font-size: 16px; fill: #ffffff; font-weight: 600; }
+      .code { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; font-size: 12px; fill: #e5e7eb; }
+      .code-small { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; font-size: 11px; fill: #9ca3af; }
+      .keyword { fill: #f472b6; }
+      .string { fill: #a5f3fc; }
+      .operator { fill: #fbbf24; }
+      .arrow { fill: none; stroke: #6b7280; stroke-width: 2; marker-end: url(#arrowhead); }
+      .center-box { fill: #2d2d2d; stroke: #4b5563; stroke-width: 2; rx: 12; ry: 12; }
+      .section-label { font-family: Inter, Roboto, Arial, sans-serif; font-size: 11px; fill: #6b7280; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="900" height="600"/>
+
+  <!-- Title -->
+  <text x="450" y="40" class="title" text-anchor="middle">Patrones de Renderizado Condicional</text>
+  <text x="450" y="60" class="subtitle" text-anchor="middle">Cuándo usar cada patrón en React</text>
+
+  <!-- Center decision box -->
+  <rect x="350" y="250" width="200" height="80" class="center-box"/>
+  <text x="450" y="280" class="label" text-anchor="middle">¿Qué necesitas</text>
+  <text x="450" y="300" class="label" text-anchor="middle">renderizar?</text>
+
+  <!-- Ternary - Top Left -->
+  <rect x="40" y="100" width="220" height="130" class="box box-ternary"/>
+  <text x="150" y="130" class="label" text-anchor="middle">? : Ternario</text>
+  <text x="60" y="155" class="code"><tspan class="keyword">condition</tspan> ?</text>
+  <text x="60" y="175" class="code">  &lt;ComponentA /&gt; :</text>
+  <text x="60" y="195" class="code">  &lt;ComponentB /&gt;</text>
+  <text x="60" y="220" class="code-small">• Dos opciones diferentes</text>
+
+  <!-- AND - Top Right -->
+  <rect x="640" y="100" width="220" height="130" class="box box-and"/>
+  <text x="750" y="130" class="label" text-anchor="middle">&amp;&amp; Operador AND</text>
+  <text x="660" y="155" class="code"><tspan class="keyword">condition</tspan> <tspan class="operator">&amp;&amp;</tspan></text>
+  <text x="660" y="175" class="code">  &lt;Component /&gt;</text>
+  <text x="660" y="200" class="code-small">• Mostrar u ocultar</text>
+  <text x="660" y="220" class="code-small">• Sin alternativa</text>
+
+  <!-- OR - Bottom Left -->
+  <rect x="40" y="380" width="220" height="130" class="box box-or"/>
+  <text x="150" y="410" class="label" text-anchor="middle">|| Operador OR</text>
+  <text x="60" y="435" class="code"><tspan class="keyword">value</tspan> <tspan class="operator">||</tspan> <tspan class="string">'Default'</tspan></text>
+  <text x="60" y="460" class="code-small">• Valores por defecto</text>
+  <text x="60" y="480" class="code-small">• Fallback si falsy</text>
+  <text x="60" y="500" class="code-small">• ⚠️ 0 y '' son falsy</text>
+
+  <!-- Nullish - Bottom Right -->
+  <rect x="640" y="380" width="220" height="130" class="box box-nullish"/>
+  <text x="750" y="410" class="label" text-anchor="middle">?? Nullish Coalescing</text>
+  <text x="660" y="435" class="code"><tspan class="keyword">value</tspan> <tspan class="operator">??</tspan> <tspan class="string">'Default'</tspan></text>
+  <text x="660" y="460" class="code-small">• Solo null/undefined</text>
+  <text x="660" y="480" class="code-small">• ✅ 0 y '' se muestran</text>
+  <text x="660" y="500" class="code-small">• Más preciso que ||</text>
+
+  <!-- Early Return - Bottom Center -->
+  <rect x="340" y="450" width="220" height="100" class="box box-early"/>
+  <text x="450" y="480" class="label" text-anchor="middle">Early Return</text>
+  <text x="360" y="505" class="code"><tspan class="keyword">if</tspan> (!data) <tspan class="keyword">return</tspan> null;</text>
+  <text x="360" y="530" class="code-small">• Guard clause</text>
+  <text x="360" y="545" class="code-small">• Validación temprana</text>
+
+  <!-- Arrows from center to patterns -->
+  <path d="M 350 270 L 270 230" class="arrow"/>
+  <path d="M 550 270 L 630 230" class="arrow"/>
+  <path d="M 350 310 L 270 380" class="arrow"/>
+  <path d="M 550 310 L 630 380" class="arrow"/>
+  <path d="M 450 330 L 450 450" class="arrow"/>
+
+  <!-- Section labels -->
+  <text x="150" y="85" class="section-label" text-anchor="middle">BIFURCACIÓN</text>
+  <text x="750" y="85" class="section-label" text-anchor="middle">MOSTRAR/OCULTAR</text>
+  <text x="150" y="365" class="section-label" text-anchor="middle">VALORES DEFAULT</text>
+  <text x="750" y="365" class="section-label" text-anchor="middle">NULL SAFETY</text>
+  <text x="450" y="435" class="section-label" text-anchor="middle">VALIDACIÓN</text>
+</svg>

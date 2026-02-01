@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 600">
+  <defs>
+    <style>
+      .bg { fill: #1a1a1a; }
+      .title { font-family: Inter, Roboto, Arial, sans-serif; font-size: 24px; fill: #ffffff; font-weight: bold; }
+      .subtitle { font-family: Inter, Roboto, Arial, sans-serif; font-size: 14px; fill: #9ca3af; }
+      .box { rx: 8; ry: 8; }
+      .good-box { fill: #1a3a2f; stroke: #22c55e; stroke-width: 2; }
+      .bad-box { fill: #3d1a1a; stroke: #ef4444; stroke-width: 2; }
+      .neutral-box { fill: #1e293b; stroke: #475569; stroke-width: 2; }
+      .react-box { fill: #1e3a5f; stroke: #61dafb; stroke-width: 2; }
+      .label { font-family: Inter, Roboto, Arial, sans-serif; font-size: 16px; fill: #ffffff; font-weight: 600; }
+      .label-small { font-family: Inter, Roboto, Arial, sans-serif; font-size: 13px; fill: #d1d5db; }
+      .code { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; font-size: 12px; fill: #e5e7eb; }
+      .code-small { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; font-size: 11px; fill: #9ca3af; }
+      .good { fill: #22c55e; }
+      .bad { fill: #ef4444; }
+      .keyword { fill: #f472b6; }
+      .string { fill: #a5f3fc; }
+      .number { fill: #fbbf24; }
+      .arrow { fill: none; stroke: #6b7280; stroke-width: 2; marker-end: url(#arrowhead); }
+      .arrow-good { fill: none; stroke: #22c55e; stroke-width: 2; marker-end: url(#arrowhead-good); }
+      .arrow-bad { fill: none; stroke: #ef4444; stroke-width: 2; marker-end: url(#arrowhead-bad); }
+      .item-box { fill: #2d2d2d; stroke: #4b5563; stroke-width: 1; rx: 4; ry: 4; }
+      .item-new { fill: #1a3a2f; stroke: #22c55e; stroke-width: 2; rx: 4; ry: 4; }
+      .item-moved { fill: #3d3d1a; stroke: #eab308; stroke-width: 2; rx: 4; ry: 4; }
+      .section-title { font-family: Inter, Roboto, Arial, sans-serif; font-size: 14px; fill: #9ca3af; text-transform: uppercase; letter-spacing: 1px; }
+      .divider { stroke: #374151; stroke-width: 1; stroke-dasharray: 5,5; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+    <marker id="arrowhead-good" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowhead-bad" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="950" height="600"/>
+
+  <!-- Title -->
+  <text x="475" y="35" class="title" text-anchor="middle">¿Por qué son importantes las Keys?</text>
+  <text x="475" y="55" class="subtitle" text-anchor="middle">Cómo React identifica elementos en listas</text>
+
+  <!-- Section: Without proper keys -->
+  <text x="240" y="95" class="section-title" text-anchor="middle">❌ SIN KEY ÚNICA (index)</text>
+
+  <!-- Before state - Bad -->
+  <rect x="50" y="115" width="180" height="160" class="box bad-box"/>
+  <text x="140" y="140" class="label" text-anchor="middle">Estado Inicial</text>
+  <rect x="65" y="155" width="150" height="30" class="item-box"/>
+  <text x="75" y="175" class="code">key=0: Ana</text>
+  <rect x="65" y="190" width="150" height="30" class="item-box"/>
+  <text x="75" y="210" class="code">key=1: Carlos</text>
+  <rect x="65" y="225" width="150" height="30" class="item-box"/>
+  <text x="75" y="245" class="code">key=2: María</text>
+
+  <path d="M 240 195 L 270 195" class="arrow-bad"/>
+  <text x="255" y="185" class="code-small bad">+Eva</text>
+
+  <!-- After state - Bad -->
+  <rect x="280" y="115" width="180" height="200" class="box bad-box"/>
+  <text x="370" y="140" class="label" text-anchor="middle">Después de Insertar</text>
+  <rect x="295" y="155" width="150" height="30" class="item-new"/>
+  <text x="305" y="175" class="code">key=0: <tspan class="bad">Eva</tspan> ← nueva</text>
+  <rect x="295" y="190" width="150" height="30" class="item-moved"/>
+  <text x="305" y="210" class="code">key=1: Ana ⚠️</text>
+  <rect x="295" y="225" width="150" height="30" class="item-moved"/>
+  <text x="305" y="245" class="code">key=2: Carlos ⚠️</text>
+  <rect x="295" y="260" width="150" height="30" class="item-moved"/>
+  <text x="305" y="280" class="code">key=3: María ⚠️</text>
+
+  <!-- Problem explanation -->
+  <text x="140" y="295" class="code-small bad">React piensa que TODOS</text>
+  <text x="140" y="310" class="code-small bad">los items cambiaron</text>
+
+  <!-- Section: With proper keys -->
+  <text x="710" y="95" class="section-title" text-anchor="middle">✅ CON KEY ÚNICA (id)</text>
+
+  <!-- Before state - Good -->
+  <rect x="520" y="115" width="180" height="160" class="box good-box"/>
+  <text x="610" y="140" class="label" text-anchor="middle">Estado Inicial</text>
+  <rect x="535" y="155" width="150" height="30" class="item-box"/>
+  <text x="545" y="175" class="code">key=1: Ana</text>
+  <rect x="535" y="190" width="150" height="30" class="item-box"/>
+  <text x="545" y="210" class="code">key=2: Carlos</text>
+  <rect x="535" y="225" width="150" height="30" class="item-box"/>
+  <text x="545" y="245" class="code">key=3: María</text>
+
+  <path d="M 710 195 L 740 195" class="arrow-good"/>
+  <text x="725" y="185" class="code-small good">+Eva</text>
+
+  <!-- After state - Good -->
+  <rect x="750" y="115" width="180" height="200" class="box good-box"/>
+  <text x="840" y="140" class="label" text-anchor="middle">Después de Insertar</text>
+  <rect x="765" y="155" width="150" height="30" class="item-new"/>
+  <text x="775" y="175" class="code">key=4: <tspan class="good">Eva</tspan> ← única</text>
+  <rect x="765" y="190" width="150" height="30" class="item-box"/>
+  <text x="775" y="210" class="code">key=1: Ana ✓</text>
+  <rect x="765" y="225" width="150" height="30" class="item-box"/>
+  <text x="775" y="245" class="code">key=2: Carlos ✓</text>
+  <rect x="765" y="260" width="150" height="30" class="item-box"/>
+  <text x="775" y="280" class="code">key=3: María ✓</text>
+
+  <text x="610" y="295" class="code-small good">React SABE que solo</text>
+  <text x="610" y="310" class="code-small good">Eva es nueva</text>
+
+  <!-- Divider -->
+  <line x1="30" y1="350" x2="920" y2="350" class="divider"/>
+
+  <!-- Bottom section: Consequences -->
+  <text x="475" y="385" class="label" text-anchor="middle">Consecuencias del Mal Uso de Keys</text>
+
+  <!-- Bad consequences -->
+  <rect x="50" y="410" width="280" height="150" class="box bad-box"/>
+  <text x="190" y="435" class="label" text-anchor="middle">⚠️ Problemas con index</text>
+  <text x="70" y="465" class="label-small">• Re-renders innecesarios</text>
+  <text x="70" y="490" class="label-small">• Pérdida de estado en inputs</text>
+  <text x="70" y="515" class="label-small">• Animaciones rotas</text>
+  <text x="70" y="540" class="label-small">• Performance degradada</text>
+
+  <!-- Correct usage -->
+  <rect x="350" y="410" width="260" height="150" class="box react-box"/>
+  <text x="480" y="435" class="label" text-anchor="middle">🔑 Key Correcta</text>
+  <text x="370" y="465" class="code-small"><tspan class="keyword">key</tspan>={item.id}</text>
+  <text x="370" y="490" class="code-small"><tspan class="keyword">key</tspan>={item.uuid}</text>
+  <text x="370" y="515" class="code-small"><tspan class="keyword">key</tspan>={item.slug}</text>
+  <text x="370" y="540" class="label-small">Identificador único y estable</text>
+
+  <!-- Good consequences -->
+  <rect x="630" y="410" width="280" height="150" class="box good-box"/>
+  <text x="770" y="435" class="label" text-anchor="middle">✅ Beneficios</text>
+  <text x="650" y="465" class="label-small">• Reconciliación eficiente</text>
+  <text x="650" y="490" class="label-small">• Estado preservado</text>
+  <text x="650" y="515" class="label-small">• Animaciones fluidas</text>
+  <text x="650" y="540" class="label-small">• Mejor performance</text>
+</svg>

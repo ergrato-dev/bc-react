@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 550">
+  <defs>
+    <style>
+      .bg { fill: #1a1a1a; }
+      .title { font-family: Inter, Roboto, Arial, sans-serif; font-size: 24px; fill: #ffffff; font-weight: bold; }
+      .subtitle { font-family: Inter, Roboto, Arial, sans-serif; font-size: 14px; fill: #9ca3af; }
+      .box { rx: 8; ry: 8; }
+      .array-box { fill: #1e293b; stroke: #475569; stroke-width: 2; }
+      .map-box { fill: #1e3a5f; stroke: #3b82f6; stroke-width: 2; }
+      .jsx-box { fill: #1a3a2f; stroke: #22c55e; stroke-width: 2; }
+      .label { font-family: Inter, Roboto, Arial, sans-serif; font-size: 16px; fill: #ffffff; font-weight: 600; }
+      .label-small { font-family: Inter, Roboto, Arial, sans-serif; font-size: 13px; fill: #9ca3af; }
+      .code { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; font-size: 12px; fill: #e5e7eb; }
+      .code-small { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; font-size: 11px; fill: #9ca3af; }
+      .keyword { fill: #f472b6; }
+      .string { fill: #a5f3fc; }
+      .number { fill: #fbbf24; }
+      .comment { fill: #6b7280; }
+      .arrow { fill: none; stroke: #3b82f6; stroke-width: 3; marker-end: url(#arrowhead-blue); }
+      .item-box { fill: #2d2d2d; stroke: #4b5563; stroke-width: 1; rx: 4; ry: 4; }
+      .item-jsx { fill: #1a2f1a; stroke: #22c55e; stroke-width: 1; rx: 4; ry: 4; }
+      .step-circle { fill: #3b82f6; }
+      .step-text { font-family: Inter, Roboto, Arial, sans-serif; font-size: 14px; fill: #ffffff; font-weight: bold; }
+      .divider { stroke: #374151; stroke-width: 1; stroke-dasharray: 5,5; }
+    </style>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="950" height="550"/>
+
+  <!-- Title -->
+  <text x="475" y="35" class="title" text-anchor="middle">Renderizado de Listas con .map()</text>
+  <text x="475" y="55" class="subtitle" text-anchor="middle">Transformar arrays en elementos JSX</text>
+
+  <!-- Step 1: Array -->
+  <circle cx="95" cy="100" r="20" class="step-circle"/>
+  <text x="95" y="106" class="step-text" text-anchor="middle">1</text>
+  <text x="130" y="106" class="label">Array de Datos</text>
+
+  <rect x="30" y="130" width="250" height="180" class="box array-box"/>
+  <text x="50" y="155" class="code"><tspan class="keyword">const</tspan> users = [</text>
+  
+  <!-- Array items -->
+  <rect x="45" y="165" width="220" height="35" class="item-box"/>
+  <text x="55" y="182" class="code">{ id: <tspan class="number">1</tspan>, name: <tspan class="string">'Ana'</tspan> }</text>
+  
+  <rect x="45" y="205" width="220" height="35" class="item-box"/>
+  <text x="55" y="222" class="code">{ id: <tspan class="number">2</tspan>, name: <tspan class="string">'Carlos'</tspan> }</text>
+  
+  <rect x="45" y="245" width="220" height="35" class="item-box"/>
+  <text x="55" y="262" class="code">{ id: <tspan class="number">3</tspan>, name: <tspan class="string">'María'</tspan> }</text>
+  
+  <text x="50" y="300" class="code">];</text>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 290 220 L 340 220" class="arrow"/>
+
+  <!-- Step 2: .map() -->
+  <circle cx="400" cy="100" r="20" class="step-circle"/>
+  <text x="400" y="106" class="step-text" text-anchor="middle">2</text>
+  <text x="440" y="106" class="label">Transformar con .map()</text>
+
+  <rect x="350" y="130" width="250" height="180" class="box map-box"/>
+  <text x="370" y="155" class="code">users.<tspan class="keyword">map</tspan>((user) =&gt; (</text>
+  <text x="380" y="180" class="code">&lt;li <tspan class="keyword">key</tspan>={user.id}&gt;</text>
+  <text x="390" y="205" class="code">{user.name}</text>
+  <text x="380" y="230" class="code">&lt;/li&gt;</text>
+  <text x="370" y="255" class="code">))</text>
+  
+  <text x="370" y="290" class="code-small comment">// Cada item necesita key única</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 610 220 L 660 220" class="arrow"/>
+
+  <!-- Step 3: JSX Result -->
+  <circle cx="720" cy="100" r="20" class="step-circle"/>
+  <text x="720" y="106" class="step-text" text-anchor="middle">3</text>
+  <text x="760" y="106" class="label">Resultado JSX</text>
+
+  <rect x="670" y="130" width="250" height="180" class="box jsx-box"/>
+  <text x="690" y="155" class="code">&lt;ul&gt;</text>
+  
+  <!-- JSX items -->
+  <rect x="685" y="165" width="220" height="30" class="item-jsx"/>
+  <text x="695" y="185" class="code">&lt;li key=<tspan class="string">"1"</tspan>&gt;Ana&lt;/li&gt;</text>
+  
+  <rect x="685" y="200" width="220" height="30" class="item-jsx"/>
+  <text x="695" y="220" class="code">&lt;li key=<tspan class="string">"2"</tspan>&gt;Carlos&lt;/li&gt;</text>
+  
+  <rect x="685" y="235" width="220" height="30" class="item-jsx"/>
+  <text x="695" y="255" class="code">&lt;li key=<tspan class="string">"3"</tspan>&gt;María&lt;/li&gt;</text>
+  
+  <text x="690" y="295" class="code">&lt;/ul&gt;</text>
+
+  <!-- Divider -->
+  <line x1="30" y1="340" x2="920" y2="340" class="divider"/>
+
+  <!-- Tips section -->
+  <text x="475" y="375" class="label" text-anchor="middle">Puntos Clave</text>
+
+  <!-- Tip boxes -->
+  <rect x="50" y="400" width="260" height="110" class="box array-box"/>
+  <text x="70" y="425" class="label-small">✅ Siempre usar key única</text>
+  <text x="70" y="450" class="code-small">key={item.id} // ✓ ID único</text>
+  <text x="70" y="475" class="code-small">key={index}   // ⚠️ Solo si</text>
+  <text x="70" y="495" class="code-small">              // lista estática</text>
+
+  <rect x="345" y="400" width="260" height="110" class="box map-box"/>
+  <text x="365" y="425" class="label-small">📦 Retorno implícito</text>
+  <text x="365" y="450" class="code-small">.map(x =&gt; &lt;li&gt;{x}&lt;/li&gt;)</text>
+  <text x="365" y="475" class="label-small">📦 Retorno explícito</text>
+  <text x="365" y="495" class="code-small">.map(x =&gt; { return &lt;li&gt;...; })</text>
+
+  <rect x="640" y="400" width="260" height="110" class="box jsx-box"/>
+  <text x="660" y="425" class="label-small">🔄 Extraer componente</text>
+  <text x="660" y="450" class="code-small">.map(item =&gt; (</text>
+  <text x="660" y="470" class="code-small">  &lt;ItemCard</text>
+  <text x="660" y="490" class="code-small">    key={item.id}</text>
+  <text x="660" y="510" class="code-small">    item={item} /&gt;))</text>
+</svg>
