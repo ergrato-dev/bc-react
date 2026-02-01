@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .card { fill: #16213e; stroke: #0f3460; stroke-width: 2; rx: 12; }
+      .title { fill: #e94560; font-family: system-ui, sans-serif; font-size: 20px; font-weight: bold; }
+      .subtitle { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 14px; }
+      .label { fill: #f8fafc; font-family: system-ui, sans-serif; font-size: 13px; }
+      .label-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 11px; }
+      .accent { fill: #0f3460; }
+      .arrow { stroke: #e94560; stroke-width: 2; fill: none; }
+      .arrow-head { fill: #e94560; }
+      .server { fill: #1e3a5f; stroke: #3b82f6; stroke-width: 2; rx: 8; }
+      .browser { fill: #1e3a5f; stroke: #10b981; stroke-width: 2; rx: 8; }
+      .highlight { fill: #e94560; }
+      .divider { stroke: #334155; stroke-width: 1; stroke-dasharray: 4,4; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="900" height="500"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="title">SPA vs MPA: Arquitecturas de Navegación</text>
+  
+  <!-- MPA Section -->
+  <text x="225" y="70" text-anchor="middle" class="subtitle">Multi-Page Application (MPA)</text>
+  
+  <!-- MPA Browser -->
+  <rect x="50" y="95" width="350" height="180" class="card"/>
+  <rect x="60" y="105" width="330" height="25" class="accent" rx="4"/>
+  <text x="75" y="122" class="label">🌐 Navegador</text>
+  
+  <!-- MPA Flow -->
+  <rect x="80" y="145" width="120" height="40" class="browser"/>
+  <text x="140" y="170" text-anchor="middle" class="label">/home</text>
+  
+  <rect x="80" y="200" width="120" height="40" class="browser"/>
+  <text x="140" y="225" text-anchor="middle" class="label">/about</text>
+  
+  <!-- MPA Server -->
+  <rect x="250" y="145" width="130" height="95" class="server"/>
+  <text x="315" y="175" text-anchor="middle" class="label">Servidor</text>
+  <text x="315" y="195" text-anchor="middle" class="label-sm">HTML Completo</text>
+  <text x="315" y="215" text-anchor="middle" class="label-sm">cada petición</text>
+  
+  <!-- MPA Arrows -->
+  <path d="M200 165 L245 165" class="arrow" marker-end="url(#arrowhead)"/>
+  <path d="M200 220 L245 220" class="arrow" marker-end="url(#arrowhead)"/>
+  <text x="165" y="295" text-anchor="middle" class="label-sm">⚠️ Recarga completa en cada navegación</text>
+  
+  <!-- SPA Section -->
+  <text x="675" y="70" text-anchor="middle" class="subtitle">Single-Page Application (SPA)</text>
+  
+  <!-- SPA Browser -->
+  <rect x="500" y="95" width="350" height="180" class="card"/>
+  <rect x="510" y="105" width="330" height="25" class="accent" rx="4"/>
+  <text x="525" y="122" class="label">🌐 Navegador + React Router</text>
+  
+  <!-- SPA Components -->
+  <rect x="530" y="145" width="80" height="35" class="browser"/>
+  <text x="570" y="167" text-anchor="middle" class="label-sm">Home</text>
+  
+  <rect x="620" y="145" width="80" height="35" class="browser"/>
+  <text x="660" y="167" text-anchor="middle" class="label-sm">About</text>
+  
+  <rect x="710" y="145" width="80" height="35" class="browser"/>
+  <text x="750" y="167" text-anchor="middle" class="label-sm">Contact</text>
+  
+  <!-- SPA Router -->
+  <rect x="575" y="195" width="150" height="45" class="highlight" rx="6"/>
+  <text x="650" y="215" text-anchor="middle" fill="#fff" style="font-family: system-ui; font-size: 12px;">React Router</text>
+  <text x="650" y="230" text-anchor="middle" fill="#fff" style="font-family: system-ui; font-size: 10px;">Client-side routing</text>
+  
+  <text x="650" y="295" text-anchor="middle" class="label-sm">✓ Sin recargas · ✓ Transiciones suaves</text>
+  
+  <!-- Comparison Table -->
+  <rect x="50" y="320" width="800" height="160" class="card"/>
+  <text x="450" y="350" text-anchor="middle" class="subtitle">Comparación</text>
+  
+  <!-- Table Headers -->
+  <text x="200" y="380" text-anchor="middle" fill="#e94560" style="font-family: system-ui; font-size: 13px; font-weight: bold;">MPA</text>
+  <text x="450" y="380" text-anchor="middle" fill="#94a3b8" style="font-family: system-ui; font-size: 13px;">Característica</text>
+  <text x="700" y="380" text-anchor="middle" fill="#10b981" style="font-family: system-ui; font-size: 13px; font-weight: bold;">SPA</text>
+  
+  <line x1="100" y1="390" x2="800" y2="390" class="divider"/>
+  
+  <!-- Row 1 -->
+  <text x="200" y="410" text-anchor="middle" class="label-sm">Completa</text>
+  <text x="450" y="410" text-anchor="middle" class="label">Carga de página</text>
+  <text x="700" y="410" text-anchor="middle" class="label-sm">Parcial (componentes)</text>
+  
+  <!-- Row 2 -->
+  <text x="200" y="435" text-anchor="middle" class="label-sm">Servidor</text>
+  <text x="450" y="435" text-anchor="middle" class="label">Lógica de navegación</text>
+  <text x="700" y="435" text-anchor="middle" class="label-sm">Cliente (JavaScript)</text>
+  
+  <!-- Row 3 -->
+  <text x="200" y="460" text-anchor="middle" class="label-sm">Excelente</text>
+  <text x="450" y="460" text-anchor="middle" class="label">SEO nativo</text>
+  <text x="700" y="460" text-anchor="middle" class="label-sm">Requiere SSR/SSG</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="arrow-head"/>
+    </marker>
+  </defs>
+</svg>

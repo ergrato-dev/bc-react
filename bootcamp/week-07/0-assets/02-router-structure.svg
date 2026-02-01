@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .card { fill: #16213e; stroke: #0f3460; stroke-width: 2; rx: 12; }
+      .title { fill: #e94560; font-family: system-ui, sans-serif; font-size: 18px; font-weight: bold; }
+      .subtitle { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 14px; }
+      .label { fill: #f8fafc; font-family: system-ui, sans-serif; font-size: 13px; }
+      .label-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 11px; }
+      .code { fill: #e2e8f0; font-family: 'Fira Code', monospace; font-size: 11px; }
+      .keyword { fill: #c792ea; font-family: 'Fira Code', monospace; font-size: 11px; }
+      .component { fill: #82aaff; font-family: 'Fira Code', monospace; font-size: 11px; }
+      .string { fill: #c3e88d; font-family: 'Fira Code', monospace; font-size: 11px; }
+      .accent { fill: #0f3460; }
+      .arrow { stroke: #e94560; stroke-width: 2; fill: none; }
+      .arrow-head { fill: #e94560; }
+      .router-box { fill: #1e3a5f; stroke: #3b82f6; stroke-width: 2; rx: 8; }
+      .route-box { fill: #1e3a5f; stroke: #10b981; stroke-width: 2; rx: 6; }
+      .highlight { fill: #e94560; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="900" height="560"/>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="title">Estructura de React Router v6</text>
+  
+  <!-- BrowserRouter Section -->
+  <rect x="50" y="50" width="800" height="440" class="card"/>
+  
+  <!-- BrowserRouter Header -->
+  <rect x="60" y="60" width="780" height="30" class="router-box"/>
+  <text x="75" y="80" class="component">&lt;BrowserRouter&gt;</text>
+  <text x="700" y="80" class="label-sm">Proveedor de contexto</text>
+  
+  <!-- Routes Container -->
+  <rect x="80" y="105" width="740" height="370" class="card" style="stroke: #6366f1;"/>
+  <rect x="90" y="115" width="720" height="25" style="fill: #312e81; rx: 4;"/>
+  <text x="105" y="132" class="component">&lt;Routes&gt;</text>
+  <text x="600" y="132" class="label-sm">Contenedor de rutas</text>
+  
+  <!-- Route 1: Home -->
+  <rect x="110" y="155" width="680" height="55" class="route-box"/>
+  <text x="125" y="175" class="keyword">Route</text>
+  <text x="170" y="175" class="code">path=</text>
+  <text x="205" y="175" class="string">"/"</text>
+  <text x="230" y="175" class="code">element={</text>
+  <text x="290" y="175" class="component">&lt;HomePage /&gt;</text>
+  <text x="385" y="175" class="code">}</text>
+  
+  <text x="125" y="195" class="label-sm">→ URL: /</text>
+  <text x="500" y="195" class="label-sm">Renderiza: HomePage</text>
+  
+  <!-- Route 2: About -->
+  <rect x="110" y="220" width="680" height="55" class="route-box"/>
+  <text x="125" y="240" class="keyword">Route</text>
+  <text x="170" y="240" class="code">path=</text>
+  <text x="205" y="240" class="string">"/about"</text>
+  <text x="270" y="240" class="code">element={</text>
+  <text x="335" y="240" class="component">&lt;AboutPage /&gt;</text>
+  <text x="435" y="240" class="code">}</text>
+  
+  <text x="125" y="260" class="label-sm">→ URL: /about</text>
+  <text x="500" y="260" class="label-sm">Renderiza: AboutPage</text>
+  
+  <!-- Route 3: Products (dynamic) -->
+  <rect x="110" y="285" width="680" height="55" class="route-box"/>
+  <text x="125" y="305" class="keyword">Route</text>
+  <text x="170" y="305" class="code">path=</text>
+  <text x="205" y="305" class="string">"/products/:id"</text>
+  <text x="315" y="305" class="code">element={</text>
+  <text x="380" y="305" class="component">&lt;ProductPage /&gt;</text>
+  <text x="485" y="305" class="code">}</text>
+  
+  <text x="125" y="325" class="label-sm">→ URL: /products/123</text>
+  <text x="500" y="325" class="label-sm">:id = parámetro dinámico</text>
+  
+  <!-- Route 4: 404 -->
+  <rect x="110" y="350" width="680" height="55" class="route-box" style="stroke: #ef4444;"/>
+  <text x="125" y="370" class="keyword">Route</text>
+  <text x="170" y="370" class="code">path=</text>
+  <text x="205" y="370" class="string">"*"</text>
+  <text x="225" y="370" class="code">element={</text>
+  <text x="285" y="370" class="component">&lt;NotFoundPage /&gt;</text>
+  <text x="400" y="370" class="code">}</text>
+  
+  <text x="125" y="390" class="label-sm">→ Cualquier URL no coincidente</text>
+  <text x="500" y="390" class="label-sm">Catch-all para 404</text>
+  
+  <!-- Navigation Components -->
+  <rect x="110" y="415" width="320" height="45" class="router-box"/>
+  <text x="125" y="435" class="component">&lt;Link to="/about"&gt;</text>
+  <text x="275" y="435" class="code">Ir a About</text>
+  <text x="345" y="435" class="component">&lt;/Link&gt;</text>
+  <text x="125" y="450" class="label-sm">Navegación declarativa</text>
+  
+  <rect x="450" y="415" width="340" height="45" class="router-box"/>
+  <text x="465" y="435" class="component">&lt;NavLink to="/about"</text>
+  <text x="620" y="435" class="code">className={...}</text>
+  <text x="710" y="435" class="component">&gt;</text>
+  <text x="465" y="450" class="label-sm">Link con estado activo</text>
+  
+  <!-- Legend -->
+  <rect x="60" y="510" width="120" height="8" style="fill: #3b82f6; rx: 2;"/>
+  <text x="190" y="518" class="label-sm">Provider/Router</text>
+  
+  <rect x="300" y="510" width="120" height="8" style="fill: #10b981; rx: 2;"/>
+  <text x="430" y="518" class="label-sm">Rutas activas</text>
+  
+  <rect x="540" y="510" width="120" height="8" style="fill: #ef4444; rx: 2;"/>
+  <text x="670" y="518" class="label-sm">Catch-all 404</text>
+</svg>

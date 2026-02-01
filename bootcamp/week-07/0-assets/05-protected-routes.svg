@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .card { fill: #16213e; stroke: #0f3460; stroke-width: 2; rx: 12; }
+      .title { fill: #e94560; font-family: system-ui, sans-serif; font-size: 20px; font-weight: bold; }
+      .subtitle { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 14px; }
+      .label { fill: #f8fafc; font-family: system-ui, sans-serif; font-size: 13px; }
+      .label-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 11px; }
+      .code { fill: #e2e8f0; font-family: 'Fira Code', monospace; font-size: 10px; }
+      .component { fill: #82aaff; font-family: 'Fira Code', monospace; font-size: 11px; }
+      .guard-box { fill: #2d1f4e; stroke: #f59e0b; stroke-width: 2; rx: 8; }
+      .protected-box { fill: #1e4035; stroke: #10b981; stroke-width: 2; rx: 6; }
+      .redirect-box { fill: #3b1c1c; stroke: #ef4444; stroke-width: 2; rx: 6; }
+      .public-box { fill: #1e3a5f; stroke: #3b82f6; stroke-width: 2; rx: 6; }
+      .arrow { stroke: #e94560; stroke-width: 2; fill: none; }
+      .arrow-green { stroke: #10b981; stroke-width: 2; fill: none; }
+      .arrow-red { stroke: #ef4444; stroke-width: 2; fill: none; }
+      .arrow-head { fill: #e94560; }
+      .arrow-head-green { fill: #10b981; }
+      .arrow-head-red { fill: #ef4444; }
+      .decision { fill: #1e3a5f; stroke: #8b5cf6; stroke-width: 2; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="900" height="500"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="title">Rutas Protegidas: Flujo de Autenticación</text>
+  
+  <!-- Flow Diagram -->
+  <rect x="30" y="55" width="840" height="240" class="card"/>
+  <text x="450" y="80" text-anchor="middle" class="subtitle">Flujo de Navegación con ProtectedRoute</text>
+  
+  <!-- User request -->
+  <rect x="60" y="100" width="140" height="50" class="public-box"/>
+  <text x="130" y="120" text-anchor="middle" class="label">Usuario</text>
+  <text x="130" y="137" text-anchor="middle" class="label-sm">navega a /dashboard</text>
+  
+  <!-- Arrow to guard -->
+  <path d="M200 125 L260 125" class="arrow" marker-end="url(#arrowhead)"/>
+  
+  <!-- ProtectedRoute Guard -->
+  <polygon points="340,95 420,125 340,155 260,125" class="decision"/>
+  <text x="340" y="120" text-anchor="middle" class="label-sm">isAuthenticated</text>
+  <text x="340" y="135" text-anchor="middle" class="label-sm">?</text>
+  
+  <!-- Yes path - to protected content -->
+  <path d="M420 125 L500 125" class="arrow-green" marker-end="url(#arrowhead-green)"/>
+  <text x="455" y="115" class="label-sm" fill="#10b981">✓ Sí</text>
+  
+  <rect x="500" y="100" width="150" height="50" class="protected-box"/>
+  <text x="575" y="120" text-anchor="middle" class="label">Dashboard</text>
+  <text x="575" y="137" text-anchor="middle" class="label-sm">Contenido protegido</text>
+  
+  <!-- No path - to login -->
+  <path d="M340 155 L340 185 L500 185" class="arrow-red" marker-end="url(#arrowhead-red)"/>
+  <text x="360" y="175" class="label-sm" fill="#ef4444">✗ No</text>
+  
+  <rect x="500" y="165" width="150" height="50" class="redirect-box"/>
+  <text x="575" y="185" text-anchor="middle" class="label">Login</text>
+  <text x="575" y="202" text-anchor="middle" class="label-sm">Redirige con state</text>
+  
+  <!-- Post-login flow -->
+  <path d="M650 190 L700 190 L700 125 L780 125" class="arrow-green" marker-end="url(#arrowhead-green)"/>
+  
+  <rect x="680" y="100" width="170" height="50" class="protected-box"/>
+  <text x="765" y="120" text-anchor="middle" class="label">Dashboard</text>
+  <text x="765" y="137" text-anchor="middle" class="label-sm">Después del login</text>
+  
+  <text x="728" y="165" class="label-sm" fill="#10b981">Login OK</text>
+  
+  <!-- Code Example -->
+  <rect x="30" y="310" width="410" height="175" class="card"/>
+  <text x="235" y="335" text-anchor="middle" class="subtitle">Componente ProtectedRoute</text>
+  
+  <rect x="50" y="350" width="370" height="120" style="fill: #0d1117; rx: 6;"/>
+  <text x="65" y="370" class="code">const ProtectedRoute = ({ isAuth }) =&gt; {</text>
+  <text x="80" y="390" class="code">const location = useLocation();</text>
+  <text x="80" y="410" class="code">if (!isAuth) {</text>
+  <text x="95" y="430" class="code">return &lt;Navigate to="/login"</text>
+  <text x="110" y="445" class="code">state={{ from: location }} /&gt;;</text>
+  <text x="80" y="460" class="code">}</text>
+  <text x="80" y="475" class="code">return &lt;Outlet /&gt;;</text>
+  
+  <!-- Route Configuration -->
+  <rect x="460" y="310" width="410" height="175" class="card"/>
+  <text x="665" y="335" text-anchor="middle" class="subtitle">Configuración de Rutas</text>
+  
+  <rect x="480" y="350" width="370" height="120" style="fill: #0d1117; rx: 6;"/>
+  <text x="495" y="370" class="code">&lt;Routes&gt;</text>
+  <text x="510" y="390" class="code">{/* Públicas */}</text>
+  <text x="510" y="405" class="code">&lt;Route path="/login" element={&lt;Login /&gt;} /&gt;</text>
+  <text x="510" y="425" class="code">{/* Protegidas */}</text>
+  <text x="510" y="440" class="code">&lt;Route element={&lt;ProtectedRoute /&gt;}&gt;</text>
+  <text x="525" y="455" class="code">&lt;Route path="/dashboard" ... /&gt;</text>
+  <text x="510" y="470" class="code">&lt;/Route&gt;</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="250" width="80" height="20" class="public-box"/>
+  <text x="145" y="265" class="label-sm">Ruta pública</text>
+  
+  <rect x="240" y="250" width="80" height="20" class="protected-box"/>
+  <text x="335" y="265" class="label-sm">Ruta protegida</text>
+  
+  <rect x="430" y="250" width="80" height="20" class="redirect-box"/>
+  <text x="525" y="265" class="label-sm">Redirección</text>
+  
+  <polygon points="620,250 660,260 620,270 580,260" class="decision"/>
+  <text x="700" y="265" class="label-sm">Decisión (guard)</text>
+  
+  <!-- Arrow marker definitions -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="arrow-head"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="arrow-head-green"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="arrow-head-red"/>
+    </marker>
+  </defs>
+</svg>

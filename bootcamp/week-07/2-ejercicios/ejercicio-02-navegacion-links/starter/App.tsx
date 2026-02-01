@@ -1,0 +1,38 @@
+// ============================================
+// EJERCICIO 02: App con Navigation
+// ============================================
+
+import { Routes, Route } from 'react-router-dom';
+// import { Navigation } from './components/Navigation';
+
+const HomePage: React.FC = () => <h2>Home Page</h2>;
+const AboutPage: React.FC = () => <h2>About Page</h2>;
+const ContactPage: React.FC = () => <h2>Contact Page</h2>;
+
+const App: React.FC = () => {
+  return (
+    <div className="app">
+      {/* PASO 3: Agrega el Navigation aquí */}
+      {/* <Navigation /> */}
+
+      <main>
+        <Routes>
+          <Route
+            path="/"
+            element={<HomePage />}
+          />
+          <Route
+            path="/about"
+            element={<AboutPage />}
+          />
+          <Route
+            path="/contact"
+            element={<ContactPage />}
+          />
+        </Routes>
+      </main>
+    </div>
+  );
+};
+
+export default App;

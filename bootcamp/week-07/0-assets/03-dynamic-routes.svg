@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" fill="none">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .card { fill: #16213e; stroke: #0f3460; stroke-width: 2; rx: 12; }
+      .title { fill: #e94560; font-family: system-ui, sans-serif; font-size: 20px; font-weight: bold; }
+      .subtitle { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 14px; }
+      .label { fill: #f8fafc; font-family: system-ui, sans-serif; font-size: 13px; }
+      .label-sm { fill: #94a3b8; font-family: system-ui, sans-serif; font-size: 11px; }
+      .code { fill: #e2e8f0; font-family: 'Fira Code', monospace; font-size: 11px; }
+      .keyword { fill: #c792ea; font-family: 'Fira Code', monospace; font-size: 11px; }
+      .param { fill: #ffcb6b; font-family: 'Fira Code', monospace; font-size: 12px; font-weight: bold; }
+      .string { fill: #c3e88d; font-family: 'Fira Code', monospace; font-size: 11px; }
+      .url-box { fill: #1e3a5f; stroke: #3b82f6; stroke-width: 2; rx: 6; }
+      .param-box { fill: #2d3a5f; stroke: #f59e0b; stroke-width: 2; rx: 6; }
+      .hook-box { fill: #1e3a5f; stroke: #10b981; stroke-width: 2; rx: 8; }
+      .arrow { stroke: #e94560; stroke-width: 2; fill: none; }
+      .arrow-head { fill: #e94560; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="900" height="480"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="title">Rutas Dinámicas: useParams y useSearchParams</text>
+  
+  <!-- useParams Section -->
+  <rect x="30" y="55" width="410" height="200" class="card"/>
+  <text x="235" y="80" text-anchor="middle" class="subtitle">useParams - Parámetros de Ruta</text>
+  
+  <!-- Route Definition -->
+  <rect x="50" y="95" width="370" height="35" class="url-box"/>
+  <text x="65" y="117" class="code">Route path=</text>
+  <text x="145" y="117" class="string">"/products/</text>
+  <text x="220" y="117" class="param">:productId</text>
+  <text x="295" y="117" class="string">"</text>
+  
+  <!-- URL Example -->
+  <rect x="50" y="140" width="370" height="35" class="param-box"/>
+  <text x="65" y="162" class="label-sm">URL:</text>
+  <text x="95" y="162" class="code">/products/</text>
+  <text x="170" y="162" class="param">abc-123</text>
+  
+  <!-- Arrow -->
+  <path d="M235 180 L235 195" class="arrow" marker-end="url(#arrowhead)"/>
+  
+  <!-- Hook Result -->
+  <rect x="50" y="200" width="370" height="45" class="hook-box"/>
+  <text x="65" y="220" class="code">const { productId } = useParams();</text>
+  <text x="65" y="237" class="label-sm">productId = </text>
+  <text x="140" y="237" class="param">"abc-123"</text>
+  
+  <!-- useSearchParams Section -->
+  <rect x="460" y="55" width="410" height="200" class="card"/>
+  <text x="665" y="80" text-anchor="middle" class="subtitle">useSearchParams - Query Strings</text>
+  
+  <!-- URL with Query -->
+  <rect x="480" y="95" width="370" height="35" class="url-box"/>
+  <text x="495" y="117" class="code">/products</text>
+  <text x="560" y="117" class="param">?category=books&amp;page=2</text>
+  
+  <!-- Query Params Breakdown -->
+  <rect x="480" y="140" width="175" height="35" class="param-box"/>
+  <text x="495" y="157" class="label-sm">category=</text>
+  <text x="560" y="157" class="param">books</text>
+  
+  <rect x="665" y="140" width="125" height="35" class="param-box"/>
+  <text x="680" y="157" class="label-sm">page=</text>
+  <text x="720" y="157" class="param">2</text>
+  
+  <!-- Arrow -->
+  <path d="M665 180 L665 195" class="arrow" marker-end="url(#arrowhead)"/>
+  
+  <!-- Hook Result -->
+  <rect x="480" y="200" width="370" height="45" class="hook-box"/>
+  <text x="495" y="220" class="code">searchParams.get('category')</text>
+  <text x="710" y="220" class="param">"books"</text>
+  <text x="495" y="237" class="code">searchParams.get('page')</text>
+  <text x="710" y="237" class="param">"2"</text>
+  
+  <!-- Multiple Params Example -->
+  <rect x="30" y="270" width="840" height="90" class="card"/>
+  <text x="450" y="295" text-anchor="middle" class="subtitle">Múltiples Parámetros Combinados</text>
+  
+  <rect x="50" y="310" width="800" height="40" class="url-box"/>
+  <text x="70" y="335" class="code">/users/</text>
+  <text x="130" y="335" class="param">:userId</text>
+  <text x="195" y="335" class="code">/posts/</text>
+  <text x="260" y="335" class="param">:postId</text>
+  <text x="320" y="335" class="param">?sort=date&amp;order=desc</text>
+  
+  <text x="550" y="335" class="label-sm">→ useParams + useSearchParams juntos</text>
+  
+  <!-- Comparison Table -->
+  <rect x="30" y="375" width="840" height="90" class="card"/>
+  <text x="450" y="400" text-anchor="middle" class="subtitle">Diferencias Clave</text>
+  
+  <!-- Table content -->
+  <text x="225" y="425" text-anchor="middle" fill="#f59e0b" style="font-family: system-ui; font-size: 12px; font-weight: bold;">useParams</text>
+  <text x="675" y="425" text-anchor="middle" fill="#10b981" style="font-family: system-ui; font-size: 12px; font-weight: bold;">useSearchParams</text>
+  
+  <text x="225" y="445" text-anchor="middle" class="label-sm">Parte del path: /products/:id</text>
+  <text x="675" y="445" text-anchor="middle" class="label-sm">Query string: ?key=value</text>
+  
+  <text x="225" y="460" text-anchor="middle" class="label-sm">Identificadores únicos, recursos</text>
+  <text x="675" y="460" text-anchor="middle" class="label-sm">Filtros, ordenamiento, paginación</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="arrow-head"/>
+    </marker>
+  </defs>
+</svg>
