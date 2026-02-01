@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 550" style="font-family: Inter, Roboto, Arial, sans-serif;">
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="950" height="550" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="475" y="35" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Compound Components - Estado Compartido Interno</text>
+  
+  <!-- Componente principal -->
+  <rect x="300" y="60" width="350" height="100" rx="8" fill="#1e3a5f" stroke="#61DAFB" stroke-width="3"/>
+  <text x="475" y="95" fill="#61DAFB" font-size="18" font-weight="bold" text-anchor="middle">Accordion</text>
+  <text x="475" y="120" fill="#888" font-size="12" text-anchor="middle">Mantiene el estado: openItems, toggleItem</text>
+  <text x="475" y="140" fill="#61DAFB" font-size="11" text-anchor="middle">Provider del Context interno</text>
+  
+  <!-- Context bubble -->
+  <ellipse cx="475" cy="200" rx="120" ry="35" fill="#2c4a6e" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="475" y="195" fill="#f39c12" font-size="12" font-weight="bold" text-anchor="middle">Context Interno</text>
+  <text x="475" y="212" fill="#ffffff" font-size="10" text-anchor="middle">(no exportado)</text>
+  
+  <!-- Flechas hacia subcomponentes -->
+  <line x1="380" y1="230" x2="180" y2="290" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="475" y1="235" x2="475" y2="290" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="570" y1="230" x2="770" y2="290" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  
+  <!-- Subcomponentes -->
+  <rect x="80" y="300" width="200" height="90" rx="6" fill="#2c4a2c" stroke="#2ecc71" stroke-width="2"/>
+  <text x="180" y="330" fill="#2ecc71" font-size="14" font-weight="bold" text-anchor="middle">Accordion.Item</text>
+  <text x="180" y="355" fill="#888" font-size="11" text-anchor="middle">Provee id al contexto</text>
+  <text x="180" y="375" fill="#ffffff" font-size="10" text-anchor="middle">AccordionItemContext</text>
+  
+  <rect x="375" y="300" width="200" height="90" rx="6" fill="#3d2c4a" stroke="#9b59b6" stroke-width="2"/>
+  <text x="475" y="330" fill="#9b59b6" font-size="14" font-weight="bold" text-anchor="middle">Accordion.Trigger</text>
+  <text x="475" y="355" fill="#888" font-size="11" text-anchor="middle">Lee: isOpen, toggleItem</text>
+  <text x="475" y="375" fill="#ffffff" font-size="10" text-anchor="middle">onClick → toggleItem(id)</text>
+  
+  <rect x="670" y="300" width="200" height="90" rx="6" fill="#4a3d2c" stroke="#f39c12" stroke-width="2"/>
+  <text x="770" y="330" fill="#f39c12" font-size="14" font-weight="bold" text-anchor="middle">Accordion.Content</text>
+  <text x="770" y="355" fill="#888" font-size="11" text-anchor="middle">Lee: isOpen(id)</text>
+  <text x="770" y="375" fill="#ffffff" font-size="10" text-anchor="middle">Renderiza si está abierto</text>
+  
+  <!-- Código de uso -->
+  <rect x="50" y="420" width="400" height="115" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="250" y="445" fill="#888" font-size="12" text-anchor="middle">Uso declarativo:</text>
+  
+  <text x="70" y="470" fill="#ff7b72" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;Accordion&gt;</text>
+  <text x="85" y="490" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;Accordion.Item</text>
+  <text x="210" y="490" fill="#7ee787" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">id</text>
+  <text x="225" y="490" fill="#ffffff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">=</text>
+  <text x="235" y="490" fill="#a5d6ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">"faq-1"</text>
+  <text x="285" y="490" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&gt;</text>
+  <text x="100" y="510" fill="#9b59b6" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;Accordion.Trigger&gt;</text>
+  <text x="255" y="510" fill="#ffffff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">Pregunta</text>
+  <text x="315" y="510" fill="#9b59b6" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;/...&gt;</text>
+  <text x="100" y="525" fill="#f39c12" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;Accordion.Content&gt;</text>
+  <text x="265" y="525" fill="#ffffff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">Respuesta</text>
+  <text x="335" y="525" fill="#f39c12" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;/...&gt;</text>
+  
+  <!-- Beneficios -->
+  <rect x="500" y="420" width="400" height="115" rx="8" fill="#1f2d1f" stroke="#2ecc71"/>
+  <text x="700" y="445" fill="#2ecc71" font-size="14" font-weight="bold" text-anchor="middle">Beneficios del patrón</text>
+  
+  <text x="520" y="470" fill="#ffffff" font-size="12">✓ API declarativa y legible</text>
+  <text x="520" y="490" fill="#ffffff" font-size="12">✓ Estado encapsulado (no se pasa por props)</text>
+  <text x="520" y="510" fill="#ffffff" font-size="12">✓ Flexibilidad en la estructura</text>
+  <text x="520" y="530" fill="#ffffff" font-size="12">✓ Autocompletado de IDE con TypeScript</text>
+</svg>

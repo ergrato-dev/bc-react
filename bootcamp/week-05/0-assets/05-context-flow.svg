@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 600" style="font-family: Inter, Roboto, Arial, sans-serif;">
+  <defs>
+    <marker id="arrowCtx" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="950" height="600" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="475" y="35" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Context API - Prop Drilling vs Context</text>
+  
+  <!-- Lado izquierdo: Prop Drilling -->
+  <rect x="30" y="60" width="420" height="520" rx="8" fill="#2d1f1f" stroke="#e74c3c" stroke-width="2"/>
+  <text x="240" y="90" fill="#e74c3c" font-size="18" font-weight="bold" text-anchor="middle">❌ Prop Drilling</text>
+  
+  <!-- Árbol de componentes con props -->
+  <rect x="170" y="110" width="140" height="45" rx="6" fill="#4a2c2c" stroke="#e74c3c"/>
+  <text x="240" y="138" fill="#ffffff" font-size="12" text-anchor="middle">App (user)</text>
+  
+  <line x1="240" y1="155" x2="240" y2="175" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="280" y="168" fill="#ff6b6b" font-size="9">user={user}</text>
+  
+  <rect x="170" y="180" width="140" height="45" rx="6" fill="#4a2c2c" stroke="#e74c3c"/>
+  <text x="240" y="208" fill="#ffffff" font-size="12" text-anchor="middle">Layout (user)</text>
+  
+  <line x1="240" y1="225" x2="240" y2="245" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="280" y="238" fill="#ff6b6b" font-size="9">user={user}</text>
+  
+  <rect x="170" y="250" width="140" height="45" rx="6" fill="#4a2c2c" stroke="#e74c3c"/>
+  <text x="240" y="278" fill="#ffffff" font-size="12" text-anchor="middle">Sidebar (user)</text>
+  
+  <line x1="240" y1="295" x2="240" y2="315" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="280" y="308" fill="#ff6b6b" font-size="9">user={user}</text>
+  
+  <rect x="170" y="320" width="140" height="45" rx="6" fill="#4a2c2c" stroke="#e74c3c"/>
+  <text x="240" y="348" fill="#ffffff" font-size="12" text-anchor="middle">UserMenu (user)</text>
+  
+  <line x1="240" y1="365" x2="240" y2="385" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="280" y="378" fill="#ff6b6b" font-size="9">user={user}</text>
+  
+  <rect x="170" y="390" width="140" height="45" rx="6" fill="#6a3c3c" stroke="#e74c3c" stroke-width="2"/>
+  <text x="240" y="418" fill="#ffffff" font-size="12" text-anchor="middle">Avatar 🎯</text>
+  
+  <!-- Problemas -->
+  <text x="240" y="470" fill="#ff6b6b" font-size="12" text-anchor="middle">Problemas:</text>
+  <text x="240" y="495" fill="#ff6b6b" font-size="11" text-anchor="middle">• Props en cada nivel</text>
+  <text x="240" y="515" fill="#ff6b6b" font-size="11" text-anchor="middle">• Componentes intermedios</text>
+  <text x="240" y="535" fill="#ff6b6b" font-size="11" text-anchor="middle">   no necesitan user</text>
+  <text x="240" y="555" fill="#ff6b6b" font-size="11" text-anchor="middle">• Difícil de mantener</text>
+  
+  <!-- Lado derecho: Context -->
+  <rect x="500" y="60" width="420" height="520" rx="8" fill="#1f2d1f" stroke="#2ecc71" stroke-width="2"/>
+  <text x="710" y="90" fill="#2ecc71" font-size="18" font-weight="bold" text-anchor="middle">✅ Context API</text>
+  
+  <!-- Provider -->
+  <rect x="580" y="110" width="260" height="55" rx="6" fill="#2c4a2c" stroke="#61DAFB" stroke-width="2"/>
+  <text x="710" y="135" fill="#61DAFB" font-size="14" font-weight="bold" text-anchor="middle">UserProvider</text>
+  <text x="710" y="155" fill="#888" font-size="10" text-anchor="middle">value={{ user, setUser }}</text>
+  
+  <!-- Árbol de componentes sin props -->
+  <rect x="640" y="180" width="140" height="40" rx="6" fill="#2c4a2c" stroke="#2ecc71"/>
+  <text x="710" y="205" fill="#ffffff" font-size="12" text-anchor="middle">App</text>
+  
+  <line x1="710" y1="220" x2="710" y2="240" stroke="#2ecc71" stroke-width="1"/>
+  
+  <rect x="640" y="245" width="140" height="40" rx="6" fill="#2c4a2c" stroke="#2ecc71"/>
+  <text x="710" y="270" fill="#ffffff" font-size="12" text-anchor="middle">Layout</text>
+  
+  <line x1="710" y1="285" x2="710" y2="305" stroke="#2ecc71" stroke-width="1"/>
+  
+  <rect x="640" y="310" width="140" height="40" rx="6" fill="#2c4a2c" stroke="#2ecc71"/>
+  <text x="710" y="335" fill="#ffffff" font-size="12" text-anchor="middle">Sidebar</text>
+  
+  <line x1="710" y1="350" x2="710" y2="370" stroke="#2ecc71" stroke-width="1"/>
+  
+  <rect x="640" y="375" width="140" height="40" rx="6" fill="#2c4a2c" stroke="#2ecc71"/>
+  <text x="710" y="400" fill="#ffffff" font-size="12" text-anchor="middle">UserMenu</text>
+  
+  <line x1="710" y1="415" x2="710" y2="435" stroke="#2ecc71" stroke-width="1"/>
+  
+  <rect x="640" y="440" width="140" height="45" rx="6" fill="#3c6a3c" stroke="#61DAFB" stroke-width="2"/>
+  <text x="710" y="460" fill="#ffffff" font-size="12" text-anchor="middle">Avatar 🎯</text>
+  <text x="710" y="478" fill="#61DAFB" font-size="10" text-anchor="middle">useUser()</text>
+  
+  <!-- Flecha directa del context -->
+  <path d="M 840 140 Q 880 290 790 455" stroke="#61DAFB" stroke-width="3" stroke-dasharray="8,4" fill="none" marker-end="url(#arrowCtx)"/>
+  <text x="870" y="300" fill="#61DAFB" font-size="11" transform="rotate(70 870 300)">Acceso directo</text>
+  
+  <!-- Beneficios -->
+  <text x="710" y="510" fill="#2ecc71" font-size="12" text-anchor="middle">Beneficios:</text>
+  <text x="710" y="535" fill="#2ecc71" font-size="11" text-anchor="middle">• Sin props intermedios</text>
+  <text x="710" y="555" fill="#2ecc71" font-size="11" text-anchor="middle">• Acceso directo con useUser()</text>
+  <text x="710" y="575" fill="#2ecc71" font-size="11" text-anchor="middle">• Fácil de mantener</text>
+</svg>
