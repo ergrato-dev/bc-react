@@ -1,0 +1,104 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowCycle" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="800" height="500" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">
+    Ciclo de Vida de Componentes con Hooks
+  </text>
+  
+  <!-- Fase MOUNT -->
+  <rect x="50" y="70" width="200" height="180" rx="8" fill="#2d2d2d" stroke="#4ade80" stroke-width="2"/>
+  <text x="150" y="100" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">🟢 MOUNT</text>
+  <text x="150" y="125" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="12">Primer render</text>
+  
+  <text x="70" y="155" fill="#61DAFB" font-family="monospace" font-size="12">useEffect(() =&gt; {</text>
+  <text x="80" y="175" fill="#ffffff" font-family="monospace" font-size="11">// Setup inicial</text>
+  <text x="80" y="195" fill="#ffffff" font-family="monospace" font-size="11">// Fetch datos</text>
+  <text x="80" y="215" fill="#ffffff" font-family="monospace" font-size="11">// Suscripciones</text>
+  <text x="70" y="235" fill="#61DAFB" font-family="monospace" font-size="12">}, [])</text>
+  
+  <!-- Flecha MOUNT -> UPDATE -->
+  <path d="M 250 160 L 290 160" stroke="#61DAFB" stroke-width="2" fill="none" marker-end="url(#arrowCycle)"/>
+  
+  <!-- Fase UPDATE -->
+  <rect x="300" y="70" width="200" height="180" rx="8" fill="#2d2d2d" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="100" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">🔄 UPDATE</text>
+  <text x="400" y="125" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="12">Re-renders</text>
+  
+  <text x="320" y="155" fill="#61DAFB" font-family="monospace" font-size="12">useEffect(() =&gt; {</text>
+  <text x="330" y="175" fill="#ffffff" font-family="monospace" font-size="11">// Cuando deps</text>
+  <text x="330" y="195" fill="#ffffff" font-family="monospace" font-size="11">// cambian</text>
+  <text x="320" y="215" fill="#61DAFB" font-family="monospace" font-size="12">}, [dep1, dep2])</text>
+  
+  <!-- Flecha circular UPDATE -->
+  <path d="M 400 250 C 400 280, 450 280, 450 250" stroke="#f59e0b" stroke-width="2" fill="none"/>
+  <path d="M 450 250 L 450 250" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowCycle)"/>
+  <text x="425" y="295" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">State/Props change</text>
+  
+  <!-- Flecha UPDATE -> UNMOUNT -->
+  <path d="M 500 160 L 540 160" stroke="#61DAFB" stroke-width="2" fill="none" marker-end="url(#arrowCycle)"/>
+  
+  <!-- Fase UNMOUNT -->
+  <rect x="550" y="70" width="200" height="180" rx="8" fill="#2d2d2d" stroke="#ef4444" stroke-width="2"/>
+  <text x="650" y="100" text-anchor="middle" fill="#ef4444" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">🔴 UNMOUNT</text>
+  <text x="650" y="125" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="12">Componente se elimina</text>
+  
+  <text x="570" y="155" fill="#61DAFB" font-family="monospace" font-size="12">useEffect(() =&gt; {</text>
+  <text x="580" y="175" fill="#ffffff" font-family="monospace" font-size="11">// Setup...</text>
+  <text x="580" y="195" fill="#C586C0" font-family="monospace" font-size="11">return () =&gt; {</text>
+  <text x="590" y="215" fill="#ffffff" font-family="monospace" font-size="11">// Cleanup</text>
+  <text x="580" y="235" fill="#C586C0" font-family="monospace" font-size="11">}</text>
+  
+  <!-- Timeline -->
+  <line x1="50" y1="320" x2="750" y2="320" stroke="#404040" stroke-width="2"/>
+  <text x="400" y="345" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="12">TIMELINE DE EJECUCIÓN</text>
+  
+  <!-- Eventos en timeline -->
+  <circle cx="100" cy="320" r="8" fill="#4ade80"/>
+  <text x="100" y="370" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">Render</text>
+  <text x="100" y="385" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">inicial</text>
+  
+  <circle cx="200" cy="320" r="8" fill="#4ade80"/>
+  <text x="200" y="370" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">useLayout</text>
+  <text x="200" y="385" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">Effect</text>
+  
+  <circle cx="300" cy="320" r="8" fill="#4ade80"/>
+  <text x="300" y="370" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">Paint</text>
+  <text x="300" y="385" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">DOM</text>
+  
+  <circle cx="400" cy="320" r="8" fill="#4ade80"/>
+  <text x="400" y="370" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">useEffect</text>
+  <text x="400" y="385" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">(mount)</text>
+  
+  <circle cx="500" cy="320" r="8" fill="#f59e0b"/>
+  <text x="500" y="370" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">Cleanup</text>
+  <text x="500" y="385" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">prev effect</text>
+  
+  <circle cx="600" cy="320" r="8" fill="#f59e0b"/>
+  <text x="600" y="370" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">useEffect</text>
+  <text x="600" y="385" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">(update)</text>
+  
+  <circle cx="700" cy="320" r="8" fill="#ef4444"/>
+  <text x="700" y="370" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">Cleanup</text>
+  <text x="700" y="385" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="10">(unmount)</text>
+  
+  <!-- Equivalencias Class vs Hooks -->
+  <rect x="50" y="410" width="700" height="80" rx="6" fill="#252525" stroke="#3178C6" stroke-width="1"/>
+  <text x="400" y="435" text-anchor="middle" fill="#3178C6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Equivalencias: Class Components → Hooks</text>
+  
+  <text x="100" y="460" fill="#a0a0a0" font-family="monospace" font-size="11">componentDidMount</text>
+  <text x="100" y="475" fill="#61DAFB" font-family="monospace" font-size="11">useEffect(fn, [])</text>
+  
+  <text x="300" y="460" fill="#a0a0a0" font-family="monospace" font-size="11">componentDidUpdate</text>
+  <text x="300" y="475" fill="#61DAFB" font-family="monospace" font-size="11">useEffect(fn, [deps])</text>
+  
+  <text x="530" y="460" fill="#a0a0a0" font-family="monospace" font-size="11">componentWillUnmount</text>
+  <text x="530" y="475" fill="#61DAFB" font-family="monospace" font-size="11">useEffect return cleanup</text>
+</svg>

@@ -1,0 +1,95 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="800" height="450" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">
+    Composición de Custom Hooks
+  </text>
+  
+  <!-- Hooks Base (Nivel 1) -->
+  <text x="80" y="80" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="12">HOOKS BASE</text>
+  
+  <!-- useLocalStorage -->
+  <rect x="50" y="95" width="150" height="70" rx="6" fill="#2d2d2d" stroke="#3178C6" stroke-width="2"/>
+  <text x="125" y="120" text-anchor="middle" fill="#61DAFB" font-family="monospace" font-size="13" font-weight="bold">useLocalStorage</text>
+  <text x="125" y="145" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">Persistencia</text>
+  <text x="125" y="158" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">localStorage</text>
+  
+  <!-- useFetch -->
+  <rect x="230" y="95" width="150" height="70" rx="6" fill="#2d2d2d" stroke="#3178C6" stroke-width="2"/>
+  <text x="305" y="120" text-anchor="middle" fill="#61DAFB" font-family="monospace" font-size="13" font-weight="bold">useFetch</text>
+  <text x="305" y="145" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">Llamadas API</text>
+  <text x="305" y="158" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">loading/error</text>
+  
+  <!-- useDebounce -->
+  <rect x="410" y="95" width="150" height="70" rx="6" fill="#2d2d2d" stroke="#3178C6" stroke-width="2"/>
+  <text x="485" y="120" text-anchor="middle" fill="#61DAFB" font-family="monospace" font-size="13" font-weight="bold">useDebounce</text>
+  <text x="485" y="145" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">Optimización</text>
+  <text x="485" y="158" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">de inputs</text>
+  
+  <!-- useToggle -->
+  <rect x="590" y="95" width="150" height="70" rx="6" fill="#2d2d2d" stroke="#3178C6" stroke-width="2"/>
+  <text x="665" y="120" text-anchor="middle" fill="#61DAFB" font-family="monospace" font-size="13" font-weight="bold">useToggle</text>
+  <text x="665" y="145" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">Boolean</text>
+  <text x="665" y="158" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">state</text>
+  
+  <!-- Flechas de composición -->
+  <path d="M 125 165 L 125 200 L 255 230" stroke="#61DAFB" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 305 165 L 305 230" stroke="#61DAFB" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 485 165 L 485 200 L 355 230" stroke="#61DAFB" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Hooks Compuestos (Nivel 2) -->
+  <text x="80" y="220" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="12">HOOKS COMPUESTOS</text>
+  
+  <!-- useAuth -->
+  <rect x="170" y="240" width="200" height="80" rx="6" fill="#2d2d2d" stroke="#4ade80" stroke-width="2"/>
+  <text x="270" y="270" text-anchor="middle" fill="#4ade80" font-family="monospace" font-size="14" font-weight="bold">useAuth</text>
+  <text x="270" y="295" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">useLocalStorage + useFetch</text>
+  <text x="270" y="310" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">login, logout, user, token</text>
+  
+  <!-- useSearch -->
+  <rect x="430" y="240" width="200" height="80" rx="6" fill="#2d2d2d" stroke="#4ade80" stroke-width="2"/>
+  <text x="530" y="270" text-anchor="middle" fill="#4ade80" font-family="monospace" font-size="14" font-weight="bold">useSearch</text>
+  <text x="530" y="295" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">useFetch + useDebounce</text>
+  <text x="530" y="310" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">query, results, loading</text>
+  
+  <!-- Flecha a useToggle para useModal -->
+  <path d="M 665 165 L 665 240" stroke="#61DAFB" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- useModal -->
+  <rect x="590" y="240" width="150" height="80" rx="6" fill="#2d2d2d" stroke="#4ade80" stroke-width="2"/>
+  <text x="665" y="270" text-anchor="middle" fill="#4ade80" font-family="monospace" font-size="14" font-weight="bold">useModal</text>
+  <text x="665" y="295" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">useToggle</text>
+  <text x="665" y="310" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">open, close, isOpen</text>
+  
+  <!-- Flechas al hook de aplicación -->
+  <path d="M 270 320 L 270 360 L 380 380" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M 530 320 L 530 360 L 420 380" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M 665 320 L 665 360 L 450 380" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  
+  <!-- Hook de Aplicación (Nivel 3) -->
+  <text x="80" y="370" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="12">HOOK DE APLICACIÓN</text>
+  
+  <rect x="250" y="390" width="300" height="50" rx="6" fill="#2d2d2d" stroke="#f472b6" stroke-width="2"/>
+  <text x="400" y="420" text-anchor="middle" fill="#f472b6" font-family="monospace" font-size="16" font-weight="bold">useDashboard</text>
+  
+  <!-- Leyenda -->
+  <rect x="50" y="390" width="15" height="15" rx="2" fill="#3178C6"/>
+  <text x="75" y="402" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">Hooks Base</text>
+  
+  <rect x="50" y="410" width="15" height="15" rx="2" fill="#4ade80"/>
+  <text x="75" y="422" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">Hooks Compuestos</text>
+  
+  <rect x="50" y="430" width="15" height="15" rx="2" fill="#f472b6"/>
+  <text x="75" y="442" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">Hook de Feature</text>
+</svg>
