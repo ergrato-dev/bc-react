@@ -1,0 +1,211 @@
+/* ============================================
+   Estilos para Ejercicio 03 - Selectores
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height: 100vh;
+  color: #e4e4e7;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+header p {
+  color: #a1a1aa;
+}
+
+/* Todo App */
+.todo-app {
+  background: #27272a;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* Form */
+.todo-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #3f3f46;
+  color: #f4f4f5;
+  font-size: 1rem;
+}
+
+.todo-input:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+.todo-input::placeholder {
+  color: #71717a;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  text-align: center;
+  padding: 1rem;
+  background: #3f3f46;
+  border-radius: 8px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #10b981;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #a1a1aa;
+  text-transform: uppercase;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filters button {
+  flex: 1;
+  padding: 0.5rem;
+  background: #3f3f46;
+  border: none;
+  border-radius: 6px;
+  color: #a1a1aa;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filters button:hover {
+  background: #52525b;
+}
+
+.filters button.active {
+  background: #10b981;
+  color: white;
+}
+
+/* Todo List */
+.todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background: #3f3f46;
+  border-radius: 8px;
+  border-left: 3px solid #10b981;
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+  border-left-color: #71717a;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+}
+
+.todo-item input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.todo-text {
+  flex: 1;
+}
+
+.delete-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.todo-item:hover .delete-btn {
+  opacity: 1;
+}
+
+/* Buttons */
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.clear-btn {
+  width: 100%;
+  margin-top: 1rem;
+  background: #3f3f46;
+}
+
+.clear-btn:hover {
+  background: #52525b;
+  box-shadow: none;
+}

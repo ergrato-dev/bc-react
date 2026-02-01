@@ -1,0 +1,77 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowSel" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="800" height="500" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold">Selectores Memoizados - createSelector</text>
+  
+  <!-- Store State -->
+  <rect x="50" y="70" width="200" height="180" rx="8" fill="#2d2d2d" stroke="#764ABC" stroke-width="2"/>
+  <text x="150" y="95" text-anchor="middle" fill="#764ABC" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold">Store State</text>
+  <text x="70" y="120" fill="#888888" font-family="monospace" font-size="10">{</text>
+  <text x="85" y="140" fill="#61DAFB" font-family="monospace" font-size="10">todos: {</text>
+  <text x="100" y="160" fill="#888888" font-family="monospace" font-size="10">items: [...],</text>
+  <text x="100" y="178" fill="#888888" font-family="monospace" font-size="10">filter: 'all'</text>
+  <text x="85" y="196" fill="#61DAFB" font-family="monospace" font-size="10">},</text>
+  <text x="85" y="214" fill="#00D084" font-family="monospace" font-size="10">users: {...}</text>
+  <text x="70" y="232" fill="#888888" font-family="monospace" font-size="10">}</text>
+  
+  <!-- Input Selectors -->
+  <rect x="300" y="70" width="200" height="80" rx="8" fill="#2d2d2d" stroke="#F7DF1E" stroke-width="2"/>
+  <text x="400" y="95" text-anchor="middle" fill="#F7DF1E" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">Input Selectors</text>
+  <text x="320" y="118" fill="#888888" font-family="monospace" font-size="9">selectItems = s =&gt; s.todos.items</text>
+  <text x="320" y="138" fill="#888888" font-family="monospace" font-size="9">selectFilter = s =&gt; s.todos.filter</text>
+  
+  <!-- Flecha Store → Input -->
+  <line x1="250" y1="120" x2="295" y2="120" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowSel)"/>
+  
+  <!-- Output Selector -->
+  <rect x="300" y="180" width="200" height="70" rx="8" fill="#2d2d2d" stroke="#00D084" stroke-width="2"/>
+  <text x="400" y="205" text-anchor="middle" fill="#00D084" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">Output Selector</text>
+  <text x="320" y="228" fill="#888888" font-family="monospace" font-size="9">(items, filter) =&gt;</text>
+  <text x="330" y="243" fill="#888888" font-family="monospace" font-size="9">items.filter(...)</text>
+  
+  <!-- Flecha Input → Output -->
+  <line x1="400" y1="150" x2="400" y2="175" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowSel)"/>
+  
+  <!-- Memoization Cache -->
+  <rect x="550" y="110" width="200" height="100" rx="8" fill="#2d2d2d" stroke="#FF6B6B" stroke-width="2"/>
+  <text x="650" y="135" text-anchor="middle" fill="#FF6B6B" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">Memoization Cache</text>
+  <text x="570" y="160" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">lastInputs: [items, filter]</text>
+  <text x="570" y="180" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">lastResult: [filtered...]</text>
+  <text x="570" y="200" fill="#666666" font-family="Inter, system-ui, sans-serif" font-size="9">Reutiliza si inputs ===</text>
+  
+  <!-- Flecha Output ↔ Cache -->
+  <line x1="500" y1="200" x2="545" y2="170" stroke="#FF6B6B" stroke-width="1.5" stroke-dasharray="4,2"/>
+  
+  <!-- Resultado -->
+  <rect x="300" y="280" width="200" height="50" rx="8" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="400" y="310" text-anchor="middle" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">Resultado Memoizado</text>
+  
+  <!-- Flecha Output → Resultado -->
+  <line x1="400" y1="250" x2="400" y2="275" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowSel)"/>
+  
+  <!-- Comparación Sin vs Con Memoization -->
+  <rect x="50" y="350" width="320" height="130" rx="8" fill="#252525"/>
+  <text x="210" y="375" text-anchor="middle" fill="#FF6B6B" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">❌ Sin createSelector</text>
+  <text x="70" y="400" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">• Se ejecuta en CADA render</text>
+  <text x="70" y="420" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">• Nuevo array = re-render innecesario</text>
+  <text x="70" y="440" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">• filter() crea referencia nueva</text>
+  <text x="70" y="460" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">• Problemas de rendimiento</text>
+  
+  <rect x="430" y="350" width="320" height="130" rx="8" fill="#252525"/>
+  <text x="590" y="375" text-anchor="middle" fill="#00D084" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">✅ Con createSelector</text>
+  <text x="450" y="400" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">• Solo recalcula si inputs cambian</text>
+  <text x="450" y="420" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">• Retorna misma referencia = no re-render</text>
+  <text x="450" y="440" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">• Composición de selectores</text>
+  <text x="450" y="460" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">• Rendimiento optimizado</text>
+  
+  <!-- Fórmula de createSelector -->
+  <text x="400" y="490" text-anchor="middle" fill="#555555" font-family="monospace" font-size="10">createSelector([inputSelectors], outputSelector) → memoizedSelector</text>
+</svg>

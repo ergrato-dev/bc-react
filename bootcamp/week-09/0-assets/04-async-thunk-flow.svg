@@ -1,0 +1,92 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowAsync" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="800" height="500" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold">createAsyncThunk - Ciclo de Vida</text>
+  
+  <!-- Componente inicia -->
+  <rect x="50" y="80" width="140" height="50" rx="8" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="120" y="110" text-anchor="middle" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">Component</text>
+  
+  <!-- Flecha a dispatch -->
+  <line x1="190" y1="105" x2="240" y2="105" stroke="#764ABC" stroke-width="2" marker-end="url(#arrowAsync)"/>
+  <text x="215" y="95" text-anchor="middle" fill="#764ABC" font-family="Inter, system-ui, sans-serif" font-size="9">dispatch()</text>
+  
+  <!-- Thunk -->
+  <rect x="250" y="70" width="180" height="70" rx="8" fill="#2d2d2d" stroke="#764ABC" stroke-width="2"/>
+  <text x="340" y="95" text-anchor="middle" fill="#764ABC" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">Async Thunk</text>
+  <text x="340" y="115" text-anchor="middle" fill="#888888" font-family="monospace" font-size="9">fetchUsers()</text>
+  <text x="340" y="130" text-anchor="middle" fill="#666666" font-family="Inter, system-ui, sans-serif" font-size="8">createAsyncThunk</text>
+  
+  <!-- PENDING -->
+  <rect x="500" y="70" width="250" height="60" rx="8" fill="#2d2d2d" stroke="#F7DF1E" stroke-width="2"/>
+  <text x="625" y="95" text-anchor="middle" fill="#F7DF1E" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">PENDING</text>
+  <text x="625" y="115" text-anchor="middle" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">status: 'loading'</text>
+  
+  <!-- Flecha Thunk → Pending -->
+  <line x1="430" y1="100" x2="495" y2="100" stroke="#F7DF1E" stroke-width="2" marker-end="url(#arrowAsync)"/>
+  <text x="462" y="90" text-anchor="middle" fill="#F7DF1E" font-family="Inter, system-ui, sans-serif" font-size="9">1. Inicia</text>
+  
+  <!-- API Call -->
+  <rect x="250" y="180" width="180" height="60" rx="8" fill="#1a1a1a" stroke="#888888" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="340" y="205" text-anchor="middle" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="11">API Call</text>
+  <text x="340" y="225" text-anchor="middle" fill="#666666" font-family="monospace" font-size="9">await fetch('/api/users')</text>
+  
+  <!-- Flecha Pending → API -->
+  <line x1="340" y1="140" x2="340" y2="175" stroke="#888888" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="375" y="160" fill="#666666" font-family="Inter, system-ui, sans-serif" font-size="9">2. Ejecuta</text>
+  
+  <!-- Bifurcación SUCCESS/ERROR -->
+  <circle cx="340" cy="280" r="15" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="340" y="285" text-anchor="middle" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="10">?</text>
+  
+  <!-- Flecha API → Bifurcación -->
+  <line x1="340" y1="240" x2="340" y2="265" stroke="#888888" stroke-width="1.5"/>
+  
+  <!-- FULFILLED -->
+  <rect x="500" y="320" width="250" height="70" rx="8" fill="#2d2d2d" stroke="#00D084" stroke-width="2"/>
+  <text x="625" y="345" text-anchor="middle" fill="#00D084" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">FULFILLED</text>
+  <text x="625" y="365" text-anchor="middle" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">status: 'succeeded'</text>
+  <text x="625" y="380" text-anchor="middle" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">data: action.payload</text>
+  
+  <!-- Flecha Bifurcación → Fulfilled -->
+  <path d="M 355 280 L 450 280 L 450 355 L 495 355" fill="none" stroke="#00D084" stroke-width="2" marker-end="url(#arrowAsync)"/>
+  <text x="420" y="270" fill="#00D084" font-family="Inter, system-ui, sans-serif" font-size="9">3a. Éxito</text>
+  
+  <!-- REJECTED -->
+  <rect x="500" y="410" width="250" height="70" rx="8" fill="#2d2d2d" stroke="#FF6B6B" stroke-width="2"/>
+  <text x="625" y="435" text-anchor="middle" fill="#FF6B6B" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">REJECTED</text>
+  <text x="625" y="455" text-anchor="middle" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">status: 'failed'</text>
+  <text x="625" y="470" text-anchor="middle" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="10">error: action.error.message</text>
+  
+  <!-- Flecha Bifurcación → Rejected -->
+  <path d="M 340 295 L 340 445 L 495 445" fill="none" stroke="#FF6B6B" stroke-width="2" marker-end="url(#arrowAsync)"/>
+  <text x="280" y="380" fill="#FF6B6B" font-family="Inter, system-ui, sans-serif" font-size="9">3b. Error</text>
+  
+  <!-- Store Update -->
+  <rect x="50" y="320" width="140" height="50" rx="8" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="120" y="340" text-anchor="middle" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="bold">Store</text>
+  <text x="120" y="358" text-anchor="middle" fill="#888888" font-family="Inter, system-ui, sans-serif" font-size="9">extraReducers</text>
+  
+  <!-- Flechas de vuelta al store -->
+  <path d="M 625 140 L 625 160 L 50 160 L 50 315" fill="none" stroke="#61DAFB" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <path d="M 500 355 L 195 355" fill="none" stroke="#00D084" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <path d="M 500 445 L 200 445 L 200 375" fill="none" stroke="#FF6B6B" stroke-width="1.5" stroke-dasharray="4,2"/>
+  
+  <!-- Leyenda -->
+  <rect x="50" y="420" width="150" height="70" rx="6" fill="#222222"/>
+  <text x="125" y="440" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="bold">Estados del Thunk</text>
+  <circle cx="70" cy="455" r="5" fill="#F7DF1E"/>
+  <text x="85" y="459" fill="#F7DF1E" font-family="Inter, system-ui, sans-serif" font-size="9">pending</text>
+  <circle cx="70" cy="473" r="5" fill="#00D084"/>
+  <text x="85" y="477" fill="#00D084" font-family="Inter, system-ui, sans-serif" font-size="9">fulfilled</text>
+  <circle cx="145" cy="455" r="5" fill="#FF6B6B"/>
+  <text x="160" y="459" fill="#FF6B6B" font-family="Inter, system-ui, sans-serif" font-size="9">rejected</text>
+</svg>

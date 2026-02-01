@@ -1,0 +1,190 @@
+/* ============================================
+   Estilos para Ejercicio 04 - Entity Adapter
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height: 100vh;
+  color: #e4e4e7;
+}
+
+.app {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+header p {
+  color: #a1a1aa;
+}
+
+/* Product Manager */
+.product-manager {
+  background: #27272a;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* Form */
+.product-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-form input {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: #3f3f46;
+  color: #f4f4f5;
+  font-size: 0.9rem;
+}
+
+.product-form input:focus {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+.product-form input::placeholder {
+  color: #71717a;
+}
+
+/* Counter */
+.product-count {
+  text-align: center;
+  padding: 1rem;
+  background: #3f3f46;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.product-count strong {
+  color: #f59e0b;
+  font-size: 1.25rem;
+}
+
+/* Product List */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.product-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #3f3f46;
+  border-radius: 8px;
+  border-left: 3px solid #f59e0b;
+}
+
+.product-info h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.product-info .price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #f59e0b;
+}
+
+.product-info .stock {
+  font-size: 0.875rem;
+  color: #a1a1aa;
+}
+
+.product-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.stock-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 1.25rem;
+  background: #52525b;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.stock-btn:hover:not(:disabled) {
+  background: #71717a;
+}
+
+.stock-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.delete-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+}
+
+/* Buttons */
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+/* Empty Message */
+.empty-message {
+  text-align: center;
+  padding: 2rem;
+  color: #71717a;
+}
