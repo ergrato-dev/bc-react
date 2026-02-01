@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" style="font-family: Inter, Roboto, Arial, sans-serif;">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="900" height="450" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="450" y="35" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">El Prop Children - Flujo de Contenido</text>
+  
+  <!-- Código JSX -->
+  <rect x="30" y="60" width="320" height="180" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="45" y="85" fill="#7ee787" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">// Uso del componente</text>
+  <text x="45" y="110" fill="#ff7b72" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&lt;Card&gt;</text>
+  <text x="60" y="132" fill="#79c0ff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&lt;h2&gt;</text>
+  <text x="90" y="132" fill="#ffffff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">Título</text>
+  <text x="135" y="132" fill="#79c0ff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&lt;/h2&gt;</text>
+  <text x="60" y="154" fill="#79c0ff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&lt;p&gt;</text>
+  <text x="85" y="154" fill="#ffffff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">Contenido...</text>
+  <text x="175" y="154" fill="#79c0ff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&lt;/p&gt;</text>
+  <text x="60" y="176" fill="#79c0ff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&lt;Button&gt;</text>
+  <text x="130" y="176" fill="#ffffff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">Click</text>
+  <text x="165" y="176" fill="#79c0ff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&lt;/Button&gt;</text>
+  <text x="45" y="198" fill="#ff7b72" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&lt;/Card&gt;</text>
+  
+  <!-- Flecha -->
+  <line x1="370" y1="150" x2="430" y2="150" stroke="#61DAFB" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="400" y="135" fill="#61DAFB" font-size="11" text-anchor="middle">children</text>
+  
+  <!-- Componente Card -->
+  <rect x="450" y="60" width="420" height="180" rx="8" fill="#1e3a5f" stroke="#61DAFB" stroke-width="2"/>
+  <text x="660" y="85" fill="#61DAFB" font-size="14" font-weight="bold" text-anchor="middle">Componente Card</text>
+  
+  <rect x="470" y="100" width="380" height="120" rx="6" fill="#0d1117"/>
+  <text x="485" y="125" fill="#ff7b72" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">const</text>
+  <text x="520" y="125" fill="#d2a8ff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">Card</text>
+  <text x="555" y="125" fill="#ffffff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">= ({</text>
+  <text x="585" y="125" fill="#ffa657" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">children</text>
+  <text x="655" y="125" fill="#ffffff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">}) =&gt; (</text>
+  <text x="500" y="150" fill="#79c0ff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&lt;div</text>
+  <text x="535" y="150" fill="#7ee787" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">className</text>
+  <text x="610" y="150" fill="#ffffff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">=</text>
+  <text x="620" y="150" fill="#a5d6ff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">"card"</text>
+  <text x="665" y="150" fill="#79c0ff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&gt;</text>
+  <text x="515" y="175" fill="#ffffff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">{</text>
+  <text x="525" y="175" fill="#ffa657" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">children</text>
+  <text x="595" y="175" fill="#ffffff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">}</text>
+  <text x="620" y="175" fill="#888" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">← se renderiza aquí</text>
+  <text x="500" y="200" fill="#79c0ff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&lt;/div&gt;</text>
+  
+  <!-- Tipos de children -->
+  <text x="450" y="280" fill="#ffffff" font-size="16" font-weight="bold">Tipos de children:</text>
+  
+  <!-- ReactNode -->
+  <rect x="30" y="300" width="200" height="130" rx="8" fill="#1e3a5f" stroke="#61DAFB"/>
+  <text x="130" y="325" fill="#61DAFB" font-size="14" font-weight="bold" text-anchor="middle">ReactNode</text>
+  <text x="130" y="350" fill="#888" font-size="11" text-anchor="middle">(Más flexible)</text>
+  <text x="45" y="375" fill="#ffffff" font-size="11">• Elementos JSX</text>
+  <text x="45" y="395" fill="#ffffff" font-size="11">• Strings, numbers</text>
+  <text x="45" y="415" fill="#ffffff" font-size="11">• null, undefined, arrays</text>
+  
+  <!-- ReactElement -->
+  <rect x="250" y="300" width="200" height="130" rx="8" fill="#3d2e5f" stroke="#9b59b6"/>
+  <text x="350" y="325" fill="#9b59b6" font-size="14" font-weight="bold" text-anchor="middle">ReactElement</text>
+  <text x="350" y="350" fill="#888" font-size="11" text-anchor="middle">(Más estricto)</text>
+  <text x="265" y="375" fill="#ffffff" font-size="11">• Solo elementos JSX</text>
+  <text x="265" y="395" fill="#ffffff" font-size="11">• &lt;Component /&gt;</text>
+  <text x="265" y="415" fill="#ffffff" font-size="11">• No strings/numbers</text>
+  
+  <!-- PropsWithChildren -->
+  <rect x="470" y="300" width="200" height="130" rx="8" fill="#2d3a1f" stroke="#2ecc71"/>
+  <text x="570" y="325" fill="#2ecc71" font-size="14" font-weight="bold" text-anchor="middle">PropsWithChildren</text>
+  <text x="570" y="350" fill="#888" font-size="11" text-anchor="middle">(Utility type)</text>
+  <text x="485" y="375" fill="#ffffff" font-size="11">• Añade children auto</text>
+  <text x="485" y="395" fill="#ffffff" font-size="11">• children?: ReactNode</text>
+  <text x="485" y="415" fill="#ffffff" font-size="11">• Menos código</text>
+  
+  <!-- Ejemplo de uso -->
+  <rect x="690" y="300" width="180" height="130" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="780" y="325" fill="#888" font-size="11" text-anchor="middle">Ejemplo de tipo:</text>
+  <text x="705" y="355" fill="#ff7b72" font-size="10" style="font-family: 'Fira Code', Consolas, monospace;">interface</text>
+  <text x="760" y="355" fill="#d2a8ff" font-size="10" style="font-family: 'Fira Code', Consolas, monospace;">Props</text>
+  <text x="790" y="355" fill="#ffffff" font-size="10" style="font-family: 'Fira Code', Consolas, monospace;">{</text>
+  <text x="715" y="375" fill="#7ee787" font-size="10" style="font-family: 'Fira Code', Consolas, monospace;">children</text>
+  <text x="775" y="375" fill="#ffffff" font-size="10" style="font-family: 'Fira Code', Consolas, monospace;">:</text>
+  <text x="785" y="375" fill="#79c0ff" font-size="10" style="font-family: 'Fira Code', Consolas, monospace;">ReactNode</text>
+  <text x="705" y="395" fill="#ffffff" font-size="10" style="font-family: 'Fira Code', Consolas, monospace;">}</text>
+</svg>

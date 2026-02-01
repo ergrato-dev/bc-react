@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" style="font-family: Inter, Roboto, Arial, sans-serif;">
+  <!-- Fondo -->
+  <rect width="900" height="500" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="450" y="35" fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">Slots Pattern - Múltiples Áreas de Contenido</text>
+  
+  <!-- Componente con slots -->
+  <rect x="50" y="60" width="380" height="420" rx="8" fill="#1e3a5f" stroke="#61DAFB" stroke-width="2"/>
+  <text x="240" y="90" fill="#61DAFB" font-size="16" font-weight="bold" text-anchor="middle">Componente Card con Slots</text>
+  
+  <!-- Header slot -->
+  <rect x="70" y="110" width="340" height="80" rx="6" fill="#2c4a6e" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="240" y="140" fill="#f39c12" font-size="14" font-weight="bold" text-anchor="middle">header (slot)</text>
+  <text x="240" y="165" fill="#888" font-size="12" text-anchor="middle">{props.header}</text>
+  
+  <!-- Body slot (children) -->
+  <rect x="70" y="200" width="340" height="140" rx="6" fill="#2c4a6e" stroke="#2ecc71" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="240" y="250" fill="#2ecc71" font-size="14" font-weight="bold" text-anchor="middle">children (slot principal)</text>
+  <text x="240" y="275" fill="#888" font-size="12" text-anchor="middle">{props.children}</text>
+  <text x="240" y="310" fill="#666" font-size="11" text-anchor="middle">Contenido flexible del padre</text>
+  
+  <!-- Footer slot -->
+  <rect x="70" y="350" width="340" height="80" rx="6" fill="#2c4a6e" stroke="#9b59b6" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="240" y="380" fill="#9b59b6" font-size="14" font-weight="bold" text-anchor="middle">footer (slot)</text>
+  <text x="240" y="405" fill="#888" font-size="12" text-anchor="middle">{props.footer}</text>
+  
+  <!-- Código de uso -->
+  <rect x="470" y="60" width="400" height="420" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="670" y="90" fill="#888" font-size="14" text-anchor="middle">Uso del componente:</text>
+  
+  <!-- Código -->
+  <text x="490" y="125" fill="#ff7b72" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&lt;Card</text>
+  
+  <!-- Header prop -->
+  <text x="505" y="150" fill="#7ee787" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">header</text>
+  <text x="560" y="150" fill="#ffffff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">=</text>
+  <text x="570" y="150" fill="#ffffff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">{</text>
+  <rect x="580" y="135" width="270" height="50" rx="4" fill="#3d2e1f" stroke="#f39c12"/>
+  <text x="595" y="155" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;h2&gt;</text>
+  <text x="630" y="155" fill="#ffffff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">Mi Título</text>
+  <text x="700" y="155" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;/h2&gt;</text>
+  <text x="595" y="175" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;Badge&gt;</text>
+  <text x="660" y="175" fill="#ffffff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">Nuevo</text>
+  <text x="705" y="175" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;/Badge&gt;</text>
+  
+  <!-- Footer prop -->
+  <text x="505" y="210" fill="#7ee787" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">footer</text>
+  <text x="555" y="210" fill="#ffffff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">=</text>
+  <text x="565" y="210" fill="#ffffff" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">{</text>
+  <rect x="575" y="195" width="275" height="50" rx="4" fill="#2d1f3d" stroke="#9b59b6"/>
+  <text x="590" y="215" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;Button&gt;</text>
+  <text x="660" y="215" fill="#ffffff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">Cancelar</text>
+  <text x="720" y="215" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;/Button&gt;</text>
+  <text x="590" y="235" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;Button&gt;</text>
+  <text x="660" y="235" fill="#ffffff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">Guardar</text>
+  <text x="715" y="235" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;/Button&gt;</text>
+  
+  <text x="490" y="270" fill="#ff7b72" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&gt;</text>
+  
+  <!-- Children -->
+  <rect x="500" y="285" width="350" height="100" rx="4" fill="#1f2d1f" stroke="#2ecc71"/>
+  <text x="515" y="305" fill="#888" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">// children (contenido principal)</text>
+  <text x="515" y="330" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;p&gt;</text>
+  <text x="540" y="330" fill="#ffffff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">Este es el contenido</text>
+  <text x="515" y="350" fill="#ffffff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">principal del card.</text>
+  <text x="640" y="350" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;/p&gt;</text>
+  <text x="515" y="375" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">&lt;img</text>
+  <text x="545" y="375" fill="#7ee787" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">src</text>
+  <text x="570" y="375" fill="#ffffff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">=</text>
+  <text x="580" y="375" fill="#a5d6ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">"..."</text>
+  <text x="610" y="375" fill="#79c0ff" font-size="11" style="font-family: 'Fira Code', Consolas, monospace;">/&gt;</text>
+  
+  <text x="490" y="410" fill="#ff7b72" font-size="12" style="font-family: 'Fira Code', Consolas, monospace;">&lt;/Card&gt;</text>
+  
+  <!-- Beneficios -->
+  <text x="670" y="445" fill="#61DAFB" font-size="13" text-anchor="middle">✓ Estructura predecible, contenido flexible</text>
+  <text x="670" y="467" fill="#61DAFB" font-size="13" text-anchor="middle">✓ Cada slot tiene un propósito claro</text>
+  
+  <!-- Flechas conectoras -->
+  <line x1="430" y1="150" x2="470" y2="150" stroke="#f39c12" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="430" y1="270" x2="470" y2="340" stroke="#2ecc71" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="430" y1="390" x2="470" y2="220" stroke="#9b59b6" stroke-width="2" stroke-dasharray="4,2"/>
+</svg>
