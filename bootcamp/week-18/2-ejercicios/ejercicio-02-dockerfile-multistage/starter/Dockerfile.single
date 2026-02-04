@@ -1,0 +1,23 @@
+# ============================================
+# DOCKERFILE SIN MULTI-STAGE (para comparar)
+# ❌ NO usar en producción - Solo para demostrar el problema
+# ============================================
+
+FROM node:20
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+# Instalar serve para servir los archivos estáticos
+RUN npm install -g serve
+
+EXPOSE 3000
+
+CMD ["serve", "-s", "dist", "-l", "3000"]

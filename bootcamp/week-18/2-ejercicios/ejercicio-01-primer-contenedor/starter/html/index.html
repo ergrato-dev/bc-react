@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primera App Docker</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+          sans-serif;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+      }
+
+      .container {
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .docker-logo {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #61dafb;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: #888;
+        margin-bottom: 2rem;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #0db7ed;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 25px;
+        font-weight: bold;
+        margin: 0.5rem;
+      }
+
+      .info {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .info p {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+      }
+
+      code {
+        background: rgba(97, 218, 251, 0.2);
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        font-family: 'Fira Code', monospace;
+        color: #61dafb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="docker-logo">🐳</div>
+      <h1>¡Hola Docker!</h1>
+      <p>Esta página está siendo servida desde un contenedor Docker</p>
+
+      <div>
+        <span class="badge">Nginx Alpine</span>
+        <span class="badge">Puerto 80</span>
+        <span class="badge">Volumen Montado</span>
+      </div>
+
+      <div class="info">
+        <p>📁 Archivo: <code>/usr/share/nginx/html/index.html</code></p>
+        <p>🔗 Montado desde: <code>./html</code></p>
+        <p>✏️ Edita este archivo y refresca el navegador</p>
+      </div>
+    </div>
+  </body>
+</html>

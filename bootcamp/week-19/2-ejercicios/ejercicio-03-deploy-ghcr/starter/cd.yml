@@ -1,0 +1,88 @@
+# ============================================
+# EJERCICIO 03: CD WORKFLOW - DEPLOY A GHCR
+# Descomenta las secciones paso a paso
+# ============================================
+
+# ============================================
+# PASO 1: Nombre y Triggers
+# ============================================
+# Solo ejecutar en push a main (no en PRs)
+# Descomenta las siguientes líneas:
+# name: CD - Build and Push
+#
+# on:
+#   push:
+#     branches: [main]
+#     tags: ['v*']
+
+# ============================================
+# PASO 2: Variables de entorno
+# ============================================
+# Descomenta las siguientes líneas:
+# env:
+#   REGISTRY: ghcr.io
+#   IMAGE_NAME: ${{ github.repository }}
+
+# ============================================
+# PASO 3: Job con permisos
+# ============================================
+# Descomenta las siguientes líneas:
+# jobs:
+#   build-and-push:
+#     name: 🐳 Build & Push Docker Image
+#     runs-on: ubuntu-latest
+#
+#     permissions:
+#       contents: read
+#       packages: write
+
+# ============================================
+# PASO 4: Checkout y Setup Buildx
+# ============================================
+# Agrega estos steps dentro del job:
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+#
+#       - name: Set up Docker Buildx
+#         uses: docker/setup-buildx-action@v3
+
+# ============================================
+# PASO 5: Login a GHCR
+# ============================================
+# Agrega este step:
+#       - name: Log in to Container Registry
+#         uses: docker/login-action@v3
+#         with:
+#           registry: ${{ env.REGISTRY }}
+#           username: ${{ github.actor }}
+#           password: ${{ secrets.GITHUB_TOKEN }}
+
+# ============================================
+# PASO 6: Generar tags y labels
+# ============================================
+# Agrega este step:
+#       - name: Extract metadata (tags, labels)
+#         id: meta
+#         uses: docker/metadata-action@v5
+#         with:
+#           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+#           tags: |
+#             type=ref,event=branch
+#             type=semver,pattern={{version}}
+#             type=sha,prefix=sha-
+#             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+
+# ============================================
+# PASO 7: Build y Push
+# ============================================
+# Agrega este step:
+#       - name: Build and push Docker image
+#         uses: docker/build-push-action@v5
+#         with:
+#           context: .
+#           push: true
+#           tags: ${{ steps.meta.outputs.tags }}
+#           labels: ${{ steps.meta.outputs.labels }}
+#           cache-from: type=gha
+#           cache-to: type=gha,mode=max

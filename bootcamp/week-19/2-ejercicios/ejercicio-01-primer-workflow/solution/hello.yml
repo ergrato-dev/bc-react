@@ -1,0 +1,32 @@
+# ============================================
+# EJERCICIO 01: PRIMER WORKFLOW - SOLUCIÓN
+# ============================================
+
+name: Hello World
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello, GitHub Actions!"
+
+      - name: Show Date
+        run: date
+
+      - name: Show Runner Info
+        run: |
+          echo "Runner OS: ${{ runner.os }}"
+          echo "Runner Arch: ${{ runner.arch }}"
+
+      - name: Show GitHub Context
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "SHA: ${{ github.sha }}"

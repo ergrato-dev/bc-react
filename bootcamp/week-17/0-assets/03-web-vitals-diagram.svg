@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1a1a1a; }
+      .text { fill: #e0e0e0; font-family: system-ui, -apple-system, sans-serif; }
+      .text-small { fill: #b0b0b0; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-title { fill: #61DAFB; font-family: system-ui, sans-serif; font-size: 18px; font-weight: bold; }
+      .box { fill: #2a2a2a; stroke: #404040; stroke-width: 2; rx: 8; }
+      .box-good { fill: #1e3a2a; stroke: #4ade80; stroke-width: 2; rx: 8; }
+      .box-warning { fill: #3a351e; stroke: #facc15; stroke-width: 2; rx: 8; }
+      .box-poor { fill: #3a1e1e; stroke: #ef4444; stroke-width: 2; rx: 8; }
+      .bar-good { fill: #4ade80; }
+      .bar-warning { fill: #facc15; }
+      .bar-poor { fill: #ef4444; }
+      .line { stroke: #404040; stroke-width: 1; }
+    </style>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect class="bg" width="800" height="500"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" class="text-title" text-anchor="middle">Core Web Vitals - Métricas de Rendimiento</text>
+  
+  <!-- LCP -->
+  <rect x="30" y="60" width="240" height="200" class="box"/>
+  <text x="150" y="90" class="text" text-anchor="middle" font-size="14" font-weight="bold">LCP</text>
+  <text x="150" y="110" class="text-small" text-anchor="middle">Largest Contentful Paint</text>
+  <text x="150" y="130" class="text-small" text-anchor="middle" fill="#61DAFB">Velocidad de carga</text>
+  
+  <!-- Barras LCP -->
+  <rect x="50" y="150" width="80" height="30" class="box-good" rx="4"/>
+  <text x="90" y="170" class="text-small" text-anchor="middle">≤ 2.5s</text>
+  <text x="180" y="170" class="text-small" fill="#4ade80">Bueno</text>
+  
+  <rect x="50" y="190" width="80" height="30" class="box-warning" rx="4"/>
+  <text x="90" y="210" class="text-small" text-anchor="middle">≤ 4.0s</text>
+  <text x="180" y="210" class="text-small" fill="#facc15">Mejorar</text>
+  
+  <rect x="50" y="230" width="80" height="30" class="box-poor" rx="4"/>
+  <text x="90" y="250" class="text-small" text-anchor="middle">&gt; 4.0s</text>
+  <text x="180" y="250" class="text-small" fill="#ef4444">Pobre</text>
+  
+  <!-- FID -->
+  <rect x="280" y="60" width="240" height="200" class="box"/>
+  <text x="400" y="90" class="text" text-anchor="middle" font-size="14" font-weight="bold">FID</text>
+  <text x="400" y="110" class="text-small" text-anchor="middle">First Input Delay</text>
+  <text x="400" y="130" class="text-small" text-anchor="middle" fill="#61DAFB">Interactividad</text>
+  
+  <!-- Barras FID -->
+  <rect x="300" y="150" width="80" height="30" class="box-good" rx="4"/>
+  <text x="340" y="170" class="text-small" text-anchor="middle">≤ 100ms</text>
+  <text x="430" y="170" class="text-small" fill="#4ade80">Bueno</text>
+  
+  <rect x="300" y="190" width="80" height="30" class="box-warning" rx="4"/>
+  <text x="340" y="210" class="text-small" text-anchor="middle">≤ 300ms</text>
+  <text x="430" y="210" class="text-small" fill="#facc15">Mejorar</text>
+  
+  <rect x="300" y="230" width="80" height="30" class="box-poor" rx="4"/>
+  <text x="340" y="250" class="text-small" text-anchor="middle">&gt; 300ms</text>
+  <text x="430" y="250" class="text-small" fill="#ef4444">Pobre</text>
+  
+  <!-- CLS -->
+  <rect x="530" y="60" width="240" height="200" class="box"/>
+  <text x="650" y="90" class="text" text-anchor="middle" font-size="14" font-weight="bold">CLS</text>
+  <text x="650" y="110" class="text-small" text-anchor="middle">Cumulative Layout Shift</text>
+  <text x="650" y="130" class="text-small" text-anchor="middle" fill="#61DAFB">Estabilidad visual</text>
+  
+  <!-- Barras CLS -->
+  <rect x="550" y="150" width="80" height="30" class="box-good" rx="4"/>
+  <text x="590" y="170" class="text-small" text-anchor="middle">≤ 0.1</text>
+  <text x="680" y="170" class="text-small" fill="#4ade80">Bueno</text>
+  
+  <rect x="550" y="190" width="80" height="30" class="box-warning" rx="4"/>
+  <text x="590" y="210" class="text-small" text-anchor="middle">≤ 0.25</text>
+  <text x="680" y="210" class="text-small" fill="#facc15">Mejorar</text>
+  
+  <rect x="550" y="230" width="80" height="30" class="box-poor" rx="4"/>
+  <text x="590" y="250" class="text-small" text-anchor="middle">&gt; 0.25</text>
+  <text x="680" y="250" class="text-small" fill="#ef4444">Pobre</text>
+  
+  <!-- Línea separadora -->
+  <line x1="50" y1="290" x2="750" y2="290" class="line"/>
+  
+  <!-- Causas y Soluciones -->
+  <text x="400" y="320" class="text" text-anchor="middle" font-size="14" font-weight="bold">Causas Comunes y Soluciones</text>
+  
+  <!-- LCP Causas -->
+  <text x="150" y="350" class="text-small" text-anchor="middle" fill="#ef4444">Causas LCP alto:</text>
+  <text x="150" y="370" class="text-small" text-anchor="middle">• Imágenes grandes</text>
+  <text x="150" y="390" class="text-small" text-anchor="middle">• JS bloqueante</text>
+  <text x="150" y="410" class="text-small" text-anchor="middle">• Server lento</text>
+  
+  <text x="150" y="440" class="text-small" text-anchor="middle" fill="#4ade80">Soluciones:</text>
+  <text x="150" y="460" class="text-small" text-anchor="middle">Preload, WebP, CDN</text>
+  <text x="150" y="480" class="text-small" text-anchor="middle">Code splitting</text>
+  
+  <!-- FID Causas -->
+  <text x="400" y="350" class="text-small" text-anchor="middle" fill="#ef4444">Causas FID alto:</text>
+  <text x="400" y="370" class="text-small" text-anchor="middle">• Tareas largas (&gt;50ms)</text>
+  <text x="400" y="390" class="text-small" text-anchor="middle">• Bundle grande</text>
+  <text x="400" y="410" class="text-small" text-anchor="middle">• Hydration lento</text>
+  
+  <text x="400" y="440" class="text-small" text-anchor="middle" fill="#4ade80">Soluciones:</text>
+  <text x="400" y="460" class="text-small" text-anchor="middle">Dividir tareas</text>
+  <text x="400" y="480" class="text-small" text-anchor="middle">Lazy loading, Workers</text>
+  
+  <!-- CLS Causas -->
+  <text x="650" y="350" class="text-small" text-anchor="middle" fill="#ef4444">Causas CLS alto:</text>
+  <text x="650" y="370" class="text-small" text-anchor="middle">• Imágenes sin size</text>
+  <text x="650" y="390" class="text-small" text-anchor="middle">• Ads dinámicos</text>
+  <text x="650" y="410" class="text-small" text-anchor="middle">• Fuentes FOUT</text>
+  
+  <text x="650" y="440" class="text-small" text-anchor="middle" fill="#4ade80">Soluciones:</text>
+  <text x="650" y="460" class="text-small" text-anchor="middle">width/height explícitos</text>
+  <text x="650" y="480" class="text-small" text-anchor="middle">Skeleton, reservar espacio</text>
+</svg>

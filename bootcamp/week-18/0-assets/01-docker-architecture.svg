@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <style>
+      .bg { fill: #1a1a1a; }
+      .title { font-family: Inter, system-ui, sans-serif; font-size: 24px; font-weight: bold; fill: #ffffff; }
+      .subtitle { font-family: Inter, system-ui, sans-serif; font-size: 14px; fill: #888888; }
+      .label { font-family: Inter, system-ui, sans-serif; font-size: 13px; fill: #ffffff; }
+      .label-small { font-family: Inter, system-ui, sans-serif; font-size: 11px; fill: #cccccc; }
+      .box-client { fill: #2d4a2d; stroke: #4ade80; stroke-width: 2; rx: 8; }
+      .box-daemon { fill: #1e3a5f; stroke: #3b82f6; stroke-width: 2; rx: 8; }
+      .box-container { fill: #3d2d4a; stroke: #a855f7; stroke-width: 2; rx: 6; }
+      .box-image { fill: #4a3d2d; stroke: #f59e0b; stroke-width: 2; rx: 6; }
+      .box-registry { fill: #4a2d3d; stroke: #ec4899; stroke-width: 2; rx: 8; }
+      .box-host { fill: #2d2d2d; stroke: #666666; stroke-width: 2; rx: 8; }
+      .arrow { stroke: #61DAFB; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .arrow-dashed { stroke: #888888; stroke-width: 2; stroke-dasharray: 5,5; fill: none; marker-end: url(#arrowhead-gray); }
+      .icon { font-family: Inter, system-ui, sans-serif; font-size: 20px; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+    <marker id="arrowhead-gray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888888"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="900" height="600"/>
+  
+  <!-- Title -->
+  <text class="title" x="450" y="35" text-anchor="middle">Arquitectura de Docker</text>
+  <text class="subtitle" x="450" y="55" text-anchor="middle">Cliente, Daemon, Imágenes, Contenedores y Registro</text>
+  
+  <!-- Docker Client -->
+  <rect class="box-client" x="40" y="90" width="180" height="100"/>
+  <text class="icon" x="130" y="125" text-anchor="middle">⌨️</text>
+  <text class="label" x="130" y="150" text-anchor="middle" font-weight="bold">Docker Client</text>
+  <text class="label-small" x="130" y="170" text-anchor="middle">docker CLI</text>
+  
+  <!-- Arrow Client to Daemon -->
+  <path class="arrow" d="M 220 140 L 280 140"/>
+  <text class="label-small" x="250" y="130" text-anchor="middle">REST API</text>
+  
+  <!-- Docker Host Box -->
+  <rect class="box-host" x="290" y="75" width="570" height="350"/>
+  <text class="label" x="575" y="100" text-anchor="middle" font-weight="bold">Docker Host</text>
+  
+  <!-- Docker Daemon -->
+  <rect class="box-daemon" x="310" y="120" width="200" height="90"/>
+  <text class="icon" x="410" y="150" text-anchor="middle">🐳</text>
+  <text class="label" x="410" y="175" text-anchor="middle" font-weight="bold">Docker Daemon</text>
+  <text class="label-small" x="410" y="195" text-anchor="middle">dockerd</text>
+  
+  <!-- Images Section -->
+  <rect class="box-image" x="540" y="120" width="300" height="90"/>
+  <text class="label" x="690" y="145" text-anchor="middle" font-weight="bold">Imágenes</text>
+  <text class="icon" x="590" y="185" text-anchor="middle">📦</text>
+  <text class="label-small" x="590" y="200" text-anchor="middle">node:20</text>
+  <text class="icon" x="660" y="185" text-anchor="middle">📦</text>
+  <text class="label-small" x="660" y="200" text-anchor="middle">nginx</text>
+  <text class="icon" x="730" y="185" text-anchor="middle">📦</text>
+  <text class="label-small" x="730" y="200" text-anchor="middle">mi-app</text>
+  <text class="icon" x="800" y="185" text-anchor="middle">📦</text>
+  <text class="label-small" x="800" y="200" text-anchor="middle">postgres</text>
+  
+  <!-- Arrow Daemon to Images -->
+  <path class="arrow" d="M 510 165 L 540 165"/>
+  
+  <!-- Containers Section -->
+  <rect x="310" y="240" width="530" height="170" fill="none" stroke="#666666" stroke-width="1" stroke-dasharray="4,4" rx="8"/>
+  <text class="label" x="575" y="265" text-anchor="middle" fill="#888888">Contenedores en Ejecución</text>
+  
+  <!-- Container 1 -->
+  <rect class="box-container" x="330" y="285" width="150" height="105"/>
+  <text class="icon" x="405" y="315" text-anchor="middle">🔲</text>
+  <text class="label" x="405" y="340" text-anchor="middle" font-weight="bold">Frontend</text>
+  <text class="label-small" x="405" y="360" text-anchor="middle">nginx:alpine</text>
+  <text class="label-small" x="405" y="380" text-anchor="middle">:3000 → :80</text>
+  
+  <!-- Container 2 -->
+  <rect class="box-container" x="500" y="285" width="150" height="105"/>
+  <text class="icon" x="575" y="315" text-anchor="middle">🔲</text>
+  <text class="label" x="575" y="340" text-anchor="middle" font-weight="bold">API</text>
+  <text class="label-small" x="575" y="360" text-anchor="middle">node:20-alpine</text>
+  <text class="label-small" x="575" y="380" text-anchor="middle">:8080 → :8080</text>
+  
+  <!-- Container 3 -->
+  <rect class="box-container" x="670" y="285" width="150" height="105"/>
+  <text class="icon" x="745" y="315" text-anchor="middle">🔲</text>
+  <text class="label" x="745" y="340" text-anchor="middle" font-weight="bold">Database</text>
+  <text class="label-small" x="745" y="360" text-anchor="middle">postgres:15</text>
+  <text class="label-small" x="745" y="380" text-anchor="middle">:5432 → :5432</text>
+  
+  <!-- Arrow Daemon to Containers -->
+  <path class="arrow" d="M 410 210 L 410 240"/>
+  <path class="arrow" d="M 410 240 L 575 285"/>
+  
+  <!-- Registry (External) -->
+  <rect class="box-registry" x="40" y="230" width="180" height="120"/>
+  <text class="icon" x="130" y="270" text-anchor="middle">☁️</text>
+  <text class="label" x="130" y="295" text-anchor="middle" font-weight="bold">Registry</text>
+  <text class="label-small" x="130" y="315" text-anchor="middle">Docker Hub</text>
+  <text class="label-small" x="130" y="335" text-anchor="middle">ghcr.io</text>
+  
+  <!-- Arrow Daemon to Registry -->
+  <path class="arrow-dashed" d="M 310 180 C 250 180 250 270 220 290"/>
+  <text class="label-small" x="235" y="230" text-anchor="middle" fill="#888888">pull/push</text>
+  
+  <!-- Host OS -->
+  <rect x="290" y="440" width="570" height="50" fill="#1e3a5f" stroke="#3178C6" stroke-width="2" rx="8"/>
+  <text class="label" x="575" y="472" text-anchor="middle" font-weight="bold" fill="#61DAFB">Host Operating System (Linux Kernel)</text>
+  
+  <!-- Legend -->
+  <g transform="translate(40, 470)">
+    <text class="label" x="0" y="0" font-weight="bold">Leyenda:</text>
+    
+    <rect x="0" y="15" width="20" height="14" fill="#2d4a2d" stroke="#4ade80" stroke-width="1" rx="3"/>
+    <text class="label-small" x="28" y="26">Cliente (comandos docker)</text>
+    
+    <rect x="200" y="15" width="20" height="14" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text class="label-small" x="228" y="26">Daemon (servidor)</text>
+    
+    <rect x="380" y="15" width="20" height="14" fill="#3d2d4a" stroke="#a855f7" stroke-width="1" rx="3"/>
+    <text class="label-small" x="408" y="26">Contenedor</text>
+    
+    <rect x="520" y="15" width="20" height="14" fill="#4a3d2d" stroke="#f59e0b" stroke-width="1" rx="3"/>
+    <text class="label-small" x="548" y="26">Imagen</text>
+    
+    <rect x="640" y="15" width="20" height="14" fill="#4a2d3d" stroke="#ec4899" stroke-width="1" rx="3"/>
+    <text class="label-small" x="668" y="26">Registry</text>
+  </g>
+  
+  <!-- Flow Numbers -->
+  <circle cx="240" cy="108" r="14" fill="#61DAFB"/>
+  <text class="label" x="240" y="113" text-anchor="middle" fill="#1a1a1a" font-weight="bold">1</text>
+  
+  <circle cx="525" cy="142" r="14" fill="#61DAFB"/>
+  <text class="label" x="525" y="147" text-anchor="middle" fill="#1a1a1a" font-weight="bold">2</text>
+  
+  <circle cx="420" cy="227" r="14" fill="#61DAFB"/>
+  <text class="label" x="420" y="232" text-anchor="middle" fill="#1a1a1a" font-weight="bold">3</text>
+  
+  <!-- Flow Description -->
+  <text class="label-small" x="450" y="565" text-anchor="middle">1. Cliente envía comandos → 2. Daemon gestiona imágenes → 3. Daemon crea/ejecuta contenedores</text>
+</svg>

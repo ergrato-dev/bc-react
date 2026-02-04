@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#1a1a2e"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" fill="#61DAFB" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Pipeline CI/CD</text>
+  
+  <!-- Fase 1: Source -->
+  <rect x="30" y="70" width="140" height="80" rx="8" fill="#2d2d44" stroke="#61DAFB" stroke-width="2"/>
+  <text x="100" y="100" fill="#61DAFB" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">📁 SOURCE</text>
+  <text x="100" y="120" fill="#a0a0a0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Git Push</text>
+  <text x="100" y="135" fill="#a0a0a0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Pull Request</text>
+  
+  <!-- Flecha 1 -->
+  <path d="M170 110 L200 110" stroke="#61DAFB" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Fase 2: Build -->
+  <rect x="210" y="70" width="140" height="80" rx="8" fill="#2d2d44" stroke="#4fc3f7" stroke-width="2"/>
+  <text x="280" y="100" fill="#4fc3f7" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">🔨 BUILD</text>
+  <text x="280" y="120" fill="#a0a0a0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Install deps</text>
+  <text x="280" y="135" fill="#a0a0a0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Compile/Bundle</text>
+  
+  <!-- Flecha 2 -->
+  <path d="M350 110 L380 110" stroke="#4fc3f7" stroke-width="2" fill="none" marker-end="url(#arrow2)"/>
+  
+  <!-- Fase 3: Test -->
+  <rect x="390" y="70" width="140" height="80" rx="8" fill="#2d2d44" stroke="#66bb6a" stroke-width="2"/>
+  <text x="460" y="100" fill="#66bb6a" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">🧪 TEST</text>
+  <text x="460" y="120" fill="#a0a0a0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Lint / Format</text>
+  <text x="460" y="135" fill="#a0a0a0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Unit / E2E</text>
+  
+  <!-- Flecha 3 -->
+  <path d="M530 110 L560 110" stroke="#66bb6a" stroke-width="2" fill="none" marker-end="url(#arrow3)"/>
+  
+  <!-- Fase 4: Deploy -->
+  <rect x="570" y="70" width="140" height="80" rx="8" fill="#2d2d44" stroke="#ff9800" stroke-width="2"/>
+  <text x="640" y="100" fill="#ff9800" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">🚀 DEPLOY</text>
+  <text x="640" y="120" fill="#a0a0a0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Push to Registry</text>
+  <text x="640" y="135" fill="#a0a0a0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Deploy to Server</text>
+  
+  <!-- Línea divisoria CI/CD -->
+  <line x1="350" y1="180" x2="350" y2="220" stroke="#555" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Labels CI y CD -->
+  <rect x="80" y="190" width="200" height="30" rx="4" fill="#1e3a5f"/>
+  <text x="180" y="210" fill="#61DAFB" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">CI - Continuous Integration</text>
+  
+  <rect x="420" y="190" width="200" height="30" rx="4" fill="#3e2723"/>
+  <text x="520" y="210" fill="#ff9800" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">CD - Continuous Delivery</text>
+  
+  <!-- Environments -->
+  <text x="400" y="260" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Environments</text>
+  
+  <!-- Staging -->
+  <rect x="200" y="280" width="150" height="60" rx="8" fill="#2d2d44" stroke="#66bb6a" stroke-width="2"/>
+  <text x="275" y="305" fill="#66bb6a" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">🔬 STAGING</text>
+  <text x="275" y="325" fill="#a0a0a0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">develop branch</text>
+  
+  <!-- Production -->
+  <rect x="450" y="280" width="150" height="60" rx="8" fill="#2d2d44" stroke="#ff9800" stroke-width="2"/>
+  <text x="525" y="305" fill="#ff9800" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">🌐 PRODUCTION</text>
+  <text x="525" y="325" fill="#a0a0a0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">main branch / tags</text>
+  
+  <!-- Flecha staging a production -->
+  <path d="M350 310 L450 310" stroke="#888" stroke-width="2" fill="none" marker-end="url(#arrow4)"/>
+  <text x="400" y="300" fill="#888" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">promote</text>
+  
+  <!-- Footer -->
+  <text x="400" y="380" fill="#666" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Bootcamp React - Semana 19: CI/CD con Docker</text>
+  
+  <!-- Definiciones de flechas -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#61DAFB"/>
+    </marker>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4fc3f7"/>
+    </marker>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#66bb6a"/>
+    </marker>
+    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#888"/>
+    </marker>
+  </defs>
+</svg>
