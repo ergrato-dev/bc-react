@@ -12,7 +12,7 @@ import { useAuthStore } from './stores/authStore';
 
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   const theme = useUIStore((s) => s.theme);
   const hasHydrated = useAuthStore((s) => s._hasHydrated);
 
@@ -40,6 +40,6 @@ function App() {
       <Notifications />
     </div>
   );
-}
+};
 
 export default App;
