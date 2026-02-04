@@ -71,6 +71,6 @@ const App: React.FC = () => {
       {view === 'create' && <ItemForm onClose={handleBack} />}
     </div>
   );
-}
+};
 
 export default App;
