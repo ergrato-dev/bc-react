@@ -40,7 +40,7 @@ TypeScript (.ts/.tsx) → Compilador (tsc) → JavaScript (.js)
     // QUÉ: especificar la versión de JavaScript de destino
     // PARA: que el compilador genere código compatible
     // IMPACTO: define qué características ES podemos usar
-    "target": "ES2020",
+    "target": "ES2023",
 
     // QUÉ: tipo de módulos que genera el compilador
     // PARA: permitir import/export modernos
