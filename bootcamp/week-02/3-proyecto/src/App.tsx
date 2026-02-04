@@ -10,7 +10,7 @@ import ItemList from './components/ItemList';
  * Este componente gestiona el estado global de la aplicación
  * y coordina la comunicación entre componentes hijos.
  */
-function App() {
+const App = () => {
   // ============================================
   // ESTADO PRINCIPAL
   // ============================================
@@ -131,6 +131,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
