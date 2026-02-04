@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1a1a1a; }
+      .text { fill: #e0e0e0; font-family: system-ui, -apple-system, sans-serif; }
+      .text-small { fill: #b0b0b0; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-title { fill: #61DAFB; font-family: system-ui, sans-serif; font-size: 18px; font-weight: bold; }
+      .box { fill: #2a2a2a; stroke: #404040; stroke-width: 2; rx: 8; }
+      .box-main { fill: #1e3a5f; stroke: #61DAFB; stroke-width: 2; rx: 8; }
+      .box-chunk { fill: #2d4a2d; stroke: #4ade80; stroke-width: 2; rx: 8; }
+      .box-lazy { fill: #4a2d4a; stroke: #c084fc; stroke-width: 2; rx: 8; }
+      .arrow { stroke: #61DAFB; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .arrow-load { stroke: #4ade80; stroke-width: 2; stroke-dasharray: 5,5; fill: none; marker-end: url(#arrowhead-green); }
+      .line { stroke: #404040; stroke-width: 1; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect class="bg" width="800" height="500"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" class="text-title" text-anchor="middle">Code Splitting con React.lazy y Suspense</text>
+  
+  <!-- Sección: Sin Code Splitting -->
+  <text x="200" y="75" class="text" text-anchor="middle" font-size="14" font-weight="bold">Sin Code Splitting</text>
+  
+  <!-- Bundle único -->
+  <rect x="50" y="95" width="300" height="150" class="box"/>
+  <text x="200" y="120" class="text" text-anchor="middle" font-size="13">bundle.js (2 MB)</text>
+  
+  <rect x="70" y="135" width="120" height="30" class="box-main"/>
+  <text x="130" y="155" class="text-small" text-anchor="middle">Home</text>
+  
+  <rect x="200" y="135" width="120" height="30" class="box-main"/>
+  <text x="260" y="155" class="text-small" text-anchor="middle">Products</text>
+  
+  <rect x="70" y="175" width="120" height="30" class="box-main"/>
+  <text x="130" y="195" class="text-small" text-anchor="middle">Profile</text>
+  
+  <rect x="200" y="175" width="120" height="30" class="box-main"/>
+  <text x="260" y="195" class="text-small" text-anchor="middle">Admin</text>
+  
+  <text x="200" y="235" class="text-small" text-anchor="middle">Todo carga al inicio ❌</text>
+  
+  <!-- Sección: Con Code Splitting -->
+  <text x="600" y="75" class="text" text-anchor="middle" font-size="14" font-weight="bold">Con Code Splitting</text>
+  
+  <!-- Main bundle -->
+  <rect x="500" y="95" width="200" height="50" class="box-main"/>
+  <text x="600" y="125" class="text-small" text-anchor="middle">main.js (50 KB)</text>
+  
+  <!-- Chunks -->
+  <rect x="450" y="170" width="100" height="35" class="box-chunk"/>
+  <text x="500" y="192" class="text-small" text-anchor="middle">Home.js</text>
+  
+  <rect x="560" y="170" width="100" height="35" class="box-chunk"/>
+  <text x="610" y="192" class="text-small" text-anchor="middle">Products.js</text>
+  
+  <rect x="670" y="170" width="100" height="35" class="box-chunk"/>
+  <text x="720" y="192" class="text-small" text-anchor="middle">Profile.js</text>
+  
+  <rect x="560" y="215" width="100" height="35" class="box-chunk"/>
+  <text x="610" y="237" class="text-small" text-anchor="middle">Admin.js</text>
+  
+  <text x="600" y="275" class="text-small" text-anchor="middle">Chunks cargan bajo demanda ✅</text>
+  
+  <!-- Flujo React.lazy -->
+  <text x="400" y="320" class="text" text-anchor="middle" font-size="14" font-weight="bold">Flujo de Carga con React.lazy</text>
+  
+  <!-- Usuario -->
+  <rect x="50" y="350" width="100" height="50" class="box"/>
+  <text x="100" y="380" class="text-small" text-anchor="middle">Usuario</text>
+  
+  <!-- Navega -->
+  <path d="M 150 375 L 200 375" class="arrow"/>
+  <text x="175" y="365" class="text-small" text-anchor="middle">navega</text>
+  
+  <!-- Router -->
+  <rect x="200" y="350" width="100" height="50" class="box"/>
+  <text x="250" y="380" class="text-small" text-anchor="middle">Router</text>
+  
+  <!-- Detecta lazy -->
+  <path d="M 300 375 L 350 375" class="arrow"/>
+  <text x="325" y="365" class="text-small" text-anchor="middle">lazy()</text>
+  
+  <!-- Suspense -->
+  <rect x="350" y="350" width="100" height="50" class="box-lazy"/>
+  <text x="400" y="380" class="text-small" text-anchor="middle">Suspense</text>
+  
+  <!-- Fallback -->
+  <path d="M 400 400 L 400 440 L 250 440" class="arrow-load"/>
+  <text x="325" y="455" class="text-small" text-anchor="middle">muestra fallback</text>
+  <rect x="200" y="420" width="100" height="40" class="box"/>
+  <text x="250" y="445" class="text-small" text-anchor="middle">Loading...</text>
+  
+  <!-- Carga chunk -->
+  <path d="M 450 375 L 500 375" class="arrow"/>
+  <text x="475" y="365" class="text-small" text-anchor="middle">import()</text>
+  
+  <!-- Network -->
+  <rect x="500" y="350" width="100" height="50" class="box"/>
+  <text x="550" y="380" class="text-small" text-anchor="middle">Network</text>
+  
+  <!-- Chunk cargado -->
+  <path d="M 600 375 L 650 375" class="arrow-load"/>
+  <text x="625" y="365" class="text-small" text-anchor="middle">chunk</text>
+  
+  <!-- Componente -->
+  <rect x="650" y="350" width="100" height="50" class="box-chunk"/>
+  <text x="700" y="380" class="text-small" text-anchor="middle">Componente</text>
+  
+  <!-- Renderiza -->
+  <path d="M 700 400 L 700 450 L 450 450 L 450 400" class="arrow-load"/>
+  <text x="575" y="470" class="text-small" text-anchor="middle">reemplaza fallback</text>
+</svg>

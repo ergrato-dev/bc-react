@@ -1,0 +1,118 @@
+# ============================================
+# EJERCICIO 02: CI WORKFLOW
+# Descomenta las secciones paso a paso
+# ============================================
+
+# ============================================
+# PASO 1: Nombre y Triggers
+# ============================================
+# Descomenta las siguientes líneas:
+# name: CI Pipeline
+#
+# on:
+#   push:
+#     branches: [main, develop]
+#   pull_request:
+#     branches: [main]
+
+# ============================================
+# PASO 2: Variables de entorno globales
+# ============================================
+# Descomenta las siguientes líneas:
+# env:
+#   NODE_VERSION: '20'
+
+# ============================================
+# PASO 3: Job de Linting
+# ============================================
+# Descomenta las siguientes líneas:
+# jobs:
+#   lint:
+#     name: 🔍 Lint
+#     runs-on: ubuntu-latest
+#
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
+#
+#       - name: Setup pnpm
+#         uses: pnpm/action-setup@v3
+#         with:
+#           version: 9
+#
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: ${{ env.NODE_VERSION }}
+#           cache: 'pnpm'
+#
+#       - name: Install dependencies
+#         run: pnpm install --frozen-lockfile
+#
+#       - name: Run ESLint
+#         run: pnpm lint
+
+# ============================================
+# PASO 4: Job de Tests
+# ============================================
+# Agrega este job después de lint:
+#   test:
+#     name: 🧪 Test
+#     runs-on: ubuntu-latest
+#
+#     steps:
+#       - uses: actions/checkout@v4
+#
+#       - uses: pnpm/action-setup@v3
+#         with:
+#           version: 9
+#
+#       - uses: actions/setup-node@v4
+#         with:
+#           node-version: ${{ env.NODE_VERSION }}
+#           cache: 'pnpm'
+#
+#       - run: pnpm install --frozen-lockfile
+#
+#       - name: Run tests with coverage
+#         run: pnpm test:coverage
+#
+#       - name: Upload coverage
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: coverage-report
+#           path: coverage/
+#           retention-days: 7
+
+# ============================================
+# PASO 5: Job de Build (con dependencias)
+# ============================================
+# Agrega este job después de test:
+#   build:
+#     name: 🏗️ Build
+#     runs-on: ubuntu-latest
+#     needs: [lint, test]
+#
+#     steps:
+#       - uses: actions/checkout@v4
+#
+#       - uses: pnpm/action-setup@v3
+#         with:
+#           version: 9
+#
+#       - uses: actions/setup-node@v4
+#         with:
+#           node-version: ${{ env.NODE_VERSION }}
+#           cache: 'pnpm'
+#
+#       - run: pnpm install --frozen-lockfile
+#
+#       - name: Build application
+#         run: pnpm build
+#
+#       - name: Upload build artifact
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: dist
+#           path: dist/
+#           retention-days: 7

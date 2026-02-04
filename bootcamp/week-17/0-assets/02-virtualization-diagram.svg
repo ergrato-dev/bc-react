@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1a1a1a; }
+      .text { fill: #e0e0e0; font-family: system-ui, -apple-system, sans-serif; }
+      .text-small { fill: #b0b0b0; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-title { fill: #61DAFB; font-family: system-ui, sans-serif; font-size: 18px; font-weight: bold; }
+      .box { fill: #2a2a2a; stroke: #404040; stroke-width: 2; rx: 4; }
+      .box-visible { fill: #1e3a5f; stroke: #61DAFB; stroke-width: 2; rx: 4; }
+      .box-hidden { fill: #2a2a2a; stroke: #404040; stroke-width: 1; rx: 4; opacity: 0.5; }
+      .box-rendered { fill: #2d4a2d; stroke: #4ade80; stroke-width: 2; rx: 4; }
+      .viewport { fill: none; stroke: #f97316; stroke-width: 3; stroke-dasharray: 8,4; rx: 8; }
+      .spacer { fill: #1a1a1a; stroke: #404040; stroke-width: 1; stroke-dasharray: 4,4; }
+      .arrow { stroke: #61DAFB; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect class="bg" width="800" height="500"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" class="text-title" text-anchor="middle">Virtualización de Listas con react-window</text>
+  
+  <!-- Sin Virtualización -->
+  <text x="150" y="70" class="text" text-anchor="middle" font-size="14" font-weight="bold">Sin Virtualización</text>
+  
+  <!-- Lista completa -->
+  <rect x="50" y="85" width="200" height="380" class="box"/>
+  
+  <!-- Viewport indicator -->
+  <rect x="45" y="85" width="210" height="100" class="viewport"/>
+  <text x="260" y="140" class="text-small" fill="#f97316">Viewport</text>
+  
+  <!-- Items sin virtualizar -->
+  <rect x="60" y="95" width="180" height="25" class="box-visible"/>
+  <text x="150" y="112" class="text-small" text-anchor="middle">Item 1 ← DOM</text>
+  
+  <rect x="60" y="125" width="180" height="25" class="box-visible"/>
+  <text x="150" y="142" class="text-small" text-anchor="middle">Item 2 ← DOM</text>
+  
+  <rect x="60" y="155" width="180" height="25" class="box-visible"/>
+  <text x="150" y="172" class="text-small" text-anchor="middle">Item 3 ← DOM</text>
+  
+  <!-- Items ocultos (pero en DOM) -->
+  <rect x="60" y="190" width="180" height="25" class="box-hidden"/>
+  <text x="150" y="207" class="text-small" text-anchor="middle" opacity="0.5">Item 4 ← DOM</text>
+  
+  <rect x="60" y="220" width="180" height="25" class="box-hidden"/>
+  <text x="150" y="237" class="text-small" text-anchor="middle" opacity="0.5">Item 5 ← DOM</text>
+  
+  <rect x="60" y="250" width="180" height="25" class="box-hidden"/>
+  <text x="150" y="267" class="text-small" text-anchor="middle" opacity="0.5">Item 6 ← DOM</text>
+  
+  <rect x="60" y="280" width="180" height="25" class="box-hidden"/>
+  <text x="150" y="297" class="text-small" text-anchor="middle" opacity="0.5">... ← DOM</text>
+  
+  <rect x="60" y="310" width="180" height="25" class="box-hidden"/>
+  <text x="150" y="327" class="text-small" text-anchor="middle" opacity="0.5">Item 9999 ← DOM</text>
+  
+  <rect x="60" y="340" width="180" height="25" class="box-hidden"/>
+  <text x="150" y="357" class="text-small" text-anchor="middle" opacity="0.5">Item 10000 ← DOM</text>
+  
+  <!-- Stats sin virtualizar -->
+  <text x="150" y="400" class="text-small" text-anchor="middle" fill="#ef4444">10,000 nodos DOM</text>
+  <text x="150" y="420" class="text-small" text-anchor="middle" fill="#ef4444">500+ MB memoria</text>
+  <text x="150" y="440" class="text-small" text-anchor="middle" fill="#ef4444">Scroll con lag</text>
+  
+  <!-- Con Virtualización -->
+  <text x="550" y="70" class="text" text-anchor="middle" font-size="14" font-weight="bold">Con Virtualización (react-window)</text>
+  
+  <!-- Container virtualizado -->
+  <rect x="450" y="85" width="200" height="380" class="box"/>
+  
+  <!-- Viewport indicator -->
+  <rect x="445" y="85" width="210" height="100" class="viewport"/>
+  <text x="660" y="140" class="text-small" fill="#f97316">Viewport</text>
+  
+  <!-- Solo items visibles renderizados -->
+  <rect x="460" y="95" width="180" height="25" class="box-rendered"/>
+  <text x="550" y="112" class="text-small" text-anchor="middle">Item 1 ← DOM ✓</text>
+  
+  <rect x="460" y="125" width="180" height="25" class="box-rendered"/>
+  <text x="550" y="142" class="text-small" text-anchor="middle">Item 2 ← DOM ✓</text>
+  
+  <rect x="460" y="155" width="180" height="25" class="box-rendered"/>
+  <text x="550" y="172" class="text-small" text-anchor="middle">Item 3 ← DOM ✓</text>
+  
+  <!-- Buffer -->
+  <rect x="460" y="185" width="180" height="20" class="box-rendered" opacity="0.7"/>
+  <text x="550" y="199" class="text-small" text-anchor="middle" opacity="0.7">Buffer</text>
+  
+  <!-- Espaciador -->
+  <rect x="460" y="210" width="180" height="240" class="spacer"/>
+  <text x="550" y="330" class="text-small" text-anchor="middle" fill="#6b7280">Espaciador vacío</text>
+  <text x="550" y="350" class="text-small" text-anchor="middle" fill="#6b7280">(solo altura CSS)</text>
+  <text x="550" y="370" class="text-small" text-anchor="middle" fill="#6b7280">Sin nodos DOM</text>
+  
+  <!-- Stats con virtualizar -->
+  <text x="550" y="400" class="text-small" text-anchor="middle" fill="#4ade80">~15 nodos DOM</text>
+  <text x="550" y="420" class="text-small" text-anchor="middle" fill="#4ade80">~10 MB memoria</text>
+  <text x="550" y="440" class="text-small" text-anchor="middle" fill="#4ade80">Scroll fluido 60fps</text>
+  
+  <!-- Comparación -->
+  <path d="M 280 230 L 420 230" class="arrow"/>
+  <text x="350" y="220" class="text-small" text-anchor="middle">Windowing</text>
+  <text x="350" y="250" class="text-small" text-anchor="middle" fill="#61DAFB">99.8% menos</text>
+  <text x="350" y="270" class="text-small" text-anchor="middle" fill="#61DAFB">nodos DOM</text>
+</svg>

@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <defs>
+    <style>
+      .bg { fill: #1a1a1a; }
+      .title { font-family: Inter, system-ui, sans-serif; font-size: 24px; font-weight: bold; fill: #ffffff; }
+      .subtitle { font-family: Inter, system-ui, sans-serif; font-size: 14px; fill: #888888; }
+      .label { font-family: Inter, system-ui, sans-serif; font-size: 13px; fill: #ffffff; }
+      .label-small { font-family: Inter, system-ui, sans-serif; font-size: 11px; fill: #cccccc; }
+      .label-code { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #61DAFB; }
+      .compose-box { fill: #1e3a5f; stroke: #3b82f6; stroke-width: 2; rx: 10; }
+      .service-frontend { fill: #2d4a3d; stroke: #4ade80; stroke-width: 2; rx: 8; }
+      .service-api { fill: #4a3d2d; stroke: #f59e0b; stroke-width: 2; rx: 8; }
+      .service-db { fill: #3d2d4a; stroke: #a855f7; stroke-width: 2; rx: 8; }
+      .network-box { fill: #2d3d4a; stroke: #61DAFB; stroke-width: 2; stroke-dasharray: 5,5; rx: 8; }
+      .volume-box { fill: #4a2d3d; stroke: #ec4899; stroke-width: 2; rx: 6; }
+      .browser-box { fill: #2d2d2d; stroke: #888888; stroke-width: 2; rx: 8; }
+      .arrow { stroke: #61DAFB; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .arrow-data { stroke: #4ade80; stroke-width: 2; fill: none; marker-end: url(#arrowhead-green); }
+      .arrow-http { stroke: #f59e0b; stroke-width: 2; fill: none; marker-end: url(#arrowhead-orange); }
+      .port-badge { fill: #61DAFB; rx: 10; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="900" height="700"/>
+  
+  <!-- Title -->
+  <text class="title" x="450" y="35" text-anchor="middle">Docker Compose - Orquestación</text>
+  <text class="subtitle" x="450" y="55" text-anchor="middle">Flujo de comunicación entre servicios</text>
+  
+  <!-- Browser/User -->
+  <rect class="browser-box" x="360" y="75" width="180" height="70"/>
+  <text class="label" x="450" y="100" text-anchor="middle" font-weight="bold">🌐 Navegador</text>
+  <text class="label-small" x="450" y="120" text-anchor="middle">localhost:3000</text>
+  
+  <!-- Arrow from Browser to Docker -->
+  <path class="arrow" d="M 450 145 L 450 175"/>
+  
+  <!-- Docker Compose Box -->
+  <rect class="compose-box" x="40" y="180" width="820" height="400"/>
+  <text class="label" x="450" y="205" text-anchor="middle" font-weight="bold" fill="#3b82f6">docker-compose.yml</text>
+  
+  <!-- Network Box -->
+  <rect class="network-box" x="60" y="225" width="600" height="340"/>
+  <text class="label-small" x="360" y="250" text-anchor="middle" fill="#61DAFB">app-network (bridge)</text>
+  
+  <!-- Frontend Service -->
+  <rect class="service-frontend" x="80" y="270" width="200" height="140"/>
+  <text class="label" x="180" y="295" text-anchor="middle" font-weight="bold" fill="#4ade80">frontend</text>
+  <text class="label-small" x="180" y="315" text-anchor="middle">nginx:alpine</text>
+  
+  <rect class="port-badge" x="120" y="330" width="120" height="25"/>
+  <text class="label-small" x="180" y="347" text-anchor="middle" fill="#1a1a1a" font-weight="bold">3000:80</text>
+  
+  <text class="label-small" x="180" y="380" text-anchor="middle">React SPA</text>
+  <text class="label-small" x="180" y="395" text-anchor="middle">/usr/share/nginx/html</text>
+  
+  <!-- API Service -->
+  <rect class="service-api" x="300" y="270" width="200" height="140"/>
+  <text class="label" x="400" y="295" text-anchor="middle" font-weight="bold" fill="#f59e0b">api</text>
+  <text class="label-small" x="400" y="315" text-anchor="middle">node:20-alpine</text>
+  
+  <rect class="port-badge" x="340" y="330" width="120" height="25"/>
+  <text class="label-small" x="400" y="347" text-anchor="middle" fill="#1a1a1a" font-weight="bold">8080:8080</text>
+  
+  <text class="label-small" x="400" y="380" text-anchor="middle">Express API</text>
+  <text class="label-small" x="400" y="395" text-anchor="middle">depends_on: db</text>
+  
+  <!-- Database Service -->
+  <rect class="service-db" x="80" y="430" width="200" height="120"/>
+  <text class="label" x="180" y="455" text-anchor="middle" font-weight="bold" fill="#a855f7">db</text>
+  <text class="label-small" x="180" y="475" text-anchor="middle">postgres:15-alpine</text>
+  
+  <rect class="port-badge" x="120" y="490" width="120" height="25"/>
+  <text class="label-small" x="180" y="507" text-anchor="middle" fill="#1a1a1a" font-weight="bold">5432:5432</text>
+  
+  <text class="label-small" x="180" y="537" text-anchor="middle">PostgreSQL</text>
+  
+  <!-- Volume -->
+  <rect class="volume-box" x="300" y="450" width="180" height="80"/>
+  <text class="label" x="390" y="475" text-anchor="middle" font-weight="bold" fill="#ec4899">📁 postgres-data</text>
+  <text class="label-small" x="390" y="495" text-anchor="middle">Named Volume</text>
+  <text class="label-small" x="390" y="515" text-anchor="middle">/var/lib/postgresql/data</text>
+  
+  <!-- Arrows between services -->
+  <!-- Browser to Frontend -->
+  <path class="arrow-http" d="M 450 175 L 450 230 L 250 230 L 250 270"/>
+  
+  <!-- Frontend to API -->
+  <path class="arrow-http" d="M 280 340 L 300 340"/>
+  <text class="label-small" x="290" y="330" text-anchor="middle" fill="#f59e0b">HTTP</text>
+  <text class="label-code" x="290" y="355" text-anchor="middle">api:8080</text>
+  
+  <!-- API to Database -->
+  <path class="arrow-data" d="M 400 410 L 400 430 L 280 430"/>
+  <text class="label-small" x="340" y="420" text-anchor="middle" fill="#4ade80">SQL</text>
+  <text class="label-code" x="340" y="445" text-anchor="middle">db:5432</text>
+  
+  <!-- Database to Volume -->
+  <path class="arrow-data" d="M 280 490 L 300 490"/>
+  <text class="label-small" x="290" y="480" text-anchor="middle" fill="#ec4899">persist</text>
+  
+  <!-- docker-compose.yml snippet -->
+  <rect x="680" y="225" width="160" height="340" fill="#2d2d2d" stroke="#444444" stroke-width="1" rx="8"/>
+  <text class="label-code" x="760" y="250" text-anchor="middle" fill="#ffffff">services:</text>
+  
+  <text class="label-code" x="700" y="275" text-anchor="start" fill="#4ade80">  frontend:</text>
+  <text class="label-code" x="700" y="290" text-anchor="start">    build: ./frontend</text>
+  <text class="label-code" x="700" y="305" text-anchor="start">    ports:</text>
+  <text class="label-code" x="700" y="320" text-anchor="start">      - "3000:80"</text>
+  
+  <text class="label-code" x="700" y="350" text-anchor="start" fill="#f59e0b">  api:</text>
+  <text class="label-code" x="700" y="365" text-anchor="start">    build: ./api</text>
+  <text class="label-code" x="700" y="380" text-anchor="start">    ports:</text>
+  <text class="label-code" x="700" y="395" text-anchor="start">      - "8080:8080"</text>
+  <text class="label-code" x="700" y="410" text-anchor="start">    depends_on:</text>
+  <text class="label-code" x="700" y="425" text-anchor="start">      - db</text>
+  
+  <text class="label-code" x="700" y="455" text-anchor="start" fill="#a855f7">  db:</text>
+  <text class="label-code" x="700" y="470" text-anchor="start">    image: postgres</text>
+  <text class="label-code" x="700" y="485" text-anchor="start">    volumes:</text>
+  <text class="label-code" x="700" y="500" text-anchor="start">      - postgres-</text>
+  <text class="label-code" x="700" y="515" text-anchor="start">        data:/var/...</text>
+  
+  <text class="label-code" x="700" y="545" text-anchor="start" fill="#ec4899">volumes:</text>
+  <text class="label-code" x="700" y="560" text-anchor="start">  postgres-data:</text>
+  
+  <!-- Command Flow -->
+  <rect x="40" y="600" width="820" height="80" fill="#2d2d2d" stroke="#444444" stroke-width="1" rx="8"/>
+  <text class="label" x="450" y="625" text-anchor="middle" font-weight="bold">Comandos Docker Compose</text>
+  
+  <rect x="60" y="640" width="150" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="6"/>
+  <text class="label-code" x="135" y="660" text-anchor="middle">docker compose up</text>
+  
+  <rect x="230" y="640" width="180" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="6"/>
+  <text class="label-code" x="320" y="660" text-anchor="middle">docker compose up -d</text>
+  
+  <rect x="430" y="640" width="180" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="6"/>
+  <text class="label-code" x="520" y="660" text-anchor="middle">docker compose down</text>
+  
+  <rect x="630" y="640" width="180" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="6"/>
+  <text class="label-code" x="720" y="660" text-anchor="middle">docker compose logs -f</text>
+  
+  <!-- Legend -->
+  <g transform="translate(60, 595)">
+    <line x1="0" y1="-5" x2="30" y2="-5" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text class="label-small" x="35" y="0">Red</text>
+    
+    <line x1="80" y1="-5" x2="110" y2="-5" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead-orange)"/>
+    <text class="label-small" x="115" y="0">HTTP</text>
+    
+    <line x1="170" y1="-5" x2="200" y2="-5" stroke="#4ade80" stroke-width="2" marker-end="url(#arrowhead-green)"/>
+    <text class="label-small" x="205" y="0">Datos</text>
+  </g>
+</svg>

@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <defs>
+    <style>
+      .bg { fill: #1a1a1a; }
+      .title { font-family: Inter, system-ui, sans-serif; font-size: 24px; font-weight: bold; fill: #ffffff; }
+      .subtitle { font-family: Inter, system-ui, sans-serif; font-size: 14px; fill: #888888; }
+      .label { font-family: Inter, system-ui, sans-serif; font-size: 13px; fill: #ffffff; }
+      .label-small { font-family: Inter, system-ui, sans-serif; font-size: 11px; fill: #cccccc; }
+      .label-code { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #61DAFB; }
+      .stage1 { fill: #1e3a5f; stroke: #3b82f6; stroke-width: 2; rx: 10; }
+      .stage2 { fill: #2d4a2d; stroke: #4ade80; stroke-width: 2; rx: 10; }
+      .layer { fill: #2d2d2d; stroke: #555555; stroke-width: 1; rx: 4; }
+      .layer-discard { fill: #4a2d2d; stroke: #ef4444; stroke-width: 1; rx: 4; opacity: 0.7; }
+      .layer-keep { fill: #2d4a2d; stroke: #4ade80; stroke-width: 1; rx: 4; }
+      .arrow { stroke: #61DAFB; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .arrow-copy { stroke: #4ade80; stroke-width: 2; fill: none; marker-end: url(#arrowhead-green); }
+      .size-box { fill: #3d2d2d; stroke: #ef4444; stroke-width: 2; rx: 6; }
+      .size-box-small { fill: #2d3d2d; stroke: #4ade80; stroke-width: 2; rx: 6; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="900" height="650"/>
+  
+  <!-- Title -->
+  <text class="title" x="450" y="35" text-anchor="middle">Dockerfile Multi-stage Build</text>
+  <text class="subtitle" x="450" y="55" text-anchor="middle">Build optimizado para aplicaciones React</text>
+  
+  <!-- STAGE 1: Builder -->
+  <rect class="stage1" x="40" y="80" width="380" height="380"/>
+  <text class="label" x="230" y="105" text-anchor="middle" font-weight="bold" fill="#3b82f6">STAGE 1: Builder</text>
+  <text class="label-small" x="230" y="125" text-anchor="middle">FROM node:20-alpine AS builder</text>
+  
+  <!-- Stage 1 Layers -->
+  <rect class="layer" x="60" y="145" width="340" height="35"/>
+  <text class="label-code" x="70" y="167">FROM node:20-alpine</text>
+  <text class="label-small" x="350" y="167" text-anchor="end">~180MB</text>
+  
+  <rect class="layer" x="60" y="190" width="340" height="35"/>
+  <text class="label-code" x="70" y="212">WORKDIR /app</text>
+  
+  <rect class="layer" x="60" y="235" width="340" height="35"/>
+  <text class="label-code" x="70" y="257">COPY package*.json ./</text>
+  <text class="label-small" x="350" y="257" text-anchor="end">~5KB</text>
+  
+  <rect class="layer" x="60" y="280" width="340" height="35"/>
+  <text class="label-code" x="70" y="302">RUN pnpm install</text>
+  <text class="label-small" x="350" y="302" text-anchor="end">~400MB</text>
+  
+  <rect class="layer" x="60" y="325" width="340" height="35"/>
+  <text class="label-code" x="70" y="347">COPY . .</text>
+  <text class="label-small" x="350" y="347" text-anchor="end">~50MB</text>
+  
+  <rect class="layer-keep" x="60" y="370" width="340" height="35"/>
+  <text class="label-code" x="70" y="392">RUN pnpm build</text>
+  <text class="label-small" x="350" y="392" text-anchor="end" fill="#4ade80">dist/ ~5MB</text>
+  
+  <!-- Stage 1 Total Size -->
+  <rect class="size-box" x="60" y="420" width="340" height="30"/>
+  <text class="label" x="230" y="440" text-anchor="middle" fill="#ef4444">Tamaño Total: ~635MB ❌</text>
+  
+  <!-- Arrow between stages -->
+  <path class="arrow-copy" d="M 420 387 C 460 387 460 200 480 200"/>
+  <text class="label-small" x="450" y="290" text-anchor="middle" fill="#4ade80">COPY --from=builder</text>
+  <text class="label-small" x="450" y="305" text-anchor="middle" fill="#4ade80">/app/dist</text>
+  
+  <!-- STAGE 2: Production -->
+  <rect class="stage2" x="480" y="80" width="380" height="300"/>
+  <text class="label" x="670" y="105" text-anchor="middle" font-weight="bold" fill="#4ade80">STAGE 2: Production</text>
+  <text class="label-small" x="670" y="125" text-anchor="middle">FROM nginx:alpine AS production</text>
+  
+  <!-- Stage 2 Layers -->
+  <rect class="layer" x="500" y="145" width="340" height="35"/>
+  <text class="label-code" x="510" y="167">FROM nginx:alpine</text>
+  <text class="label-small" x="790" y="167" text-anchor="end">~25MB</text>
+  
+  <rect class="layer" x="500" y="190" width="340" height="35"/>
+  <text class="label-code" x="510" y="212">COPY nginx.conf ...</text>
+  <text class="label-small" x="790" y="212" text-anchor="end">~1KB</text>
+  
+  <rect class="layer-keep" x="500" y="235" width="340" height="35"/>
+  <text class="label-code" x="510" y="257">COPY --from=builder /app/dist .</text>
+  <text class="label-small" x="790" y="257" text-anchor="end" fill="#4ade80">~5MB</text>
+  
+  <rect class="layer" x="500" y="280" width="340" height="35"/>
+  <text class="label-code" x="510" y="302">EXPOSE 80</text>
+  
+  <rect class="layer" x="500" y="325" width="340" height="35"/>
+  <text class="label-code" x="510" y="347">CMD ["nginx", "-g", "daemon off;"]</text>
+  
+  <!-- Stage 2 Total Size -->
+  <rect class="size-box-small" x="500" y="400" width="340" height="30"/>
+  <text class="label" x="670" y="420" text-anchor="middle" fill="#4ade80">Tamaño Final: ~30MB ✅</text>
+  
+  <!-- Comparison -->
+  <rect x="40" y="480" width="820" height="150" fill="#2d2d2d" stroke="#444444" stroke-width="1" rx="10"/>
+  <text class="label" x="450" y="505" text-anchor="middle" font-weight="bold">Comparación de Tamaños</text>
+  
+  <!-- Without Multi-stage -->
+  <rect x="60" y="525" width="350" height="40" fill="#4a2d2d" stroke="#ef4444" stroke-width="2" rx="6"/>
+  <text class="label" x="235" y="550" text-anchor="middle">Sin Multi-stage: ~1GB</text>
+  
+  <!-- Breakdown -->
+  <rect x="60" y="575" width="90" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="4"/>
+  <text class="label-small" x="105" y="592" text-anchor="middle">Node.js</text>
+  
+  <rect x="155" y="575" width="120" height="25" fill="#3d2d4a" stroke="#a855f7" stroke-width="1" rx="4"/>
+  <text class="label-small" x="215" y="592" text-anchor="middle">node_modules</text>
+  
+  <rect x="280" y="575" width="70" height="25" fill="#4a3d2d" stroke="#f59e0b" stroke-width="1" rx="4"/>
+  <text class="label-small" x="315" y="592" text-anchor="middle">source</text>
+  
+  <rect x="355" y="575" width="55" height="25" fill="#2d4a2d" stroke="#4ade80" stroke-width="1" rx="4"/>
+  <text class="label-small" x="382" y="592" text-anchor="middle">dist</text>
+  
+  <!-- With Multi-stage -->
+  <rect x="490" y="525" width="350" height="40" fill="#2d4a2d" stroke="#4ade80" stroke-width="2" rx="6"/>
+  <text class="label" x="665" y="550" text-anchor="middle">Con Multi-stage: ~30MB</text>
+  
+  <!-- Breakdown -->
+  <rect x="490" y="575" width="100" height="25" fill="#2d4a2d" stroke="#4ade80" stroke-width="1" rx="4"/>
+  <text class="label-small" x="540" y="592" text-anchor="middle">Nginx</text>
+  
+  <rect x="595" y="575" width="65" height="25" fill="#2d4a2d" stroke="#4ade80" stroke-width="1" rx="4"/>
+  <text class="label-small" x="627" y="592" text-anchor="middle">dist</text>
+  
+  <!-- Savings -->
+  <text class="label" x="750" y="592" text-anchor="start" fill="#4ade80">↓ 97% menor</text>
+  
+  <!-- Legend -->
+  <g transform="translate(60, 625)">
+    <rect x="0" y="0" width="16" height="12" fill="#2d2d2d" stroke="#555555" stroke-width="1" rx="2"/>
+    <text class="label-small" x="22" y="10">Capa normal</text>
+    
+    <rect x="140" y="0" width="16" height="12" fill="#4a2d2d" stroke="#ef4444" stroke-width="1" rx="2" opacity="0.7"/>
+    <text class="label-small" x="162" y="10">Descartada</text>
+    
+    <rect x="280" y="0" width="16" height="12" fill="#2d4a2d" stroke="#4ade80" stroke-width="1" rx="2"/>
+    <text class="label-small" x="302" y="10">Copiada a producción</text>
+    
+    <line x1="460" y1="6" x2="500" y2="6" stroke="#4ade80" stroke-width="2" marker-end="url(#arrowhead-green)"/>
+    <text class="label-small" x="510" y="10">Solo archivos necesarios</text>
+  </g>
+</svg>

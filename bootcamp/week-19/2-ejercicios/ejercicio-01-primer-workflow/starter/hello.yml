@@ -1,0 +1,56 @@
+# ============================================
+# EJERCICIO 01: PRIMER WORKFLOW
+# Descomenta las secciones paso a paso
+# ============================================
+
+# ============================================
+# PASO 1: Nombre del Workflow
+# ============================================
+# El nombre aparece en la UI de GitHub Actions
+# Descomenta la siguiente línea:
+# name: Hello World
+
+# ============================================
+# PASO 2: Trigger (¿Cuándo se ejecuta?)
+# ============================================
+# on: define los eventos que disparan el workflow
+# Descomenta las siguientes líneas:
+# on:
+#   push:
+#     branches: [main]
+#   workflow_dispatch:
+
+# ============================================
+# PASO 3: Jobs (¿Qué se ejecuta?)
+# ============================================
+# jobs: contiene uno o más trabajos a ejecutar
+# Descomenta las siguientes líneas:
+# jobs:
+#   greet:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Say Hello
+#         run: echo "Hello, GitHub Actions!"
+
+# ============================================
+# PASO 4: Agregar más steps
+# ============================================
+# Agrega estos steps después del primero:
+#       - name: Show Date
+#         run: date
+#
+#       - name: Show Runner Info
+#         run: |
+#           echo "Runner OS: ${{ runner.os }}"
+#           echo "Runner Arch: ${{ runner.arch }}"
+
+# ============================================
+# PASO 5: GitHub Context
+# ============================================
+# Agrega este step para ver información del repo:
+#       - name: Show GitHub Context
+#         run: |
+#           echo "Repository: ${{ github.repository }}"
+#           echo "Branch: ${{ github.ref_name }}"
+#           echo "Actor: ${{ github.actor }}"
+#           echo "SHA: ${{ github.sha }}"

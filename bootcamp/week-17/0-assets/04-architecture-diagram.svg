@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <style>
+      .bg { fill: #1a1a1a; }
+      .text { fill: #e0e0e0; font-family: system-ui, -apple-system, sans-serif; }
+      .text-small { fill: #b0b0b0; font-family: system-ui, sans-serif; font-size: 11px; }
+      .text-title { fill: #61DAFB; font-family: system-ui, sans-serif; font-size: 18px; font-weight: bold; }
+      .box { fill: #2a2a2a; stroke: #404040; stroke-width: 2; rx: 8; }
+      .box-feature { fill: #1e3a5f; stroke: #61DAFB; stroke-width: 2; rx: 6; }
+      .box-shared { fill: #2d4a2d; stroke: #4ade80; stroke-width: 2; rx: 6; }
+      .box-layer { fill: #4a2d4a; stroke: #c084fc; stroke-width: 2; rx: 6; }
+      .arrow { stroke: #61DAFB; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .line { stroke: #404040; stroke-width: 1; stroke-dasharray: 4,4; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect class="bg" width="800" height="600"/>
+  
+  <!-- Título -->
+  <text x="400" y="30" class="text-title" text-anchor="middle">Arquitectura Escalable - Feature-Based Structure</text>
+  
+  <!-- Estructura por Features -->
+  <text x="200" y="60" class="text" text-anchor="middle" font-size="14" font-weight="bold">Estructura por Features</text>
+  
+  <!-- src/ -->
+  <rect x="30" y="75" width="340" height="290" class="box"/>
+  <text x="50" y="95" class="text-small" font-weight="bold">src/</text>
+  
+  <!-- features/ -->
+  <rect x="45" y="105" width="150" height="155" class="box-feature"/>
+  <text x="55" y="125" class="text-small" fill="#61DAFB">features/</text>
+  
+  <text x="60" y="145" class="text-small">auth/</text>
+  <text x="75" y="160" class="text-small" fill="#6b7280">├── components/</text>
+  <text x="75" y="175" class="text-small" fill="#6b7280">├── hooks/</text>
+  <text x="75" y="190" class="text-small" fill="#6b7280">├── services/</text>
+  <text x="75" y="205" class="text-small" fill="#6b7280">└── index.ts</text>
+  
+  <text x="60" y="225" class="text-small">products/</text>
+  <text x="75" y="240" class="text-small" fill="#6b7280">├── components/</text>
+  <text x="75" y="255" class="text-small" fill="#6b7280">└── ...</text>
+  
+  <!-- shared/ -->
+  <rect x="205" y="105" width="150" height="100" class="box-shared"/>
+  <text x="215" y="125" class="text-small" fill="#4ade80">shared/</text>
+  
+  <text x="220" y="145" class="text-small">components/</text>
+  <text x="235" y="160" class="text-small" fill="#6b7280">├── Button/</text>
+  <text x="235" y="175" class="text-small" fill="#6b7280">├── Input/</text>
+  <text x="235" y="190" class="text-small" fill="#6b7280">└── Modal/</text>
+  
+  <!-- pages/ -->
+  <rect x="205" y="215" width="150" height="45" class="box"/>
+  <text x="215" y="235" class="text-small">pages/</text>
+  <text x="235" y="250" class="text-small" fill="#6b7280">HomePage, etc.</text>
+  
+  <!-- layouts/, App.tsx -->
+  <text x="55" y="280" class="text-small">layouts/</text>
+  <text x="55" y="300" class="text-small">App.tsx</text>
+  <text x="55" y="320" class="text-small">main.tsx</text>
+  
+  <!-- Benefits -->
+  <text x="200" y="350" class="text-small" text-anchor="middle" fill="#4ade80">✓ Código relacionado junto</text>
+  <text x="200" y="370" class="text-small" text-anchor="middle" fill="#4ade80">✓ Fácil de encontrar</text>
+  
+  <!-- Arquitectura por Capas -->
+  <text x="600" y="60" class="text" text-anchor="middle" font-size="14" font-weight="bold">Arquitectura por Capas</text>
+  
+  <!-- Capas -->
+  <rect x="450" y="80" width="300" height="50" class="box-layer"/>
+  <text x="600" y="110" class="text-small" text-anchor="middle">UI Components (Presentación)</text>
+  
+  <path d="M 600 130 L 600 145" class="arrow"/>
+  
+  <rect x="450" y="145" width="300" height="50" class="box-layer"/>
+  <text x="600" y="175" class="text-small" text-anchor="middle">Container Components (Lógica UI)</text>
+  
+  <path d="M 600 195 L 600 210" class="arrow"/>
+  
+  <rect x="450" y="210" width="300" height="50" class="box-layer"/>
+  <text x="600" y="240" class="text-small" text-anchor="middle">Hooks (Lógica de Negocio)</text>
+  
+  <path d="M 600 260 L 600 275" class="arrow"/>
+  
+  <rect x="450" y="275" width="300" height="50" class="box-layer"/>
+  <text x="600" y="305" class="text-small" text-anchor="middle">Services (Acceso a Datos)</text>
+  
+  <path d="M 600 325 L 600 340" class="arrow"/>
+  
+  <rect x="450" y="340" width="300" height="50" class="box-layer"/>
+  <text x="600" y="370" class="text-small" text-anchor="middle">API Client (HTTP)</text>
+  
+  <!-- Línea separadora -->
+  <line x1="50" y1="410" x2="750" y2="410" class="line"/>
+  
+  <!-- Patrones de Composición -->
+  <text x="400" y="440" class="text" text-anchor="middle" font-size="14" font-weight="bold">Patrones de Composición</text>
+  
+  <!-- Compound Components -->
+  <rect x="50" y="460" width="200" height="120" class="box"/>
+  <text x="150" y="485" class="text-small" text-anchor="middle" font-weight="bold">Compound Components</text>
+  <text x="150" y="510" class="text-small" text-anchor="middle" fill="#61DAFB">&lt;Accordion&gt;</text>
+  <text x="150" y="530" class="text-small" text-anchor="middle" fill="#6b7280">&lt;Accordion.Item&gt;</text>
+  <text x="150" y="550" class="text-small" text-anchor="middle" fill="#6b7280">&lt;Accordion.Header&gt;</text>
+  <text x="150" y="570" class="text-small" text-anchor="middle" fill="#6b7280">&lt;Accordion.Panel&gt;</text>
+  
+  <!-- Custom Hooks -->
+  <rect x="300" y="460" width="200" height="120" class="box"/>
+  <text x="400" y="485" class="text-small" text-anchor="middle" font-weight="bold">Custom Hooks ⭐</text>
+  <text x="400" y="515" class="text-small" text-anchor="middle" fill="#4ade80">Preferido para lógica</text>
+  <text x="400" y="540" class="text-small" text-anchor="middle" fill="#6b7280">const { data, error }</text>
+  <text x="400" y="560" class="text-small" text-anchor="middle" fill="#6b7280">  = useProducts();</text>
+  
+  <!-- Render Props -->
+  <rect x="550" y="460" width="200" height="120" class="box"/>
+  <text x="650" y="485" class="text-small" text-anchor="middle" font-weight="bold">Render Props</text>
+  <text x="650" y="515" class="text-small" text-anchor="middle" fill="#facc15">Legacy pattern</text>
+  <text x="650" y="540" class="text-small" text-anchor="middle" fill="#6b7280">&lt;Mouse&gt;</text>
+  <text x="650" y="560" class="text-small" text-anchor="middle" fill="#6b7280">  {(pos) =&gt; ...}</text>
+  <text x="650" y="575" class="text-small" text-anchor="middle" fill="#6b7280">&lt;/Mouse&gt;</text>
+</svg>
