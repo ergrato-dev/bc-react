@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="520" viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="520" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Inter, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Styled Components: CSS-in-JS Runtime
+  </text>
+  
+  <!-- Step 1: Define Component -->
+  <rect x="40" y="80" width="220" height="140" rx="8" fill="#2d2d2d" stroke="#DB7093" stroke-width="2"/>
+  <text x="150" y="105" font-family="Inter, sans-serif" font-size="12" fill="#DB7093" text-anchor="middle" font-weight="bold">
+    1. DEFINIR COMPONENTE
+  </text>
+  <text x="55" y="130" font-family="monospace" font-size="9" fill="#C678DD">
+    const Button = styled.button`
+  </text>
+  <text x="55" y="145" font-family="monospace" font-size="9" fill="#ABB2BF">
+      padding: 12px 24px;
+  </text>
+  <text x="55" y="160" font-family="monospace" font-size="9" fill="#ABB2BF">
+      background: ${props =&gt;
+  </text>
+  <text x="55" y="175" font-family="monospace" font-size="9" fill="#E5C07B">
+        props.primary ? 'blue' : 'gray'
+  </text>
+  <text x="55" y="190" font-family="monospace" font-size="9" fill="#ABB2BF">
+      };
+  </text>
+  <text x="55" y="205" font-family="monospace" font-size="9" fill="#C678DD">
+    `;
+  </text>
+  
+  <!-- Arrow 1->2 -->
+  <line x1="260" y1="150" x2="290" y2="150" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  
+  <!-- Step 2: Props y Render -->
+  <rect x="300" y="80" width="200" height="140" rx="8" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="400" y="105" font-family="Inter, sans-serif" font-size="12" fill="#61DAFB" text-anchor="middle" font-weight="bold">
+    2. USAR CON PROPS
+  </text>
+  <text x="315" y="135" font-family="monospace" font-size="9" fill="#E06C75">
+    &lt;Button primary&gt;
+  </text>
+  <text x="315" y="150" font-family="monospace" font-size="9" fill="#ABB2BF">
+      Click me
+  </text>
+  <text x="315" y="165" font-family="monospace" font-size="9" fill="#E06C75">
+    &lt;/Button&gt;
+  </text>
+  <text x="315" y="190" font-family="monospace" font-size="9" fill="#5C6370">
+    // props.primary = true
+  </text>
+  <text x="315" y="205" font-family="monospace" font-size="9" fill="#5C6370">
+    // Interpola en runtime
+  </text>
+  
+  <!-- Arrow 2->3 -->
+  <line x1="500" y1="150" x2="530" y2="150" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  
+  <!-- Step 3: Runtime Processing -->
+  <rect x="540" y="80" width="220" height="140" rx="8" fill="#2d2d2d" stroke="#F7DF1E" stroke-width="2"/>
+  <text x="650" y="105" font-family="Inter, sans-serif" font-size="12" fill="#F7DF1E" text-anchor="middle" font-weight="bold">
+    3. RUNTIME JS
+  </text>
+  <text x="555" y="130" font-family="monospace" font-size="9" fill="#ABB2BF">
+    styled-components:
+  </text>
+  <text x="555" y="150" font-family="monospace" font-size="9" fill="#98C379">
+    1. Parsea template literal
+  </text>
+  <text x="555" y="165" font-family="monospace" font-size="9" fill="#98C379">
+    2. Evalúa funciones
+  </text>
+  <text x="555" y="180" font-family="monospace" font-size="9" fill="#98C379">
+    3. Genera hash único
+  </text>
+  <text x="555" y="195" font-family="monospace" font-size="9" fill="#98C379">
+    4. Inyecta CSS en &lt;head&gt;
+  </text>
+  
+  <!-- Arrow 3->4 -->
+  <path d="M 650 220 L 650 260 L 400 260 L 400 290" stroke="#61DAFB" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
+  
+  <!-- Step 4: Generated CSS -->
+  <rect x="160" y="300" width="230" height="100" rx="8" fill="#2d2d2d" stroke="#4EC9B0" stroke-width="2"/>
+  <text x="275" y="325" font-family="Inter, sans-serif" font-size="12" fill="#4EC9B0" text-anchor="middle" font-weight="bold">
+    4. CSS INYECTADO EN &lt;head&gt;
+  </text>
+  <text x="175" y="350" font-family="monospace" font-size="9" fill="#E5C07B">
+    .sc-bdVaJa {
+  </text>
+  <text x="175" y="365" font-family="monospace" font-size="9" fill="#ABB2BF">
+      padding: 12px 24px;
+  </text>
+  <text x="175" y="380" font-family="monospace" font-size="9" fill="#ABB2BF">
+      background: blue;
+  </text>
+  <text x="175" y="395" font-family="monospace" font-size="9" fill="#E5C07B">
+    }
+  </text>
+  
+  <!-- Arrow 4->5 -->
+  <line x1="390" y1="350" x2="430" y2="350" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  
+  <!-- Step 5: Final HTML -->
+  <rect x="440" y="300" width="200" height="100" rx="8" fill="#2d2d2d" stroke="#E06C75" stroke-width="2"/>
+  <text x="540" y="325" font-family="Inter, sans-serif" font-size="12" fill="#E06C75" text-anchor="middle" font-weight="bold">
+    5. HTML RENDERIZADO
+  </text>
+  <text x="455" y="355" font-family="monospace" font-size="9" fill="#E06C75">
+    &lt;button
+  </text>
+  <text x="455" y="370" font-family="monospace" font-size="9" fill="#98C379">
+      class="sc-bdVaJa iUxQwR"&gt;
+  </text>
+  <text x="455" y="385" font-family="monospace" font-size="9" fill="#ABB2BF">
+      Click me
+  </text>
+  <text x="455" y="400" font-family="monospace" font-size="9" fill="#E06C75">
+    &lt;/button&gt;
+  </text>
+  
+  <!-- Theme Context Box -->
+  <rect x="40" y="420" width="350" height="80" rx="8" fill="#1e2d3d" stroke="#3178C6" stroke-width="1"/>
+  <text x="215" y="445" font-family="Inter, sans-serif" font-size="12" fill="#3178C6" text-anchor="middle" font-weight="bold">
+    🎨 ThemeProvider (Context API)
+  </text>
+  <text x="55" y="465" font-family="monospace" font-size="9" fill="#ABB2BF">
+    const theme = { colors: { primary: '#3178C6' } }
+  </text>
+  <text x="55" y="480" font-family="monospace" font-size="9" fill="#C678DD">
+    background: ${props =&gt; props.theme.colors.primary}
+  </text>
+  
+  <!-- Benefits Section -->
+  <rect x="410" y="420" width="350" height="80" rx="8" fill="#1e3a1e" stroke="#4EC9B0" stroke-width="1"/>
+  <text x="585" y="445" font-family="Inter, sans-serif" font-size="12" fill="#4EC9B0" text-anchor="middle" font-weight="bold">
+    ✓ CARACTERÍSTICAS
+  </text>
+  <text x="425" y="465" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">
+    • Props dinámicas interpoladas
+  </text>
+  <text x="425" y="480" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">
+    • Theming con Context • Auto vendor prefixes
+  </text>
+</svg>

@@ -1,0 +1,109 @@
+/* ============================================
+   EJERCICIO 01: Card con CSS Modules
+   Archivo: Card.module.css (starter)
+   ============================================ */
+
+/* ============================================
+   PASO 2: Estilos base de la Card
+   Descomentar los siguientes estilos para
+   crear la estructura visual básica.
+   ============================================ */
+
+/* .card {
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 320px;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+} */
+
+/* ============================================
+   PASO 3: Variantes de la Card
+   Las variantes permiten diferentes estilos
+   visuales para el mismo componente.
+   ============================================ */
+
+/* Variante: elevated (con sombra pronunciada) */
+/* .elevated {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.elevated:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+} */
+
+/* Variante: outlined (solo borde, sin fondo) */
+/* .outlined {
+  background-color: transparent;
+  border: 2px solid #3178C6;
+} */
+
+/* Variante: filled (fondo sólido de color primario) */
+/* .filled {
+  background-color: #3178C6;
+  border: none;
+  color: white;
+} */
+
+/* ============================================
+   PASO 4: Contenido interno de la Card
+   Header, body y footer con estilos propios.
+   ============================================ */
+
+/* .cardHeader {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #404040;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.cardSubtitle {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 4px 0 0 0;
+}
+
+.cardBody {
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+.cardFooter {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #404040;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+} */
+
+/* ============================================
+   Modifica la variante filled para que el
+   header y footer tengan colores adecuados
+   ============================================ */
+
+/* .filled .cardHeader {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.filled .cardTitle,
+.filled .cardSubtitle,
+.filled .cardBody {
+  color: white;
+}
+
+.filled .cardFooter {
+  border-top-color: rgba(255, 255, 255, 0.2);
+} */

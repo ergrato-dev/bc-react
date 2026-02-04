@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Inter, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    CSS Modules: Flujo de Estilos Aislados
+  </text>
+  
+  <!-- Step 1: Component File -->
+  <rect x="40" y="80" width="200" height="120" rx="8" fill="#2d2d2d" stroke="#3178C6" stroke-width="2"/>
+  <text x="140" y="105" font-family="Inter, sans-serif" font-size="12" fill="#3178C6" text-anchor="middle" font-weight="bold">
+    1. COMPONENTE TSX
+  </text>
+  <text x="55" y="130" font-family="monospace" font-size="10" fill="#61DAFB">
+    import styles from
+  </text>
+  <text x="55" y="145" font-family="monospace" font-size="10" fill="#98C379">
+      './Button.module.css';
+  </text>
+  <text x="55" y="165" font-family="monospace" font-size="10" fill="#C678DD">
+    className={styles.btn}
+  </text>
+  <text x="55" y="185" font-family="monospace" font-size="10" fill="#E5C07B">
+    // Objeto de clases
+  </text>
+  
+  <!-- Arrow 1->2 -->
+  <line x1="240" y1="140" x2="280" y2="140" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 2: CSS Module File -->
+  <rect x="300" y="80" width="200" height="120" rx="8" fill="#2d2d2d" stroke="#4EC9B0" stroke-width="2"/>
+  <text x="400" y="105" font-family="Inter, sans-serif" font-size="12" fill="#4EC9B0" text-anchor="middle" font-weight="bold">
+    2. ARCHIVO .module.css
+  </text>
+  <text x="315" y="130" font-family="monospace" font-size="10" fill="#E5C07B">
+    .btn {
+  </text>
+  <text x="315" y="145" font-family="monospace" font-size="10" fill="#ABB2BF">
+      padding: 12px 24px;
+  </text>
+  <text x="315" y="160" font-family="monospace" font-size="10" fill="#ABB2BF">
+      background: #3178C6;
+  </text>
+  <text x="315" y="175" font-family="monospace" font-size="10" fill="#E5C07B">
+    }
+  </text>
+  <text x="315" y="190" font-family="monospace" font-size="10" fill="#5C6370">
+    /* CSS estándar */
+  </text>
+  
+  <!-- Arrow 2->3 -->
+  <line x1="500" y1="140" x2="540" y2="140" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 3: Build Tool -->
+  <rect x="560" y="80" width="200" height="120" rx="8" fill="#2d2d2d" stroke="#F7DF1E" stroke-width="2"/>
+  <text x="660" y="105" font-family="Inter, sans-serif" font-size="12" fill="#F7DF1E" text-anchor="middle" font-weight="bold">
+    3. VITE / WEBPACK
+  </text>
+  <text x="575" y="130" font-family="monospace" font-size="10" fill="#ABB2BF">
+    Procesa CSS Module:
+  </text>
+  <text x="575" y="150" font-family="monospace" font-size="10" fill="#98C379">
+    .btn → ._btn_x7k2j
+  </text>
+  <text x="575" y="170" font-family="monospace" font-size="10" fill="#5C6370">
+    // Hash único generado
+  </text>
+  <text x="575" y="190" font-family="monospace" font-size="10" fill="#E5C07B">
+    Exporta objeto JS
+  </text>
+  
+  <!-- Arrow 3->4 -->
+  <path d="M 660 200 L 660 240 L 140 240 L 140 280" stroke="#61DAFB" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 4: Generated Object -->
+  <rect x="40" y="290" width="200" height="100" rx="8" fill="#2d2d2d" stroke="#C678DD" stroke-width="2"/>
+  <text x="140" y="315" font-family="Inter, sans-serif" font-size="12" fill="#C678DD" text-anchor="middle" font-weight="bold">
+    4. OBJETO GENERADO
+  </text>
+  <text x="55" y="340" font-family="monospace" font-size="10" fill="#ABB2BF">
+    styles = {
+  </text>
+  <text x="55" y="355" font-family="monospace" font-size="10" fill="#E5C07B">
+      btn: "_btn_x7k2j"
+  </text>
+  <text x="55" y="370" font-family="monospace" font-size="10" fill="#ABB2BF">
+    }
+  </text>
+  
+  <!-- Arrow 4->5 -->
+  <line x1="240" y1="340" x2="280" y2="340" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 5: DOM Output -->
+  <rect x="300" y="290" width="200" height="100" rx="8" fill="#2d2d2d" stroke="#E06C75" stroke-width="2"/>
+  <text x="400" y="315" font-family="Inter, sans-serif" font-size="12" fill="#E06C75" text-anchor="middle" font-weight="bold">
+    5. HTML RENDERIZADO
+  </text>
+  <text x="315" y="345" font-family="monospace" font-size="10" fill="#E06C75">
+    &lt;button
+  </text>
+  <text x="315" y="360" font-family="monospace" font-size="10" fill="#98C379">
+      class="_btn_x7k2j"&gt;
+  </text>
+  <text x="315" y="375" font-family="monospace" font-size="10" fill="#E06C75">
+    &lt;/button&gt;
+  </text>
+  
+  <!-- Arrow 5->6 -->
+  <line x1="500" y1="340" x2="540" y2="340" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 6: Final CSS -->
+  <rect x="560" y="290" width="200" height="100" rx="8" fill="#2d2d2d" stroke="#4EC9B0" stroke-width="2"/>
+  <text x="660" y="315" font-family="Inter, sans-serif" font-size="12" fill="#4EC9B0" text-anchor="middle" font-weight="bold">
+    6. CSS FINAL
+  </text>
+  <text x="575" y="345" font-family="monospace" font-size="10" fill="#E5C07B">
+    ._btn_x7k2j {
+  </text>
+  <text x="575" y="360" font-family="monospace" font-size="10" fill="#ABB2BF">
+      padding: 12px 24px;
+  </text>
+  <text x="575" y="375" font-family="monospace" font-size="10" fill="#E5C07B">
+    }
+  </text>
+  
+  <!-- Benefits Section -->
+  <rect x="40" y="420" width="720" height="60" rx="8" fill="#1e3a1e" stroke="#4EC9B0" stroke-width="1"/>
+  <text x="400" y="445" font-family="Inter, sans-serif" font-size="14" fill="#4EC9B0" text-anchor="middle" font-weight="bold">
+    ✓ BENEFICIOS
+  </text>
+  <text x="130" y="465" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">
+    Scope local automático
+  </text>
+  <text x="310" y="465" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">
+    Sin colisiones de nombres
+  </text>
+  <text x="500" y="465" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">
+    CSS estándar
+  </text>
+  <text x="670" y="465" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">
+    Dead code elimination
+  </text>
+</svg>
