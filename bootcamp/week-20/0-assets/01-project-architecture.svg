@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="800" height="500" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Arquitectura del Proyecto Final</text>
+  
+  <!-- Capa Frontend -->
+  <rect x="50" y="70" width="700" height="120" rx="8" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="400" y="95" fill="#61DAFB" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">FRONTEND (React + TypeScript)</text>
+  
+  <!-- Componentes Frontend -->
+  <rect x="70" y="110" width="100" height="60" rx="4" fill="#3d3d3d" stroke="#61DAFB" stroke-width="1"/>
+  <text x="120" y="135" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Components</text>
+  <text x="120" y="155" fill="#888888" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">UI + Features</text>
+  
+  <rect x="190" y="110" width="100" height="60" rx="4" fill="#3d3d3d" stroke="#61DAFB" stroke-width="1"/>
+  <text x="240" y="135" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Hooks</text>
+  <text x="240" y="155" fill="#888888" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Custom + Query</text>
+  
+  <rect x="310" y="110" width="100" height="60" rx="4" fill="#3d3d3d" stroke="#61DAFB" stroke-width="1"/>
+  <text x="360" y="135" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Store</text>
+  <text x="360" y="155" fill="#888888" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Zustand/Redux</text>
+  
+  <rect x="430" y="110" width="100" height="60" rx="4" fill="#3d3d3d" stroke="#61DAFB" stroke-width="1"/>
+  <text x="480" y="135" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Services</text>
+  <text x="480" y="155" fill="#888888" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">API Client</text>
+  
+  <rect x="550" y="110" width="100" height="60" rx="4" fill="#3d3d3d" stroke="#61DAFB" stroke-width="1"/>
+  <text x="600" y="135" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Router</text>
+  <text x="600" y="155" fill="#888888" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">React Router</text>
+  
+  <!-- Flecha Frontend -> API -->
+  <line x1="400" y1="190" x2="400" y2="230" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="420" y="215" fill="#888888" font-family="system-ui, sans-serif" font-size="10">HTTP/REST</text>
+  
+  <!-- Capa API -->
+  <rect x="200" y="240" width="400" height="70" rx="8" fill="#2d2d2d" stroke="#4ade80" stroke-width="2"/>
+  <text x="400" y="265" fill="#4ade80" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">BACKEND API</text>
+  <text x="400" y="290" fill="#888888" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Node.js / Express / Mock API</text>
+  
+  <!-- Flecha API -> DB -->
+  <line x1="400" y1="310" x2="400" y2="350" stroke="#4ade80" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Capa Database -->
+  <rect x="250" y="360" width="300" height="50" rx="8" fill="#2d2d2d" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="390" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">DATABASE / JSON Server</text>
+  
+  <!-- Docker Container -->
+  <rect x="30" y="60" width="740" height="370" rx="12" fill="none" stroke="#3178C6" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="760" y="420" fill="#3178C6" font-family="system-ui, sans-serif" font-size="12" text-anchor="end">Docker Container</text>
+  
+  <!-- CI/CD Pipeline -->
+  <rect x="50" y="450" width="700" height="40" rx="6" fill="#2d2d2d" stroke="#a855f7" stroke-width="2"/>
+  <text x="100" y="475" fill="#a855f7" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">CI/CD:</text>
+  
+  <text x="160" y="475" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">Push</text>
+  <text x="200" y="475" fill="#888888" font-family="system-ui, sans-serif" font-size="11">→</text>
+  <text x="220" y="475" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">Lint</text>
+  <text x="260" y="475" fill="#888888" font-family="system-ui, sans-serif" font-size="11">→</text>
+  <text x="280" y="475" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">Test</text>
+  <text x="320" y="475" fill="#888888" font-family="system-ui, sans-serif" font-size="11">→</text>
+  <text x="340" y="475" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">Build</text>
+  <text x="390" y="475" fill="#888888" font-family="system-ui, sans-serif" font-size="11">→</text>
+  <text x="410" y="475" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">Docker</text>
+  <text x="470" y="475" fill="#888888" font-family="system-ui, sans-serif" font-size="11">→</text>
+  <text x="490" y="475" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">Push GHCR</text>
+  <text x="580" y="475" fill="#888888" font-family="system-ui, sans-serif" font-size="11">→</text>
+  <text x="600" y="475" fill="#4ade80" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Deploy</text>
+</svg>

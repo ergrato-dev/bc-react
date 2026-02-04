@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="800" height="450" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Integración Full-Stack con React Query</text>
+  
+  <!-- Componente UI -->
+  <rect x="50" y="70" width="160" height="100" rx="8" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="130" y="100" fill="#61DAFB" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Component</text>
+  <text x="130" y="125" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">ItemList.tsx</text>
+  <text x="130" y="145" fill="#888888" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">UI + Eventos</text>
+  
+  <!-- Flecha Component -> Hook -->
+  <line x1="210" y1="120" x2="260" y2="120" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <text x="235" y="110" fill="#888888" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">useItems()</text>
+  
+  <!-- Custom Hook -->
+  <rect x="270" y="70" width="160" height="100" rx="8" fill="#2d2d2d" stroke="#a855f7" stroke-width="2"/>
+  <text x="350" y="100" fill="#a855f7" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Custom Hook</text>
+  <text x="350" y="125" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">useItems.ts</text>
+  <text x="350" y="145" fill="#888888" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">useQuery + useMutation</text>
+  
+  <!-- Flecha Hook -> Service -->
+  <line x1="430" y1="120" x2="480" y2="120" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <text x="455" y="110" fill="#888888" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">service</text>
+  
+  <!-- Service -->
+  <rect x="490" y="70" width="160" height="100" rx="8" fill="#2d2d2d" stroke="#f59e0b" stroke-width="2"/>
+  <text x="570" y="100" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Service</text>
+  <text x="570" y="125" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">itemService.ts</text>
+  <text x="570" y="145" fill="#888888" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">CRUD Operations</text>
+  
+  <!-- Flecha Service -> API -->
+  <line x1="650" y1="120" x2="700" y2="120" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <text x="675" y="110" fill="#888888" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">fetch</text>
+  
+  <!-- API Client -->
+  <rect x="50" y="200" width="160" height="80" rx="8" fill="#2d2d2d" stroke="#4ade80" stroke-width="2"/>
+  <text x="130" y="230" fill="#4ade80" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">API Client</text>
+  <text x="130" y="255" fill="#888888" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Axios + Interceptors</text>
+  
+  <!-- React Query Cache -->
+  <rect x="270" y="200" width="160" height="80" rx="8" fill="#2d2d2d" stroke="#ec4899" stroke-width="2"/>
+  <text x="350" y="230" fill="#ec4899" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Query Cache</text>
+  <text x="350" y="255" fill="#888888" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Invalidation + Refetch</text>
+  
+  <!-- Backend API -->
+  <rect x="490" y="200" width="260" height="80" rx="8" fill="#2d2d2d" stroke="#3178C6" stroke-width="2"/>
+  <text x="620" y="230" fill="#3178C6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Backend API</text>
+  <text x="620" y="255" fill="#888888" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">REST Endpoints: /api/items</text>
+  
+  <!-- Flujo de datos -->
+  <text x="400" y="330" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Flujo de Datos</text>
+  
+  <!-- Request flow -->
+  <rect x="50" y="350" width="700" height="40" rx="6" fill="#2d2d2d" stroke="#61DAFB" stroke-width="1"/>
+  <text x="100" y="375" fill="#4ade80" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Request:</text>
+  <text x="170" y="375" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">Component</text>
+  <text x="235" y="375" fill="#888888" font-family="system-ui, sans-serif" font-size="10">→</text>
+  <text x="260" y="375" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">useQuery</text>
+  <text x="325" y="375" fill="#888888" font-family="system-ui, sans-serif" font-size="10">→</text>
+  <text x="355" y="375" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">Service</text>
+  <text x="415" y="375" fill="#888888" font-family="system-ui, sans-serif" font-size="10">→</text>
+  <text x="445" y="375" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">API Client</text>
+  <text x="520" y="375" fill="#888888" font-family="system-ui, sans-serif" font-size="10">→</text>
+  <text x="555" y="375" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">Backend</text>
+  
+  <!-- Response flow -->
+  <rect x="50" y="400" width="700" height="40" rx="6" fill="#2d2d2d" stroke="#ec4899" stroke-width="1"/>
+  <text x="100" y="425" fill="#ec4899" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Response:</text>
+  <text x="180" y="425" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">Backend</text>
+  <text x="240" y="425" fill="#888888" font-family="system-ui, sans-serif" font-size="10">→</text>
+  <text x="275" y="425" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">JSON Data</text>
+  <text x="350" y="425" fill="#888888" font-family="system-ui, sans-serif" font-size="10">→</text>
+  <text x="385" y="425" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">Cache</text>
+  <text x="430" y="425" fill="#888888" font-family="system-ui, sans-serif" font-size="10">→</text>
+  <text x="475" y="425" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">Hook State</text>
+  <text x="555" y="425" fill="#888888" font-family="system-ui, sans-serif" font-size="10">→</text>
+  <text x="590" y="425" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10">Re-render UI</text>
+</svg>
