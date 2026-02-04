@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 20px; font-weight: bold; }
+      .box { fill: #2d2d44; stroke: #4a5568; stroke-width: 2; rx: 8; }
+      .label { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 12px; font-weight: bold; }
+      .code { fill: #a0a0a0; font-family: monospace; font-size: 10px; }
+      .desc { fill: #d0d0d0; font-family: system-ui, sans-serif; font-size: 11px; }
+    </style>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect class="bg" width="700" height="320"/>
+  
+  <!-- Título -->
+  <text class="title" x="350" y="30" text-anchor="middle">vi.mock vs vi.spyOn</text>
+  
+  <!-- vi.mock -->
+  <rect class="box" x="30" y="55" width="300" height="120" fill="#1e3a5f" stroke="#3b82f6"/>
+  <text class="label" x="180" y="80" text-anchor="middle" fill="#3b82f6">vi.mock()</text>
+  <text class="desc" x="180" y="100" text-anchor="middle">Reemplaza modulo completo</text>
+  <text class="code" x="45" y="125">vi.mock('./api')</text>
+  <text class="code" x="45" y="142">// Hoisted al inicio</text>
+  <text class="code" x="45" y="159">// Reemplaza todas las exports</text>
+  
+  <!-- vi.spyOn -->
+  <rect class="box" x="370" y="55" width="300" height="120" fill="#1e3a28" stroke="#10b981"/>
+  <text class="label" x="520" y="80" text-anchor="middle" fill="#10b981">vi.spyOn()</text>
+  <text class="desc" x="520" y="100" text-anchor="middle">Espia funcion especifica</text>
+  <text class="code" x="385" y="125">vi.spyOn(obj, 'method')</text>
+  <text class="code" x="385" y="142">// En runtime</text>
+  <text class="code" x="385" y="159">// Preserva original</text>
+  
+  <!-- Tabla comparativa -->
+  <rect class="box" x="30" y="195" width="640" height="110"/>
+  <text class="label" x="350" y="220" text-anchor="middle">Comparacion</text>
+  
+  <!-- Headers -->
+  <text class="desc" x="120" y="245" text-anchor="middle" fill="#a0a0a0">Caracteristica</text>
+  <text class="desc" x="320" y="245" text-anchor="middle" fill="#3b82f6">vi.mock</text>
+  <text class="desc" x="520" y="245" text-anchor="middle" fill="#10b981">vi.spyOn</text>
+  
+  <!-- Row 1 -->
+  <text class="code" x="120" y="265" text-anchor="middle">Alcance</text>
+  <text class="code" x="320" y="265" text-anchor="middle">Modulo completo</text>
+  <text class="code" x="520" y="265" text-anchor="middle">Funcion especifica</text>
+  
+  <!-- Row 2 -->
+  <text class="code" x="120" y="285" text-anchor="middle">Timing</text>
+  <text class="code" x="320" y="285" text-anchor="middle">Hoisted (primero)</text>
+  <text class="code" x="520" y="285" text-anchor="middle">Runtime</text>
+</svg>

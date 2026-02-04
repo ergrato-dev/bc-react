@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 20px; font-weight: bold; }
+      .box { fill: #2d2d44; stroke: #4a5568; stroke-width: 2; rx: 8; }
+      .label { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 12px; font-weight: bold; }
+      .code { fill: #a0a0a0; font-family: monospace; font-size: 10px; }
+      .desc { fill: #d0d0d0; font-family: system-ui, sans-serif; font-size: 11px; }
+      .arrow { stroke: #f59e0b; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect class="bg" width="700" height="350"/>
+  
+  <!-- Título -->
+  <text class="title" x="350" y="30" text-anchor="middle">MSW: Mock Service Worker</text>
+  
+  <!-- Browser/App -->
+  <rect class="box" x="30" y="60" width="150" height="80" fill="#1e3a5f" stroke="#3b82f6"/>
+  <text class="label" x="105" y="90" text-anchor="middle" fill="#3b82f6">App/Tests</text>
+  <text class="code" x="105" y="115" text-anchor="middle">fetch('/api/users')</text>
+  
+  <!-- Flecha App -> MSW -->
+  <path class="arrow" d="M 180 100 L 250 100"/>
+  <text class="code" x="215" y="90" text-anchor="middle" fill="#f59e0b">request</text>
+  
+  <!-- MSW -->
+  <rect class="box" x="260" y="50" width="180" height="100" fill="#3a1e3a" stroke="#f59e0b"/>
+  <text class="label" x="350" y="80" text-anchor="middle" fill="#f59e0b">MSW</text>
+  <text class="desc" x="350" y="100" text-anchor="middle">Intercepta requests</text>
+  <text class="code" x="350" y="120" text-anchor="middle">http.get('/api/users')</text>
+  <text class="code" x="350" y="135" text-anchor="middle">return mockData</text>
+  
+  <!-- Flecha MSW -> App (response) -->
+  <path class="arrow" d="M 250 120 L 180 120"/>
+  <text class="code" x="215" y="138" text-anchor="middle" fill="#10b981">response</text>
+  
+  <!-- Real API (crossed out) -->
+  <rect class="box" x="520" y="60" width="150" height="80" fill="#2d2d44" stroke="#ef4444" stroke-dasharray="5,5"/>
+  <text class="label" x="595" y="90" text-anchor="middle" fill="#ef4444">Real API</text>
+  <text class="desc" x="595" y="115" text-anchor="middle" fill="#ef4444">No se llama</text>
+  
+  <!-- Handlers example -->
+  <rect class="box" x="30" y="180" width="640" height="150"/>
+  <text class="label" x="350" y="205" text-anchor="middle">Ejemplo de Handlers</text>
+  
+  <text class="code" x="50" y="230" fill="#f59e0b">// handlers.ts</text>
+  <text class="code" x="50" y="248">export const handlers = [</text>
+  <text class="code" x="60" y="266">http.get('/api/users', () =&gt; {</text>
+  <text class="code" x="70" y="284">return HttpResponse.json([</text>
+  <text class="code" x="80" y="302">{ id: 1, name: 'Juan' }</text>
+  <text class="code" x="70" y="320">])</text>
+</svg>

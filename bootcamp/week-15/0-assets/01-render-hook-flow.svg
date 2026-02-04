@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 20px; font-weight: bold; }
+      .box { fill: #2d2d44; stroke: #4a5568; stroke-width: 2; rx: 8; }
+      .label { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 13px; font-weight: bold; }
+      .code { fill: #a0a0a0; font-family: monospace; font-size: 10px; }
+      .desc { fill: #d0d0d0; font-family: system-ui, sans-serif; font-size: 11px; }
+      .arrow { stroke: #4a5568; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .circle { fill: #3b82f6; }
+      .number { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 12px; font-weight: bold; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#4a5568"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect class="bg" width="700" height="350"/>
+  
+  <!-- Título -->
+  <text class="title" x="350" y="30" text-anchor="middle">Flujo de renderHook</text>
+  
+  <!-- Paso 1: renderHook -->
+  <rect class="box" x="30" y="60" width="180" height="80" fill="#1e3a5f" stroke="#3b82f6"/>
+  <circle class="circle" cx="55" cy="85" r="12"/>
+  <text class="number" x="55" y="89" text-anchor="middle">1</text>
+  <text class="label" x="120" y="90" text-anchor="middle" fill="#3b82f6">renderHook()</text>
+  <text class="code" x="120" y="110" text-anchor="middle">const { result }</text>
+  <text class="code" x="120" y="124" text-anchor="middle">= renderHook(useHook)</text>
+  
+  <!-- Flecha 1->2 -->
+  <path class="arrow" d="M 210 100 L 250 100"/>
+  
+  <!-- Paso 2: result.current -->
+  <rect class="box" x="260" y="60" width="180" height="80" fill="#1e3a28" stroke="#10b981"/>
+  <circle cx="285" cy="85" r="12" fill="#10b981"/>
+  <text class="number" x="285" y="89" text-anchor="middle">2</text>
+  <text class="label" x="350" y="90" text-anchor="middle" fill="#10b981">result.current</text>
+  <text class="code" x="350" y="110" text-anchor="middle">Accede al valor</text>
+  <text class="code" x="350" y="124" text-anchor="middle">retornado por hook</text>
+  
+  <!-- Flecha 2->3 -->
+  <path class="arrow" d="M 440 100 L 480 100"/>
+  
+  <!-- Paso 3: act() -->
+  <rect class="box" x="490" y="60" width="180" height="80" fill="#3a1e3a" stroke="#8b5cf6"/>
+  <circle cx="515" cy="85" r="12" fill="#8b5cf6"/>
+  <text class="number" x="515" y="89" text-anchor="middle">3</text>
+  <text class="label" x="580" y="90" text-anchor="middle" fill="#8b5cf6">act()</text>
+  <text class="code" x="580" y="110" text-anchor="middle">act(() =&gt; {</text>
+  <text class="code" x="580" y="124" text-anchor="middle">result.current.fn()</text>
+  
+  <!-- Ejemplo completo -->
+  <rect class="box" x="30" y="170" width="640" height="160"/>
+  <text class="label" x="350" y="195" text-anchor="middle">Ejemplo: useCounter</text>
+  
+  <!-- Código del ejemplo -->
+  <text class="code" x="50" y="220" fill="#3b82f6">// 1. Render del hook</text>
+  <text class="code" x="50" y="238">const { result } = renderHook(() =&gt; useCounter())</text>
+  
+  <text class="code" x="50" y="262" fill="#10b981">// 2. Verificar valor inicial</text>
+  <text class="code" x="50" y="280">expect(result.current.count).toBe(0)</text>
+  
+  <text class="code" x="50" y="304" fill="#8b5cf6">// 3. Actualizar estado con act</text>
+  <text class="code" x="50" y="322">act(() =&gt; result.current.increment())</text>
+</svg>
