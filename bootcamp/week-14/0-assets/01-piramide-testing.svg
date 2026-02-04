@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #a0a0a0; font-family: system-ui, sans-serif; font-size: 14px; }
+      .label { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; }
+      .label-small { fill: #a0a0a0; font-family: system-ui, sans-serif; font-size: 12px; }
+      .unit { fill: #10b981; }
+      .integration { fill: #3b82f6; }
+      .e2e { fill: #8b5cf6; }
+      .arrow { stroke: #4a5568; stroke-width: 2; fill: none; }
+      .connector { stroke: #4a5568; stroke-width: 1; stroke-dasharray: 4; }
+    </style>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect class="bg" width="800" height="500"/>
+  
+  <!-- Título -->
+  <text class="title" x="400" y="40" text-anchor="middle">Pirámide de Testing</text>
+  <text class="subtitle" x="400" y="60" text-anchor="middle">Distribución recomendada de tipos de tests</text>
+  
+  <!-- Pirámide -->
+  <!-- Base - Unit Tests -->
+  <polygon class="unit" points="100,400 700,400 550,280 250,280" opacity="0.8"/>
+  <text class="label" x="400" y="350" text-anchor="middle" font-weight="bold">Unit Tests</text>
+  <text class="label-small" x="400" y="370" text-anchor="middle">70% - Rápidos, aislados, muchos</text>
+  
+  <!-- Medio - Integration Tests -->
+  <polygon class="integration" points="250,280 550,280 475,180 325,180" opacity="0.8"/>
+  <text class="label" x="400" y="235" text-anchor="middle" font-weight="bold">Integration Tests</text>
+  <text class="label-small" x="400" y="255" text-anchor="middle">20% - Flujos completos</text>
+  
+  <!-- Cima - E2E Tests -->
+  <polygon class="e2e" points="325,180 475,180 400,100" opacity="0.8"/>
+  <text class="label" x="400" y="150" text-anchor="middle" font-weight="bold">E2E</text>
+  <text class="label-small" x="400" y="168" text-anchor="middle">10%</text>
+  
+  <!-- Indicadores laterales izquierda -->
+  <line class="connector" x1="80" y1="340" x2="100" y2="340"/>
+  <line class="connector" x1="80" y1="230" x2="250" y2="230"/>
+  <line class="connector" x1="80" y1="140" x2="325" y2="140"/>
+  
+  <text class="label-small" x="70" y="344" text-anchor="end">Más tests</text>
+  <text class="label-small" x="70" y="234" text-anchor="end">Balance</text>
+  <text class="label-small" x="70" y="144" text-anchor="end">Menos tests</text>
+  
+  <!-- Indicadores laterales derecha -->
+  <line class="connector" x1="700" y1="340" x2="720" y2="340"/>
+  <line class="connector" x1="550" y1="230" x2="720" y2="230"/>
+  <line class="connector" x1="475" y1="140" x2="720" y2="140"/>
+  
+  <text class="label-small" x="730" y="344" text-anchor="start">Rápido</text>
+  <text class="label-small" x="730" y="234" text-anchor="start">Medio</text>
+  <text class="label-small" x="730" y="144" text-anchor="start">Lento</text>
+  
+  <!-- Flecha de velocidad -->
+  <line class="arrow" x1="760" y1="380" x2="760" y2="120" marker-end="url(#arrowhead)"/>
+  <text class="label-small" x="770" y="250" text-anchor="start" transform="rotate(90, 770, 250)">Velocidad</text>
+  
+  <!-- Flecha de cobertura -->
+  <line class="arrow" x1="40" y1="120" x2="40" y2="380" marker-end="url(#arrowhead)"/>
+  <text class="label-small" x="30" y="250" text-anchor="end" transform="rotate(-90, 30, 250)">Cantidad</text>
+  
+  <!-- Marcador de flecha -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a5568"/>
+    </marker>
+  </defs>
+  
+  <!-- Leyenda -->
+  <rect x="200" y="430" width="16" height="16" class="unit"/>
+  <text class="label-small" x="222" y="443">Unit: Componentes, hooks, funciones</text>
+  
+  <rect x="450" y="430" width="16" height="16" class="integration"/>
+  <text class="label-small" x="472" y="443">Integration: Flujos de usuario</text>
+  
+  <rect x="200" y="455" width="16" height="16" class="e2e"/>
+  <text class="label-small" x="222" y="468">E2E: App completa en navegador</text>
+  
+  <text class="label-small" x="450" y="468" fill="#10b981">✓ Vitest + RTL cubren Unit + Integration</text>
+</svg>

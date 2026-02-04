@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 22px; font-weight: bold; }
+      .subtitle { fill: #a0a0a0; font-family: system-ui, sans-serif; font-size: 14px; }
+      .box { fill: #2d2d44; stroke: #4a5568; stroke-width: 2; rx: 8; }
+      .box-good { stroke: #10b981; }
+      .box-bad { stroke: #ef4444; }
+      .label { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
+      .code { fill: #e0e0e0; font-family: monospace; font-size: 10px; }
+      .priority { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 12px; }
+      .number { fill: #1a1a2e; font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; }
+      .circle-green { fill: #10b981; }
+      .circle-yellow { fill: #f59e0b; }
+      .circle-red { fill: #ef4444; }
+      .good { fill: #10b981; }
+      .bad { fill: #ef4444; }
+    </style>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect class="bg" width="800" height="450"/>
+  
+  <!-- Título -->
+  <text class="title" x="400" y="30" text-anchor="middle">Prioridad de Queries en RTL</text>
+  <text class="subtitle" x="400" y="50" text-anchor="middle">Ordenadas de más a menos recomendadas</text>
+  
+  <!-- Columna: Queries Accesibles (Recomendadas) -->
+  <text class="label" x="200" y="80" text-anchor="middle" fill="#10b981">Accesibles (Preferidas)</text>
+  
+  <!-- 1. getByRole -->
+  <rect class="box box-good" x="50" y="95" width="300" height="55"/>
+  <circle class="circle-green" cx="75" cy="122" r="15"/>
+  <text class="number" x="75" y="127" text-anchor="middle">1</text>
+  <text class="label" x="95" y="115">getByRole</text>
+  <text class="code" x="95" y="135">getByRole('button', {name: /send/i})</text>
+  
+  <!-- 2. getByLabelText -->
+  <rect class="box box-good" x="50" y="160" width="300" height="55"/>
+  <circle class="circle-green" cx="75" cy="187" r="15"/>
+  <text class="number" x="75" y="192" text-anchor="middle">2</text>
+  <text class="label" x="95" y="180">getByLabelText</text>
+  <text class="code" x="95" y="200">getByLabelText(/email/i)</text>
+  
+  <!-- 3. getByPlaceholderText -->
+  <rect class="box box-good" x="50" y="225" width="300" height="55"/>
+  <circle class="circle-green" cx="75" cy="252" r="15"/>
+  <text class="number" x="75" y="257" text-anchor="middle">3</text>
+  <text class="label" x="95" y="245">getByPlaceholderText</text>
+  <text class="code" x="95" y="265">getByPlaceholderText('Search...')</text>
+  
+  <!-- 4. getByText -->
+  <rect class="box box-good" x="50" y="290" width="300" height="55"/>
+  <circle class="circle-yellow" cx="75" cy="317" r="15"/>
+  <text class="number" x="75" y="322" text-anchor="middle">4</text>
+  <text class="label" x="95" y="310">getByText</text>
+  <text class="code" x="95" y="330">getByText(/welcome/i)</text>
+  
+  <!-- Columna: Queries de Escape -->
+  <text class="label" x="600" y="80" text-anchor="middle" fill="#f59e0b">Escape Hatches</text>
+  
+  <!-- 5. getByAltText -->
+  <rect class="box" x="450" y="95" width="300" height="55"/>
+  <circle class="circle-yellow" cx="475" cy="122" r="15"/>
+  <text class="number" x="475" y="127" text-anchor="middle">5</text>
+  <text class="label" x="495" y="115">getByAltText</text>
+  <text class="code" x="495" y="135">getByAltText('Company logo')</text>
+  
+  <!-- 6. getByTitle -->
+  <rect class="box" x="450" y="160" width="300" height="55"/>
+  <circle class="circle-yellow" cx="475" cy="187" r="15"/>
+  <text class="number" x="475" y="192" text-anchor="middle">6</text>
+  <text class="label" x="495" y="180">getByTitle</text>
+  <text class="code" x="495" y="200">getByTitle('Close modal')</text>
+  
+  <!-- Último recurso -->
+  <text class="label" x="600" y="240" text-anchor="middle" fill="#ef4444">Último Recurso</text>
+  
+  <!-- 7. getByTestId -->
+  <rect class="box box-bad" x="450" y="255" width="300" height="55"/>
+  <circle class="circle-red" cx="475" cy="282" r="15"/>
+  <text class="number" x="475" y="287" text-anchor="middle">7</text>
+  <text class="label" x="495" y="275">getByTestId</text>
+  <text class="code" x="495" y="295">getByTestId('submit-btn')</text>
+  
+  <!-- Nota importante -->
+  <rect class="box" x="50" y="365" width="700" height="70" fill="#1e293b"/>
+  <text class="label" x="400" y="390" text-anchor="middle">Principio Guía</text>
+  <text class="subtitle" x="400" y="410" text-anchor="middle" fill="#d0d0d0">Cuanto más se parezca tu test a cómo un usuario usa tu app,</text>
+  <text class="subtitle" x="400" y="425" text-anchor="middle" fill="#d0d0d0">más confianza te dará. — Kent C. Dodds</text>
+</svg>
