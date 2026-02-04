@@ -259,7 +259,7 @@ Archivo de configuración de TypeScript (`tsconfig.json`).
 ```json
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2023",
     "strict": true
   }
 }
