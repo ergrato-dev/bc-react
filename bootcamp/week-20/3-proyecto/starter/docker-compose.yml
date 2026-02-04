@@ -1,0 +1,39 @@
+# ============================================
+# Docker Compose para Proyecto Final
+# Orquesta frontend + API (mock)
+# ============================================
+
+# TODO: Adapta este docker-compose a tu proyecto
+
+# version: '3.8'
+#
+# services:
+#   # ============================================
+#   # SERVICIO: Frontend React
+#   # ============================================
+#   frontend:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     ports:
+#       - "3000:80"
+#     environment:
+#       - VITE_API_URL=http://localhost:3001/api
+#     depends_on:
+#       - api
+#     restart: unless-stopped
+#
+#   # ============================================
+#   # SERVICIO: API Mock (JSON Server)
+#   # ============================================
+#   api:
+#     image: vimagick/json-server
+#     ports:
+#       - "3001:3000"
+#     volumes:
+#       - ./db.json:/data/db.json
+#     restart: unless-stopped
+#
+# networks:
+#   default:
+#     name: proyecto-final-network
