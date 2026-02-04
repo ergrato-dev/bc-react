@@ -55,7 +55,7 @@ Al finalizar el bootcamp, los estudiantes serán capaces de:
 - Configuración de TypeScript (tsconfig.json)
 - Proyecto: Funciones utilitarias tipadas
 
-**Requisitos previos**: JavaScript intermedio (ES6+, promesas, módulos)
+**Requisitos previos**: JavaScript intermedio (ES2023, promesas, módulos)
 
 ---
 

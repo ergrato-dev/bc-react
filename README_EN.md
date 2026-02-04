@@ -98,7 +98,7 @@ bootcamp/week-XX/
 
 | Component                 | Version  | Description                  |
 | ------------------------- | -------- | ---------------------------- |
-| **JavaScript**            | ES6+     | Base language                |
+| **JavaScript**            | ES2023   | Base language                |
 | **TypeScript**            | 5.x      | Type safety                  |
 | **React**                 | 18+      | UI framework                 |
 | **Vite**                  | 5+       | Build tool (fast HMR)        |
@@ -125,7 +125,7 @@ bootcamp/week-XX/
 - **Docker** 20+ (for containerization)
 - **VS Code** (recommended) with included extensions
 - Modern browser (Chrome, Firefox, Edge)
-- **Intermediate JavaScript** (ES6+, promises, modules)
+- **Intermediate JavaScript** (ES2023, promises, modules)
 
 ### 1. Clone the Repository
 

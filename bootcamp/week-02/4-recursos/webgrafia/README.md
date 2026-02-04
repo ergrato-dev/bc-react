@@ -239,7 +239,7 @@ Enlaces a artículos, blogs, tutoriales y recursos web para profundizar en React
 - **Descripción**: Referencia completa de JavaScript
 - **Secciones útiles**:
   - Array methods
-  - ES6+ features
+  - ES2023 features
   - DOM API
 
 ### React API Reference

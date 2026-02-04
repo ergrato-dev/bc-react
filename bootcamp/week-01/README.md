@@ -16,7 +16,7 @@ Al finalizar esta semana, serás capaz de:
 
 ## 📚 Requisitos Previos
 
-- JavaScript intermedio (ES6+: arrow functions, destructuring, spread/rest, promesas, módulos)
+- JavaScript intermedio (ES2023: arrow functions, destructuring, spread/rest, promesas, módulos)
 - Node.js 24 LTS instalado
 - pnpm o yarn instalado (❌ NO usar npm)
 - VS Code con extensión TypeScript (recomendado)
