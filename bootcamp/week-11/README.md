@@ -99,15 +99,36 @@ week-11/
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
-1. **Ejercicios completados** (5 ejercicios guiados)
-2. **Proyecto semanal** funcionando con:
-   - Formulario con React Hook Form
-   - Validación completa con Zod
-   - Campos dinámicos
-   - Error Boundary implementado
-3. **Cuestionario teórico** sobre conceptos clave
+**Proyecto Semanal 📦 (100%)**
+
+- Formulario con React Hook Form
+- Validación completa con Zod
+- Campos dinámicos implementados
+- Error Boundary implementado
+- Adaptado al dominio asignado
+
+> 💡 **Nota:** La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+### ✅ Checklist de la Semana
+
+**Preparación (No evaluada):**
+
+- [ ] Leer material teórico en `1-teoria/`
+- [ ] Completar ejercicios guiados en `2-ejercicios/`
+- [ ] Consultar glosario en `5-glosario/`
+
+**Entregable (Evaluado):**
+
+- [ ] Proyecto semanal completado
+- [ ] Formulario principal con React Hook Form
+- [ ] Esquema de validación Zod completo
+- [ ] Al menos una sección con campos dinámicos
+- [ ] Error Boundary envolviendo el formulario
+- [ ] Tipos TypeScript inferidos de Zod
+- [ ] README con instrucciones de ejecución
+- [ ] Adaptado al dominio asignado por el instructor
 
 ---
 

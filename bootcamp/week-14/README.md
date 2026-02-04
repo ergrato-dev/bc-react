@@ -88,7 +88,44 @@ pnpm add -D vitest @testing-library/react @testing-library/jest-dom @testing-lib
 
 ---
 
-## 🔗 Navegación
+## � Entregable
+
+### Proyecto Semanal 📦 (100%)
+
+**Entregable único**: Testing Suite Básica
+
+- ✅ Suite de tests para componentes del dominio
+- ✅ Todos los tests pasando (`pnpm test`)
+- ✅ Tests adaptados correctamente al dominio asignado
+- ✅ Cobertura razonable de componentes
+- ✅ README documentando la estrategia de testing
+
+**Evaluación**: Ver [rubrica-evaluacion.md](rubrica-evaluacion.md)
+
+> **Nota**: La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+---
+
+## ✅ Checklist de Progreso
+
+### Preparación (No evaluada)
+
+- [ ] Leí toda la teoría (1-teoria/)
+- [ ] Practiqué con los ejercicios guiados (2-ejercicios/)
+- [ ] Revisé recursos adicionales según necesidad
+- [ ] Consulté el glosario según necesidad
+
+### Entregable (Evaluado)
+
+- [ ] **Implementé el proyecto semanal** (3-proyecto/)
+- [ ] Todos los tests pasan (`pnpm test`)
+- [ ] Adaptado a mi dominio asignado
+- [ ] Incluí README documentando estrategia de testing
+- [ ] Código en repositorio con commit descriptivo
+
+---
+
+## �🔗 Navegación
 
 - ⬅️ [Semana 13: Componentes UI y Animaciones](../week-13/)
 - ➡️ [Semana 15: Testing Avanzado](../week-15/)

@@ -15,34 +15,42 @@
 
 ---
 
-## 📊 Criterios de Evaluación
+## 📊 Distribución de la Evaluación
 
-### 1. Conocimiento (30%) 🧠
+| Componente      | Peso | Descripción                                |
+| --------------- | ---- | ------------------------------------------ |
+| 📦 **Proyecto** | 100% | Sistema de Cards con múltiples estrategias |
 
-| Criterio                  | Excelente (100%)                                    | Bueno (80%)                              | Suficiente (70%)       | Insuficiente (<70%)      |
-| ------------------------- | --------------------------------------------------- | ---------------------------------------- | ---------------------- | ------------------------ |
-| **Comprende CSS Modules** | Explica scope local, composición y typed modules    | Entiende scope local y uso básico        | Conoce sintaxis básica | No comprende el concepto |
-| **Comprende CSS-in-JS**   | Explica tagged templates, theming y props dinámicas | Entiende styled() y props básicas        | Conoce sintaxis básica | No comprende CSS-in-JS   |
-| **Comprende Tailwind**    | Explica utility-first, purge y customización        | Entiende clases utilitarias y responsive | Conoce clases básicas  | No comprende Tailwind    |
-| **Comprende Responsive**  | Explica mobile-first, breakpoints y media queries   | Entiende breakpoints básicos             | Conoce media queries   | No aplica responsive     |
+---
 
-### 2. Desempeño (40%) 💪
+## 📖 Recursos de Aprendizaje (No Evaluados)
 
-| Criterio              | Excelente (100%)                                      | Bueno (80%)                            | Suficiente (70%)           | Insuficiente (<70%)  |
-| --------------------- | ----------------------------------------------------- | -------------------------------------- | -------------------------- | -------------------- |
-| **CSS Modules**       | Implementa composition, variables CSS y typed modules | Usa scoped classes y variants          | Implementa estilos básicos | No logra implementar |
-| **Styled Components** | Usa theming, props dinámicas y extends                | Implementa styled() con props          | Crea componentes básicos   | No logra implementar |
-| **Tailwind CSS**      | Configura theme, usa @apply y responsive              | Aplica clases utility correctamente    | Usa clases básicas         | No logra implementar |
-| **Responsive Design** | Mobile-first perfecto, todos los breakpoints          | Responsive funcional en 3+ breakpoints | Responsive básico          | No es responsivo     |
+La **teoría** y los **ejercicios** son recursos de preparación para el proyecto. Aunque no se califican directamente, son esenciales para desarrollar las competencias necesarias:
 
-### 3. Producto (30%) 📦
+- **Teoría**: Fundamentos de CSS Modules, Styled Components, Tailwind CSS y Responsive Design
+- **Ejercicios**: Práctica guiada de cada estrategia de estilos
 
-| Criterio                | Excelente (100%)                                  | Bueno (80%)                                 | Suficiente (70%)             | Insuficiente (<70%)  |
-| ----------------------- | ------------------------------------------------- | ------------------------------------------- | ---------------------------- | -------------------- |
-| **Funcionalidad**       | Todas las estrategias implementadas correctamente | 3 de 3 estrategias funcionan bien           | 2 de 3 estrategias funcionan | Menos de 2 funcionan |
-| **Código limpio**       | DRY, organizado, reutilizable                     | Bien organizado con pocas repeticiones      | Organización aceptable       | Código desordenado   |
-| **Consistencia visual** | Diseño coherente en todas las variantes           | Diseño consistente con pequeñas diferencias | Diseño funcional             | Diseño inconsistente |
-| **Documentación**       | README completo con comparativa detallada         | README con instrucciones claras             | README básico                | Sin documentación    |
+> 💡 **Recomendación**: Completa todos los ejercicios antes de iniciar el proyecto para dominar cada técnica.
+
+---
+
+## 📦 Proyecto (100%)
+
+### Distribución de Pesos
+
+| Criterio                  | Peso | Descripción                                              |
+| ------------------------- | ---- | -------------------------------------------------------- |
+| **Funcionalidad**         | 40%  | Las 3 estrategias de estilos implementadas correctamente |
+| **Adaptación al Dominio** | 35%  | Estilos coherentes con el dominio asignado               |
+| **Calidad del Código**    | 25%  | Código limpio, organizado y documentado                  |
+
+### Criterios Detallados
+
+| Criterio                  | Excelente (100%)                                  | Bueno (80%)                            | Suficiente (70%)             | Insuficiente (<70%)  |
+| ------------------------- | ------------------------------------------------- | -------------------------------------- | ---------------------------- | -------------------- |
+| **Funcionalidad**         | Todas las estrategias implementadas correctamente | 3 de 3 estrategias funcionan bien      | 2 de 3 estrategias funcionan | Menos de 2 funcionan |
+| **Adaptación al Dominio** | Estilos totalmente coherentes con el dominio      | Buena adaptación con detalles menores  | Adaptación básica            | No adapta al dominio |
+| **Calidad del Código**    | DRY, organizado, reutilizable y documentado       | Bien organizado con pocas repeticiones | Organización aceptable       | Código desordenado   |
 
 ---
 
@@ -54,6 +62,15 @@
 | **Notable**       | 80-89%  | Buen dominio con áreas de mejora menores |
 | **Aprobado**      | 70-79%  | Cumple requisitos mínimos                |
 | **Insuficiente**  | <70%    | No alcanza los objetivos mínimos         |
+
+---
+
+## ✅ Criterios de Aprobación
+
+- **Mínimo 70%** en la calificación del proyecto
+- Entrega puntual del proyecto
+- Código funcional sin errores críticos
+- Implementación coherente con el dominio asignado
 
 ---
 
@@ -93,16 +110,17 @@
 
 ---
 
-## 📝 Rúbrica de Entrega
+## 📝 Formato de Entrega
 
-| Elemento      | Peso | Criterio de Aceptación                 |
-| ------------- | ---- | -------------------------------------- |
-| Ejercicio 01  | 10%  | CSS Modules implementado correctamente |
-| Ejercicio 02  | 10%  | Styled Components con props dinámicas  |
-| Ejercicio 03  | 10%  | Tailwind CSS con responsive            |
-| Ejercicio 04  | 10%  | Navbar responsivo funcional            |
-| Proyecto      | 50%  | Sistema de Cards con 3 estrategias     |
-| Documentación | 10%  | README con comparativa                 |
+### Entregable Único: Proyecto Semanal
+
+| Componente             | Incluido | Descripción                                   |
+| ---------------------- | -------- | --------------------------------------------- |
+| Código del proyecto    | ✅       | Sistema de Cards con 3 estrategias de estilos |
+| README.md              | ✅       | Documentación con comparativa de estrategias  |
+| Archivos CSS Modules   | ✅       | Estilos con `.module.css`                     |
+| Componentes Styled     | ✅       | Componentes con Styled Components             |
+| Configuración Tailwind | ✅       | `tailwind.config.js` y estilos utilitarios    |
 
 ---
 

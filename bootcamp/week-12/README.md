@@ -85,11 +85,29 @@ Implementarás un componente `Card` usando las tres estrategias de estilos apren
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
-1. **Ejercicios completados** (4 ejercicios guiados)
-2. **Proyecto semanal**: Sistema de Cards estilizado
-3. **Documentación**: README con comparativa de estrategias
+📦 **Proyecto Semanal** (100%): Sistema de Cards estilizado con documentación comparativa
+
+> 💡 **Nota**: La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+### ✅ Checklist de la Semana
+
+**Preparación (No evaluada)**
+
+- [ ] Leer teoría de CSS Modules
+- [ ] Leer teoría de Styled Components
+- [ ] Leer teoría de Tailwind CSS
+- [ ] Leer teoría de Responsive Design
+- [ ] Completar ejercicio 01 (CSS Modules)
+- [ ] Completar ejercicio 02 (Styled Components)
+- [ ] Completar ejercicio 03 (Tailwind CSS)
+- [ ] Completar ejercicio 04 (Navbar responsivo)
+
+**Entregable (Evaluado)**
+
+- [ ] Proyecto: Sistema de Cards con las 3 estrategias de estilos
+- [ ] README con comparativa de estrategias incluido
 
 ---
 

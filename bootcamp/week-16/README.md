@@ -92,16 +92,19 @@ Al finalizar esta semana, serás capaz de:
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
-### Ejercicios (Individual)
+> **Nota**: La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
 
+### Preparación (No Evaluada)
+
+- [ ] Leer material teórico de la semana
 - [ ] Ejercicio 01: Identificar renders innecesarios con console.log y Profiler
 - [ ] Ejercicio 02: Optimizar lista con React.memo
 - [ ] Ejercicio 03: Memorizar cálculos costosos con useMemo
 - [ ] Ejercicio 04: Estabilizar callbacks con useCallback
 
-### Proyecto (Individual)
+### Proyecto Semanal 📦 (100%)
 
 - [ ] Dashboard funcional adaptado a tu dominio
 - [ ] Mínimo 3 componentes optimizados con React.memo

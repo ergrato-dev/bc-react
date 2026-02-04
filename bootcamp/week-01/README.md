@@ -91,45 +91,40 @@ Implementa un sistema de gestión adaptado a tu dominio asignado (biblioteca, fa
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
-### 1. Conocimiento 🧠 (30%)
+### Proyecto Semanal 📦 (100%)
 
-- Comprensión de tipos primitivos y anotaciones
-- Diferencias entre interface y type
-- Uso de generics y utility types
+**Entregable único**: Proyecto de Modelado de Entidades con TypeScript
 
-**Evaluación**: Cuestionarios, revisión de código comentado
-
-### 2. Desempeño 💪 (40%)
-
-- Completar 5 ejercicios guiados
-- Código funcional y bien tipado
-- Aplicación correcta de conceptos
-
-**Evaluación**: Ejercicios ejecutables sin errores
-
-### 3. Producto 📦 (30%)
-
-- Proyecto semanal funcional
-- Adaptado correctamente a dominio asignado
-- Código limpio con comentarios qué/para/impacto
+- ✅ Código funcional que compila sin errores
+- ✅ Adaptado correctamente al dominio asignado
+- ✅ Tipos bien definidos (interfaces, types, generics, utility types)
+- ✅ Código limpio con comentarios qué/para/impacto
+- ✅ README descriptivo incluido
 
 **Evaluación**: Ver [rubrica-evaluacion.md](rubrica-evaluacion.md)
+
+> **Nota**: La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
 
 ---
 
 ## ✅ Checklist de Progreso
 
+### Preparación (No evaluada)
+
 - [ ] Leí toda la teoría (1-teoria/)
-- [ ] Completé ejercicio 1: Tipos Primitivos
-- [ ] Completé ejercicio 2: Interfaces y Types
-- [ ] Completé ejercicio 3: Funciones Tipadas
-- [ ] Completé ejercicio 4: Generics
-- [ ] Completé ejercicio 5: Utility Types
-- [ ] Implementé el proyecto semanal
-- [ ] Revisé recursos adicionales
+- [ ] Practiqué con los ejercicios guiados (2-ejercicios/)
+- [ ] Revisé recursos adicionales según necesidad
 - [ ] Consulté el glosario según necesidad
+
+### Entregable (Evaluado)
+
+- [ ] **Implementé el proyecto semanal** (3-proyecto/)
+- [ ] Código compila sin errores
+- [ ] Adaptado a mi dominio asignado
+- [ ] Incluí comentarios qué/para/impacto
+- [ ] Incluí README descriptivo
 
 ---
 

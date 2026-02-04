@@ -106,45 +106,42 @@ Crea una interfaz con **4 componentes** (Header, Form, List, Card), estado local
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
-### 1. Conocimiento 🧠 (30%)
+### Proyecto Semanal 📦 (100%)
 
-- Comprensión de componentes y JSX/TSX
-- Diferencia entre props y state
-- Manejo de eventos en React
+**Entregable único**: Sistema CRUD Básico con React y TypeScript
 
-**Evaluación**: Cuestionarios, revisión de código
-
-### 2. Desempeño 💪 (40%)
-
-- Completar 5 ejercicios guiados
-- Componentes funcionales sin errores
-- TypeScript estricto sin `any`
-
-**Evaluación**: Ejercicios ejecutables
-
-### 3. Producto 📦 (30%)
-
-- Proyecto semanal funcional
-- Interfaz interactiva con estado
-- Código limpio con tipos correctos
+- ✅ Aplicación funcional que compila sin errores
+- ✅ Componentes bien organizados y tipados
+- ✅ Estado local con useState funcionando
+- ✅ Adaptado correctamente al dominio asignado
+- ✅ Código limpio con comentarios qué/para/impacto
+- ✅ README descriptivo incluido
 
 **Evaluación**: Ver [rubrica-evaluacion.md](rubrica-evaluacion.md)
+
+> **Nota**: La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
 
 ---
 
 ## ✅ Checklist de Progreso
 
+### Preparación (No evaluada)
+
 - [ ] Leí toda la teoría (1-teoria/)
-- [ ] Completé ejercicio 1: Primer Componente
-- [ ] Completé ejercicio 2: Props Tipados
-- [ ] Completé ejercicio 3: useState
-- [ ] Completé ejercicio 4: Eventos
-- [ ] Completé ejercicio 5: Listas
-- [ ] Implementé el proyecto semanal
-- [ ] Revisé recursos adicionales
-- [ ] Consulté el glosario
+- [ ] Practiqué con los ejercicios guiados (2-ejercicios/)
+- [ ] Revisé recursos adicionales según necesidad
+- [ ] Consulté el glosario según necesidad
+
+### Entregable (Evaluado)
+
+- [ ] **Implementé el proyecto semanal** (3-proyecto/)
+- [ ] Aplicación compila sin errores
+- [ ] Componentes bien tipados
+- [ ] Adaptado a mi dominio asignado
+- [ ] Incluí comentarios qué/para/impacto
+- [ ] Incluí README descriptivo
 
 ---
 

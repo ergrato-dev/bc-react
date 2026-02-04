@@ -20,100 +20,70 @@
 
 | Tipo de Evidencia | Porcentaje | Puntos      |
 | ----------------- | ---------- | ----------- |
-| 🧠 Conocimiento   | 30%        | 30 pts      |
-| 💪 Desempeño      | 40%        | 40 pts      |
-| 📦 Producto       | 30%        | 30 pts      |
+| 📦 Proyecto       | 100%       | 100 pts     |
 | **Total**         | **100%**   | **100 pts** |
 
 ---
 
-## 🧠 Evidencia de Conocimiento (30 pts)
+## 📚 Recursos de Aprendizaje (No Evaluados)
 
-### Cuestionario Teórico
+> 💡 La teoría y los ejercicios son **recursos de preparación** para el proyecto. No se evalúan directamente, pero son esenciales para completar exitosamente el proyecto.
 
-| Criterio                                            | Puntos |
-| --------------------------------------------------- | ------ |
-| Diferencia entre Server State y Client State        | 5 pts  |
-| Configuración de QueryClient y Provider             | 5 pts  |
-| Ciclo de vida de una query (fresh, stale, fetching) | 5 pts  |
-| Query Keys y su importancia                         | 5 pts  |
-| Diferencia entre invalidación y refetch             | 5 pts  |
-| Cuándo usar optimistic updates                      | 5 pts  |
+### Material Teórico
 
----
+- Diferencia entre Server State y Client State
+- Configuración de QueryClient y Provider
+- Ciclo de vida de una query (fresh, stale, fetching)
+- Query Keys y su importancia
+- Diferencia entre invalidación y refetch
+- Cuándo usar optimistic updates
 
-## 💪 Evidencia de Desempeño (40 pts)
+### Ejercicios de Práctica
 
-### Ejercicios Prácticos
-
-| Ejercicio                  | Criterios                                | Puntos |
-| -------------------------- | ---------------------------------------- | ------ |
-| **01: Primera Query**      | useQuery funcional, loading/error states | 7 pts  |
-| **02: Mutations**          | useMutation con onSuccess/onError        | 8 pts  |
-| **03: Invalidation**       | invalidateQueries después de mutation    | 8 pts  |
-| **04: Optimistic Updates** | onMutate, onError rollback               | 9 pts  |
-| **05: Infinite Queries**   | useInfiniteQuery con paginación          | 8 pts  |
-
-### Criterios de Evaluación por Ejercicio
-
-#### Ejercicio 01: Primera Query (7 pts)
-
-- ✅ QueryClient configurado correctamente (1 pt)
-- ✅ useQuery con queryKey y queryFn (2 pts)
-- ✅ Manejo de isLoading e isError (2 pts)
-- ✅ TypeScript: tipos de respuesta definidos (2 pts)
-
-#### Ejercicio 02: Mutations (8 pts)
-
-- ✅ useMutation configurado (2 pts)
-- ✅ mutate/mutateAsync llamado correctamente (2 pts)
-- ✅ Callbacks onSuccess, onError implementados (2 pts)
-- ✅ UI refleja estado de mutation (isPending) (2 pts)
-
-#### Ejercicio 03: Invalidation (8 pts)
-
-- ✅ queryClient.invalidateQueries usado (2 pts)
-- ✅ Query keys correctas para invalidar (2 pts)
-- ✅ Refetch automático después de mutation (2 pts)
-- ✅ Múltiples queries invalidadas cuando necesario (2 pts)
-
-#### Ejercicio 04: Optimistic Updates (9 pts)
-
-- ✅ onMutate implementado con snapshot (3 pts)
-- ✅ setQueryData para update optimista (2 pts)
-- ✅ onError con rollback (2 pts)
-- ✅ onSettled para sincronización final (2 pts)
-
-#### Ejercicio 05: Infinite Queries (8 pts)
-
-- ✅ useInfiniteQuery configurado (2 pts)
-- ✅ getNextPageParam implementado (2 pts)
-- ✅ fetchNextPage funcional (2 pts)
-- ✅ UI de "Cargar más" o scroll infinito (2 pts)
+- Ejercicio 01: Primera Query con useQuery
+- Ejercicio 02: Mutations con useMutation
+- Ejercicio 03: Invalidación de Caché
+- Ejercicio 04: Optimistic Updates
+- Ejercicio 05: Infinite Queries y Paginación
 
 ---
 
-## 📦 Evidencia de Producto (30 pts)
+## 📦 Proyecto (100 pts)
 
-### Proyecto: Gestor con React Query
+### Gestor con React Query - Adaptado a tu Dominio
 
-| Criterio              | Descripción                      | Puntos |
-| --------------------- | -------------------------------- | ------ |
-| **Queries (8 pts)**   |                                  |        |
-| - Lista de elementos  | useQuery para obtener lista      | 3 pts  |
-| - Detalle de elemento | useQuery con parámetro ID        | 3 pts  |
-| - Estados de carga    | Loading spinners visibles        | 2 pts  |
-| **Mutations (8 pts)** |                                  |        |
-| - Crear elemento      | useMutation POST funcional       | 3 pts  |
-| - Editar elemento     | useMutation PUT/PATCH funcional  | 3 pts  |
-| - Eliminar elemento   | useMutation DELETE funcional     | 2 pts  |
-| **Caché (7 pts)**     |                                  |        |
-| - Invalidación        | Cache invalidado tras mutations  | 3 pts  |
-| - Optimistic updates  | Al menos una operación optimista | 4 pts  |
-| **Calidad (7 pts)**   |                                  |        |
-| - TypeScript          | Tipos correctos, sin any         | 3 pts  |
-| - UX                  | Feedback visual de operaciones   | 2 pts  |
-| - DevTools            | React Query DevTools integrado   | 2 pts  |
+#### Funcionalidad (40 pts)
+
+| Criterio               | Descripción                      | Puntos |
+| ---------------------- | -------------------------------- | ------ |
+| **Queries (16 pts)**   |                                  |        |
+| - Lista de elementos   | useQuery para obtener lista      | 6 pts  |
+| - Detalle de elemento  | useQuery con parámetro ID        | 5 pts  |
+| - Estados de carga     | Loading spinners visibles        | 5 pts  |
+| **Mutations (16 pts)** |                                  |        |
+| - Crear elemento       | useMutation POST funcional       | 6 pts  |
+| - Editar elemento      | useMutation PUT/PATCH funcional  | 5 pts  |
+| - Eliminar elemento    | useMutation DELETE funcional     | 5 pts  |
+| **Caché (8 pts)**      |                                  |        |
+| - Invalidación         | Cache invalidado tras mutations  | 4 pts  |
+| - Optimistic updates   | Al menos una operación optimista | 4 pts  |
+
+#### Adaptación al Dominio (35 pts)
+
+| Criterio                  | Descripción                                   | Puntos |
+| ------------------------- | --------------------------------------------- | ------ |
+| Modelo de datos coherente | Entidades y propiedades relevantes al dominio | 12 pts |
+| Operaciones contextuales  | CRUD con sentido para el dominio asignado     | 12 pts |
+| Interfaz adaptada         | UI/UX que refleje el contexto del dominio     | 11 pts |
+
+#### Calidad del Código (25 pts)
+
+| Criterio      | Descripción                     | Puntos |
+| ------------- | ------------------------------- | ------ |
+| TypeScript    | Tipos correctos, sin any        | 10 pts |
+| UX            | Feedback visual de operaciones  | 8 pts  |
+| DevTools      | React Query DevTools integrado  | 4 pts  |
+| Documentación | README con instrucciones claras | 3 pts  |
 
 ---
 
@@ -174,6 +144,15 @@ const mutation = useMutation({
 
 ---
 
+## 🎯 Criterios de Aprobación
+
+| Requisito               | Mínimo Requerido               |
+| ----------------------- | ------------------------------ |
+| Puntuación del Proyecto | 70 pts (70%)                   |
+| Funcionalidad básica    | Queries y Mutations operativas |
+| Adaptación al dominio   | Implementación coherente       |
+| TypeScript              | Sin errores de compilación     |
+
 ## 🎯 Niveles de Desempeño
 
 | Nivel            | Rango  | Descripción                                         |
@@ -185,27 +164,22 @@ const mutation = useMutation({
 
 ---
 
-## 📅 Fechas de Entrega
+## 📅 Formato de Entrega
 
-| Entregable   | Fecha Límite       |
-| ------------ | ------------------ |
-| Ejercicios   | Día 5 de la semana |
-| Proyecto     | Día 7 de la semana |
-| Cuestionario | Día 7 de la semana |
+| Entregable  | Fecha Límite       |
+| ----------- | ------------------ |
+| 📦 Proyecto | Día 7 de la semana |
 
 ---
 
 ## ✅ Checklist de Entrega
 
-### Ejercicios
+### Preparación (No evaluada)
 
-- [ ] Ejercicio 01 completado (starter → solution funcional)
-- [ ] Ejercicio 02 completado
-- [ ] Ejercicio 03 completado
-- [ ] Ejercicio 04 completado
-- [ ] Ejercicio 05 completado
+- [ ] Material teórico revisado
+- [ ] Ejercicios de práctica completados
 
-### Proyecto
+### Proyecto (Evaluado)
 
 - [ ] QueryClientProvider configurado
 - [ ] Queries para listar y obtener elementos

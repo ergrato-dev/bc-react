@@ -150,23 +150,47 @@ El proyecto integrador que demuestra todas las competencias del bootcamp:
 
 ---
 
-## 📝 Entregables
+## 📝 Entregable
 
-1. **Repositorio GitHub** con:
-   - Código fuente completo
-   - README.md profesional
-   - Workflows de GitHub Actions
-   - Dockerfile y docker-compose.yml
+### Proyecto Semanal 📦 (100%)
 
-2. **Imagen Docker** publicada en GHCR
+**Repositorio GitHub** con:
 
-3. **Documentación Storybook** (puede ser estática o enlace)
+- Código fuente completo y funcional
+- README.md profesional con instrucciones claras
+- Workflows de GitHub Actions (CI/CD)
+- Dockerfile y docker-compose.yml funcionales
+- Imagen Docker publicada en GHCR
+- Documentación Storybook (puede ser estática o enlace)
+- **Presentación** (5-10 minutos):
+  - Demo de la aplicación
+  - Explicación de arquitectura
+  - Decisiones técnicas tomadas
+  - Lecciones aprendidas
 
-4. **Presentación** (5-10 minutos):
-   - Demo de la aplicación
-   - Explicación de arquitectura
-   - Decisiones técnicas tomadas
-   - Lecciones aprendidas
+> 📖 **Nota**: La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+---
+
+## ✅ Checklist de la Semana
+
+### 📚 Preparación (No evaluada)
+
+- [ ] Leer teoría: Planificación de proyecto
+- [ ] Leer teoría: Integración fullstack
+- [ ] Leer teoría: A11y, SEO y producción
+- [ ] Completar ejercicio: Checklist de producción
+- [ ] Completar ejercicio: Storybook básico
+
+### 📦 Entregable (Evaluado - 100%)
+
+- [ ] Aplicación funcional desplegable
+- [ ] Docker y Docker Compose configurados
+- [ ] CI/CD funcionando (al menos CI básico)
+- [ ] README profesional con instrucciones
+- [ ] Tests básicos pasando
+- [ ] Storybook documentado
+- [ ] Presentación preparada
 
 ---
 

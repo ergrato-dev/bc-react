@@ -96,11 +96,24 @@ week-10/
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
-1. **Ejercicios completados** (5 ejercicios con código funcional)
-2. **Proyecto semanal** adaptado a tu dominio asignado
-3. **Cuestionario teórico** (evaluación de conocimientos)
+📦 **Proyecto Semanal** (100%) - Aplicación con React Query adaptada a tu dominio asignado
+
+> 💡 **Nota**: La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+### ✅ Checklist de la Semana
+
+**Preparación (No evaluada)**:
+
+- [ ] Leer material teórico de React Query
+- [ ] Completar ejercicios guiados de práctica
+
+**Entregable (Evaluado)**:
+
+- [ ] Proyecto semanal funcionando con React Query
+- [ ] Adaptado al dominio asignado por el instructor
+- [ ] README con instrucciones de ejecución
 
 ---
 

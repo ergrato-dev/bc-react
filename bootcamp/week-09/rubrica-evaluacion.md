@@ -4,140 +4,64 @@
 
 ### 📋 Información General
 
-| Aspecto      | Detalle                      |
-| ------------ | ---------------------------- |
-| **Semana**   | 09                           |
-| **Tema**     | Redux Toolkit con TypeScript |
-| **Etapa**    | 3 - React Intermedio         |
-| **Duración** | 8 horas                      |
+| Aspecto        | Detalle                      |
+| -------------- | ---------------------------- |
+| **Semana**     | 09                           |
+| **Tema**       | Redux Toolkit con TypeScript |
+| **Etapa**      | 3 - React Intermedio         |
+| **Duración**   | 8 horas                      |
+| **Entregable** | Proyecto (100%)              |
+
+---
+
+## 📚 Recursos de Aprendizaje (No Evaluados)
+
+La teoría y los ejercicios son materiales de preparación para el proyecto:
+
+| Recurso                        | Propósito                                              |
+| ------------------------------ | ------------------------------------------------------ |
+| **Teoría** (1-teoria/)         | Comprender arquitectura Flux, Redux Toolkit, slices    |
+| **Ejercicios** (2-ejercicios/) | Practicar conceptos antes de aplicarlos en el proyecto |
+
+> 💡 **Recomendación:** Completa la teoría y los ejercicios antes de iniciar el proyecto para un mejor desempeño.
 
 ---
 
 ## 🎯 Criterios de Evaluación
 
-### 1. Conocimiento Teórico (30%)
+### Proyecto Semanal (100%)
 
-#### Excelente (90-100%)
-
-- Explica claramente la arquitectura Flux y el flujo unidireccional
-- Comprende la diferencia entre Redux clásico y Redux Toolkit
-- Describe el ciclo de vida de una acción: dispatch → reducer → state → UI
-- Entiende cuándo usar Redux vs alternativas (Zustand, Context)
-- Conoce los conceptos de normalización y selectores memoizados
-
-#### Bueno (70-89%)
-
-- Comprende los principios básicos de Redux
-- Sabe configurar un store con Redux Toolkit
-- Entiende slices, reducers y actions
-- Conoce createAsyncThunk para operaciones asíncronas
-
-#### Suficiente (50-69%)
-
-- Conoce los conceptos básicos de Redux
-- Puede explicar qué es un slice y un reducer
-- Entiende el flujo básico de datos
-
-#### Insuficiente (<50%)
-
-- No comprende el patrón Redux
-- Confunde conceptos fundamentales
-- No puede explicar el flujo de datos
-
----
-
-### 2. Ejercicios Prácticos (40%)
-
-#### Ejercicio 1: Primer Slice (20%)
-
-| Criterio                                         | Puntos |
-| ------------------------------------------------ | ------ |
-| Interface de estado tipada correctamente         | 3      |
-| Reducers con PayloadAction tipado                | 4      |
-| Actions exportadas y nombradas correctamente     | 3      |
-| Slice integrado en el store                      | 5      |
-| Componente consume estado con useSelector tipado | 5      |
-
-#### Ejercicio 2: Async Thunk (20%)
-
-| Criterio                                        | Puntos |
-| ----------------------------------------------- | ------ |
-| createAsyncThunk con tipos correctos            | 4      |
-| Manejo de estados: pending, fulfilled, rejected | 6      |
-| extraReducers implementados correctamente       | 4      |
-| Componente muestra loading/error/data           | 4      |
-| Tipos de respuesta API definidos                | 2      |
-
-#### Ejercicio 3: Selectores (20%)
-
-| Criterio                          | Puntos |
-| --------------------------------- | ------ |
-| Selectores simples tipados        | 3      |
-| createSelector con memoización    | 5      |
-| Selectores derivados con cálculos | 4      |
-| Selectores parametrizados         | 4      |
-| Reutilización de selectores base  | 4      |
-
-#### Ejercicio 4: Entity Adapter (20%)
-
-| Criterio                                | Puntos |
-| --------------------------------------- | ------ |
-| createEntityAdapter configurado         | 4      |
-| Entidades normalizadas (ids + entities) | 5      |
-| CRUD con métodos del adapter            | 5      |
-| Selectores generados utilizados         | 4      |
-| Tipos de entidad correctos              | 2      |
-
-#### Ejercicio 5: RTK Query Intro (20%)
-
-| Criterio                       | Puntos |
-| ------------------------------ | ------ |
-| API slice creado con createApi | 4      |
-| Endpoints query definidos      | 4      |
-| Hooks generados utilizados     | 4      |
-| Cache y refetch funcionando    | 4      |
-| Tipos de respuesta inferidos   | 4      |
-
----
-
-### 3. Proyecto Semanal (30%)
-
-#### Estructura y Configuración (25%)
+#### Funcionalidad (40%)
 
 | Criterio                                       | Puntos |
 | ---------------------------------------------- | ------ |
 | Store configurado con configureStore           | 5      |
 | Múltiples slices organizados                   | 5      |
-| Tipos RootState y AppDispatch exportados       | 5      |
-| Hooks tipados (useAppSelector, useAppDispatch) | 5      |
-| DevTools integrado                             | 5      |
+| Tipos RootState y AppDispatch exportados       | 4      |
+| Hooks tipados (useAppSelector, useAppDispatch) | 4      |
+| CRUD completo con thunks asíncronos            | 8      |
+| Estados de carga (loading, success, error)     | 6      |
+| Selectores optimizados con createSelector      | 4      |
+| UI reactiva a cambios de estado                | 4      |
 
-#### Funcionalidad (40%)
+#### Adaptación al Dominio (35%)
 
-| Criterio                                   | Puntos |
-| ------------------------------------------ | ------ |
-| CRUD completo con thunks asíncronos        | 10     |
-| Estados de carga (loading, success, error) | 8      |
-| Selectores optimizados con createSelector  | 8      |
-| Normalización de datos con entityAdapter   | 8      |
-| UI reactiva a cambios de estado            | 6      |
+| Criterio                                 | Puntos |
+| ---------------------------------------- | ------ |
+| Entidades adaptadas al dominio asignado  | 10     |
+| Acciones con sentido en el contexto      | 10     |
+| UI coherente con el dominio              | 8      |
+| Normalización de datos con entityAdapter | 7      |
 
-#### Calidad de Código (20%)
+#### Calidad del Código (25%)
 
 | Criterio                                           | Puntos |
 | -------------------------------------------------- | ------ |
-| TypeScript estricto sin `any`                      | 5      |
-| Código limpio y organizado                         | 5      |
-| Separación de concerns (slices, selectors, thunks) | 5      |
-| Comentarios explicativos                           | 5      |
-
-#### Adaptación al Dominio (15%)
-
-| Criterio                                | Puntos |
-| --------------------------------------- | ------ |
-| Entidades adaptadas al dominio asignado | 5      |
-| Acciones con sentido en el contexto     | 5      |
-| UI coherente con el dominio             | 5      |
+| TypeScript estricto sin `any`                      | 7      |
+| Código limpio y organizado                         | 6      |
+| Separación de concerns (slices, selectors, thunks) | 6      |
+| Comentarios explicativos                           | 3      |
+| DevTools integrado                                 | 3      |
 
 ---
 
@@ -177,11 +101,24 @@ Cada aprendiz implementa el proyecto con su dominio asignado:
 
 ---
 
-## ✅ Checklist de Entrega
+## ✅ Criterios de Aprobación
 
-### Obligatorios
+- **Mínimo requerido:** 70% en el proyecto
+- **Entrega puntual** del proyecto
+- **Código funcional** y bien documentado
+- **Implementación coherente** con el dominio asignado
 
-- [ ] Ejercicios 1-5 completados con código funcional
+---
+
+## 📋 Formato de Entrega
+
+### Preparación (No evaluada)
+
+- [ ] Revisar material teórico (1-teoria/)
+- [ ] Completar ejercicios guiados (2-ejercicios/)
+
+### Proyecto (100% de la evaluación)
+
 - [ ] Proyecto implementado con dominio asignado
 - [ ] Store con múltiples slices funcionando
 - [ ] Al menos 2 thunks asíncronos implementados

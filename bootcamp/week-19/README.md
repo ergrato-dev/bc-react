@@ -106,11 +106,34 @@ week-19/
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
-1. **Ejercicios completados**: 3 workflows funcionales en GitHub
-2. **Proyecto semanal**: Pipeline CI/CD completo para aplicación de tu dominio
-3. **Documentación**: README con badges de CI y explicación del pipeline
+### 📦 Proyecto Semanal (100%)
+
+**Pipeline CI/CD Completo** para tu aplicación de dominio asignado:
+
+- Pipeline CI/CD funcional con GitHub Actions
+- Imagen Docker publicada en GitHub Container Registry
+- README con badges de CI y explicación del pipeline
+- Documentación para contribuidores
+
+> 💡 **Nota**: La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+### ✅ Checklist de Entrega
+
+**Preparación (No evaluada)**:
+
+- [ ] Leer material teórico de CI/CD
+- [ ] Completar ejercicio 01: Primer workflow
+- [ ] Completar ejercicio 02: Build y test workflow
+- [ ] Completar ejercicio 03: Deploy a GHCR
+
+**Entregable (Evaluado)**:
+
+- [ ] Proyecto: Pipeline CI/CD completo para tu dominio
+- [ ] Workflows funcionales ejecutándose en GitHub Actions
+- [ ] Imagen publicada en GHCR con tags semánticos
+- [ ] README con badges y documentación del pipeline
 
 ---
 

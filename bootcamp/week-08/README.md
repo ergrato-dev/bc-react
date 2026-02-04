@@ -101,11 +101,25 @@ week-08/
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
-1. **Ejercicios completados** - Código funcional de los 5 ejercicios
-2. **Proyecto semanal** - Aplicación con estado global usando Zustand
-3. **Cuestionario teórico** - Evaluación de conceptos
+**Proyecto Semanal 📦 (100%)** - Aplicación con estado global usando Zustand
+
+> 💡 **Nota**: La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+### ✅ Checklist de la Semana
+
+#### Preparación (No evaluada)
+
+- [ ] Leer material teórico (5 módulos)
+- [ ] Completar ejercicios guiados (5 ejercicios)
+- [ ] Revisar recursos adicionales si es necesario
+
+#### Entregable (Evaluado - 100%)
+
+- [ ] Proyecto semanal completado y funcional
+- [ ] Código subido al repositorio
+- [ ] README del proyecto actualizado
 
 ---
 
