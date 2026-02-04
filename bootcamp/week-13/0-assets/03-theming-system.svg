@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#f8fafc" text-anchor="middle">Sistema de Theming con CSS Custom Properties</text>
+  
+  <!-- Light Theme -->
+  <g transform="translate(30, 60)">
+    <rect width="180" height="160" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="90" y="25" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1e293b" text-anchor="middle">TEMA CLARO</text>
+    
+    <!-- Color swatches -->
+    <rect x="15" y="40" width="30" height="30" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="55" y="60" font-family="system-ui, sans-serif" font-size="9" fill="#475569">--bg-primary</text>
+    
+    <rect x="15" y="75" width="30" height="30" rx="6" fill="#f3f4f6" stroke="#e2e8f0"/>
+    <text x="55" y="95" font-family="system-ui, sans-serif" font-size="9" fill="#475569">--bg-secondary</text>
+    
+    <rect x="15" y="110" width="30" height="30" rx="6" fill="#111827"/>
+    <text x="55" y="130" font-family="system-ui, sans-serif" font-size="9" fill="#475569">--text-primary</text>
+  </g>
+  
+  <!-- Arrow -->
+  <g transform="translate(220, 140)">
+    <line x1="0" y1="0" x2="40" y2="0" stroke="#60a5fa" stroke-width="2" marker-end="url(#arr)"/>
+  </g>
+  
+  <!-- CSS Variables -->
+  <g transform="translate(270, 60)">
+    <rect width="260" height="160" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <text x="130" y="25" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#60a5fa" text-anchor="middle">CSS CUSTOM PROPERTIES</text>
+    
+    <g transform="translate(15, 40)">
+      <rect width="230" height="105" rx="8" fill="#0f172a"/>
+      <text x="10" y="20" font-family="monospace" font-size="10" fill="#64748b">:root {</text>
+      <text x="20" y="38" font-family="monospace" font-size="10" fill="#fbbf24">--color-bg-primary</text>
+      <text x="145" y="38" font-family="monospace" font-size="10" fill="#64748b">: #fff;</text>
+      <text x="20" y="56" font-family="monospace" font-size="10" fill="#fbbf24">--color-text-primary</text>
+      <text x="150" y="56" font-family="monospace" font-size="10" fill="#64748b">: #111;</text>
+      <text x="10" y="74" font-family="monospace" font-size="10" fill="#64748b">}</text>
+      <text x="10" y="92" font-family="monospace" font-size="10" fill="#c084fc">[data-theme="dark"]</text>
+      <text x="135" y="92" font-family="monospace" font-size="10" fill="#64748b">{ ... }</text>
+    </g>
+  </g>
+  
+  <!-- Arrow -->
+  <g transform="translate(540, 140)">
+    <line x1="0" y1="0" x2="40" y2="0" stroke="#60a5fa" stroke-width="2" marker-end="url(#arr)"/>
+  </g>
+  
+  <!-- Dark Theme -->
+  <g transform="translate(590, 60)">
+    <rect width="180" height="160" rx="12" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+    <text x="90" y="25" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#f8fafc" text-anchor="middle">TEMA OSCURO</text>
+    
+    <!-- Color swatches -->
+    <rect x="15" y="40" width="30" height="30" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="55" y="60" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">--bg-primary</text>
+    
+    <rect x="15" y="75" width="30" height="30" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="55" y="95" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">--bg-secondary</text>
+    
+    <rect x="15" y="110" width="30" height="30" rx="6" fill="#f8fafc"/>
+    <text x="55" y="130" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">--text-primary</text>
+  </g>
+  
+  <!-- ThemeProvider Flow -->
+  <g transform="translate(30, 250)">
+    <rect width="740" height="130" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="370" y="25" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#94a3b8" text-anchor="middle">FLUJO DEL THEME PROVIDER</text>
+    
+    <!-- User Preference -->
+    <g transform="translate(20, 45)">
+      <rect width="130" height="65" rx="8" fill="#581c87" stroke="#a855f7" stroke-width="1"/>
+      <text x="65" y="25" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#c084fc" text-anchor="middle">Usuario/Sistema</text>
+      <text x="65" y="45" font-family="system-ui, sans-serif" font-size="9" fill="#d8b4fe" text-anchor="middle">prefers-color-scheme</text>
+      <text x="65" y="58" font-family="system-ui, sans-serif" font-size="9" fill="#d8b4fe" text-anchor="middle">localStorage</text>
+    </g>
+    
+    <!-- Arrow -->
+    <line x1="160" y1="77" x2="190" y2="77" stroke="#60a5fa" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <!-- ThemeContext -->
+    <g transform="translate(200, 45)">
+      <rect width="130" height="65" rx="8" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+      <text x="65" y="25" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#34d399" text-anchor="middle">ThemeContext</text>
+      <text x="65" y="45" font-family="system-ui, sans-serif" font-size="9" fill="#6ee7b7" text-anchor="middle">theme: 'dark'</text>
+      <text x="65" y="58" font-family="system-ui, sans-serif" font-size="9" fill="#6ee7b7" text-anchor="middle">setTheme()</text>
+    </g>
+    
+    <!-- Arrow -->
+    <line x1="340" y1="77" x2="370" y2="77" stroke="#60a5fa" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <!-- DOM Update -->
+    <g transform="translate(380, 45)">
+      <rect width="150" height="65" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="75" y="25" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#60a5fa" text-anchor="middle">Actualizar DOM</text>
+      <text x="75" y="45" font-family="monospace" font-size="9" fill="#93c5fd" text-anchor="middle">data-theme="dark"</text>
+      <text x="75" y="58" font-family="monospace" font-size="9" fill="#93c5fd" text-anchor="middle">class="dark"</text>
+    </g>
+    
+    <!-- Arrow -->
+    <line x1="540" y1="77" x2="570" y2="77" stroke="#60a5fa" stroke-width="2" marker-end="url(#arr)"/>
+    
+    <!-- CSS Variables Apply -->
+    <g transform="translate(580, 45)">
+      <rect width="140" height="65" rx="8" fill="#713f12" stroke="#f59e0b" stroke-width="1"/>
+      <text x="70" y="25" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#fbbf24" text-anchor="middle">CSS Aplica</text>
+      <text x="70" y="45" font-family="system-ui, sans-serif" font-size="9" fill="#fcd34d" text-anchor="middle">Variables cambian</text>
+      <text x="70" y="58" font-family="system-ui, sans-serif" font-size="9" fill="#fcd34d" text-anchor="middle">UI se actualiza</text>
+    </g>
+  </g>
+</svg>

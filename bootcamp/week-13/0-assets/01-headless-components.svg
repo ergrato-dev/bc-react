@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#f8fafc" text-anchor="middle">Headless Components: Separación de Responsabilidades</text>
+  
+  <!-- Traditional Component Box -->
+  <g transform="translate(50, 70)">
+    <rect width="300" height="140" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="150" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#94a3b8" text-anchor="middle">COMPONENTE TRADICIONAL</text>
+    
+    <!-- Combined box -->
+    <rect x="20" y="50" width="260" height="70" rx="8" fill="#7f1d1d" stroke="#ef4444" stroke-width="1"/>
+    <text x="150" y="75" font-family="system-ui, sans-serif" font-size="12" fill="#fca5a5" text-anchor="middle">Lógica + Estilos + Accesibilidad</text>
+    <text x="150" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#f87171" text-anchor="middle">Todo acoplado - Difícil de personalizar</text>
+  </g>
+  
+  <!-- VS -->
+  <text x="400" y="150" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#64748b" text-anchor="middle">VS</text>
+  
+  <!-- Headless Component Box -->
+  <g transform="translate(450, 70)">
+    <rect width="300" height="140" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="150" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#94a3b8" text-anchor="middle">COMPONENTE HEADLESS</text>
+    
+    <!-- Separated boxes -->
+    <rect x="15" y="50" width="130" height="70" rx="8" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+    <text x="80" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#34d399" text-anchor="middle">Lógica</text>
+    <text x="80" y="92" font-family="system-ui, sans-serif" font-size="10" fill="#6ee7b7" text-anchor="middle">+ Accesibilidad</text>
+    <text x="80" y="107" font-family="system-ui, sans-serif" font-size="9" fill="#a7f3d0" text-anchor="middle">(Radix/Headless UI)</text>
+    
+    <rect x="155" y="50" width="130" height="70" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="220" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle">Estilos</text>
+    <text x="220" y="92" font-family="system-ui, sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">100% Tuyos</text>
+    <text x="220" y="107" font-family="system-ui, sans-serif" font-size="9" fill="#bfdbfe" text-anchor="middle">(Tailwind/CSS)</text>
+  </g>
+  
+  <!-- Flow diagram -->
+  <g transform="translate(50, 240)">
+    <!-- Radix Box -->
+    <rect x="0" y="0" width="140" height="80" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <text x="70" y="35" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#34d399" text-anchor="middle">Radix UI</text>
+    <text x="70" y="55" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Dialog.Root</text>
+    <text x="70" y="70" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Dialog.Content</text>
+    
+    <!-- Arrow 1 -->
+    <line x1="150" y1="40" x2="200" y2="40" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="175" y="30" font-family="system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">props</text>
+    
+    <!-- Your Styles Box -->
+    <rect x="210" y="0" width="140" height="80" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <text x="280" y="35" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#60a5fa" text-anchor="middle">Tus Estilos</text>
+    <text x="280" y="55" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">className="..."</text>
+    <text x="280" y="70" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Tailwind/CSS</text>
+    
+    <!-- Arrow 2 -->
+    <line x1="360" y1="40" x2="410" y2="40" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Result Box -->
+    <rect x="420" y="0" width="140" height="80" rx="10" fill="#1e293b" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="490" y="35" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#a78bfa" text-anchor="middle">Resultado</text>
+    <text x="490" y="55" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">✓ Accesible</text>
+    <text x="490" y="70" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">✓ Personalizado</text>
+    
+    <!-- Arrow 3 -->
+    <line x1="570" y1="40" x2="620" y2="40" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Final UI -->
+    <rect x="630" y="0" width="110" height="80" rx="10" fill="#3b82f6" stroke="#60a5fa" stroke-width="2"/>
+    <text x="685" y="30" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Tu Modal</text>
+    <rect x="645" y="40" width="80" height="30" rx="6" fill="#1e293b"/>
+    <text x="685" y="60" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Contenido</text>
+  </g>
+  
+  <!-- Benefits -->
+  <g transform="translate(50, 350)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#10b981">✓ Focus trap automático</text>
+    <text x="180" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#10b981">✓ Escape key handling</text>
+    <text x="370" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#10b981">✓ ARIA attributes</text>
+    <text x="530" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#10b981">✓ Keyboard navigation</text>
+  </g>
+</svg>
