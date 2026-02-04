@@ -138,29 +138,25 @@ Ejercicios progresivos formato tutorial guiado:
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
 Al finalizar la semana, debes entregar:
 
-### Evidencia de Conocimiento (30%)
+### Proyecto Semanal 📦 (100%)
 
-- Responder cuestionario sobre useEffect
-- Explicar diferencias entre tipos de dependencias
-- Identificar cuándo usar cleanup functions
+**Entregable único**: Dashboard con Datos en Tiempo Real
 
-### Evidencia de Desempeño (40%)
+- ✅ Dashboard funcional con fetch de datos
+- ✅ Polling con actualización periódica
+- ✅ Efectos con cleanup apropiado (sin memory leaks)
+- ✅ Manejo de estados loading/error/data
+- ✅ Adaptado correctamente al dominio asignado
+- ✅ Código TypeScript tipado correctamente
+- ✅ README con descripción del dominio
 
-- 5 ejercicios completados y funcionales
-- Código siguiendo nomenclatura inglés/español
-- Tests pasando (cuando aplique)
+**Evaluación**: Ver [rubrica-evaluacion.md](rubrica-evaluacion.md)
 
-### Evidencia de Producto (30%)
-
-- Proyecto de dashboard funcional
-- README con descripción del dominio
-- Implementación coherente con el dominio asignado
-- Código TypeScript tipado correctamente
-- Efectos con cleanup apropiado
+> **Nota**: La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
 
 ---
 
@@ -168,18 +164,21 @@ Al finalizar la semana, debes entregar:
 
 Antes de considerar la semana completa:
 
+### Preparación (No evaluada)
+
 - [ ] Teoría: Leídos los 4 archivos de teoría
-- [ ] Ejercicio 01: Effect básico completado
-- [ ] Ejercicio 02: Dependencies completado
-- [ ] Ejercicio 03: Cleanup completado
-- [ ] Ejercicio 04: Fetch data completado
-- [ ] Ejercicio 05: Timer app completado
+- [ ] Practiqué con los ejercicios guiados (2-ejercicios/)
+- [ ] Código: Nomenclatura inglés (técnico) + español (comentarios)
+- [ ] Tipos: TypeScript sin `any`
+
+### Entregable (Evaluado)
+
+- [ ] **Implementé el proyecto semanal** (3-proyecto/)
 - [ ] Proyecto: Dashboard funcional con fetch
 - [ ] Proyecto: Cleanup functions implementadas
 - [ ] Proyecto: Manejo de loading/error states
-- [ ] Código: Nomenclatura inglés (técnico) + español (comentarios)
-- [ ] Tipos: TypeScript sin `any`
-- [ ] Git: Commits descriptivos en inglés
+- [ ] Proyecto: Adaptado a mi dominio asignado
+- [ ] Incluí README descriptivo
 
 ---
 

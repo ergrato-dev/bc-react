@@ -109,9 +109,11 @@ Proyecto final de la Etapa 2 que integra TODO lo aprendido:
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
-### Ejercicios (Evaluación Formativa)
+> **💡 Nota:** La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+### ✅ Preparación (No evaluada)
 
 - [ ] Ejercicio 01: `useToggle` y `useCounter` funcionando
 - [ ] Ejercicio 02: `useForm` y `useArray` con estado tipado
@@ -119,7 +121,7 @@ Proyecto final de la Etapa 2 que integra TODO lo aprendido:
 - [ ] Ejercicio 04: Hooks genéricos `useLocalStorage<T>` y `useAsync<T>`
 - [ ] Ejercicio 05: Composición `useAuth` = `useLocalStorage` + `useFetch`
 
-### Proyecto (Evaluación Sumativa)
+### 📦 Proyecto Semanal (100% de la evaluación)
 
 - [ ] Dashboard con al menos 5 custom hooks implementados
 - [ ] Mínimo 3 widgets interactivos (estadísticas, lista, formulario)
@@ -132,12 +134,13 @@ Proyecto final de la Etapa 2 que integra TODO lo aprendido:
 
 ## 🏆 Criterios de Evaluación
 
-| Criterio                 | Peso |
-| ------------------------ | ---- |
-| Custom hooks funcionales | 30%  |
-| TypeScript correcto      | 25%  |
-| Integración de conceptos | 25%  |
-| Calidad del código       | 20%  |
+| Criterio              | Peso |
+| --------------------- | ---- |
+| Funcionalidad         | 40%  |
+| Adaptación al Dominio | 35%  |
+| Calidad del Código    | 25%  |
+
+> **Nota:** Se requiere mínimo 70% en el proyecto para aprobar la semana.
 
 ---
 

@@ -113,27 +113,32 @@ week-13/
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
-### Conocimiento (30%)
-
-- [ ] Cuestionario sobre componentes headless
-- [ ] Quiz de conceptos de Framer Motion
-- [ ] Evaluación de theming y accesibilidad
-
-### Desempeño (40%)
-
-- [ ] Ejercicio 1: Modal con Radix Dialog
-- [ ] Ejercicio 2: Animaciones Framer Motion
-- [ ] Ejercicio 3: Theme Switcher funcional
-- [ ] Ejercicio 4: Design Tokens aplicados
-
-### Producto (30%)
+### Proyecto Semanal 📦 (100%)
 
 - [ ] Mini Design System con 5+ componentes
 - [ ] Soporte dark/light mode
 - [ ] Animaciones consistentes
 - [ ] Documentación de componentes
+
+> **📝 Nota:** La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+### ✅ Checklist de Preparación
+
+**Preparación (No evaluada):**
+
+- [ ] Revisar teoría de headless components
+- [ ] Revisar teoría de Framer Motion
+- [ ] Revisar teoría de theming y dark mode
+- [ ] Completar ejercicio 1: Modal con Radix Dialog
+- [ ] Completar ejercicio 2: Animaciones Framer Motion
+- [ ] Completar ejercicio 3: Theme Switcher funcional
+- [ ] Completar ejercicio 4: Design Tokens aplicados
+
+**Entregable (Evaluado):**
+
+- [ ] Proyecto: Mini Design System completo
 
 ---
 

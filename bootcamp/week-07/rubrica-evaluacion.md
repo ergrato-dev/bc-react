@@ -4,98 +4,86 @@
 
 ---
 
-## 🎯 Competencias a Evaluar
+## 📊 Distribución de Evaluación
 
-### 1. Conocimiento (30%)
+| Componente           | Peso |
+| -------------------- | ---- |
+| **Proyecto Semanal** | 100% |
 
-#### Conceptos de Routing (15%)
+---
 
-| Nivel        | Descripción                                                         | Puntos |
-| ------------ | ------------------------------------------------------------------- | ------ |
-| Excelente    | Explica SPA vs MPA, client-side routing y sus ventajas/limitaciones | 15     |
-| Bueno        | Comprende routing básico y diferencias entre enfoques               | 12     |
-| Suficiente   | Entiende conceptos básicos pero confunde algunos términos           | 9      |
-| Insuficiente | No comprende los fundamentos del routing en SPAs                    | 0-6    |
+## 📖 Recursos de Aprendizaje (No Evaluados)
 
-#### API de React Router (15%)
+La teoría y los ejercicios son recursos de preparación para el proyecto. No son entregables evaluados, pero se recomienda completarlos antes de iniciar el proyecto.
+
+### Teoría
+
+- Fundamentos de routing en SPAs
+- Configuración de React Router v6
+- Rutas dinámicas y parámetros
+- Layouts y rutas anidadas
+- Rutas protegidas y autenticación
+
+### Ejercicios Guiados
+
+- Ejercicio 01: Configuración básica de React Router
+- Ejercicio 02: Navegación con Link y NavLink
+- Ejercicio 03: Rutas dinámicas con useParams
+- Ejercicio 04: Layouts anidados con Outlet
+- Ejercicio 05: Rutas protegidas con guards
+
+---
+
+## 🎯 Proyecto (100%)
+
+### Funcionalidad (40 puntos)
 
 | Nivel        | Descripción                                                   | Puntos |
 | ------------ | ------------------------------------------------------------- | ------ |
-| Excelente    | Domina BrowserRouter, Routes, Route, Link, NavLink, Outlet    | 15     |
-| Bueno        | Usa correctamente los componentes principales                 | 12     |
-| Suficiente   | Conoce componentes básicos pero no avanzados                  | 9      |
-| Insuficiente | No distingue entre los diferentes componentes de React Router | 0-6    |
+| Excelente    | Navegación completa, todas las rutas funcionan, sin errores   | 36-40  |
+| Bueno        | Navegación funciona con mínimos bugs                          | 28-35  |
+| Suficiente   | Navegación básica funciona, algunos problemas menores         | 20-27  |
+| Insuficiente | Navegación con errores críticos o funcionalidades incompletas | 0-19   |
 
----
+**Criterios específicos:**
 
-### 2. Desempeño (40%)
+- BrowserRouter configurado correctamente (8 pts)
+- Mínimo 5 rutas implementadas (8 pts)
+- Al menos 2 rutas con parámetros dinámicos usando useParams (8 pts)
+- Ruta protegida con redirección funcional (8 pts)
+- Página 404 personalizada (8 pts)
 
-#### Configuración de Rutas (10%)
+### Adaptación al Dominio (35 puntos)
 
-| Nivel        | Descripción                                                 | Puntos |
-| ------------ | ----------------------------------------------------------- | ------ |
-| Excelente    | Configura rutas con tipado completo y estructura organizada | 10     |
-| Bueno        | Rutas funcionan correctamente con tipado básico             | 8      |
-| Suficiente   | Rutas funcionan pero sin tipado o mal organizadas           | 6      |
-| Insuficiente | Errores en la configuración básica de rutas                 | 0-4    |
+| Nivel        | Descripción                                                   | Puntos |
+| ------------ | ------------------------------------------------------------- | ------ |
+| Excelente    | Rutas coherentes con el dominio, entidades bien representadas | 32-35  |
+| Bueno        | Dominio aplicado correctamente con adaptaciones menores       | 25-31  |
+| Suficiente   | Dominio reconocible pero con inconsistencias                  | 18-24  |
+| Insuficiente | Dominio no aplicado o rutas genéricas sin contexto            | 0-17   |
 
-#### Rutas Dinámicas (10%)
+**Criterios específicos:**
 
-| Nivel        | Descripción                                              | Puntos |
-| ------------ | -------------------------------------------------------- | ------ |
-| Excelente    | Implementa useParams y useSearchParams con tipos seguros | 10     |
-| Bueno        | Rutas dinámicas funcionan con tipado básico              | 8      |
-| Suficiente   | Parámetros funcionan pero sin validación                 | 6      |
-| Insuficiente | No logra implementar rutas dinámicas correctamente       | 0-4    |
+- Rutas nombradas según entidades del dominio (10 pts)
+- Navegación lógica para el contexto del negocio (10 pts)
+- Parámetros dinámicos relevantes al dominio (8 pts)
+- README documenta el dominio y sus rutas (7 pts)
 
-#### Layouts y Anidamiento (10%)
-
-| Nivel        | Descripción                                                         | Puntos |
-| ------------ | ------------------------------------------------------------------- | ------ |
-| Excelente    | Layouts reutilizables con Outlet, rutas anidadas bien estructuradas | 10     |
-| Bueno        | Outlet funciona, layouts básicos implementados                      | 8      |
-| Suficiente   | Layouts simples sin aprovechar anidamiento                          | 6      |
-| Insuficiente | No implementa layouts correctamente                                 | 0-4    |
-
-#### Rutas Protegidas (10%)
-
-| Nivel        | Descripción                                           | Puntos |
-| ------------ | ----------------------------------------------------- | ------ |
-| Excelente    | Guards tipados, redirección correcta, manejo de roles | 10     |
-| Bueno        | Protección básica funciona con redirección            | 8      |
-| Suficiente   | Intenta proteger rutas pero con problemas             | 6      |
-| Insuficiente | No logra implementar protección de rutas              | 0-4    |
-
----
-
-### 3. Producto (30%)
-
-#### Funcionalidad (15%)
-
-| Nivel        | Descripción                                                 | Puntos |
-| ------------ | ----------------------------------------------------------- | ------ |
-| Excelente    | Navegación completa, todas las rutas funcionan, sin errores | 15     |
-| Bueno        | Navegación funciona con mínimos bugs                        | 12     |
-| Suficiente   | Navegación básica funciona, algunos problemas               | 9      |
-| Insuficiente | Navegación con errores críticos o incompleta                | 0-6    |
-
-#### Calidad del Código (10%)
+### Calidad del Código (25 puntos)
 
 | Nivel        | Descripción                                                | Puntos |
 | ------------ | ---------------------------------------------------------- | ------ |
-| Excelente    | TypeScript estricto, código limpio, rutas bien organizadas | 10     |
-| Bueno        | Tipado correcto, código legible                            | 8      |
-| Suficiente   | Funciona pero con tipos any o código desorganizado         | 6      |
-| Insuficiente | Sin tipado, código difícil de mantener                     | 0-4    |
+| Excelente    | TypeScript estricto, código limpio, rutas bien organizadas | 23-25  |
+| Bueno        | Tipado correcto, código legible y mantenible               | 18-22  |
+| Suficiente   | Funciona pero con tipos any o código desorganizado         | 13-17  |
+| Insuficiente | Sin tipado, código difícil de mantener o con errores       | 0-12   |
 
-#### Experiencia de Usuario (5%)
+**Criterios específicos:**
 
-| Nivel        | Descripción                                                | Puntos |
-| ------------ | ---------------------------------------------------------- | ------ |
-| Excelente    | Navegación fluida, estados de carga, manejo de errores 404 | 5      |
-| Bueno        | Navegación funcional con feedback básico                   | 4      |
-| Suficiente   | Navegación funciona sin indicadores visuales               | 3      |
-| Insuficiente | Experiencia confusa o broken                               | 0-2    |
+- TypeScript sin errores de compilación (8 pts)
+- Parámetros de ruta tipados correctamente (6 pts)
+- Componentes organizados y reutilizables (6 pts)
+- Layout principal con Outlet implementado (5 pts)
 
 ---
 
@@ -111,18 +99,20 @@
 
 ---
 
-## ✅ Checklist de Entrega
+## ✅ Criterios de Aprobación
 
-### Ejercicios
+- **Mínimo 70 puntos** en el proyecto para aprobar la semana
+- El proyecto debe compilar sin errores de TypeScript
+- Todas las rutas principales deben ser funcionales
+- El dominio asignado debe estar claramente implementado
 
-- [ ] Ejercicio 01: Configuración básica de React Router
-- [ ] Ejercicio 02: Navegación con Link y NavLink
-- [ ] Ejercicio 03: Rutas dinámicas con useParams
-- [ ] Ejercicio 04: Layouts anidados con Outlet
-- [ ] Ejercicio 05: Rutas protegidas con guards
+---
 
-### Proyecto Semanal
+## 📋 Formato de Entrega
 
+### Proyecto Semanal (Único Entregable)
+
+- [ ] Repositorio con código fuente del proyecto
 - [ ] BrowserRouter configurado correctamente
 - [ ] Mínimo 5 rutas implementadas
 - [ ] Al menos 2 rutas con parámetros dinámicos
@@ -130,7 +120,7 @@
 - [ ] Ruta protegida con redirección
 - [ ] Página 404 personalizada
 - [ ] Código TypeScript sin errores
-- [ ] README con instrucciones del dominio
+- [ ] README con instrucciones y descripción del dominio
 
 ---
 

@@ -4,32 +4,59 @@
 
 ---
 
-## 🎯 Competencias a Evaluar
+## 📚 Recursos de Aprendizaje (No Evaluados)
 
-### 1. Conocimiento (30%) 🧠
+La teoría y los ejercicios son **preparación** para el proyecto. No son entregables evaluados, pero son fundamentales para adquirir las competencias necesarias:
 
-| Criterio                              | Excelente (100%)                                             | Bueno (80%)                  | Suficiente (70%)          | Insuficiente (<70%) |
-| ------------------------------------- | ------------------------------------------------------------ | ---------------------------- | ------------------------- | ------------------- |
-| Comprende conceptos de CI/CD          | Explica diferencias entre CI y CD, beneficios y casos de uso | Entiende conceptos básicos   | Conocimiento superficial  | No comprende        |
-| Entiende estructura de GitHub Actions | Domina workflows, jobs, steps, triggers y contexts           | Conoce elementos principales | Conoce sintaxis básica    | No entiende         |
-| Conoce estrategias de deployment      | Explica staging, production, blue-green, rolling             | Conoce staging/production    | Solo conoce deploy básico | No conoce           |
+| Recurso                            | Propósito                                       |
+| ---------------------------------- | ----------------------------------------------- |
+| `01-introduccion-cicd.md`          | Comprender conceptos de CI/CD y pipelines       |
+| `02-github-actions-fundamentos.md` | Dominar workflows, jobs, steps y triggers       |
+| `03-docker-registry-deploy.md`     | Aprender sobre GHCR y estrategias de deployment |
+| `ejercicio-01-primer-workflow`     | Practicar creación de workflows básicos         |
+| `ejercicio-02-build-test-workflow` | Practicar CI con build y tests automatizados    |
+| `ejercicio-03-deploy-ghcr`         | Practicar CD con push a Container Registry      |
 
-### 2. Desempeño (40%) 💪
+---
 
-| Criterio                          | Excelente (100%)                                  | Bueno (80%)                   | Suficiente (70%)              | Insuficiente (<70%) |
-| --------------------------------- | ------------------------------------------------- | ----------------------------- | ----------------------------- | ------------------- |
-| Configura workflows correctamente | Workflows funcionales con buenas prácticas        | Workflows funcionales básicos | Workflows con errores menores | No funcionan        |
-| Implementa CI (build + test)      | Tests automáticos, linting, matrix builds         | Build y test funcional        | Solo build                    | No implementa       |
-| Implementa CD (deploy a registry) | Push a GHCR con tags semánticos y conditions      | Push funcional                | Push manual                   | No implementa       |
-| Maneja secrets y variables        | Secrets, environments, variables bien organizados | Usa secrets correctamente     | Configuración básica          | Expone credenciales |
+## 🎯 Proyecto (100%) 📦
 
-### 3. Producto (30%) 📦
+### Distribución de Puntaje
 
-| Criterio                   | Excelente (100%)                          | Bueno (80%)        | Suficiente (70%) | Insuficiente (<70%) |
-| -------------------------- | ----------------------------------------- | ------------------ | ---------------- | ------------------- |
-| Pipeline CI/CD completo    | Pipeline robusto con todas las fases      | Pipeline funcional | Pipeline básico  | No funciona         |
-| Documentación del pipeline | README con badges, diagrama, explicación  | README con badges  | README básico    | Sin documentación   |
-| Adaptación al dominio      | Workflow adaptado y coherente con dominio | Adaptación parcial | Genérico         | Sin adaptación      |
+| Componente            | Peso |
+| --------------------- | ---- |
+| Funcionalidad         | 40%  |
+| Adaptación al Dominio | 35%  |
+| Calidad del Código    | 25%  |
+| **Total**             | 100% |
+
+### Criterios de Evaluación
+
+#### Funcionalidad (40%)
+
+| Criterio              | Excelente (100%)                                  | Bueno (80%)                  | Suficiente (70%)         | Insuficiente (<70%) |
+| --------------------- | ------------------------------------------------- | ---------------------------- | ------------------------ | ------------------- |
+| Pipeline CI funcional | Tests automáticos, linting, matrix builds         | Build y test funcional       | Solo build               | No funciona         |
+| Pipeline CD funcional | Push a GHCR con tags semánticos y conditions      | Push funcional               | Push con errores menores | No funciona         |
+| Triggers y conditions | Triggers bien configurados para PR y branches     | Triggers básicos funcionales | Configuración mínima     | No configurados     |
+| Manejo de secrets     | Secrets, environments, variables bien organizados | Usa secrets correctamente    | Configuración básica     | Expone credenciales |
+
+#### Adaptación al Dominio (35%)
+
+| Criterio                      | Excelente (100%)                                    | Bueno (80%)                   | Suficiente (70%)       | Insuficiente (<70%) |
+| ----------------------------- | --------------------------------------------------- | ----------------------------- | ---------------------- | ------------------- |
+| Coherencia con dominio        | Pipeline completamente adaptado al dominio asignado | Adaptación en elementos clave | Adaptación superficial | Sin adaptación      |
+| Documentación contextualizada | README describe el pipeline en contexto del dominio | Documentación parcial         | Documentación genérica | Sin documentación   |
+| Originalidad                  | Implementación única y creativa para el dominio     | Implementación diferenciada   | Implementación básica  | Copia de otros      |
+
+#### Calidad del Código (25%)
+
+| Criterio                    | Excelente (100%)                        | Bueno (80%)              | Suficiente (70%)   | Insuficiente (<70%) |
+| --------------------------- | --------------------------------------- | ------------------------ | ------------------ | ------------------- |
+| Estructura del workflow     | Modular, reutilizable, bien organizado  | Estructura clara         | Estructura básica  | Desorganizado       |
+| Nomenclatura                | Nombres descriptivos para jobs y steps  | Nombres claros           | Nombres aceptables | Nombres confusos    |
+| Comentarios y documentación | Comentarios explicativos útiles en YAML | Comentarios básicos      | Pocos comentarios  | Sin comentarios     |
+| Buenas prácticas            | Cache, matrix, artifacts bien usados    | Algunas buenas prácticas | Prácticas mínimas  | Malas prácticas     |
 
 ---
 
@@ -42,51 +69,74 @@
 | 70-79%  | Suficiente   | Cumple requisitos mínimos    |
 | < 70%   | Insuficiente | No cumple requisitos mínimos |
 
+### ✅ Criterios de Aprobación
+
+- **Mínimo 70%** en el proyecto para aprobar la semana
+- Proyecto funcional con pipeline ejecutándose en GitHub Actions
+- Imagen publicada correctamente en GHCR
+- Implementación coherente con el dominio asignado
+
 ---
 
 ## ✅ Lista de Verificación del Proyecto
 
-### Workflow CI (40 puntos)
+### Funcionalidad (40 puntos)
 
 - [ ] Trigger en push y pull_request (5 pts)
-- [ ] Job de linting con ESLint (10 pts)
-- [ ] Job de tests con Vitest (10 pts)
-- [ ] Cache de dependencias (pnpm) (5 pts)
-- [ ] Matrix para múltiples versiones de Node (5 pts)
-- [ ] Status checks configurados (5 pts)
+- [ ] Job de linting con ESLint (8 pts)
+- [ ] Job de tests con Vitest (8 pts)
+- [ ] Build de imagen Docker multi-stage (8 pts)
+- [ ] Login y push a GitHub Container Registry (6 pts)
+- [ ] Tags semánticos (latest, sha, version) (5 pts)
 
-### Workflow CD (35 puntos)
+### Adaptación al Dominio (35 puntos)
 
-- [ ] Build de imagen Docker multi-stage (10 pts)
-- [ ] Login a GitHub Container Registry (5 pts)
-- [ ] Push con tags semánticos (latest, sha, version) (10 pts)
-- [ ] Condition para branch main/production (5 pts)
-- [ ] Scan de vulnerabilidades (opcional) (5 pts)
+- [ ] Pipeline adaptado al contexto del dominio (15 pts)
+- [ ] README contextualizado con el dominio (10 pts)
+- [ ] Implementación original y diferenciada (10 pts)
 
-### Documentación (15 puntos)
+### Calidad del Código (25 puntos)
 
-- [ ] README con badges de CI status (5 pts)
-- [ ] Descripción del pipeline y fases (5 pts)
-- [ ] Instrucciones para contribuidores (5 pts)
-
-### Calidad y Buenas Prácticas (10 puntos)
-
-- [ ] Secrets bien manejados (no hardcodeados) (3 pts)
-- [ ] Workflow modular y reutilizable (3 pts)
-- [ ] Nombres descriptivos para jobs y steps (2 pts)
-- [ ] Comentarios explicativos en YAML (2 pts)
+- [ ] Secrets bien manejados (no hardcodeados) (7 pts)
+- [ ] Workflow modular y reutilizable (6 pts)
+- [ ] Cache de dependencias configurado (4 pts)
+- [ ] Nombres descriptivos para jobs y steps (4 pts)
+- [ ] Comentarios explicativos en YAML (4 pts)
 
 ---
 
 ## 🏆 Puntuación Total: 100 puntos
 
-| Componente    | Puntos  |
-| ------------- | ------- |
-| Workflow CI   | 40      |
-| Workflow CD   | 35      |
-| Documentación | 15      |
-| Calidad       | 10      |
-| **Total**     | **100** |
+| Componente            | Puntos  |
+| --------------------- | ------- |
+| Funcionalidad         | 40      |
+| Adaptación al Dominio | 35      |
+| Calidad del Código    | 25      |
+| **Total**             | **100** |
+
+---
+
+## � Formato de Entrega
+
+### Entregable Único: Proyecto
+
+```
+Repositorio GitHub con:
+├── .github/
+│   └── workflows/
+│       ├── ci.yml          # Workflow de integración continua
+│       └── cd.yml          # Workflow de deployment continuo
+├── Dockerfile              # Dockerfile multi-stage (semana 18)
+├── README.md               # Con badges de CI y documentación
+└── src/                    # Código de la aplicación del dominio
+```
+
+### Requisitos de Entrega
+
+1. **Repositorio público** en GitHub con workflows funcionales
+2. **Mínimo 3 ejecuciones exitosas** del pipeline CI/CD
+3. **Imagen publicada** en GitHub Container Registry
+4. **README** con badges de estado y documentación del pipeline
 
 ---
 
@@ -97,6 +147,7 @@
 3. **Confirmar que la imagen se publique** en GHCR
 4. **Validar que secrets no estén expuestos** en logs ni código
 5. **El pipeline debe ser coherente** con el dominio asignado
+6. **Verificar originalidad** comparando con entregas de otros aprendices
 
 ---
 

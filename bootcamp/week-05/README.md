@@ -100,11 +100,29 @@ Crear una aplicación que use composición y Context para:
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
-1. **Ejercicios completados** - Código funcional de los 5 ejercicios
-2. **Proyecto semanal** - Sistema de temas con componentes compuestos
-3. **Reflexión** - Documento breve sobre patrones de composición
+### 🎯 Proyecto Semanal 📦 (100%)
+
+**Sistema de Temas con Panel de Configuración** - Aplicación completa que demuestre dominio de composición de componentes y Context API.
+
+> **📝 Nota:** La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+### ✅ Checklist de la Semana
+
+**Preparación (No evaluada):**
+
+- [ ] Leer material teórico de composición y Context
+- [ ] Completar ejercicios guiados para practicar
+- [ ] Revisar ejemplos de compound components
+
+**Entregable (Evaluado):**
+
+- [ ] Proyecto semanal completado y funcional
+- [ ] Implementación coherente con el dominio asignado
+- [ ] Código TypeScript limpio y bien tipado
+- [ ] Al menos 2 compound components implementados
+- [ ] Sistema de tema claro/oscuro funcional
 
 ---
 

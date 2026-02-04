@@ -15,89 +15,108 @@
 
 ---
 
-## 📊 Criterios de Evaluación
+## 📊 Distribución de la Evaluación
 
-### 1. Conocimiento (30%) 🧠
+| Evidencia       | Peso | Descripción                                 |
+| --------------- | ---- | ------------------------------------------- |
+| **Proyecto** 📦 | 100% | Sistema de Temas con Panel de Configuración |
 
-| Criterio                    | Excelente (100%)                                      | Bueno (80%)                          | Suficiente (70%)           | Insuficiente (<70%)               |
-| --------------------------- | ----------------------------------------------------- | ------------------------------------ | -------------------------- | --------------------------------- |
-| **Composición vs Herencia** | Explica claramente por qué React favorece composición | Entiende las diferencias principales | Conoce conceptos básicos   | Confunde composición con herencia |
-| **Children y ReactNode**    | Domina tipado de children y sus variantes             | Usa children correctamente           | Implementa children básico | No entiende el prop children      |
-| **Context API**             | Explica cuándo usar Context vs props                  | Entiende Provider/Consumer           | Sabe crear contextos       | No comprende el flujo de Context  |
-| **Patrones**                | Identifica y aplica múltiples patrones                | Aplica compound components           | Conoce patrones básicos    | No reconoce patrones              |
-
-### 2. Desempeño (40%) 💪
-
-| Criterio                     | Excelente (100%)                                  | Bueno (80%)                        | Suficiente (70%)              | Insuficiente (<70%)            |
-| ---------------------------- | ------------------------------------------------- | ---------------------------------- | ----------------------------- | ------------------------------ |
-| **Componentes con children** | Crea componentes genéricos y reutilizables        | Implementa children correctamente  | Usa children en casos simples | No sabe pasar children         |
-| **Slots pattern**            | Implementa slots tipados complejos                | Crea slots con TypeScript          | Usa slots básicos             | No implementa slots            |
-| **Compound Components**      | Crea APIs elegantes con componentes compuestos    | Implementa el patrón correctamente | Crea compuestos básicos       | No logra implementar el patrón |
-| **Context con TypeScript**   | Providers tipados con valores por defecto seguros | Crea contextos tipados             | Implementa contextos básicos  | Usa any o sin tipos            |
-| **Optimización**             | Previene re-renders con memoización               | Separa contextos por concern       | Evita errores comunes         | Causa re-renders innecesarios  |
-
-### 3. Producto (30%) 📦
-
-| Criterio                   | Excelente (100%)                           | Bueno (80%)                    | Suficiente (70%)           | Insuficiente (<70%)       |
-| -------------------------- | ------------------------------------------ | ------------------------------ | -------------------------- | ------------------------- |
-| **Funcionalidad**          | Todas las features funcionan perfectamente | Features principales funcionan | Funcionalidad básica       | No funciona               |
-| **Componentes compuestos** | API intuitiva y flexible                   | Componentes bien estructurados | Estructura básica correcta | Componentes mal diseñados |
-| **Theme Context**          | Tema global con persistencia               | Tema funcional con toggle      | Toggle básico              | No implementa tema        |
-| **Código limpio**          | Excelente organización y documentación     | Código bien estructurado       | Legible pero mejorable     | Desorganizado             |
-| **TypeScript**             | Tipos estrictos sin any                    | Buenos tipos                   | Tipos básicos              | Uso excesivo de any       |
+> **📝 Nota:** La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
 
 ---
 
-## 📝 Ejercicios y Puntuación
+## 📚 Recursos de Aprendizaje (No Evaluados)
 
-### Ejercicios Guiados (40% del Desempeño)
+### Teoría
 
-| Ejercicio                | Puntos  | Criterios Clave                          |
-| ------------------------ | ------- | ---------------------------------------- |
-| 01 - Children Básico     | 20      | Tipar children, ReactNode, ReactElement  |
-| 02 - Slots Pattern       | 20      | Named slots, composición flexible        |
-| 03 - Compound Components | 25      | API compuesta, estado compartido interno |
-| 04 - Context Básico      | 15      | createContext, Provider, useContext      |
-| 05 - Context Avanzado    | 20      | Reducer, separación, optimización        |
-| **Total**                | **100** |                                          |
+Material de estudio para comprender los conceptos:
 
-### Proyecto Semanal (100% del Producto)
+- Composición vs herencia en React
+- Children y ReactNode tipados
+- Patrones de compound components
+- Context API con TypeScript
 
-| Componente     | Puntos  | Criterios                                 |
-| -------------- | ------- | ----------------------------------------- |
-| ThemeProvider  | 20      | Context tipado, toggle funcional          |
-| Compound Card  | 20      | Card.Header, Card.Body, Card.Footer       |
-| Compound Modal | 20      | Modal.Trigger, Modal.Content, Modal.Close |
-| Compound Tabs  | 20      | Tabs.List, Tabs.Tab, Tabs.Panel           |
-| Integración    | 20      | Composición de múltiples contextos        |
-| **Total**      | **100** |                                           |
+### Ejercicios Guiados
+
+Práctica para dominar las técnicas antes del proyecto:
+
+| Ejercicio                | Objetivo de Aprendizaje                  |
+| ------------------------ | ---------------------------------------- |
+| 01 - Children Básico     | Tipar children, ReactNode, ReactElement  |
+| 02 - Slots Pattern       | Named slots, composición flexible        |
+| 03 - Compound Components | API compuesta, estado compartido interno |
+| 04 - Context Básico      | createContext, Provider, useContext      |
+| 05 - Context Avanzado    | Reducer, separación, optimización        |
+
+---
+
+## 📊 Criterios de Evaluación del Proyecto (100%)
+
+### Distribución de Puntos
+
+| Aspecto                   | Peso | Descripción                                    |
+| ------------------------- | ---- | ---------------------------------------------- |
+| **Funcionalidad**         | 40%  | Features completas y funcionando correctamente |
+| **Adaptación al Dominio** | 35%  | Implementación coherente con dominio asignado  |
+| **Calidad del Código**    | 25%  | TypeScript, organización, buenas prácticas     |
+
+### Funcionalidad (40%)
+
+| Criterio                   | Excelente (100%)                 | Bueno (80%)                    | Suficiente (70%)           | Insuficiente (<70%)       |
+| -------------------------- | -------------------------------- | ------------------------------ | -------------------------- | ------------------------- |
+| **Theme Context**          | Tema global con persistencia     | Tema funcional con toggle      | Toggle básico              | No implementa tema        |
+| **Componentes compuestos** | API intuitiva y flexible         | Componentes bien estructurados | Estructura básica correcta | Componentes mal diseñados |
+| **Integración**            | Todos los componentes integrados | Mayoría integrados             | Integración parcial        | Sin integración           |
+
+### Adaptación al Dominio (35%)
+
+| Criterio         | Excelente (100%)                        | Bueno (80%)           | Suficiente (70%)       | Insuficiente (<70%)  |
+| ---------------- | --------------------------------------- | --------------------- | ---------------------- | -------------------- |
+| **Coherencia**   | Perfecta adaptación al dominio asignado | Buena adaptación      | Adaptación parcial     | No adapta al dominio |
+| **Originalidad** | Solución creativa y única               | Implementación propia | Solución básica        | Copia evidente       |
+| **Contexto**     | Datos y UI coherentes con el negocio    | Mayoría coherente     | Parcialmente coherente | Incoherente          |
+
+### Calidad del Código (25%)
+
+| Criterio          | Excelente (100%)                       | Bueno (80%)              | Suficiente (70%)       | Insuficiente (<70%) |
+| ----------------- | -------------------------------------- | ------------------------ | ---------------------- | ------------------- |
+| **TypeScript**    | Tipos estrictos sin any                | Buenos tipos             | Tipos básicos          | Uso excesivo de any |
+| **Código limpio** | Excelente organización y documentación | Código bien estructurado | Legible pero mejorable | Desorganizado       |
+| **Patrones**      | Aplica patrones correctamente          | Usa patrones básicos     | Intenta usar patrones  | No usa patrones     |
+
+---
+
+## 📝 Desglose del Proyecto (100%)
+
+| Componente            | Puntos  | Criterios                                 |
+| --------------------- | ------- | ----------------------------------------- |
+| ThemeProvider         | 20      | Context tipado, toggle funcional          |
+| Compound Card         | 20      | Card.Header, Card.Body, Card.Footer       |
+| Compound Modal        | 20      | Modal.Trigger, Modal.Content, Modal.Close |
+| Compound Tabs         | 20      | Tabs.List, Tabs.Tab, Tabs.Panel           |
+| Integración y Dominio | 20      | Composición de contextos + dominio único  |
+| **Total**             | **100** |                                           |
 
 ---
 
 ## ✅ Lista de Verificación
 
-### Conocimiento
+### 📚 Preparación (No Evaluada)
 
-- [ ] Explica composición vs herencia en React
-- [ ] Diferencia ReactNode, ReactElement, ReactChild
-- [ ] Entiende el flujo Provider → Consumer
-- [ ] Conoce cuándo usar Context vs prop drilling
-- [ ] Identifica problemas de re-renders con Context
+- [ ] Leer material teórico de composición y Context API
+- [ ] Completar ejercicios guiados para practicar técnicas
+- [ ] Revisar ejemplos de compound components
+- [ ] Entender flujo Provider → Consumer
+- [ ] Practicar tipado de children y ReactNode
 
-### Desempeño
-
-- [ ] Crea componentes que aceptan children
-- [ ] Implementa slots con TypeScript
-- [ ] Construye compound components funcionales
-- [ ] Crea contextos tipados correctamente
-- [ ] Usa useContext con valores seguros
-
-### Producto
+### 📦 Proyecto (Evaluado - 100%)
 
 - [ ] Sistema de tema claro/oscuro funcional
+- [ ] ThemeProvider con Context tipado
 - [ ] Al menos 2 compound components implementados
-- [ ] Código TypeScript sin errores
+- [ ] Código TypeScript sin errores (sin any)
 - [ ] Componentes reutilizables y flexibles
+- [ ] Implementación coherente con dominio asignado
 - [ ] Documentación clara del uso
 
 ---
@@ -114,6 +133,15 @@
 
 ---
 
+## ✅ Criterios de Aprobación
+
+- **Mínimo 70%** en el proyecto para aprobar la semana
+- El proyecto debe ser funcional y ejecutable
+- Implementación coherente con el dominio asignado
+- Código original (sin copias de otros aprendices)
+
+---
+
 ## 📌 Notas para el Evaluador
 
 1. **Composición**: Verificar que no se use herencia de clases
@@ -121,6 +149,24 @@
 3. **Context**: Evaluar si el valor por defecto es seguro (no undefined sin manejo)
 4. **Compound Components**: Validar que el estado se comparte internamente
 5. **Dominio único**: Verificar implementación coherente con el dominio asignado
+6. **Originalidad**: Comparar con entregas de otros aprendices
+
+---
+
+## 📁 Formato de Entrega
+
+```
+week-05-entrega/
+├── README.md                 # Descripción del proyecto y dominio
+├── src/
+│   ├── contexts/             # ThemeContext y otros contextos
+│   ├── components/           # Compound components (Card, Modal, Tabs)
+│   └── App.tsx               # Integración de componentes
+├── package.json
+└── tsconfig.json
+```
+
+**Entregable único:** Proyecto comprimido o enlace a repositorio
 
 ---
 

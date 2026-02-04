@@ -62,7 +62,36 @@ Al finalizar esta semana, serás capaz de:
 
 ---
 
-## 📚 Recursos de la Semana
+## � Entregable
+
+| Entregable              | Peso |
+| ----------------------- | ---- |
+| **Proyecto Semanal** 📦 | 100% |
+
+> 📝 **Nota**: La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+### ✅ Checklist de Entrega
+
+#### Preparación (No evaluada)
+
+- [ ] Leer material teórico de la semana
+- [ ] Completar ejercicios guiados para practicar
+
+#### Entregable (Evaluado - 100%)
+
+- [ ] Proyecto semanal completado
+- [ ] BrowserRouter configurado correctamente
+- [ ] Mínimo 5 rutas implementadas
+- [ ] Al menos 2 rutas con parámetros dinámicos
+- [ ] Layout principal con navegación
+- [ ] Ruta protegida con redirección
+- [ ] Página 404 personalizada
+- [ ] Código TypeScript sin errores
+- [ ] README con instrucciones del dominio
+
+---
+
+## �📚 Recursos de la Semana
 
 - [Recursos adicionales](4-recursos/)
 - [Glosario de términos](5-glosario/)

@@ -68,7 +68,33 @@ Proyecto integrador donde implementarás:
 
 ---
 
-## 📋 Requisitos Previos
+## � Entregable
+
+| Tipo                    | Peso | Descripción                          |
+| ----------------------- | ---- | ------------------------------------ |
+| **Proyecto Semanal** 📦 | 100% | Sistema de Gestión con Redux Toolkit |
+
+> 📝 **Nota:** La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+### ✅ Checklist de Entrega
+
+#### Preparación (No evaluada)
+
+- [ ] Revisar material teórico (1-teoria/)
+- [ ] Completar ejercicios guiados (2-ejercicios/)
+
+#### Entregable (Evaluado - 100%)
+
+- [ ] Proyecto implementado con dominio asignado
+- [ ] Store con múltiples slices funcionando
+- [ ] Al menos 2 thunks asíncronos implementados
+- [ ] Selectores con createSelector
+- [ ] Código con TypeScript estricto
+- [ ] README del proyecto con instrucciones
+
+---
+
+## �📋 Requisitos Previos
 
 - ✅ Semana 08 completada (Zustand)
 - ✅ Comprensión de gestión de estado global

@@ -99,7 +99,17 @@ Al finalizar esta semana, serás capaz de:
 
 ---
 
-## 📖 Lecturas Recomendadas
+## � Entregable
+
+| Evidencia               | Porcentaje |
+| ----------------------- | ---------- |
+| **Proyecto Semanal** 📦 | **100%**   |
+
+> **Nota:** La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+---
+
+## �📖 Lecturas Recomendadas
 
 - [Code Splitting - React Docs](https://react.dev/reference/react/lazy)
 - [Suspense - React Docs](https://react.dev/reference/react/Suspense)
@@ -110,11 +120,17 @@ Al finalizar esta semana, serás capaz de:
 
 ## ✅ Checklist de la Semana
 
+### Preparación (No evaluada)
+
 - [ ] Leer toda la teoría
 - [ ] Completar los 4 ejercicios guiados
+- [ ] Revisar el glosario de términos
+
+### Entregable (Evaluado)
+
 - [ ] Desarrollar el proyecto semanal
 - [ ] Medir Web Vitals antes y después de optimizaciones
-- [ ] Revisar el glosario de términos
+- [ ] Documentar métricas y decisiones de arquitectura
 
 ---
 

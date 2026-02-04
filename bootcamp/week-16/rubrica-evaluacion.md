@@ -6,99 +6,79 @@
 
 | Tipo de Evidencia | Porcentaje | Puntos  |
 | ----------------- | ---------- | ------- |
-| Conocimiento 🧠   | 30%        | 30      |
-| Desempeño 💪      | 40%        | 40      |
-| Producto 📦       | 30%        | 30      |
+| Proyecto 📦       | 100%       | 100     |
 | **Total**         | **100%**   | **100** |
 
 ---
 
-## 🧠 Conocimiento (30 puntos)
+## 📚 Recursos de Aprendizaje (No Evaluados)
 
-Evaluación teórica sobre conceptos de optimización de renders en React.
+La teoría y los ejercicios son materiales de preparación para el proyecto. No son entregables evaluados, pero se recomienda completarlos para dominar los conceptos.
 
-### Criterios de Evaluación
+### Teoría Recomendada
 
-| Criterio              | Excelente (10)                                               | Bueno (7)                                           | Regular (4)                                 | Insuficiente (0)                    |
-| --------------------- | ------------------------------------------------------------ | --------------------------------------------------- | ------------------------------------------- | ----------------------------------- |
-| **Ciclo de Render**   | Explica reconciliación, Virtual DOM y cuándo ocurren renders | Comprende triggers de render y Virtual DOM          | Conoce conceptos pero confunde aplicación   | No comprende el ciclo de render     |
-| **Herramientas Memo** | Domina React.memo, useMemo, useCallback y cuándo usarlos     | Usa las herramientas correctamente en casos comunes | Aplica memorización sin criterio claro      | No sabe aplicar memorización        |
-| **Profiler/Métricas** | Interpreta Profiler, identifica cuellos de botella           | Usa Profiler y entiende métricas básicas            | Conoce herramientas pero no interpreta bien | No conoce herramientas de profiling |
+- Cómo funciona el render en React
+- React.memo y comparación de props
+- useMemo y useCallback
+- Profiler API y DevTools
 
-### Preguntas de Evaluación
+### Ejercicios de Práctica
 
-1. ¿Qué triggers provocan un re-render en un componente React?
-2. ¿Cuál es la diferencia entre `React.memo` y `useMemo`?
-3. ¿Por qué `useCallback` es necesario cuando pasamos funciones como props a componentes memorizados?
-4. ¿Qué información muestra el Profiler de React DevTools?
-5. ¿Cuándo NO deberías usar `React.memo`?
-
----
-
-## 💪 Desempeño (40 puntos)
-
-Evaluación práctica durante ejercicios guiados.
-
-### Ejercicio 01: Detectar Renders (10 puntos)
-
-| Criterio       | Puntos | Descripción                                     |
-| -------------- | ------ | ----------------------------------------------- |
-| Console.log    | 2      | Usa logs para detectar renders                  |
-| Profiler Setup | 3      | Configura y usa React DevTools Profiler         |
-| Identificación | 3      | Identifica componentes con renders innecesarios |
-| Documentación  | 2      | Documenta hallazgos claramente                  |
-
-### Ejercicio 02: React.memo (10 puntos)
-
-| Criterio          | Puntos | Descripción                                     |
-| ----------------- | ------ | ----------------------------------------------- |
-| Aplicación básica | 3      | Aplica React.memo correctamente                 |
-| Comparador custom | 3      | Implementa función de comparación personalizada |
-| Props estables    | 2      | Asegura que las props sean estables             |
-| Verificación      | 2      | Verifica mejora con Profiler                    |
-
-### Ejercicio 03: useMemo (10 puntos)
-
-| Criterio       | Puntos | Descripción                               |
-| -------------- | ------ | ----------------------------------------- |
-| Identificación | 2      | Identifica cálculos costosos              |
-| Implementación | 3      | Aplica useMemo con dependencias correctas |
-| Casos de uso   | 3      | Memoriza objetos/arrays en props          |
-| Medición       | 2      | Mide mejora de rendimiento                |
-
-### Ejercicio 04: useCallback (10 puntos)
-
-| Criterio       | Puntos | Descripción                                      |
-| -------------- | ------ | ------------------------------------------------ |
-| Problema       | 2      | Identifica el problema de referencias inestables |
-| Implementación | 3      | Aplica useCallback con dependencias correctas    |
-| Integración    | 3      | Combina con React.memo efectivamente             |
-| Verificación   | 2      | Verifica que evita renders innecesarios          |
+| Ejercicio                      | Tema                        | Objetivo                                |
+| ------------------------------ | --------------------------- | --------------------------------------- |
+| Ejercicio 01: Detectar Renders | Profiler y console.log      | Identificar renders innecesarios        |
+| Ejercicio 02: React.memo       | Memorización de componentes | Aplicar React.memo correctamente        |
+| Ejercicio 03: useMemo          | Memorización de cálculos    | Optimizar cálculos costosos             |
+| Ejercicio 04: useCallback      | Estabilizar referencias     | Evitar renders por funciones inestables |
 
 ---
 
-## 📦 Producto (30 puntos)
+## 📦 Proyecto (100 puntos)
 
 Proyecto: **Dashboard Optimizado**
 
-### Requisitos Funcionales
+### Distribución de Puntos
+
+| Categoría             | Porcentaje | Puntos  |
+| --------------------- | ---------- | ------- |
+| Funcionalidad         | 40%        | 40      |
+| Adaptación al Dominio | 35%        | 35      |
+| Calidad del Código    | 25%        | 25      |
+| **Total**             | **100%**   | **100** |
+
+### Funcionalidad (40 puntos)
 
 | Requisito                  | Puntos | Criterio de Aceptación              |
 | -------------------------- | ------ | ----------------------------------- |
-| Componentes con React.memo | 6      | Mínimo 3 componentes optimizados    |
-| Uso de useMemo             | 6      | Mínimo 2 cálculos memorizados       |
-| Uso de useCallback         | 6      | Mínimo 2 funciones estabilizadas    |
-| Análisis con Profiler      | 6      | Capturas antes/después documentadas |
-| Adaptación al dominio      | 6      | Coherente con dominio asignado      |
+| Componentes con React.memo | 10     | Mínimo 3 componentes optimizados    |
+| Uso de useMemo             | 10     | Mínimo 2 cálculos memorizados       |
+| Uso de useCallback         | 10     | Mínimo 2 funciones estabilizadas    |
+| Análisis con Profiler      | 10     | Capturas antes/después documentadas |
 
-### Escala de Calidad
+### Adaptación al Dominio (35 puntos)
+
+| Criterio                     | Puntos | Descripción                                    |
+| ---------------------------- | ------ | ---------------------------------------------- |
+| Coherencia con dominio       | 15     | Entidades y datos propios del dominio asignado |
+| Nomenclatura contextualizada | 10     | Nombres de componentes/variables del dominio   |
+| Funcionalidad específica     | 10     | Operaciones relevantes al contexto del dominio |
+
+### Calidad del Código (25 puntos)
+
+| Criterio          | Puntos | Descripción                                 |
+| ----------------- | ------ | ------------------------------------------- |
+| Tipado TypeScript | 10     | Interfaces y tipos bien definidos           |
+| Código limpio     | 10     | Organización, legibilidad, buenas prácticas |
+| Documentación     | 5      | README con explicación de optimizaciones    |
+
+### Escala de Calidad General
 
 | Nivel        | Puntos | Descripción                                                  |
 | ------------ | ------ | ------------------------------------------------------------ |
-| Excelente    | 27-30  | Optimizaciones justificadas, mejoras medibles, código limpio |
-| Bueno        | 21-26  | Optimizaciones correctas, algunas mejoras documentadas       |
-| Regular      | 15-20  | Optimizaciones básicas, falta documentación o justificación  |
-| Insuficiente | 0-14   | Optimizaciones incorrectas o ausentes                        |
+| Excelente    | 90-100 | Optimizaciones justificadas, mejoras medibles, código limpio |
+| Bueno        | 70-89  | Optimizaciones correctas, algunas mejoras documentadas       |
+| Regular      | 50-69  | Optimizaciones básicas, falta documentación o justificación  |
+| Insuficiente | 0-49   | Optimizaciones incorrectas o ausentes                        |
 
 ---
 
@@ -129,10 +109,18 @@ Proyecto: **Dashboard Optimizado**
 
 ## 🎯 Criterios de Aprobación
 
-- **Mínimo 70%** en cada tipo de evidencia
+- **Mínimo 70 puntos** en el proyecto (70%)
 - Todas las optimizaciones deben estar **justificadas**
 - El proyecto debe ser **funcional** y **coherente** con el dominio asignado
 - Documentación de análisis de rendimiento **obligatoria**
+
+### Formato de Entrega
+
+| Entregable        | Formato                    | Obligatorio |
+| ----------------- | -------------------------- | ----------- |
+| Código fuente     | Repositorio Git            | ✅          |
+| Capturas Profiler | Imágenes PNG/JPG           | ✅          |
+| README            | Markdown con documentación | ✅          |
 
 ---
 

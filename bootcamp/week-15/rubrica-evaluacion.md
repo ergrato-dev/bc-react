@@ -4,118 +4,102 @@
 
 ### 📊 Distribución de Puntaje
 
-| Tipo de Evidencia | Porcentaje | Puntos  |
-| ----------------- | ---------- | ------- |
-| Conocimiento 🧠   | 30%        | 30      |
-| Desempeño 💪      | 40%        | 40      |
-| Producto 📦       | 30%        | 30      |
-| **Total**         | **100%**   | **100** |
+| Tipo de Evidencia   | Porcentaje | Puntos  |
+| ------------------- | ---------- | ------- |
+| Proyecto Semanal 📦 | 100%       | 100     |
+| **Total**           | **100%**   | **100** |
+
+> **Nota:** La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
 
 ---
 
-## 🧠 Conocimiento (30 puntos)
+## 📚 Recursos de Aprendizaje (No Evaluados)
 
-Evaluación teórica sobre conceptos de testing avanzado.
+La teoría y los ejercicios son preparación para el proyecto. Se recomienda completarlos antes de iniciar el proyecto.
 
-### Criterios de Evaluación
+### Teoría Recomendada
 
-| Criterio             | Excelente (10)                                           | Bueno (7)                                   | Regular (4)                               | Insuficiente (0)                    |
-| -------------------- | -------------------------------------------------------- | ------------------------------------------- | ----------------------------------------- | ----------------------------------- |
-| **Testing de Hooks** | Explica renderHook, act, y testing de estados/efectos    | Comprende renderHook y casos básicos        | Conoce conceptos pero confunde aplicación | No comprende testing de hooks       |
-| **Mocking**          | Domina vi.mock, vi.spyOn, MSW y estrategias de mock      | Usa mocks correctamente en casos comunes    | Implementa mocks básicos con dificultad   | No sabe implementar mocks           |
-| **Cobertura**        | Interpreta métricas, identifica gaps, define estrategias | Genera reportes y entiende métricas básicas | Configura cobertura pero no interpreta    | No conoce herramientas de cobertura |
+- Testing de Custom Hooks con `renderHook`
+- Mocking de Módulos y APIs con `vi.mock` y MSW
+- Tests de Integración
+- Cobertura de Código y Mejores Prácticas
 
-### Preguntas de Evaluación
+### Ejercicios de Práctica
 
-1. ¿Cuándo usar `renderHook` vs `render` con un componente wrapper?
-2. ¿Cuál es la diferencia entre `vi.mock` y `vi.spyOn`?
-3. ¿Qué ventajas ofrece MSW sobre mocks manuales de fetch?
-4. ¿Qué significa una cobertura de líneas del 80%?
-5. ¿Por qué 100% de cobertura no garantiza código libre de bugs?
-
----
-
-## 💪 Desempeño (40 puntos)
-
-Evaluación práctica durante ejercicios guiados.
-
-### Ejercicio 01: Testing de Hooks (10 puntos)
-
-| Criterio      | Puntos | Descripción                           |
-| ------------- | ------ | ------------------------------------- |
-| Configuración | 2      | Usa `renderHook` correctamente        |
-| Estados       | 3      | Testea cambios de estado con `act`    |
-| Efectos       | 3      | Testea efectos secundarios            |
-| Casos borde   | 2      | Maneja valores iniciales y edge cases |
-
-### Ejercicio 02: Mocking de Módulos (10 puntos)
-
-| Criterio       | Puntos | Descripción                     |
-| -------------- | ------ | ------------------------------- |
-| vi.mock        | 3      | Mock de módulos externos        |
-| vi.spyOn       | 3      | Espías de funciones             |
-| Implementación | 2      | Mock de implementaciones custom |
-| Restauración   | 2      | Limpieza correcta entre tests   |
-
-### Ejercicio 03: MSW API Mocking (10 puntos)
-
-| Criterio      | Puntos | Descripción                    |
-| ------------- | ------ | ------------------------------ |
-| Configuración | 2      | Setup de MSW en tests          |
-| Handlers      | 3      | Define handlers REST correctos |
-| Escenarios    | 3      | Maneja éxito y errores         |
-| Integración   | 2      | Tests de componentes con API   |
-
-### Ejercicio 04: Cobertura (10 puntos)
-
-| Criterio      | Puntos | Descripción                          |
-| ------------- | ------ | ------------------------------------ |
-| Configuración | 3      | Configura @vitest/coverage-v8        |
-| Reportes      | 3      | Genera y entiende reportes           |
-| Análisis      | 2      | Identifica código no cubierto        |
-| Mejora        | 2      | Agrega tests para aumentar cobertura |
+| Ejercicio   | Tema                 | Preparación para                       |
+| ----------- | -------------------- | -------------------------------------- |
+| Ejercicio 1 | Testing de Hooks     | Tests de custom hooks en el proyecto   |
+| Ejercicio 2 | Mocking de Módulos   | Mocks de dependencias en el proyecto   |
+| Ejercicio 3 | MSW API Mocking      | Mocking de API en tests de integración |
+| Ejercicio 4 | Configurar Cobertura | Reporte de cobertura del proyecto      |
 
 ---
 
-## 📦 Producto (30 puntos)
+## 📦 Proyecto (100 puntos)
 
 Proyecto: **Aplicación 100% Testeada**
 
-### Requisitos Funcionales
+### Distribución del Puntaje del Proyecto
+
+| Aspecto               | Porcentaje | Puntos  |
+| --------------------- | ---------- | ------- |
+| Funcionalidad         | 40%        | 40      |
+| Adaptación al Dominio | 35%        | 35      |
+| Calidad del Código    | 25%        | 25      |
+| **Total**             | **100%**   | **100** |
+
+### Funcionalidad (40 puntos)
 
 | Requisito            | Puntos | Criterio de Aceptación           |
 | -------------------- | ------ | -------------------------------- |
-| Tests de hooks       | 6      | Mínimo 3 custom hooks testeados  |
-| Tests de componentes | 6      | Mínimo 5 componentes con tests   |
-| Tests de integración | 6      | Mínimo 3 flujos completos        |
-| Mocking de API       | 6      | MSW configurado y funcionando    |
-| Cobertura ≥80%       | 6      | Reporte muestra cobertura mínima |
+| Tests de hooks       | 10     | Mínimo 3 custom hooks testeados  |
+| Tests de componentes | 10     | Mínimo 5 componentes con tests   |
+| Tests de integración | 10     | Mínimo 3 flujos completos        |
+| Cobertura ≥80%       | 10     | Reporte muestra cobertura mínima |
 
-### Escala de Calidad
+### Adaptación al Dominio (35 puntos)
+
+| Criterio               | Puntos | Descripción                                  |
+| ---------------------- | ------ | -------------------------------------------- |
+| Tests contextualizados | 15     | Tests reflejan lógica específica del dominio |
+| Escenarios realistas   | 10     | Casos de prueba relevantes para el negocio   |
+| Mocking coherente      | 10     | MSW handlers adapatados al dominio asignado  |
+
+### Calidad del Código (25 puntos)
+
+| Criterio         | Puntos | Descripción                                  |
+| ---------------- | ------ | -------------------------------------------- |
+| Organización     | 10     | Tests bien estructurados y organizados       |
+| Buenas prácticas | 10     | Uso correcto de act, cleanup, async/await    |
+| Documentación    | 5      | README con estrategia de testing documentada |
+
+### Escala de Calidad General
 
 | Nivel        | Puntos | Descripción                                                  |
 | ------------ | ------ | ------------------------------------------------------------ |
-| Excelente    | 27-30  | Cobertura >90%, tests bien organizados, edge cases cubiertos |
-| Bueno        | 21-26  | Cobertura 80-90%, tests funcionales, algunos edge cases      |
-| Regular      | 15-20  | Cobertura 70-80%, tests básicos funcionan                    |
-| Insuficiente | 0-14   | Cobertura <70% o tests no funcionan                          |
+| Excelente    | 90-100 | Cobertura >90%, tests bien organizados, edge cases cubiertos |
+| Bueno        | 70-89  | Cobertura 80-90%, tests funcionales, algunos edge cases      |
+| Regular      | 50-69  | Cobertura 70-80%, tests básicos funcionan                    |
+| Insuficiente | 0-49   | Cobertura <70% o tests no funcionan                          |
 
 ---
 
 ## 📋 Checklist de Entrega
 
-### Ejercicios
+### Preparación (No evaluada)
 
-- [ ] Ejercicio 01 completado con tests pasando
-- [ ] Ejercicio 02 completado con mocks funcionando
-- [ ] Ejercicio 03 completado con MSW configurado
-- [ ] Ejercicio 04 completado con reporte de cobertura
+- [ ] Teoría completada
+- [ ] Ejercicio 01 completado (práctica de testing hooks)
+- [ ] Ejercicio 02 completado (práctica de mocking)
+- [ ] Ejercicio 03 completado (práctica de MSW)
+- [ ] Ejercicio 04 completado (práctica de cobertura)
 
-### Proyecto
+### Proyecto (Evaluado - 100%)
 
 - [ ] Repositorio con código fuente
 - [ ] Todos los tests pasan (`pnpm test`)
 - [ ] Reporte de cobertura generado (`pnpm coverage`)
+- [ ] Cobertura mínima del 80%
 - [ ] README con instrucciones de ejecución
 - [ ] Dominio asignado implementado correctamente
 
@@ -123,12 +107,12 @@ Proyecto: **Aplicación 100% Testeada**
 
 ## 🎯 Criterios de Aprobación
 
-| Requisito    | Mínimo      |
-| ------------ | ----------- |
-| Conocimiento | 21/30 (70%) |
-| Desempeño    | 28/40 (70%) |
-| Producto     | 21/30 (70%) |
-| **Total**    | **70/100**  |
+| Requisito | Mínimo       |
+| --------- | ------------ |
+| Proyecto  | 70/100 (70%) |
+| **Total** | **70/100**   |
+
+> Para aprobar la semana, el proyecto debe obtener un mínimo de 70 puntos sobre 100.
 
 ---
 

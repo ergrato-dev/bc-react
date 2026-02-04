@@ -6,13 +6,13 @@
 
 ## 📋 Información General
 
-| Aspecto             | Detalle                                      |
-| ------------------- | -------------------------------------------- |
-| **Semana**          | 06 de 20                                     |
-| **Etapa**           | 2 - Fundamentos de React (Final)             |
-| **Tema Principal**  | Custom Hooks y Proyecto Integrador           |
-| **Duración**        | 8 horas                                      |
-| **Tipo Evaluación** | Formativa (ejercicios) + Sumativa (proyecto) |
+| Aspecto             | Detalle                            |
+| ------------------- | ---------------------------------- |
+| **Semana**          | 06 de 20                           |
+| **Etapa**           | 2 - Fundamentos de React (Final)   |
+| **Tema Principal**  | Custom Hooks y Proyecto Integrador |
+| **Duración**        | 8 horas                            |
+| **Tipo Evaluación** | Sumativa (proyecto 100%)           |
 
 ---
 
@@ -25,49 +25,64 @@
 
 ---
 
-## 📝 Evidencias de Aprendizaje
+## � Recursos de Aprendizaje (No Evaluados)
 
-### Evidencia 1: Conocimiento (30%)
+La teoría y los ejercicios son recursos de preparación para el proyecto. No son entregables evaluados, pero se recomienda completarlos para adquirir las competencias necesarias.
 
-**Instrumento**: Cuestionario teórico sobre hooks
+### Teoría
 
-| Criterio                          | Excelente (10)                         | Bueno (8)          | Suficiente (6)      | Insuficiente (0-5) |
-| --------------------------------- | -------------------------------------- | ------------------ | ------------------- | ------------------ |
-| Reglas de los hooks               | Explica las 2 reglas y por qué existen | Conoce las reglas  | Conoce parcialmente | No conoce          |
-| Anatomía de custom hook           | Explica estructura completa            | Explica lo básico  | Confunde conceptos  | No puede explicar  |
-| Diferencia useState vs useReducer | Sabe cuándo usar cada uno              | Conoce diferencias | Confunde uso        | No diferencia      |
+- Custom hooks: fundamentos y anatomía
+- Patrones de composición de hooks
+- Ciclo de vida de componentes
+- Configuración de Vite
 
-### Evidencia 2: Desempeño (40%)
+### Ejercicios Guiados
 
-**Instrumento**: Ejercicios prácticos de custom hooks
+- Ejercicio 01: `useToggle`, `useCounter` - Hooks básicos
+- Ejercicio 02: `useForm`, `useArray` - Estado complejo
+- Ejercicio 03: `useFetch`, `useDebounce` - Efectos
+- Ejercicio 04: Hooks genéricos con `<T>`
+- Ejercicio 05: Composición de múltiples hooks
 
-| Criterio                 | Excelente (10)              | Bueno (8)                  | Suficiente (6)         | Insuficiente (0-5) |
-| ------------------------ | --------------------------- | -------------------------- | ---------------------- | ------------------ |
-| useToggle/useCounter     | Hooks tipados y funcionales | Funciona con tipos básicos | Funciona parcialmente  | No funciona        |
-| useForm con validación   | Tipado genérico completo    | Tipado básico funcional    | Tipado incompleto      | Sin tipado         |
-| useFetch con estados     | Loading/error/data tipados  | Estados básicos            | Falta algún estado     | No maneja estados  |
-| useLocalStorage genérico | `<T>` con serialización     | Funciona para strings      | Tipado parcial         | No es genérico     |
-| Composición de hooks     | Hooks que usan otros hooks  | Composición básica         | Intento de composición | Sin composición    |
+---
 
-### Evidencia 3: Producto (30%)
+## 📝 Proyecto (100%)
 
 **Instrumento**: Dashboard Interactivo (Proyecto Etapa 2)
 
-| Criterio                       | Excelente (10)                 | Bueno (8)          | Suficiente (6)         | Insuficiente (0-5) |
-| ------------------------------ | ------------------------------ | ------------------ | ---------------------- | ------------------ |
-| Custom hooks implementados     | 5+ hooks reutilizables         | 3-4 hooks          | 2 hooks                | <2 hooks           |
-| Widgets interactivos           | 4+ widgets funcionales         | 3 widgets          | 2 widgets              | <2 widgets         |
-| Context API (tema/usuario)     | 2+ contexts bien tipados       | 1 context completo | Context básico         | Sin context        |
-| TypeScript estricto            | 0 errores, tipos completos     | Errores menores    | any ocasional          | Muchos any         |
-| Estructura de código           | Separación clara, reutilizable | Organizado         | Algo desorganizado     | Desordenado        |
-| Dominio aplicado correctamente | Entidades coherentes           | Mayoría coherente  | Parcialmente coherente | Incoherente        |
+### Funcionalidad (40%)
+
+| Criterio                   | Excelente (10)           | Bueno (8)          | Suficiente (6)     | Insuficiente (0-5) |
+| -------------------------- | ------------------------ | ------------------ | ------------------ | ------------------ |
+| Custom hooks implementados | 5+ hooks reutilizables   | 3-4 hooks          | 2 hooks            | <2 hooks           |
+| Widgets interactivos       | 4+ widgets funcionales   | 3 widgets          | 2 widgets          | <2 widgets         |
+| Context API (tema/usuario) | 2+ contexts bien tipados | 1 context completo | Context básico     | Sin context        |
+| Manejo de estados          | Loading/error/data       | Estados básicos    | Falta algún estado | No maneja estados  |
+
+### Adaptación al Dominio (35%)
+
+| Criterio                     | Excelente (10)            | Bueno (8)         | Suficiente (6)         | Insuficiente (0-5) |
+| ---------------------------- | ------------------------- | ----------------- | ---------------------- | ------------------ |
+| Entidades del dominio        | Todas coherentes          | Mayoría coherente | Parcialmente coherente | Incoherente        |
+| Widgets adaptados            | Específicos del dominio   | Adaptados         | Genéricos              | Sin adaptar        |
+| Nomenclatura contextualizada | Nombres del dominio       | Parcialmente      | Pocos nombres          | Genérica           |
+| Datos mock representativos   | Realistas para el dominio | Aceptables        | Básicos                | Sin relación       |
+
+### Calidad del Código (25%)
+
+| Criterio                | Excelente (10)                 | Bueno (8)       | Suficiente (6)     | Insuficiente (0-5) |
+| ----------------------- | ------------------------------ | --------------- | ------------------ | ------------------ |
+| TypeScript estricto     | 0 errores, tipos completos     | Errores menores | any ocasional      | Muchos any         |
+| Estructura de código    | Separación clara, reutilizable | Organizado      | Algo desorganizado | Desordenado        |
+| Documentación           | JSDoc completo                 | Comentarios     | Mínima             | Sin documentar     |
+| Hooks bien encapsulados | Single responsibility          | Aceptable       | Hacen demasiado    | No encapsulados    |
 
 ---
 
 ## 🔢 Cálculo de Calificación
 
 ```
-Calificación Final = (Conocimiento × 0.30) + (Desempeño × 0.40) + (Producto × 0.30)
+Calificación Final = (Funcionalidad × 0.40) + (Adaptación al Dominio × 0.35) + (Calidad del Código × 0.25)
 ```
 
 ### Escala de Conversión
@@ -81,11 +96,17 @@ Calificación Final = (Conocimiento × 0.30) + (Desempeño × 0.40) + (Producto 
 | 60-69  | 6            | Suficiente    |
 | < 60   | 5 o menos    | No aprobado   |
 
+### Criterios de Aprobación
+
+- **Mínimo 70%** en el proyecto para aprobar la semana
+- Proyecto funcional y ejecutable
+- Adaptación coherente al dominio asignado
+
 ---
 
 ## ✅ Checklist de Entrega
 
-### Ejercicios Prácticos
+### Preparación (No evaluada)
 
 - [ ] Ejercicio 01: `useToggle`, `useCounter` implementados
 - [ ] Ejercicio 02: `useForm`, `useArray` con estado complejo
@@ -93,7 +114,7 @@ Calificación Final = (Conocimiento × 0.30) + (Desempeño × 0.40) + (Producto 
 - [ ] Ejercicio 04: Hooks genéricos con `<T>`
 - [ ] Ejercicio 05: Composición de múltiples hooks
 
-### Proyecto Dashboard
+### 📦 Proyecto Dashboard (100% - Evaluado)
 
 - [ ] Repositorio con estructura organizada
 - [ ] README con descripción del dominio asignado
@@ -131,12 +152,13 @@ El proyecto debe estar adaptado al dominio asignado:
 
 ## 📅 Fechas Importantes
 
-| Entregable         | Fecha Límite       |
-| ------------------ | ------------------ |
-| Ejercicios 01-03   | Día 3 de la semana |
-| Ejercicios 04-05   | Día 5 de la semana |
-| Proyecto Dashboard | Día 7 de la semana |
-| Retroalimentación  | Día 8-9            |
+| Actividad                | Fecha Límite       |
+| ------------------------ | ------------------ |
+| Preparación (ejercicios) | Recomendado día 5  |
+| **Proyecto Dashboard**   | Día 7 de la semana |
+| Retroalimentación        | Día 8-9            |
+
+> **Nota:** Solo el proyecto es entregable evaluado. Los ejercicios son preparación recomendada.
 
 ---
 

@@ -89,21 +89,27 @@ Semana 15 (8 horas)
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
-### Ejercicios (Individual)
+> **Nota:** La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
 
-- [ ] Ejercicio 01: Tests de hooks funcionando
-- [ ] Ejercicio 02: Mocks de módulos implementados
-- [ ] Ejercicio 03: MSW configurado para API mocking
-- [ ] Ejercicio 04: Reporte de cobertura generado
-
-### Proyecto (Individual)
+### Proyecto Semanal 📦 (100%)
 
 - [ ] Suite de tests completa (mínimo 15 tests)
 - [ ] Cobertura mínima del 80%
 - [ ] Tests de hooks, componentes e integración
 - [ ] Documentación de estrategia de testing
+
+### ✅ Checklist de Preparación (No evaluada)
+
+- [ ] Teoría: Testing de Hooks leída
+- [ ] Teoría: Mocking Avanzado leída
+- [ ] Teoría: Tests de Integración leída
+- [ ] Teoría: Cobertura de Código leída
+- [ ] Ejercicio 01: Tests de hooks completado
+- [ ] Ejercicio 02: Mocks de módulos completado
+- [ ] Ejercicio 03: MSW configurado completado
+- [ ] Ejercicio 04: Cobertura configurada completado
 
 ---
 

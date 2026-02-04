@@ -154,23 +154,11 @@ Ejercicios progresivos formato tutorial guiado:
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
 Al finalizar la semana, debes entregar:
 
-### Evidencia de Conocimiento (30%)
-
-- Explicar cuándo usar ternario vs && vs early return
-- Describir por qué las keys son importantes
-- Identificar problemas de usar index como key
-
-### Evidencia de Desempeño (40%)
-
-- 5 ejercicios completados y funcionales
-- Código siguiendo nomenclatura inglés/español
-- Manejo correcto de arrays tipados
-
-### Evidencia de Producto (30%)
+### Proyecto Semanal 📦 (100%)
 
 - Proyecto de catálogo funcional
 - README con descripción del dominio
@@ -178,11 +166,15 @@ Al finalizar la semana, debes entregar:
 - Keys únicas y correctas en todas las listas
 - Estados vacíos manejados apropiadamente
 
+> 💡 **Nota**: La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
 ---
 
 ## ✅ Checklist de Verificación
 
 Antes de considerar la semana completa:
+
+### Preparación (No evaluada)
 
 - [ ] Teoría: Leídos los 4 archivos de teoría
 - [ ] Ejercicio 01: Condicionales básicos completado
@@ -190,6 +182,9 @@ Antes de considerar la semana completa:
 - [ ] Ejercicio 03: Keys y actualizaciones completado
 - [ ] Ejercicio 04: Filtrado y búsqueda completado
 - [ ] Ejercicio 05: Lista completa completado
+
+### Entregable (Evaluado)
+
 - [ ] Proyecto: Catálogo con datos renderizados
 - [ ] Proyecto: Búsqueda funcional
 - [ ] Proyecto: Filtros implementados

@@ -1,309 +1,60 @@
 # 📊 Rúbrica de Evaluación - Semana 02
 
-## 🎯 Distribución de Evaluación
+## 🎯 Entregable Único
 
-| Tipo de Evidencia | Peso | Descripción                          |
-| ----------------- | ---- | ------------------------------------ |
-| 🧠 Conocimiento   | 30%  | Comprensión conceptual de React      |
-| 💪 Desempeño      | 40%  | Ejercicios prácticos con componentes |
-| 📦 Producto       | 30%  | Interfaz interactiva funcional       |
+| Entregable          | Peso | Descripción                              |
+| ------------------- | ---- | ---------------------------------------- |
+| 📦 Proyecto Semanal | 100% | Sistema CRUD Básico con React/TypeScript |
 
-**Nota mínima para aprobar**: 70% en cada tipo de evidencia
+**Nota mínima para aprobar**: 70%
 
----
-
-## 🧠 Conocimiento (30%)
-
-### Criterios de Evaluación
-
-#### 1. Comprensión de Componentes y JSX (10%)
-
-**Excelente (9-10 puntos)**
-
-- Explica qué es un componente funcional y su propósito
-- Diferencia JSX de TSX y entiende la sintaxis
-- Comprende el flujo de renderizado de React
-- Identifica componentes en una aplicación
-
-**Bueno (7-8 puntos)**
-
-- Entiende componentes básicos
-- Usa JSX/TSX correctamente en casos simples
-- Explica renderizado de forma básica
-- Reconoce componentes principales
-
-**Suficiente (5-6 puntos)**
-
-- Comprensión limitada de componentes
-- Confunde JSX/TSX ocasionalmente
-- Explica renderizado con ayuda
-- Dificultad para identificar componentes
-
-**Insuficiente (0-4 puntos)**
-
-- No comprende componentes
-- No diferencia JSX de TSX
-- No explica renderizado
-- No identifica componentes
+> **Nota**: La teoría y los ejercicios son recursos de aprendizaje. El único entregable evaluado es el proyecto.
 
 ---
 
-#### 2. Props vs State (10%)
+## 📚 Recursos de Aprendizaje (No Evaluados)
 
-**Excelente (9-10 puntos)**
+### Teoría y Ejercicios
 
-- Explica diferencias entre props y state claramente
-- Sabe cuándo usar props y cuándo state
-- Entiende inmutabilidad del state
-- Tipa props correctamente con interfaces
+La teoría y los ejercicios guiados son **recursos de preparación** para el proyecto:
 
-**Bueno (7-8 puntos)**
+- **1-teoria/**: Material conceptual sobre React y TypeScript
+- **2-ejercicios/**: Práctica guiada de cada concepto
 
-- Diferencia props de state en casos básicos
-- Usa ambos correctamente en ejemplos simples
-- Comprende inmutabilidad básica
-- Tipa props con errores menores
+Estos recursos te ayudan a desarrollar las competencias necesarias, pero **no son entregables evaluados**.
 
-**Suficiente (5-6 puntos)**
-
-- Confunde props y state ocasionalmente
-- Uso inconsistente
-- No comprende inmutabilidad completamente
-- Errores frecuentes en tipado
-
-**Insuficiente (0-4 puntos)**
-
-- No diferencia props de state
-- Uso incorrecto
-- No comprende inmutabilidad
-- No tipa props
+> 💡 **Recomendación**: Completa la teoría y los ejercicios antes de iniciar el proyecto.
 
 ---
 
-#### 3. Eventos y Manejo de Estado (10%)
+## 📦 Proyecto (100%)
 
-**Excelente (9-10 puntos)**
+### Proyecto Semanal: Sistema CRUD Básico
 
-- Explica eventos sintéticos de React
-- Entiende cómo actualizar estado correctamente
-- Usa tipos correctos para eventos (ChangeEvent, MouseEvent)
-- Aplica buenas prácticas (prevención de propagación, etc.)
+#### 1. Funcionalidad (33%)
 
-**Bueno (7-8 puntos)**
-
-- Comprende eventos básicos
-- Actualiza estado correctamente en casos simples
-- Usa tipos de eventos con ayuda
-- Aplica algunas buenas prácticas
-
-**Suficiente (5-6 puntos)**
-
-- Comprensión limitada de eventos
-- Actualiza estado pero con errores
-- No usa tipos de eventos correctamente
-- No aplica buenas prácticas
-
-**Insuficiente (0-4 puntos)**
-
-- No comprende eventos sintéticos
-- No sabe actualizar estado
-- No usa tipos
-- Errores graves
-
----
-
-## 💪 Desempeño (40%)
-
-### Ejercicios Prácticos (8% cada uno)
-
-#### Ejercicio 1: Primer Componente con TypeScript
-
-**Excelente (7-8 puntos)**
-
-- ✅ Crea componente funcional sin errores
-- ✅ Usa TypeScript correctamente (React.FC o tipos de props)
-- ✅ JSX/TSX bien formado
-- ✅ Renderiza correctamente en navegador
-
-**Bueno (5-6 puntos)**
-
-- ✅ Componente funcional básico
-- ⚠️ Errores menores de TypeScript
-- ✅ JSX funcional
-- ✅ Renderiza
-
-**Suficiente (3-4 puntos)**
-
-- ⚠️ Componente con errores
-- ⚠️ TypeScript incompleto
-- ⚠️ JSX con problemas
-- ⚠️ Renderiza con warnings
-
-**Insuficiente (0-2 puntos)**
-
-- ❌ No completa ejercicio
-- ❌ Errores de TypeScript críticos
-- ❌ JSX incorrecto
-- ❌ No renderiza
-
----
-
-#### Ejercicio 2: Props Tipados y Children
-
-**Excelente (7-8 puntos)**
-
-- ✅ Define interfaces para props correctamente
-- ✅ Usa props con destructuring
-- ✅ Maneja children con tipos correctos
-- ✅ Props opcionales con `?`
-
-**Bueno (5-6 puntos)**
-
-- ✅ Interfaces básicas
-- ✅ Usa props correctamente
-- ⚠️ Children sin tipos o con errores
-- ⚠️ Props opcionales inconsistentes
-
-**Suficiente (3-4 puntos)**
-
-- ⚠️ Interfaces incompletas
-- ⚠️ Props con errores
-- ⚠️ No maneja children
-- ⚠️ No usa opcionales
-
-**Insuficiente (0-2 puntos)**
-
-- ❌ No define interfaces
-- ❌ Props incorrectos
-- ❌ No maneja children
-- ❌ No funcional
-
----
-
-#### Ejercicio 3: Estado con useState
-
-**Excelente (7-8 puntos)**
-
-- ✅ Usa useState con tipos correctos
-- ✅ Actualiza estado inmutablemente
-- ✅ Maneja estado complejo (objetos, arrays)
-- ✅ UI refleja cambios de estado
-
-**Bueno (5-6 puntos)**
-
-- ✅ useState básico tipado
-- ✅ Actualiza estado correctamente
-- ⚠️ Dificultad con estado complejo
-- ✅ UI funcional
-
-**Suficiente (3-4 puntos)**
-
-- ⚠️ useState con tipos incorrectos
-- ⚠️ Actualiza estado con errores
-- ⚠️ No maneja estado complejo
-- ⚠️ UI con problemas
-
-**Insuficiente (0-2 puntos)**
-
-- ❌ No usa useState correctamente
-- ❌ No actualiza estado
-- ❌ Errores graves
-- ❌ UI no funcional
-
----
-
-#### Ejercicio 4: Eventos y Formularios
-
-**Excelente (7-8 puntos)**
-
-- ✅ Maneja eventos con tipos correctos (ChangeEvent, FormEvent)
-- ✅ Previene comportamiento por defecto apropiadamente
-- ✅ Actualiza estado desde eventos
-- ✅ Formulario funcional y validado
-
-**Bueno (5-6 puntos)**
-
-- ✅ Eventos básicos tipados
-- ✅ Previene default cuando es necesario
-- ✅ Actualiza estado
-- ⚠️ Validación básica o faltante
-
-**Suficiente (3-4 puntos)**
-
-- ⚠️ Eventos sin tipos o tipos incorrectos
-- ⚠️ No previene default
-- ⚠️ Actualiza estado con errores
-- ⚠️ Formulario con problemas
-
-**Insuficiente (0-2 puntos)**
-
-- ❌ No maneja eventos correctamente
-- ❌ Errores graves
-- ❌ No actualiza estado
-- ❌ Formulario no funcional
-
----
-
-#### Ejercicio 5: Listas y Renderizado Condicional
-
-**Excelente (7-8 puntos)**
-
-- ✅ Renderiza listas con `.map()` correctamente
-- ✅ Usa `key` prop apropiadamente
-- ✅ Aplica renderizado condicional (&&, ternario)
-- ✅ UI dinámica y funcional
-
-**Bueno (5-6 puntos)**
-
-- ✅ Listas básicas con map
-- ⚠️ Keys incorrectos o con warnings
-- ✅ Condicionales básicos
-- ✅ Funcional
-
-**Suficiente (3-4 puntos)**
-
-- ⚠️ Listas con errores
-- ⚠️ No usa keys o keys incorrectos
-- ⚠️ Condicionales limitados
-- ⚠️ UI con problemas
-
-**Insuficiente (0-2 puntos)**
-
-- ❌ No renderiza listas
-- ❌ Sin keys
-- ❌ No aplica condicionales
-- ❌ No funcional
-
----
-
-## 📦 Producto (30%)
-
-### Proyecto Semanal: Interfaz Interactiva
-
-#### 1. Funcionalidad (10%)
-
-**Excelente (9-10 puntos)**
+**Excelente (28-33 puntos)**
 
 - ✅ Aplicación compila y ejecuta sin errores
 - ✅ Todos los componentes implementados
-- ✅ Estado global funciona correctamente
+- ✅ Estado local funciona correctamente
 - ✅ Interacciones fluidas en navegador
 
-**Bueno (7-8 puntos)**
+**Bueno (23-27 puntos)**
 
 - ✅ Compila correctamente
 - ⚠️ Algunos componentes incompletos
 - ✅ Estado funciona en mayoría de casos
 - ⚠️ Interacciones con errores menores
 
-**Suficiente (5-6 puntos)**
+**Suficiente (17-22 puntos)**
 
 - ⚠️ Compila con warnings
 - ⚠️ Funcionalidad básica
 - ⚠️ Estado con errores
 - ⚠️ UI con problemas
 
-**Insuficiente (0-4 puntos)**
+**Insuficiente (0-16 puntos)**
 
 - ❌ No compila
 - ❌ Componentes no funcionales
@@ -312,30 +63,30 @@
 
 ---
 
-#### 2. Arquitectura de Componentes (10%)
+#### 2. Arquitectura de Componentes (33%)
 
-**Excelente (9-10 puntos)**
+**Excelente (28-33 puntos)**
 
 - ✅ Componentes bien organizados y reutilizables
 - ✅ Separación clara de responsabilidades
 - ✅ Props bien tipados con interfaces
 - ✅ Estructura de carpetas lógica (components/, etc.)
 
-**Bueno (7-8 puntos)**
+**Bueno (23-27 puntos)**
 
 - ✅ Componentes organizados
 - ⚠️ Algo de duplicación
 - ✅ Props tipados
 - ✅ Estructura básica
 
-**Suficiente (5-6 puntos)**
+**Suficiente (17-22 puntos)**
 
 - ⚠️ Componentes poco organizados
 - ⚠️ Duplicación frecuente
 - ⚠️ Props con errores de tipos
 - ⚠️ Estructura confusa
 
-**Insuficiente (0-4 puntos)**
+**Insuficiente (0-16 puntos)**
 
 - ❌ Sin organización
 - ❌ Código duplicado
@@ -344,9 +95,9 @@
 
 ---
 
-#### 3. Calidad del Código (10%)
+#### 3. Calidad del Código (34%)
 
-**Excelente (9-10 puntos)**
+**Excelente (29-34 puntos)**
 
 - ✅ Código limpio y legible
 - ✅ TypeScript estricto sin `any`
@@ -354,7 +105,7 @@
 - ✅ Nomenclatura consistente
 - ✅ README descriptivo
 
-**Bueno (7-8 puntos)**
+**Bueno (24-28 puntos)**
 
 - ✅ Código organizado
 - ⚠️ Algunos `any` o tipos débiles
@@ -362,7 +113,7 @@
 - ✅ Nomenclatura mayormente correcta
 - ✅ README básico
 
-**Suficiente (5-6 puntos)**
+**Suficiente (17-23 puntos)**
 
 - ⚠️ Código funcional pero desordenado
 - ⚠️ Uso frecuente de `any`
@@ -370,7 +121,7 @@
 - ⚠️ Nomenclatura inconsistente
 - ⚠️ README incompleto
 
-**Insuficiente (0-4 puntos)**
+**Insuficiente (0-16 puntos)**
 
 - ❌ Código desorganizado
 - ❌ `any` en todos lados
@@ -384,14 +135,11 @@
 
 ### Requisitos Mínimos
 
-1. **70% mínimo en cada tipo de evidencia**
-   - Conocimiento ≥ 70%
-   - Desempeño ≥ 70%
-   - Producto ≥ 70%
+1. **70% mínimo en el proyecto**
+   - Proyecto ≥ 70 puntos de 100
 
 2. **Entrega puntual**
-   - Ejercicios en tiempo
-   - Proyecto antes de deadline
+   - Proyecto entregado antes del deadline
 
 3. **TypeScript estricto**
    - Sin errores de compilación
@@ -406,7 +154,7 @@
 ## 🚨 Causas de Reprobación
 
 - ❌ **Plagio o copia** (0 automático)
-- ❌ **Menos de 70%** en cualquier evidencia
+- ❌ **Menos de 70%** en el proyecto
 - ❌ **Errores de compilación** en proyecto
 - ❌ **Uso excesivo de `any`** (más del 20% del código)
 - ❌ **No entregar proyecto**
@@ -415,18 +163,7 @@
 
 ## 📝 Formato de Entrega
 
-### Ejercicios
-
-```
-bootcamp/week-02/2-ejercicios/
-├── ejercicio-01-primer-componente/starter/
-├── ejercicio-02-props-tipados/starter/
-├── ejercicio-03-estado-usestate/starter/
-├── ejercicio-04-eventos-formularios/starter/
-└── ejercicio-05-listas-condicionales/starter/
-```
-
-### Proyecto
+### Proyecto (Único Entregable)
 
 ```
 bootcamp/week-02/3-proyecto/starter/
@@ -437,6 +174,8 @@ bootcamp/week-02/3-proyecto/starter/
 ├── package.json
 └── README.md (descripción de tu implementación)
 ```
+
+> **Nota**: Los ejercicios en `2-ejercicios/` son recursos de práctica y no se entregan.
 
 ---
 

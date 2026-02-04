@@ -4,39 +4,69 @@
 
 ---
 
-## 🎯 Competencias a Evaluar
+## 📚 Recursos de Aprendizaje (No Evaluados)
 
-### 1. Conocimiento (30%) 🧠
+La teoría y los ejercicios son materiales de preparación para el proyecto. No son entregables evaluados, pero son esenciales para desarrollar las competencias necesarias.
 
-| Criterio                                | Excelente (100%)                                      | Bueno (80%)                          | Suficiente (70%)                                 | Insuficiente (<70%)          |
-| --------------------------------------- | ----------------------------------------------------- | ------------------------------------ | ------------------------------------------------ | ---------------------------- |
-| Comprende el problema del estado global | Explica prop drilling y sus limitaciones con ejemplos | Identifica cuándo usar estado global | Conoce la diferencia entre estado local y global | No distingue tipos de estado |
-| Entiende la arquitectura de Zustand     | Explica stores, acciones, selectores y su flujo       | Conoce los componentes principales   | Sabe crear un store básico                       | No comprende la arquitectura |
-| Conoce patrones de organización         | Aplica slices, módulos y separación de concerns       | Organiza stores de forma lógica      | Conoce patrones básicos                          | No organiza el código        |
-| Comprende selectores y performance      | Explica re-renders y optimización con selectores      | Sabe cuándo usar selectores          | Conoce el concepto de selector                   | No entiende selectores       |
-| Entiende persistencia y middleware      | Implementa persist y middleware personalizado         | Usa persist correctamente            | Conoce el concepto de middleware                 | No usa middleware            |
+### Conocimientos Esperados 🧠
 
-### 2. Desempeño (40%) 💪
+- Comprensión del problema del estado global y prop drilling
+- Arquitectura de Zustand: stores, acciones, selectores
+- Patrones de organización de stores
+- Selectores y optimización de performance
+- Persistencia y middleware
 
-| Criterio                | Excelente (100%)                                   | Bueno (80%)              | Suficiente (70%)             | Insuficiente (<70%)  |
-| ----------------------- | -------------------------------------------------- | ------------------------ | ---------------------------- | -------------------- |
-| Crea stores tipados     | Stores con tipos completos y genéricos             | Tipos básicos correctos  | Tipos parciales              | Sin tipado           |
-| Implementa acciones     | Acciones con payload tipado y lógica compleja      | Acciones básicas tipadas | Acciones sin tipos completos | Acciones incorrectas |
-| Usa selectores          | Selectores derivados con memoización               | Selectores básicos       | Selectores simples           | No usa selectores    |
-| Aplica middleware       | Persist + middleware personalizado                 | Persist configurado      | Persist básico               | Sin middleware       |
-| Integra con componentes | Suscripción selectiva, sin re-renders innecesarios | Integración correcta     | Integración básica           | Integración con bugs |
+### Habilidades a Desarrollar 💪
 
-### 3. Producto (30%) 📦
-
-| Criterio                | Excelente (100%)                                    | Bueno (80%)                    | Suficiente (70%)             | Insuficiente (<70%)      |
-| ----------------------- | --------------------------------------------------- | ------------------------------ | ---------------------------- | ------------------------ |
-| Funcionalidad completa  | Todas las features implementadas y funcionando      | Features principales completas | Features básicas funcionando | Features incompletas     |
-| Organización del código | Stores modulares, bien separados                    | Estructura clara               | Organización básica          | Código desorganizado     |
-| Tipado TypeScript       | Tipos exhaustivos, sin any                          | Tipos correctos                | Tipos parciales              | Muchos any o errores     |
-| Performance             | Sin re-renders innecesarios, selectores optimizados | Buen rendimiento               | Rendimiento aceptable        | Problemas de performance |
-| Integración con Router  | Estado sincronizado con navegación                  | Integración correcta           | Integración básica           | Sin integración          |
+- Crear stores tipados con TypeScript
+- Implementar acciones con payload tipado
+- Usar selectores para optimización
+- Aplicar middleware de persistencia
+- Integrar Zustand con componentes React
 
 ---
+
+## 🎯 Competencias a Evaluar
+
+### Proyecto (100%) 📦
+
+#### Funcionalidad (40%)
+
+| Criterio               | Excelente (100%)                               | Bueno (80%)                    | Suficiente (70%)             | Insuficiente (<70%)  |
+| ---------------------- | ---------------------------------------------- | ------------------------------ | ---------------------------- | -------------------- |
+| Features completas     | Todas las features implementadas y funcionando | Features principales completas | Features básicas funcionando | Features incompletas |
+| Store principal        | Store completo con estado y acciones           | Store funcional                | Store básico                 | Store incompleto     |
+| Selectores             | Selectores derivados con optimización          | Selectores funcionales         | Selectores básicos           | Sin selectores       |
+| Persistencia           | localStorage configurado y funcionando         | Persistencia correcta          | Persistencia básica          | Sin persistencia     |
+| Integración con Router | Estado sincronizado con navegación             | Integración correcta           | Integración básica           | Sin integración      |
+
+#### Adaptación al Dominio (35%)
+
+| Criterio               | Excelente (100%)                           | Bueno (80%)                 | Suficiente (70%)    | Insuficiente (<70%)       |
+| ---------------------- | ------------------------------------------ | --------------------------- | ------------------- | ------------------------- |
+| Coherencia del dominio | Entidades y acciones 100% contextualizadas | Buena adaptación al dominio | Adaptación básica   | Sin adaptación            |
+| Originalidad           | Implementación única y creativa            | Implementación propia       | Implementación base | Copia de otros aprendices |
+| Entidades modeladas    | Modelos completos y relacionados           | Modelos correctos           | Modelos básicos     | Modelos incompletos       |
+
+#### Calidad del Código (25%)
+
+| Criterio              | Excelente (100%)                         | Bueno (80%)      | Suficiente (70%)    | Insuficiente (<70%)  |
+| --------------------- | ---------------------------------------- | ---------------- | ------------------- | -------------------- |
+| Tipado TypeScript     | Tipos exhaustivos, sin any               | Tipos correctos  | Tipos parciales     | Muchos any o errores |
+| Organización          | Stores modulares, bien separados         | Estructura clara | Organización básica | Código desorganizado |
+| Nombres y comentarios | Nombres descriptivos, comentarios claros | Buenos nombres   | Nombres aceptables  | Nombres confusos     |
+| Sin errores           | Cero warnings y errores                  | Mínimos warnings | Algunos warnings    | Errores en consola   |
+
+---
+
+## 📊 Distribución de la Evaluación
+
+| Componente            | Peso     |
+| --------------------- | -------- |
+| Funcionalidad         | 40%      |
+| Adaptación al Dominio | 35%      |
+| Calidad del Código    | 25%      |
+| **Total Proyecto**    | **100%** |
 
 ## 📊 Escala de Calificación
 
@@ -98,10 +128,32 @@ Cada aprendiz implementa el estado global para su dominio asignado:
 
 ## 📝 Criterios de Aprobación
 
-- **Mínimo 70%** en cada tipo de evidencia
+- **Mínimo 70%** en la calificación total del proyecto
 - Proyecto funcional y tipado correctamente
 - Implementación coherente con el dominio asignado
 - Sin copia de otros aprendices (dominio único)
+
+---
+
+## 📤 Formato de Entrega
+
+### Entregable Único: Proyecto Semanal
+
+```
+week-08/
+└── 3-proyecto/
+    └── mi-proyecto/
+        ├── src/
+        │   ├── stores/       # Stores de Zustand
+        │   ├── components/   # Componentes React
+        │   └── ...
+        ├── package.json
+        └── README.md         # Documentación del proyecto
+```
+
+**Fecha límite**: Según calendario del bootcamp
+
+> 💡 Los ejercicios (carpeta `2-ejercicios/`) son para práctica personal y no requieren entrega.
 
 ---
 

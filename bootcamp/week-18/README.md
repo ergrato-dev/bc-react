@@ -105,17 +105,22 @@ week-18/
 
 ---
 
-## 📌 Entregables
+## 📌 Entregable
 
-1. **Ejercicios completados** (3)
-   - Capturas de contenedores funcionando
-   - Dockerfiles creados
+### ✅ Preparación (No evaluada)
 
-2. **Proyecto semanal**
-   - Dockerfile multi-stage funcional
-   - docker-compose.yml configurado
-   - Aplicación corriendo en contenedor
-   - README con instrucciones de ejecución
+> La teoría y los ejercicios son recursos de aprendizaje para prepararte para el proyecto. No son entregables evaluados.
+
+- [ ] Leer material teórico
+- [ ] Completar ejercicios guiados
+- [ ] Practicar comandos Docker
+
+### 📦 Proyecto Semanal (100%)
+
+- Dockerfile multi-stage funcional
+- docker-compose.yml configurado
+- Aplicación corriendo en contenedor
+- README con instrucciones de ejecución
 
 ---
 
