@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Fondo dark -->
+  <rect width="800" height="600" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="bold">
+    Error Boundary - Flujo de Captura
+  </text>
+  
+  <!-- Árbol de Componentes Normal -->
+  <g transform="translate(30, 60)">
+    <text x="120" y="15" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="13">
+      Árbol de Componentes
+    </text>
+    
+    <!-- App -->
+    <rect x="70" y="25" width="100" height="36" rx="6" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+    <text x="120" y="48" text-anchor="middle" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">App</text>
+    
+    <!-- Líneas conectoras -->
+    <path d="M120 61 L120 75 L60 75 L60 90" stroke="#61DAFB" stroke-width="1"/>
+    <path d="M120 61 L120 75 L180 75 L180 90" stroke="#61DAFB" stroke-width="1"/>
+    
+    <!-- Header -->
+    <rect x="10" y="90" width="100" height="32" rx="6" fill="#2d2d2d" stroke="#4ade80" stroke-width="1"/>
+    <text x="60" y="110" text-anchor="middle" fill="#4ade80" font-family="Inter, system-ui, sans-serif" font-size="11">Header</text>
+    
+    <!-- ErrorBoundary -->
+    <rect x="130" y="90" width="100" height="32" rx="6" fill="#3178C6" stroke="#3178C6" stroke-width="2"/>
+    <text x="180" y="110" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="bold">ErrorBoundary</text>
+    
+    <!-- Línea desde ErrorBoundary -->
+    <path d="M180 122 L180 140" stroke="#3178C6" stroke-width="1"/>
+    
+    <!-- Content con error -->
+    <rect x="130" y="140" width="100" height="32" rx="6" fill="#2d2d2d" stroke="#ef4444" stroke-width="2"/>
+    <text x="180" y="160" text-anchor="middle" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="11">Content 💥</text>
+    
+    <!-- Footer -->
+    <rect x="70" y="195" width="100" height="32" rx="6" fill="#2d2d2d" stroke="#4ade80" stroke-width="1"/>
+    <text x="120" y="215" text-anchor="middle" fill="#4ade80" font-family="Inter, system-ui, sans-serif" font-size="11">Footer</text>
+    <path d="M120 172 L120 195" stroke="#61DAFB" stroke-width="1"/>
+  </g>
+  
+  <!-- Flecha grande -->
+  <g transform="translate(280, 160)">
+    <path d="M0 0 L50 0 L50 -8 L70 12 L50 32 L50 24 L0 24 Z" fill="#f59e0b"/>
+    <text x="35" y="48" text-anchor="middle" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="11">Error!</text>
+  </g>
+  
+  <!-- Proceso de Error Boundary -->
+  <g transform="translate(380, 60)">
+    <text x="180" y="15" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="13">
+      Proceso de Captura
+    </text>
+    
+    <!-- Paso 1 -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="360" height="45" rx="6" fill="#2d2d2d" stroke="#ef4444" stroke-width="1"/>
+      <circle cx="25" cy="22" r="16" fill="#ef4444"/>
+      <text x="25" y="27" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">1</text>
+      <text x="55" y="18" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">Error en componente hijo</text>
+      <text x="55" y="33" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="10">throw new Error("mensaje")</text>
+    </g>
+    
+    <path d="M180 80 L180 95" stroke="#a0a0a0" stroke-width="2" marker-end="url(#arrowDown)"/>
+    
+    <!-- Paso 2 -->
+    <g transform="translate(0, 100)">
+      <rect x="0" y="0" width="360" height="45" rx="6" fill="#2d2d2d" stroke="#3178C6" stroke-width="1"/>
+      <circle cx="25" cy="22" r="16" fill="#3178C6"/>
+      <text x="25" y="27" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">2</text>
+      <text x="55" y="18" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">getDerivedStateFromError()</text>
+      <text x="55" y="33" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="10">return { hasError: true }</text>
+    </g>
+    
+    <path d="M180 150 L180 165" stroke="#a0a0a0" stroke-width="2" marker-end="url(#arrowDown)"/>
+    
+    <!-- Paso 3 -->
+    <g transform="translate(0, 170)">
+      <rect x="0" y="0" width="360" height="45" rx="6" fill="#2d2d2d" stroke="#f59e0b" stroke-width="1"/>
+      <circle cx="25" cy="22" r="16" fill="#f59e0b"/>
+      <text x="25" y="27" text-anchor="middle" fill="#1a1a1a" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">3</text>
+      <text x="55" y="18" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">componentDidCatch()</text>
+      <text x="55" y="33" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="10">Log error, enviar a Sentry, etc.</text>
+    </g>
+    
+    <path d="M180 220 L180 235" stroke="#a0a0a0" stroke-width="2" marker-end="url(#arrowDown)"/>
+    
+    <!-- Paso 4 -->
+    <g transform="translate(0, 240)">
+      <rect x="0" y="0" width="360" height="45" rx="6" fill="#2d2d2d" stroke="#4ade80" stroke-width="1"/>
+      <circle cx="25" cy="22" r="16" fill="#4ade80"/>
+      <text x="25" y="27" text-anchor="middle" fill="#1a1a1a" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">4</text>
+      <text x="55" y="18" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">render() → Fallback UI</text>
+      <text x="55" y="33" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="10">Muestra interfaz de error amigable</text>
+    </g>
+  </g>
+  
+  <!-- Resultado Final -->
+  <g transform="translate(30, 380)">
+    <rect width="740" height="170" rx="8" fill="#252525" stroke="#4ade80" stroke-width="2"/>
+    <text x="370" y="28" text-anchor="middle" fill="#4ade80" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold">
+      ✓ Resultado: La aplicación sigue funcionando
+    </text>
+    
+    <!-- App final -->
+    <g transform="translate(20, 45)">
+      <rect width="700" height="105" rx="8" fill="#2d2d2d" stroke="#61DAFB" stroke-width="1"/>
+      
+      <!-- Header -->
+      <rect x="15" y="12" width="180" height="28" rx="4" fill="#4ade80"/>
+      <text x="105" y="30" text-anchor="middle" fill="#1a1a1a" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">Header ✓</text>
+      
+      <!-- Fallback UI -->
+      <rect x="220" y="12" width="260" height="80" rx="4" fill="#3178C6"/>
+      <text x="350" y="32" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">Fallback UI</text>
+      <text x="350" y="52" text-anchor="middle" fill="#dbeafe" font-family="Inter, system-ui, sans-serif" font-size="11">😕 Algo salió mal</text>
+      <rect x="300" y="62" width="100" height="22" rx="4" fill="#ffffff"/>
+      <text x="350" y="77" text-anchor="middle" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="bold">🔄 Reintentar</text>
+      
+      <!-- Footer -->
+      <rect x="505" y="12" width="180" height="28" rx="4" fill="#4ade80"/>
+      <text x="595" y="30" text-anchor="middle" fill="#1a1a1a" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">Footer ✓</text>
+    </g>
+  </g>
+  
+  <!-- Leyenda -->
+  <g transform="translate(30, 565)">
+    <text x="0" y="0" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold">Leyenda:</text>
+    <circle cx="80" cy="-3" r="6" fill="#4ade80"/>
+    <text x="92" y="0" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="10">Funciona</text>
+    <circle cx="160" cy="-3" r="6" fill="#ef4444"/>
+    <text x="172" y="0" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="10">Error</text>
+    <circle cx="220" cy="-3" r="6" fill="#3178C6"/>
+    <text x="232" y="0" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="10">Error Boundary</text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowDown" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
+      <polygon points="0 0, 10 0, 5 7" fill="#a0a0a0"/>
+    </marker>
+  </defs>
+</svg>

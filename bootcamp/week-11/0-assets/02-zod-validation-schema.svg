@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Fondo dark -->
+  <rect width="800" height="600" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="400" y="40" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="bold">
+    Zod - Sistema de Validación
+  </text>
+  
+  <!-- Sección Schema Definition -->
+  <g transform="translate(50, 70)">
+    <rect width="320" height="180" rx="8" fill="#2d2d2d" stroke="#3178C6" stroke-width="2"/>
+    <text x="160" y="30" text-anchor="middle" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="bold">
+      Schema Definition
+    </text>
+    
+    <!-- Código -->
+    <text x="20" y="60" fill="#f59e0b" font-family="monospace" font-size="11">const</text>
+    <text x="55" y="60" fill="#ffffff" font-family="monospace" font-size="11">schema = z.object({</text>
+    <text x="30" y="80" fill="#4ade80" font-family="monospace" font-size="11">name:</text>
+    <text x="75" y="80" fill="#ffffff" font-family="monospace" font-size="11">z.string().min(1),</text>
+    <text x="30" y="100" fill="#4ade80" font-family="monospace" font-size="11">email:</text>
+    <text x="80" y="100" fill="#ffffff" font-family="monospace" font-size="11">z.string().email(),</text>
+    <text x="30" y="120" fill="#4ade80" font-family="monospace" font-size="11">age:</text>
+    <text x="65" y="120" fill="#ffffff" font-family="monospace" font-size="11">z.number().min(18),</text>
+    <text x="20" y="140" fill="#ffffff" font-family="monospace" font-size="11">});</text>
+    
+    <text x="20" y="165" fill="#61DAFB" font-family="monospace" font-size="11">type</text>
+    <text x="55" y="165" fill="#ffffff" font-family="monospace" font-size="11">User = z.infer&lt;typeof schema&gt;;</text>
+  </g>
+  
+  <!-- Flecha hacia abajo -->
+  <path d="M210 260 L210 290" stroke="#3178C6" stroke-width="2" marker-end="url(#arrowhead-blue)"/>
+  <text x="240" y="280" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="11">parse()</text>
+  
+  <!-- Input Data -->
+  <g transform="translate(430, 70)">
+    <rect width="320" height="180" rx="8" fill="#2d2d2d" stroke="#f59e0b" stroke-width="2"/>
+    <text x="160" y="30" text-anchor="middle" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="bold">
+      Input Data
+    </text>
+    
+    <!-- Código -->
+    <text x="20" y="60" fill="#f59e0b" font-family="monospace" font-size="11">const</text>
+    <text x="55" y="60" fill="#ffffff" font-family="monospace" font-size="11">userData = {</text>
+    <text x="30" y="85" fill="#4ade80" font-family="monospace" font-size="11">name:</text>
+    <text x="75" y="85" fill="#fca5a5" font-family="monospace" font-size="11">"Juan Pérez"</text>
+    <text x="30" y="105" fill="#4ade80" font-family="monospace" font-size="11">email:</text>
+    <text x="80" y="105" fill="#fca5a5" font-family="monospace" font-size="11">"juan@email.com"</text>
+    <text x="30" y="125" fill="#4ade80" font-family="monospace" font-size="11">age:</text>
+    <text x="60" y="125" fill="#93c5fd" font-family="monospace" font-size="11">25</text>
+    <text x="20" y="145" fill="#ffffff" font-family="monospace" font-size="11">};</text>
+  </g>
+  
+  <!-- Flecha hacia abajo -->
+  <path d="M590 260 L590 290" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead-orange)"/>
+  
+  <!-- Validation Process -->
+  <g transform="translate(200, 300)">
+    <rect width="400" height="100" rx="8" fill="#252525" stroke="#61DAFB" stroke-width="2"/>
+    <text x="200" y="30" text-anchor="middle" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="bold">
+      Proceso de Validación
+    </text>
+    
+    <!-- Steps -->
+    <g transform="translate(30, 50)">
+      <circle cx="15" cy="15" r="15" fill="#3178C6"/>
+      <text x="15" y="20" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">1</text>
+      <text x="45" y="20" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="11">Parse type</text>
+    </g>
+    
+    <g transform="translate(140, 50)">
+      <circle cx="15" cy="15" r="15" fill="#3178C6"/>
+      <text x="15" y="20" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">2</text>
+      <text x="45" y="20" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="11">Validate rules</text>
+    </g>
+    
+    <g transform="translate(265, 50)">
+      <circle cx="15" cy="15" r="15" fill="#3178C6"/>
+      <text x="15" y="20" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">3</text>
+      <text x="45" y="20" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="11">Transform (opt)</text>
+    </g>
+  </g>
+  
+  <!-- Bifurcación -->
+  <path d="M400 400 L400 430" stroke="#61DAFB" stroke-width="2"/>
+  <path d="M400 430 L200 430 L200 460" stroke="#4ade80" stroke-width="2" marker-end="url(#arrowhead-green)"/>
+  <path d="M400 430 L600 430 L600 460" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead-red)"/>
+  
+  <!-- Success -->
+  <g transform="translate(50, 470)">
+    <rect width="300" height="100" rx="8" fill="#2d2d2d" stroke="#4ade80" stroke-width="2"/>
+    <text x="150" y="30" text-anchor="middle" fill="#4ade80" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="bold">
+      ✓ Éxito
+    </text>
+    <text x="20" y="55" fill="#a0a0a0" font-family="monospace" font-size="11">// Retorna datos tipados</text>
+    <text x="20" y="75" fill="#f59e0b" font-family="monospace" font-size="11">const</text>
+    <text x="55" y="75" fill="#ffffff" font-family="monospace" font-size="11">validUser: User = result;</text>
+  </g>
+  
+  <!-- Error -->
+  <g transform="translate(450, 470)">
+    <rect width="300" height="100" rx="8" fill="#2d2d2d" stroke="#ef4444" stroke-width="2"/>
+    <text x="150" y="30" text-anchor="middle" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="bold">
+      ✗ Error
+    </text>
+    <text x="20" y="55" fill="#a0a0a0" font-family="monospace" font-size="11">// Lanza ZodError</text>
+    <text x="20" y="75" fill="#ffffff" font-family="monospace" font-size="11">error.issues = [{</text>
+    <text x="30" y="90" fill="#4ade80" font-family="monospace" font-size="10">path, message, code</text>
+    <text x="20" y="105" fill="#ffffff" font-family="monospace" font-size="11">}]</text>
+  </g>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3178C6"/>
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+  </defs>
+</svg>

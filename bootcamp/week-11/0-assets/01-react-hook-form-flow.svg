@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <!-- Fondo dark -->
+  <rect width="800" height="500" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="400" y="40" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="bold">
+    React Hook Form - Flujo de Datos
+  </text>
+  
+  <!-- Componente Form -->
+  <g transform="translate(50, 80)">
+    <rect width="200" height="100" rx="8" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+    <text x="100" y="30" text-anchor="middle" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold">
+      useForm()
+    </text>
+    <text x="100" y="55" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="11">
+      register, handleSubmit,
+    </text>
+    <text x="100" y="72" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="11">
+      formState, watch, setValue
+    </text>
+  </g>
+  
+  <!-- Flecha 1 -->
+  <path d="M250 130 L310 130" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Inputs -->
+  <g transform="translate(320, 80)">
+    <rect width="160" height="100" rx="8" fill="#2d2d2d" stroke="#4ade80" stroke-width="2"/>
+    <text x="80" y="30" text-anchor="middle" fill="#4ade80" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold">
+      Input Fields
+    </text>
+    <text x="80" y="55" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="11">
+      {...register("field")}
+    </text>
+    <text x="80" y="72" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="11">
+      Uncontrolled refs
+    </text>
+  </g>
+  
+  <!-- Flecha 2 -->
+  <path d="M480 130 L540 130" stroke="#4ade80" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- FormState -->
+  <g transform="translate(550, 80)">
+    <rect width="180" height="100" rx="8" fill="#2d2d2d" stroke="#f59e0b" stroke-width="2"/>
+    <text x="90" y="30" text-anchor="middle" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold">
+      formState
+    </text>
+    <text x="90" y="52" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="11">
+      errors, isDirty, isValid
+    </text>
+    <text x="90" y="69" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="11">
+      isSubmitting, touchedFields
+    </text>
+  </g>
+  
+  <!-- Sección de Validación -->
+  <g transform="translate(50, 220)">
+    <rect width="700" height="120" rx="8" fill="#252525" stroke="#3178C6" stroke-width="1" stroke-dasharray="4"/>
+    <text x="350" y="25" text-anchor="middle" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold">
+      Proceso de Validación
+    </text>
+    
+    <!-- Paso 1 -->
+    <g transform="translate(20, 45)">
+      <circle cx="20" cy="20" r="18" fill="#3178C6"/>
+      <text x="20" y="25" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">1</text>
+      <text x="20" y="58" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="10">onChange</text>
+    </g>
+    
+    <!-- Flecha -->
+    <path d="M60 65 L120 65" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Paso 2 -->
+    <g transform="translate(140, 45)">
+      <circle cx="20" cy="20" r="18" fill="#3178C6"/>
+      <text x="20" y="25" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">2</text>
+      <text x="20" y="58" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="10">resolver</text>
+    </g>
+    
+    <!-- Flecha -->
+    <path d="M180 65 L240 65" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Paso 3 -->
+    <g transform="translate(260, 45)">
+      <circle cx="20" cy="20" r="18" fill="#3178C6"/>
+      <text x="20" y="25" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">3</text>
+      <text x="20" y="58" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="10">validate</text>
+    </g>
+    
+    <!-- Flecha -->
+    <path d="M300 65 L360 65" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Paso 4 -->
+    <g transform="translate(380, 45)">
+      <circle cx="20" cy="20" r="18" fill="#3178C6"/>
+      <text x="20" y="25" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">4</text>
+      <text x="20" y="58" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="10">setError</text>
+    </g>
+    
+    <!-- Flecha -->
+    <path d="M420 65 L480 65" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Paso 5 -->
+    <g transform="translate(500, 45)">
+      <circle cx="20" cy="20" r="18" fill="#3178C6"/>
+      <text x="20" y="25" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">5</text>
+      <text x="20" y="58" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="10">formState</text>
+    </g>
+    
+    <!-- Flecha -->
+    <path d="M540 65 L600 65" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Paso 6 -->
+    <g transform="translate(620, 45)">
+      <circle cx="20" cy="20" r="18" fill="#4ade80"/>
+      <text x="20" y="25" text-anchor="middle" fill="#1a1a1a" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold">6</text>
+      <text x="20" y="58" text-anchor="middle" fill="#a0a0a0" font-family="Inter, system-ui, sans-serif" font-size="10">render</text>
+    </g>
+  </g>
+  
+  <!-- Submit Flow -->
+  <g transform="translate(50, 370)">
+    <rect width="700" height="100" rx="8" fill="#252525" stroke="#ef4444" stroke-width="1" stroke-dasharray="4"/>
+    <text x="350" y="25" text-anchor="middle" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold">
+      handleSubmit() Flow
+    </text>
+    
+    <!-- Submit Box -->
+    <g transform="translate(30, 40)">
+      <rect width="130" height="45" rx="6" fill="#2d2d2d" stroke="#61DAFB" stroke-width="1"/>
+      <text x="65" y="28" text-anchor="middle" fill="#61DAFB" font-family="Inter, system-ui, sans-serif" font-size="11">handleSubmit()</text>
+    </g>
+    
+    <path d="M170 62 L200 62" stroke="#61DAFB" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Validate All -->
+    <g transform="translate(210, 40)">
+      <rect width="130" height="45" rx="6" fill="#2d2d2d" stroke="#f59e0b" stroke-width="1"/>
+      <text x="65" y="28" text-anchor="middle" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="11">Validar todo</text>
+    </g>
+    
+    <path d="M350 62 L380 62" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Decision -->
+    <g transform="translate(390, 35)">
+      <polygon points="50,0 100,27 50,55 0,27" fill="#2d2d2d" stroke="#3178C6" stroke-width="1"/>
+      <text x="50" y="32" text-anchor="middle" fill="#3178C6" font-family="Inter, system-ui, sans-serif" font-size="10">¿Válido?</text>
+    </g>
+    
+    <!-- Si válido -->
+    <path d="M490 62 L530 62" stroke="#4ade80" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <g transform="translate(540, 40)">
+      <rect width="130" height="45" rx="6" fill="#2d2d2d" stroke="#4ade80" stroke-width="1"/>
+      <text x="65" y="28" text-anchor="middle" fill="#4ade80" font-family="Inter, system-ui, sans-serif" font-size="11">onSubmit(data)</text>
+    </g>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+</svg>
