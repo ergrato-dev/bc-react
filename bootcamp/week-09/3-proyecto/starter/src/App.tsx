@@ -1,6 +1,6 @@
 // src/App.tsx
 
-function App() {
+const App: React.FC = () => {
   return (
     <div style={styles.app}>
       <header style={styles.header}>
@@ -21,7 +21,7 @@ function App() {
       </footer>
     </div>
   );
-}
+};
 
 const styles: Record<string, React.CSSProperties> = {
   app: {

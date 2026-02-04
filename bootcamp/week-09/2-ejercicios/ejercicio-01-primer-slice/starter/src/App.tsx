@@ -2,7 +2,7 @@
 
 import { Counter } from './features/counter/Counter';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div style={styles.app}>
       <h1 style={styles.heading}>Redux Toolkit - Ejercicio 01</h1>
@@ -12,7 +12,7 @@ function App() {
       </p>
     </div>
   );
-}
+};
 
 const styles: Record<string, React.CSSProperties> = {
   app: {

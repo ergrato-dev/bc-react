@@ -5,7 +5,7 @@
 
 import PostList from './features/posts/PostList';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="app">
       <header>

@@ -5,7 +5,7 @@
 
 import ProductList from './features/products/ProductList';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="app">
       <header>
@@ -18,6 +18,6 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 export default App;
