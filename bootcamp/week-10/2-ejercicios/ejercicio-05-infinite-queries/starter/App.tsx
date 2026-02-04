@@ -1,6 +1,6 @@
 // import { PostList } from './components/PostList';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div style={{ padding: '2rem', fontFamily: 'system-ui, sans-serif' }}>
       <h1>🚀 React Query - Ejercicio 05</h1>
@@ -13,6 +13,6 @@ function App() {
       <p>Descomenta PostList para comenzar</p>
     </div>
   );
-}
+};
 
 export default App;

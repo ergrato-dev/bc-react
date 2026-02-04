@@ -6,7 +6,7 @@ import { SearchFilter } from './components/SearchFilter';
 
 type View = 'list' | 'detail' | 'create';
 
-function App() {
+const App: React.FC = () => {
   const [view, setView] = useState<View>('list');
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [search, setSearch] = useState('');

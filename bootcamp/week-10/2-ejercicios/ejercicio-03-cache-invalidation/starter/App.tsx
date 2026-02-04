@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ProductList } from './components/ProductList';
 import { ProductDetail } from './components/ProductDetail';
 
-function App() {
+const App: React.FC = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
   return (
@@ -20,6 +20,6 @@ function App() {
       )}
     </div>
   );
-}
+};
 
 export default App;

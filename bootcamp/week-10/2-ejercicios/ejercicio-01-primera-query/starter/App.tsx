@@ -3,7 +3,7 @@
 // ============================================
 import { UserList } from './components/UserList';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div style={{ padding: '2rem', fontFamily: 'system-ui, sans-serif' }}>
       <h1>🚀 React Query - Ejercicio 01</h1>
@@ -12,6 +12,6 @@ function App() {
       <UserList />
     </div>
   );
-}
+};
 
 export default App;
