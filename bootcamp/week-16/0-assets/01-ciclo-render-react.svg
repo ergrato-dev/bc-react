@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="800" height="400" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">
+    Ciclo de Render en React
+  </text>
+  
+  <!-- Fase 1: TRIGGER -->
+  <rect x="50" y="80" width="200" height="260" rx="12" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="150" y="115" fill="#61DAFB" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">
+    1. TRIGGER
+  </text>
+  
+  <!-- Icono trigger -->
+  <circle cx="150" cy="170" r="35" fill="#1a1a1a" stroke="#61DAFB" stroke-width="2"/>
+  <text x="150" y="178" fill="#61DAFB" font-family="system-ui, sans-serif" font-size="24" text-anchor="middle">⚡</text>
+  
+  <!-- Lista trigger -->
+  <text x="150" y="230" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• setState()</text>
+  <text x="150" y="250" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Props nuevas</text>
+  <text x="150" y="270" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Context update</text>
+  <text x="150" y="290" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Parent render</text>
+  
+  <rect x="70" y="310" width="160" height="20" rx="4" fill="#28a745"/>
+  <text x="150" y="324" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Costo: Mínimo</text>
+  
+  <!-- Flecha 1→2 -->
+  <line x1="260" y1="200" x2="290" y2="200" stroke="#61DAFB" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Fase 2: RENDER -->
+  <rect x="300" y="80" width="200" height="260" rx="12" fill="#2d2d2d" stroke="#ffc107" stroke-width="2"/>
+  <text x="400" y="115" fill="#ffc107" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">
+    2. RENDER
+  </text>
+  
+  <!-- Icono render (Virtual DOM) -->
+  <rect x="355" y="140" width="90" height="60" rx="8" fill="#1a1a1a" stroke="#ffc107" stroke-width="2"/>
+  <text x="400" y="165" fill="#ffc107" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Virtual</text>
+  <text x="400" y="182" fill="#ffc107" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">DOM</text>
+  
+  <!-- Lista render -->
+  <text x="400" y="230" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Ejecuta componentes</text>
+  <text x="400" y="250" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Calcula diferencias</text>
+  <text x="400" y="270" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Crea "diff"</text>
+  <text x="400" y="290" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Compara árboles</text>
+  
+  <rect x="320" y="310" width="160" height="20" rx="4" fill="#ffc107"/>
+  <text x="400" y="324" fill="#1a1a1a" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Costo: Puede ser alto</text>
+  
+  <!-- Flecha 2→3 -->
+  <line x1="510" y1="200" x2="540" y2="200" stroke="#ffc107" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Fase 3: COMMIT -->
+  <rect x="550" y="80" width="200" height="260" rx="12" fill="#2d2d2d" stroke="#28a745" stroke-width="2"/>
+  <text x="650" y="115" fill="#28a745" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">
+    3. COMMIT
+  </text>
+  
+  <!-- Icono commit (DOM Real) -->
+  <rect x="605" y="140" width="90" height="60" rx="8" fill="#1a1a1a" stroke="#28a745" stroke-width="2"/>
+  <text x="650" y="165" fill="#28a745" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">DOM</text>
+  <text x="650" y="182" fill="#28a745" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Real</text>
+  
+  <!-- Lista commit -->
+  <text x="650" y="230" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Aplica cambios</text>
+  <text x="650" y="250" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Ejecuta efectos</text>
+  <text x="650" y="270" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Actualiza refs</text>
+  <text x="650" y="290" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">• Layout effects</text>
+  
+  <rect x="570" y="310" width="160" height="20" rx="4" fill="#28a745"/>
+  <text x="650" y="324" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Solo si hay cambios</text>
+  
+  <!-- Leyenda -->
+  <text x="400" y="375" fill="#666666" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">
+    El render NO actualiza el DOM directamente. Solo el commit modifica el DOM real.
+  </text>
+</svg>

@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#61DAFB"/>
+    </marker>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="800" height="550" fill="#1a1a1a"/>
+  
+  <!-- Título -->
+  <text x="400" y="35" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">
+    useMemo vs useCallback
+  </text>
+  
+  <!-- Problema (arriba) -->
+  <rect x="50" y="60" width="700" height="100" rx="12" fill="#2d2d2d" stroke="#dc3545" stroke-width="2"/>
+  <text x="400" y="85" fill="#dc3545" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">
+    ⚠️ El Problema: Referencias Nuevas en Cada Render
+  </text>
+  
+  <!-- Render 1 -->
+  <rect x="80" y="100" width="140" height="45" rx="6" fill="#1a1a1a" stroke="#666666"/>
+  <text x="150" y="118" fill="#888888" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Render 1</text>
+  <text x="150" y="135" fill="#dc3545" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">config → 0x001</text>
+  
+  <!-- Flecha -->
+  <text x="250" y="125" fill="#666666" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">→</text>
+  
+  <!-- Render 2 -->
+  <rect x="280" y="100" width="140" height="45" rx="6" fill="#1a1a1a" stroke="#666666"/>
+  <text x="350" y="118" fill="#888888" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Render 2</text>
+  <text x="350" y="135" fill="#dc3545" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">config → 0x002</text>
+  
+  <!-- Flecha -->
+  <text x="450" y="125" fill="#666666" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">→</text>
+  
+  <!-- Render 3 -->
+  <rect x="480" y="100" width="140" height="45" rx="6" fill="#1a1a1a" stroke="#666666"/>
+  <text x="550" y="118" fill="#888888" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Render 3</text>
+  <text x="550" y="135" fill="#dc3545" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">config → 0x003</text>
+  
+  <!-- Nota -->
+  <text x="680" y="125" fill="#dc3545" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">¡Ref ≠!</text>
+  
+  <!-- useMemo (izquierda) -->
+  <rect x="50" y="180" width="340" height="340" rx="12" fill="#2d2d2d" stroke="#61DAFB" stroke-width="2"/>
+  <text x="220" y="210" fill="#61DAFB" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">
+    useMemo
+  </text>
+  <text x="220" y="230" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">
+    Memoriza VALORES
+  </text>
+  
+  <!-- Diagrama useMemo -->
+  <rect x="80" y="250" width="280" height="80" rx="8" fill="#1a1a1a" stroke="#61DAFB"/>
+  <text x="220" y="275" fill="#61DAFB" font-family="monospace" font-size="11" text-anchor="middle">
+    useMemo(() =&gt; compute(a, b), [a, b])
+  </text>
+  <text x="220" y="295" fill="#888888" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">
+    ↓
+  </text>
+  <text x="220" y="315" fill="#28a745" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">
+    Retorna: valor calculado
+  </text>
+  
+  <!-- Casos de uso useMemo -->
+  <text x="220" y="355" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">
+    Casos de Uso:
+  </text>
+  <text x="220" y="380" fill="#888888" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">
+    ✓ Cálculos costosos (filtros, sorts)
+  </text>
+  <text x="220" y="400" fill="#888888" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">
+    ✓ Objetos pasados como props
+  </text>
+  <text x="220" y="420" fill="#888888" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">
+    ✓ Estabilizar configuraciones
+  </text>
+  
+  <!-- Ejemplo useMemo -->
+  <rect x="70" y="440" width="300" height="60" rx="6" fill="#1a1a1a"/>
+  <text x="220" y="460" fill="#61DAFB" font-family="monospace" font-size="10" text-anchor="middle">
+    const filtered = useMemo(() =&gt;
+  </text>
+  <text x="220" y="478" fill="#61DAFB" font-family="monospace" font-size="10" text-anchor="middle">
+    items.filter(x =&gt; x.active), [items]);
+  </text>
+  
+  <!-- useCallback (derecha) -->
+  <rect x="410" y="180" width="340" height="340" rx="12" fill="#2d2d2d" stroke="#ffc107" stroke-width="2"/>
+  <text x="580" y="210" fill="#ffc107" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">
+    useCallback
+  </text>
+  <text x="580" y="230" fill="#888888" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">
+    Memoriza FUNCIONES
+  </text>
+  
+  <!-- Diagrama useCallback -->
+  <rect x="440" y="250" width="280" height="80" rx="8" fill="#1a1a1a" stroke="#ffc107"/>
+  <text x="580" y="275" fill="#ffc107" font-family="monospace" font-size="11" text-anchor="middle">
+    useCallback((x) =&gt; doSth(x), [dep])
+  </text>
+  <text x="580" y="295" fill="#888888" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">
+    ↓
+  </text>
+  <text x="580" y="315" fill="#28a745" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">
+    Retorna: función memorizada
+  </text>
+  
+  <!-- Casos de uso useCallback -->
+  <text x="580" y="355" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">
+    Casos de Uso:
+  </text>
+  <text x="580" y="380" fill="#888888" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">
+    ✓ Handlers para hijos con memo
+  </text>
+  <text x="580" y="400" fill="#888888" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">
+    ✓ Callbacks en dependencias
+  </text>
+  <text x="580" y="420" fill="#888888" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">
+    ✓ Funciones pasadas a useEffect
+  </text>
+  
+  <!-- Ejemplo useCallback -->
+  <rect x="430" y="440" width="300" height="60" rx="6" fill="#1a1a1a"/>
+  <text x="580" y="460" fill="#ffc107" font-family="monospace" font-size="10" text-anchor="middle">
+    const handleClick = useCallback(
+  </text>
+  <text x="580" y="478" fill="#ffc107" font-family="monospace" font-size="10" text-anchor="middle">
+    (id) =&gt; setItems(...), []);
+  </text>
+</svg>
