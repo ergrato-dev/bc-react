@@ -1068,7 +1068,7 @@ Cuando trabajes en este proyecto:
 
 - **Repositorio**: https://github.com/epti-dev/bc-react
 - **Documentación general**: [\_docs/README.md](_docs/README.md)
-- **Primera semana**: [bootcamp/week-01/README.md](bootcamp/week-01/README.md)
+- **Primera semana**: [bootcamp/week-01-fundamentos_typescript/README.md](bootcamp/week-01-fundamentos_typescript/README.md)
 
 ---
 

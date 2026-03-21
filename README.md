@@ -159,7 +159,7 @@ Extensiones recomendadas:
 ### 3. Navegar a la Semana Actual
 
 ```bash
-cd bootcamp/week-01
+cd bootcamp/week-01-fundamentos_typescript
 ```
 
 ### 4. Seguir las Instrucciones
@@ -293,7 +293,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 </p>
 
 <p align="center">
-  <a href="bootcamp/week-01">📅 Comenzar Semana 1</a> •
+  <a href="bootcamp/week-01-fundamentos_typescript">📅 Comenzar Semana 1</a> •
   <a href="_docs">📖 Ver Documentación</a> •
   <a href="https://github.com/ergrato-dev/bc-react/issues">🐛 Reportar Issue</a> •
   <a href="CONTRIBUTING.md">🤝 Contribuir</a>
