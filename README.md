@@ -261,6 +261,19 @@ Cada aprendiz recibe un **dominio único asignado por el instructor**:
 
 ---
 
+## ⚠️ Exención de Responsabilidad
+
+Este repositorio es un **recurso educativo de uso libre** creado con fines de aprendizaje y formación en desarrollo web.
+
+- **Sin garantía de resultados**: La finalización del bootcamp no garantiza empleo, certificación oficial ni ningún resultado profesional específico.
+- **Contenido sujeto a cambios**: Las tecnologías, versiones y herramientas descritas evolucionan constantemente. El contenido puede no reflejar el estado más actual de las librerías y frameworks utilizados.
+- **Uso bajo propia responsabilidad**: El uso del material, ejercicios, ejemplos de código y configuraciones incluidas en este repositorio es responsabilidad exclusiva de quien los utilice. Los autores no se hacen responsables de daños, pérdidas o inconvenientes derivados de su uso.
+- **No es asesoramiento profesional**: El contenido no constituye asesoramiento legal, financiero, de seguridad informática ni de ningún otro tipo de carácter profesional.
+- **Código de ejemplo**: Los fragmentos de código incluidos son ilustrativos y educativos. No se recomienda su uso directo en entornos de producción sin revisión y adaptación adecuadas.
+- **Marcas registradas**: Los nombres de productos, frameworks y herramientas mencionados pertenecen a sus respectivos propietarios. Su mención es únicamente con fines educativos y no implica afiliación ni respaldo.
+
+---
+
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
