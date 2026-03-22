@@ -257,6 +257,19 @@ Contributions are welcome! This is an open-source educational project.
 
 ---
 
+## ⚠️ Disclaimer
+
+This repository is a **free educational resource** created for learning and training purposes in web development.
+
+- **No guarantee of results**: Completion of the bootcamp does not guarantee employment, official certification, or any specific professional outcome.
+- **Content subject to change**: The technologies, versions, and tools described are constantly evolving. The content may not reflect the most current state of the libraries and frameworks used.
+- **Use at your own risk**: The use of the material, exercises, code examples, and configurations included in this repository is the sole responsibility of the user. The authors are not liable for any damages, losses, or inconveniences arising from its use.
+- **Not professional advice**: The content does not constitute legal, financial, cybersecurity, or any other type of professional advice.
+- **Sample code**: Code snippets included are illustrative and educational. Direct use in production environments without proper review and adaptation is not recommended.
+- **Trademarks**: Product names, frameworks, and tools mentioned belong to their respective owners. Their mention is solely for educational purposes and does not imply affiliation or endorsement.
+
+---
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
