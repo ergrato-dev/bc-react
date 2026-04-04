@@ -4,12 +4,11 @@
   <img src="_assets/bootcamp-header.svg" alt="Bootcamp React + TypeScript" />
 </p>
 
-[![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 [![20 Semanas](https://img.shields.io/badge/20_Semanas-160_Horas-green.svg)](.)
 [![React 18+](https://img.shields.io/badge/React-18+-61DAFB.svg?logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6.svg?logo=typescript)](https://www.typescriptlang.org/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg?logo=docker)](https://www.docker.com/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 <p align="center">
   <a href="README_EN.md"><img src="https://img.shields.io/badge/🇺🇸_English-0969DA?style=for-the-badge&logoColor=white" alt="English Version"></a>
@@ -227,32 +226,6 @@ Cada aprendiz recibe un **dominio único asignado por el instructor**:
 
 ---
 
-## 🤝 Contribuir
-
-¡Las contribuciones son bienvenidas! Este es un proyecto educativo de código abierto.
-
-### Cómo Contribuir
-
-1. Lee la [Guía de Contribución](CONTRIBUTING.md)
-2. Revisa el [Código de Conducta](CODE_OF_CONDUCT.md)
-3. Fork del repositorio
-4. Crea tu rama (`git checkout -b feature/nueva-funcionalidad`)
-5. Commit con [Conventional Commits](https://www.conventionalcommits.org/) (`git commit -m 'feat: add new exercise'`)
-6. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-7. Abre un Pull Request
-
-### 📋 Áreas de Contribución
-
-- ✨ Ejercicios adicionales
-- 📚 Mejoras en documentación
-- 🐛 Corrección de errores
-- 🎨 Recursos visuales (diagramas SVG)
-- 🌐 Traducciones
-- 📹 Videos tutoriales
-- 🐳 Ejemplos Docker
-
----
-
 ## 📞 Soporte
 
 - 📧 Email: contacto@bootcamp.dev
@@ -276,7 +249,12 @@ Este repositorio es un **recurso educativo de uso libre** creado con fines de ap
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la licencia [CC BY-NC-SA 4.0](LICENSE) (Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International).
+
+Puedes compartir y adaptar el material libremente, siempre que:
+- Des crédito al autor original (**Atribución**)
+- No lo uses con fines comerciales (**NonCommercial**)
+- Distribuyas las adaptaciones bajo la misma licencia (**ShareAlike**)
 
 ---
 
@@ -294,9 +272,6 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 ## 📚 Documentación Adicional
 
 - [🤖 Instrucciones para Copilot](.github/copilot-instructions.md)
-- [🤝 Guía de Contribución](CONTRIBUTING.md)
-- [📜 Código de Conducta](CODE_OF_CONDUCT.md)
-- [🔒 Política de Seguridad](SECURITY.md)
 
 ---
 
@@ -308,8 +283,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 <p align="center">
   <a href="bootcamp/week-01-fundamentos_typescript">📅 Comenzar Semana 1</a> •
   <a href="_docs">📖 Ver Documentación</a> •
-  <a href="https://github.com/ergrato-dev/bc-react/issues">🐛 Reportar Issue</a> •
-  <a href="CONTRIBUTING.md">🤝 Contribuir</a>
+  <a href="https://github.com/ergrato-dev/bc-react/issues">🐛 Reportar Issue</a>
 </p>
 
 <p align="center">

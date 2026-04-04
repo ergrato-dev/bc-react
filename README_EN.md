@@ -1,33 +1,36 @@
-# 🚀 React + TypeScript Bootcamp
+# 🚀 Bootcamp React + TypeScript
 
-[![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+<p align="center">
+  <img src="_assets/bootcamp-header.svg" alt="Bootcamp React + TypeScript" />
+</p>
+
+[![License CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 [![20 Weeks](https://img.shields.io/badge/20_Weeks-160_Hours-green.svg)](.)
 [![React 18+](https://img.shields.io/badge/React-18+-61DAFB.svg?logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6.svg?logo=typescript)](https://www.typescriptlang.org/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg?logo=docker)](https://www.docker.com/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 <p align="center">
-  <a href="README.md"><img src="https://img.shields.io/badge/🇪🇸_Español-DC143C?style=for-the-badge&logoColor=white" alt="Spanish Version"></a>
+  <a href="README.md"><img src="https://img.shields.io/badge/🇪🇸_Español-0969DA?style=for-the-badge&logoColor=white" alt="Versión en Español"></a>
 </p>
 
 ---
 
 ## 📋 Description
 
-Intensive **20-week** (5-month) bootcamp designed to take developers with **intermediate JavaScript** to **Mid-Level in React + TypeScript**.
+Intensive **20-week** (5-month) bootcamp designed to take developers with **intermediate JavaScript** knowledge to **Mid-Level React + TypeScript**.
 
-Practical approach with **Project-Based Learning (PBL)**, **Unique Domains** (anti-copy policy), and **100% containerization with Docker** for production deployments.
+Hands-on approach using **Project-Based Learning (PBL)**, **Unique Domains** (anti-plagiarism policy), and **100% Docker containerization** for production deployments.
 
-### 🎯 Learning Objectives
+### 🎯 Learning Outcomes
 
 By the end of the bootcamp, students will be able to:
 
 - ✅ Apply TypeScript in professional React applications
-- ✅ Build complete React applications with functional components and modern hooks
+- ✅ Build complete React apps with functional components and modern hooks
 - ✅ Manage global state with Zustand and Redux Toolkit
-- ✅ Implement data fetching with React Query and caching
-- ✅ Create responsive interfaces with modern CSS and Tailwind CSS
+- ✅ Implement data fetching with React Query and cache management
+- ✅ Build responsive interfaces with modern CSS and Tailwind CSS
 - ✅ Write automated tests with Vitest and React Testing Library
 - ✅ Apply design patterns and clean architecture in React
 - ✅ Optimize performance (memoization, lazy loading, code splitting)
@@ -35,14 +38,14 @@ By the end of the bootcamp, students will be able to:
 - ✅ Work with REST and GraphQL APIs
 - ✅ Containerize and deploy React applications with Docker
 - ✅ Implement CI/CD with Docker in production
-- ✅ Follow best practices for accessibility (a11y) and SEO
+- ✅ Follow accessibility (a11y) and SEO best practices
 
 ### 🚀 Why This Bootcamp?
 
 > **Modern React + TypeScript from day 1** — No slow transitions, just current best practices (2026).
 
-- 🎯 **Results-focused**: Each project is an evaluable portfolio piece
-- 🏛️ **Unique domains**: Each student works on their own domain (library, pharmacy, etc.)
+- 🎯 **Results-oriented**: Every project is an evaluable portfolio item
+- 🏛️ **Unique domains**: Each learner works on their own domain (library, pharmacy, etc.)
 - 🐳 **Docker First**: 100% containerized from week 1
 - ⚡ **Modern stack**: Vite, React 18+, strict TypeScript, testing from day 1
 - 👥 **Community-driven**: Code reviews, pair programming, live coding
@@ -51,16 +54,16 @@ By the end of the bootcamp, students will be able to:
 
 ## 🗓️ Bootcamp Structure
 
-| Stage                          | Weeks     | Hours        | Content                           |
-| ------------------------------ | --------- | ------------ | --------------------------------- |
-| **1. TypeScript Fundamentals** | 1         | 8h           | Types, interfaces, generics       |
-| **2. React Fundamentals**      | 2-6       | 40h          | Components, hooks, Context API    |
-| **3. Intermediate React**      | 7-11      | 40h          | Router, global state, React Query |
-| **4. Styling & UI**            | 12-13     | 16h          | Tailwind CSS, animations          |
-| **5. Testing**                 | 14-15     | 16h          | Vitest, Testing Library           |
-| **6. Performance**             | 16-17     | 16h          | Optimization, advanced patterns   |
-| **7. Final Project + Docker**  | 18-20     | 24h          | Full-stack, Docker, deployment    |
-|                                | **TOTAL** | **20 weeks** | **160 hours**                     |
+| Stage                          | Weeks     | Hours          | Content                            |
+| ------------------------------ | --------- | -------------- | ---------------------------------- |
+| **1. TypeScript Fundamentals** | 1         | 8h             | Types, interfaces, generics        |
+| **2. React Fundamentals**      | 2–6       | 40h            | Components, hooks, Context API     |
+| **3. Intermediate React**      | 7–11      | 40h            | Router, global state, React Query  |
+| **4. Styling & UI**            | 12–13     | 16h            | Tailwind CSS, animations           |
+| **5. Testing**                 | 14–15     | 16h            | Vitest, Testing Library            |
+| **6. Performance**             | 16–17     | 16h            | Optimization, advanced patterns    |
+| **7. Final Project + Docker**  | 18–20     | 24h            | Full-stack, Docker, deployment     |
+|                                | **TOTAL** | **20 weeks**   | **160 hours**                      |
 
 ---
 
@@ -70,49 +73,49 @@ Each week includes:
 
 ```
 bootcamp/week-XX/
-├── README.md                   # Description and objectives
-├── rubrica-evaluacion.md       # Evaluation criteria
+├── README.md                   # Description and learning goals
+├── rubrica-evaluacion.md       # Evaluation rubric
 ├── 0-assets/                   # Images and diagrams
-├── 1-teoria/                   # Theoretical material
+├── 1-teoria/                   # Theory material
 ├── 2-ejercicios/               # Guided exercises (commented code)
-├── 3-proyecto/                 # Project with TODOs
+├── 3-proyecto/                 # Weekly project with TODOs
 ├── 4-recursos/                 # Additional resources
-│   ├── ebooks-free/            # Free eBooks
+│   ├── ebooks-free/            # Free e-books
 │   ├── videografia/            # Videos and tutorials
 │   └── webgrafia/              # Links and documentation
-└── 5-glosario/                 # Key terms (A-Z)
+└── 5-glosario/                 # Key terms (A–Z)
     └── README.md
 ```
 
 ### 🔑 Key Components
 
-- 📖 **Theory**: Fundamental concepts with real-world examples
+- 📖 **Theory**: Core concepts with real-world examples
 - 💻 **Guided Exercises**: Step-by-step tutorials (commented code to uncomment)
-- 📝 **Weekly Project**: Implementation in assigned unique domain
-- 🧪 **Assessment**: Evidence of knowledge, performance, and product
-- 📚 **Resources**: Glossaries, references, videos, eBooks
+- 📝 **Weekly Project**: Implementation in the learner's assigned unique domain
+- 🧪 **Evaluation**: Knowledge, performance, and product evidence
+- 📚 **Resources**: Glossaries, references, videos, e-books
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Component                 | Version  | Description                  |
-| ------------------------- | -------- | ---------------------------- |
-| **JavaScript**            | ES2023   | Base language                |
-| **TypeScript**            | 5.x      | Type safety                  |
-| **React**                 | 18+      | UI framework                 |
-| **Vite**                  | 5+       | Build tool (fast HMR)        |
-| **Zustand**               | -        | Global state (lightweight)   |
-| **Redux Toolkit**         | -        | Global state (alternative)   |
-| **React Query**           | TanStack | Server state management      |
-| **React Router**          | v6       | Routing                      |
-| **React Hook Form**       | -        | Form management              |
-| **Zod**                   | -        | Type validation              |
-| **Vitest**                | -        | Fast testing                 |
-| **React Testing Library** | -        | Component testing            |
-| **Tailwind CSS**          | 3+       | Utility-first CSS            |
-| **Docker**                | 20+      | Containerization             |
-| **pnpm / yarn**           | -        | Package managers (❌ NO npm) |
+| Component                 | Version  | Description                      |
+| ------------------------- | -------- | -------------------------------- |
+| **JavaScript**            | ES2023   | Base language                    |
+| **TypeScript**            | 5.x      | Type safety                      |
+| **React**                 | 18+      | UI framework                     |
+| **Vite**                  | 5+       | Build tool (fast HMR)            |
+| **Zustand**               | —        | Lightweight global state         |
+| **Redux Toolkit**         | —        | Global state (alternative)       |
+| **React Query**           | TanStack | Server state management          |
+| **React Router**          | v6       | Routing                          |
+| **React Hook Form**       | —        | Form management                  |
+| **Zod**                   | —        | Schema validation                |
+| **Vitest**                | —        | Fast unit testing                |
+| **React Testing Library** | —        | Component testing                |
+| **Tailwind CSS**          | 3+       | Utility-first CSS                |
+| **Docker**                | 20+      | Containerization                 |
+| **pnpm / yarn**           | —        | Package managers (❌ NO npm)     |
 
 ---
 
@@ -120,7 +123,7 @@ bootcamp/week-XX/
 
 ### Prerequisites
 
-- **Node.js** 24 LTS (recommended for development tools)
+- **Node.js** 24 LTS (recommended for dev tooling)
 - **Git** for version control
 - **Docker** 20+ (for containerization)
 - **VS Code** (recommended) with included extensions
@@ -152,13 +155,13 @@ Recommended extensions:
 - **TypeScript Vue Plugin** (Vue.vscode-typescript-vue-plugin)
 - **Thunder Client** (rangav.vscode-thunder-client)
 
-### 3. Navigate to Current Week
+### 3. Navigate to the Current Week
 
 ```bash
 cd bootcamp/week-01-fundamentos_typescript
 ```
 
-### 4. Follow Instructions
+### 4. Follow the Instructions
 
 Each week contains a `README.md` with detailed instructions.
 
@@ -166,92 +169,65 @@ Each week contains a `README.md` with detailed instructions.
 
 ## 📊 Learning Methodology
 
-### Didactic Strategies
+### Teaching Strategies
 
 - 🎯 **Project-Based Learning (PBL)**: Weekly integrative projects
-- 🏛️ **Unique Domains**: Each student applies concepts to their assigned domain (anti-copy)
-- 🧩 **Deliberate Practice**: Incremental exercises with increasing difficulty
-- 🔄 **Coding Challenges**: Real-world problems
-- 👥 **Code Review**: Peer code review
-- 🎮 **Live Coding**: Live programming sessions
+- 🏛️ **Unique Domains**: Each learner applies concepts to their assigned domain (anti-plagiarism)
+- 🧩 **Deliberate Practice**: Incrementally complex exercises
+- 🔄 **Coding Challenges**: Real-world problem solving
+- 👥 **Code Review**: Peer code review sessions
+- 🎮 **Live Coding**: Real-time programming sessions
 - 🐳 **Docker First**: Containerization from the start
 
 ### Time Distribution (8h/week)
 
-- **Theory**: 2-2.5 hours
-- **Guided Exercises**: 3-3.5 hours
-- **Weekly Project**: 2-2.5 hours
+- **Theory**: 2–2.5 hours
+- **Guided Exercises**: 3–3.5 hours
+- **Weekly Project**: 2–2.5 hours
 
-### Assessment
+### Evaluation
 
 Each week includes **three types of evidence**:
 
 1. **Knowledge 🧠** (30%): Quizzes and theoretical assessments
 2. **Performance 💪** (40%): Practical exercises and code reviews
-3. **Product 📦** (30%): Deliverable functional project
+3. **Product 📦** (30%): Functional deliverable project
 
-**Approval criteria:**
+**Passing criteria:**
 
-- Minimum **70%** in each type of evidence
-- Functional and well-documented code
+- Minimum **70%** on each evidence type
+- Functional, well-documented code
 - Tests passing (when applicable)
-- **Implementation coherent with assigned domain**
-- **Originality**: No copying between students
+- **Implementation consistent with assigned domain**
+- **Originality**: No copying between learners
 
 ---
 
-## 🏛️ Unique Domains Policy (Anti-Copy)
+## 🏛️ Unique Domains Policy (Anti-Plagiarism)
 
-Each student receives a **unique domain assigned by the instructor**:
+Each learner receives a **unique domain assigned by the instructor**:
 
 **Domain examples:**
-📖 Library, 💊 Pharmacy, 🏋️ Gym, 🏫 School, 🏬 Pet Store, 🍽️ Restaurant, 🏦 Bank, 🚕 Taxi Agency, 🏥 Hospital, 🎥 Cinema, 🏞️ Hotel, ✈️ Travel Agency, 🏎️ Car Dealership, 👗 Clothing Store, 🛠️ Mechanic Shop, and more...
+📖 Library, 💊 Pharmacy, 🏋️ Gym, 🏫 School, 🏬 Pet store, 🍽️ Restaurant, 🏦 Bank, 🚕 Taxi agency, 🏥 Hospital, 🎥 Cinema, 🏞️ Hotel, ✈️ Travel agency, 🏎️ Car dealership, 👗 Clothing store, 🛠️ Repair shop, and more...
 
-**Objective:**
+**Purpose:**
 
-- ✅ Prevent plagiarism between students
+- ✅ Prevent copying between students
 - ✅ Encourage original implementations
 - ✅ Apply general concepts to specific contexts
 - ✅ Develop abstraction and adaptation skills
 
 **Instructor responsibilities:**
 
-1. Assign a unique domain to each student at startup
-2. Maintain a registry of assigned domains
-3. Do not repeat domains in the same group
-4. Validate coherence with domain in evaluations
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! This is an open-source educational project.
-
-### How to Contribute
-
-1. Read the [Contribution Guide](CONTRIBUTING.md)
-2. Review the [Code of Conduct](CODE_OF_CONDUCT.md)
-3. Fork the repository
-4. Create your branch (`git checkout -b feature/new-feature`)
-5. Commit with [Conventional Commits](https://www.conventionalcommits.org/) (`git commit -m 'feat: add new exercise'`)
-6. Push to the branch (`git push origin feature/new-feature`)
-7. Open a Pull Request
-
-### 📋 Contribution Areas
-
-- ✨ Additional exercises
-- 📚 Documentation improvements
-- 🐛 Bug fixes
-- 🎨 Visual resources (SVG diagrams)
-- 🌐 Translations
-- 📹 Video tutorials
-- 🐳 Docker examples
+1. Assign a unique domain to each learner at the start
+2. Keep a record of assigned domains
+3. Do not repeat domains within the same group
+4. Validate domain coherence during evaluations
 
 ---
 
 ## 📞 Support
 
-- 📧 Email: contact@bootcamp.dev
 - 💬 Discussions: [GitHub Discussions](https://github.com/ergrato-dev/bc-react/discussions)
 - 🐛 Issues: [GitHub Issues](https://github.com/ergrato-dev/bc-react/issues)
 
@@ -259,60 +235,56 @@ Contributions are welcome! This is an open-source educational project.
 
 ## ⚠️ Disclaimer
 
-This repository is a **free educational resource** created for learning and training purposes in web development.
+This repository is a **free educational resource** created for learning and training in web development.
 
-- **No guarantee of results**: Completion of the bootcamp does not guarantee employment, official certification, or any specific professional outcome.
+- **No results guaranteed**: Completing the bootcamp does not guarantee employment, official certification, or any specific professional outcome.
 - **Content subject to change**: The technologies, versions, and tools described are constantly evolving. The content may not reflect the most current state of the libraries and frameworks used.
-- **Use at your own risk**: The use of the material, exercises, code examples, and configurations included in this repository is the sole responsibility of the user. The authors are not liable for any damages, losses, or inconveniences arising from its use.
+- **Use at your own risk**: The use of the material, exercises, code examples, and configurations included in this repository is the sole responsibility of the user. The authors are not liable for any damages, losses, or inconveniences arising from their use.
 - **Not professional advice**: The content does not constitute legal, financial, cybersecurity, or any other type of professional advice.
-- **Sample code**: Code snippets included are illustrative and educational. Direct use in production environments without proper review and adaptation is not recommended.
-- **Trademarks**: Product names, frameworks, and tools mentioned belong to their respective owners. Their mention is solely for educational purposes and does not imply affiliation or endorsement.
+- **Example code**: The code snippets included are illustrative and educational. Direct use in production environments without proper review and adaptation is not recommended.
+- **Trademarks**: The names of products, frameworks, and tools mentioned belong to their respective owners. Their mention is solely for educational purposes and does not imply affiliation or endorsement.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under [CC BY-NC-SA 4.0](LICENSE) (Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International).
+
+You are free to share and adapt this material, provided that you:
+- Give appropriate credit to the original author (**Attribution**)
+- Do not use it for commercial purposes (**NonCommercial**)
+- Distribute adaptations under the same license (**ShareAlike**)
 
 ---
 
-## 🏆 Acknowledgments
+## 🏆 Acknowledgements
 
 - [React Docs](https://react.dev/) — For the best React documentation
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/) — Official documentation
-- [MDN Web Docs](https://developer.mozilla.org/) — Standard web reference
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/) — Official docs
+- [MDN Web Docs](https://developer.mozilla.org/) — Web standard reference
 - [Vite](https://vitejs.dev/) — Modern build tool
 - [Docker](https://www.docker.com/) — Containerization
-- React/TypeScript Community — For resources and examples
+- React/TypeScript community — For the resources and examples
 
 ---
 
 ## 📚 Additional Documentation
 
 - [🤖 Copilot Instructions](.github/copilot-instructions.md)
-- [🤝 Contribution Guide](CONTRIBUTING.md)
-- [📜 Code of Conduct](CODE_OF_CONDUCT.md)
-- [🔒 Security Policy](SECURITY.md)
 
 ---
 
 <p align="center">
-  <strong>🎓 React + TypeScript Bootcamp</strong><br>
-  <em>From intermediate JavaScript to Mid-Level React developer in 5 months</em>
+  <strong>🎓 Bootcamp React + TypeScript</strong><br>
+  <em>From intermediate JavaScript to React Mid-Level developer in 5 months</em>
 </p>
 
 <p align="center">
   <a href="bootcamp/week-01-fundamentos_typescript">📅 Start Week 1</a> •
   <a href="_docs">📖 View Documentation</a> •
-  <a href="https://github.com/ergrato-dev/bc-react/issues">🐛 Report Issue</a> •
-  <a href="CONTRIBUTING.md">🤝 Contribute</a>
+  <a href="https://github.com/ergrato-dev/bc-react/issues">🐛 Report an Issue</a>
 </p>
 
 <p align="center">
   Made with ❤️ for the developer community
 </p>
-
----
-
-_Last updated: January 2026_  
-_Version: 1.0_
