@@ -958,21 +958,74 @@ Cuando trabajes en este proyecto:
 
 3. **Gestión de Paquetes**
    - ❌ **NUNCA usar `npm`** para instalar paquetes
-   - ✅ **SOLO usar `pnpm` o `yarn`** como gestores de paquetes
+   - ✅ **SOLO usar `pnpm`** como gestor de paquetes
    - Razón: Mejor rendimiento, gestión de dependencias más eficiente
    - Comandos recomendados:
 
      ```bash
      # Instalar dependencias
      pnpm install
-     # o
-     yarn install
 
-     # Agregar paquete
-     pnpm add <paquete>
-     # o
-     yarn add <paquete>
+     # Agregar paquete (SIEMPRE con versión exacta)
+     pnpm add <paquete>@<version-exacta>
      ```
+
+4. **🔐 REGLA DE ORO: Versiones Exactas (Pinning)**
+
+   > **PROHIBIDO usar `^` (caret) o `~` (tilde) o `>=` en `package.json`.**
+
+   - ❌ `"react": "^18.3.1"` — permite actualizaciones no supervisadas
+   - ❌ `"vite": "~6.0.0"` — permite actualizaciones de patch no auditadas
+   - ❌ `"typescript": ">=5.0.0"` — completamente abierto
+   - ✅ `"react": "18.3.1"` — versión exacta, reproducible y auditable
+
+   **¿Por qué?**
+   - Los rangos de versión permiten que un `pnpm install` traiga código diferente en distintos momentos
+   - CVEs se introducen en actualizaciones menores/patch sin que el desarrollador lo note
+   - Las versiones exactas garantizan builds reproducibles (misma versión hoy y en 6 meses)
+   - Hace auditorías de seguridad concretas y trazables
+
+   **Versiones canónicas del bootcamp (Abril 2026):**
+
+   | Paquete | Versión Pinned | CVEs mitigados |
+   |---|---|---|
+   | `react` / `react-dom` | `18.3.1` | — |
+   | `typescript` | `5.8.3` | — |
+   | `vite` (rama 5.x) | `5.4.21` | CVE-2024-23331, CVE-2024-31207, CVE-2024-45811, CVE-2024-45812, CVE-2025-30208 |
+   | `vite` (rama 6.x) | `6.4.1` | CVE-2025-30208, CVE-2025-31125 |
+   | `@vitejs/plugin-react` | `4.7.0` | — |
+   | `@vitejs/plugin-react-swc` | `3.11.0` | — |
+   | `@types/react` | `18.3.28` | — |
+   | `@types/react-dom` | `18.3.7` | — |
+   | `react-router-dom` | `6.30.3` | — |
+   | `zustand` | `4.5.7` | — |
+   | `@reduxjs/toolkit` | `2.11.2` | — |
+   | `react-redux` | `9.2.0` | — |
+   | `@tanstack/react-query` | `5.96.2` | — |
+   | `@tanstack/react-query-devtools` | `5.96.2` | — |
+   | `react-hook-form` | `7.72.1` | — |
+   | `@hookform/resolvers` | `3.10.0` | — |
+   | `zod` | `3.25.76` | — |
+   | `vitest` | `2.1.9` | — |
+   | `@vitest/coverage-v8` | `2.1.9` | — |
+   | `@testing-library/react` | `16.3.2` | — |
+   | `@testing-library/jest-dom` | `6.9.1` | — |
+   | `@testing-library/user-event` | `14.6.1` | — |
+   | `msw` | `2.12.14` | — |
+   | `jsdom` | `29.0.1` | CVE-2024-21488 |
+   | `tsx` | `4.21.0` | — |
+   | `eslint` | `8.57.1` | — |
+   | `eslint-plugin-react-hooks` | `4.6.2` | — |
+   | `eslint-plugin-react-refresh` | `0.5.2` | — |
+   | `@typescript-eslint/eslint-plugin` | `6.21.0` | — |
+   | `@typescript-eslint/parser` | `6.21.0` | — |
+
+   **Procedimiento de actualización:**
+   1. Auditar CVEs con `pnpm audit`
+   2. Revisar changelogs antes de cambiar versión
+   3. Actualizar manualmente la versión exacta en `package.json`
+   4. Ejecutar `pnpm install` y verificar que tests pasan
+   5. Hacer commit con tipo `chore(deps): bump <paquete> X.Y.Z → A.B.C`
 
 4. **Build Tool**
    - ✅ **USAR Vite** como build tool para proyectos React
