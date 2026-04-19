@@ -122,6 +122,7 @@ bootcamp/week-*/3-proyecto/solution/
 _temp/
 _backup/
 _drafts/
+*_pdf
 
 # ============================================
 # Storybook
