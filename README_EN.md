@@ -1,7 +1,7 @@
 # 🚀 Bootcamp React + TypeScript
 
 <p align="center">
-  <img src="_assets/bootcamp-header.svg" alt="Bootcamp React + TypeScript" />
+  <img src="assets/bootcamp-header.svg" alt="Bootcamp React + TypeScript" />
 </p>
 
 [![License CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
@@ -281,7 +281,7 @@ You are free to share and adapt this material, provided that you:
 
 <p align="center">
   <a href="bootcamp/week-01-fundamentos_typescript">📅 Start Week 1</a> •
-  <a href="_docs">📖 View Documentation</a> •
+  <a href="docs">📖 View Documentation</a> •
   <a href="https://github.com/ergrato-dev/bc-react/issues">🐛 Report an Issue</a>
 </p>
 
