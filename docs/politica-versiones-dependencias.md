@@ -22,7 +22,7 @@
 {
   "dependencies": {
     "react": "18.3.1",
-    "vite": "6.4.1",
+    "vite": "6.4.2",
     "typescript": "5.8.3"
   }
 }
@@ -54,9 +54,20 @@ Los rangos de versión permiten que un `pnpm install` realizado hoy descargue un
 | CVE-2024-31207 | `vite < 5.2.9` | 5.3 | Bypass de restricciones de sistema de archivos | `5.4.21` |
 | CVE-2024-45811 | `vite < 5.4.6` | 6.5 | DNS rebinding — ejecución remota de código vía dev server | `5.4.21` |
 | CVE-2024-45812 | `vite < 5.4.6` | 6.5 | Ejecución de código arbitrario vía WebSocket | `5.4.21` |
-| CVE-2025-30208 | `vite < 5.4.18`, `vite 6.x < 6.2.3` | 5.3 | Bypass de `server.fs.deny` vía `?inline&direct` | `5.4.21` / `6.4.1` |
-| CVE-2025-31125 | `vite 6.x < 6.2.4` | — | Bypass de restricciones de archivos vía URL | `6.4.1` |
+| CVE-2025-30208 | `vite < 5.4.18`, `vite 6.x < 6.2.3` | 5.3 | Bypass de `server.fs.deny` vía `?inline&direct` | `5.4.21` / `6.4.2` |
+| CVE-2025-31125 | `vite 6.x < 6.2.4` | — | Bypass de restricciones de archivos vía URL | `6.4.2` |
 | CVE-2024-21488 | `jsdom < 24.0.0` | 6.1 | XSS vía SVG embebido en contenido HTML | `29.0.1` |
+
+## CVEs mitigados en auditoría de seguimiento (Julio 2026)
+
+| CVE | Paquete afectado | CVSS | Descripción | Versión segura |
+|---|---|---|---|---|
+| CVE-2026-39363 | `vite 6.0.0–6.4.1` | 8.2 | Lectura arbitraria de archivos vía WebSocket del dev server (`fetchModule` sin `server.fs`) | `6.4.2` |
+| CVE-2026-39364 | `vite 6.0.0–6.4.1` | Alta | Bypass de `server.fs.deny` vía query params (`?raw`, `?import&url`) | `6.4.2` |
+| CVE-2026-39365 | `vite 6.0.0–6.4.1` | Alta | Path traversal en manejo de `.map` bypassa `server.fs.strict` | `6.4.2` |
+| CVE-2026-40181 | `react-router-dom 6.7.0–6.30.3` | 6.6 | Open redirect: paths que inician con `//` en `redirect()` se reinterpretan como URL protocol-relative | `6.30.4` |
+
+_Nota: la rama `vite` 5.x (`5.4.21`) no está afectada por CVE-2026-39363/39364/39365 — el rango de las tres empieza en `6.0.0`._
 
 ---
 
@@ -70,7 +81,7 @@ Todos los `package.json` del bootcamp deben usar exclusivamente estas versiones:
 |---|---|
 | `react` | `18.3.1` |
 | `react-dom` | `18.3.1` |
-| `react-router-dom` | `6.30.3` |
+| `react-router-dom` | `6.30.4` |
 | `zustand` | `4.5.7` |
 | `@reduxjs/toolkit` | `2.11.2` |
 | `react-redux` | `9.2.0` |
@@ -84,8 +95,8 @@ Todos los `package.json` del bootcamp deben usar exclusivamente estas versiones:
 
 | Paquete | Versión | Nota |
 |---|---|---|
-| `vite` | `5.4.21` | Proyectos semanas 2–8, 10, 15–18 |
-| `vite` | `6.4.1` | Proyectos semanas 9, 11, 14 |
+| `vite` | `5.4.21` | Proyectos semanas 4, 6–8, 10, 11, 16, 18, y parte de semana 15 |
+| `vite` | `6.4.2` | Proyectos semanas 2, 9, 14, y parte de semana 15 |
 | `@vitejs/plugin-react` | `4.7.0` | — |
 | `@vitejs/plugin-react-swc` | `3.11.0` | — |
 | `typescript` | `5.8.3` | — |
@@ -152,5 +163,5 @@ Si retorna > 0, se violó la regla de oro y debe corregirse antes de hacer commi
 
 ---
 
-_Última auditoría: Abril 2026_
+_Última auditoría: Julio 2026_
 _Próxima revisión recomendada: Octubre 2026_

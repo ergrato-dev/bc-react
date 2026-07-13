@@ -201,7 +201,7 @@ function Component() {
 Plugin de ESLint que detecta errores en el uso de hooks, especialmente dependencias faltantes.
 
 ```bash
-npm install eslint-plugin-react-hooks --save-dev
+pnpm add -D eslint-plugin-react-hooks
 ```
 
 ```json

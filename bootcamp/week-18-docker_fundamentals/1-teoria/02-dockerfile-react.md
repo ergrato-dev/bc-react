@@ -21,10 +21,10 @@ Un **Dockerfile** es un archivo de texto con instrucciones para construir una im
 # Ejemplo básico
 FROM node:20-alpine
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
+COPY package.json pnpm-lock.yaml ./
+RUN corepack enable pnpm && pnpm install
 COPY . .
-CMD ["npm", "start"]
+CMD ["pnpm", "start"]
 ```
 
 ---
@@ -36,7 +36,7 @@ CMD ["npm", "start"]
 | `FROM`      | Imagen base                    | `FROM node:20-alpine`                |
 | `WORKDIR`   | Directorio de trabajo          | `WORKDIR /app`                       |
 | `COPY`      | Copiar archivos del host       | `COPY . .`                           |
-| `RUN`       | Ejecutar comando durante build | `RUN npm install`                    |
+| `RUN`       | Ejecutar comando durante build | `RUN pnpm install`                   |
 | `CMD`       | Comando por defecto al iniciar | `CMD ["nginx", "-g", "daemon off;"]` |
 | `EXPOSE`    | Documentar puerto (no publica) | `EXPOSE 80`                          |
 | `ENV`       | Variable de entorno            | `ENV NODE_ENV=production`            |
@@ -52,11 +52,11 @@ Un Dockerfile simple para React tendría un problema grave:
 # ❌ MAL: Imagen de ~1GB
 FROM node:20
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
+COPY package.json pnpm-lock.yaml ./
+RUN corepack enable pnpm && pnpm install
 COPY . .
-RUN npm run build
-CMD ["npm", "run", "preview"]
+RUN pnpm build
+CMD ["pnpm", "preview"]
 ```
 
 **Problemas**:
@@ -82,16 +82,16 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 # Copiar archivos de dependencias primero (caché)
-COPY package*.json ./
+COPY package.json pnpm-lock.yaml ./
 
 # Instalar dependencias
-RUN npm ci
+RUN corepack enable pnpm && pnpm install --frozen-lockfile
 
 # Copiar código fuente
 COPY . .
 
 # Build de producción
-RUN npm run build
+RUN pnpm build
 
 # ============================================
 # STAGE 2: Production
@@ -261,7 +261,7 @@ build
 
 # Logs
 *.log
-npm-debug.log*
+pnpm-debug.log*
 
 # Testing
 coverage
@@ -345,18 +345,18 @@ Docker cachea cada capa. Si una instrucción cambia, esa capa y todas las siguie
 
 ```dockerfile
 # ✅ BIEN: Dependencias primero (cambian poco)
-COPY package*.json ./
-RUN npm ci
+COPY package.json pnpm-lock.yaml ./
+RUN corepack enable pnpm && pnpm install --frozen-lockfile
 
 # Código fuente después (cambia frecuentemente)
 COPY . .
-RUN npm run build
+RUN pnpm build
 ```
 
 ```dockerfile
 # ❌ MAL: Todo junto (sin aprovechar caché)
 COPY . .
-RUN npm ci && npm run build
+RUN corepack enable pnpm && pnpm install --frozen-lockfile && pnpm build
 ```
 
 ---

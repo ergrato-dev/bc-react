@@ -234,14 +234,14 @@ src/
 
 ## 📊 Estado de Completitud
 
-**Semana 02**: 🚧 En construcción
+**Semana 02**: ✅ Completa
 
-- ⏳ README y rúbrica
-- ⏳ Teoría
-- ⏳ Ejercicios
-- ⏳ Proyecto
-- ⏳ Recursos
-- ⏳ Glosario
+- ✅ README y rúbrica
+- ✅ Teoría (5 archivos)
+- ✅ Ejercicios (5 ejercicios con starter/solution)
+- ✅ Proyecto (CRUD funcional)
+- ✅ Recursos (ebooks, videos, web)
+- ✅ Glosario
 
 ---
 

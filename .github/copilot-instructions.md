@@ -992,12 +992,12 @@ Cuando trabajes en este proyecto:
    | `react` / `react-dom` | `18.3.1` | — |
    | `typescript` | `5.8.3` | — |
    | `vite` (rama 5.x) | `5.4.21` | CVE-2024-23331, CVE-2024-31207, CVE-2024-45811, CVE-2024-45812, CVE-2025-30208 |
-   | `vite` (rama 6.x) | `6.4.1` | CVE-2025-30208, CVE-2025-31125 |
+   | `vite` (rama 6.x) | `6.4.2` | CVE-2025-30208, CVE-2025-31125, CVE-2026-39363, CVE-2026-39364, CVE-2026-39365 |
    | `@vitejs/plugin-react` | `4.7.0` | — |
    | `@vitejs/plugin-react-swc` | `3.11.0` | — |
    | `@types/react` | `18.3.28` | — |
    | `@types/react-dom` | `18.3.7` | — |
-   | `react-router-dom` | `6.30.3` | — |
+   | `react-router-dom` | `6.30.4` | CVE-2026-40181 |
    | `zustand` | `4.5.7` | — |
    | `@reduxjs/toolkit` | `2.11.2` | — |
    | `react-redux` | `9.2.0` | — |

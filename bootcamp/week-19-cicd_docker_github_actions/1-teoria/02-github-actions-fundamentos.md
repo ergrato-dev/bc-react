@@ -236,7 +236,7 @@ steps:
     run: |
       echo "Línea 1"
       echo "Línea 2"
-      npm install
+      pnpm install
 
   - name: With working directory
     run: pnpm build

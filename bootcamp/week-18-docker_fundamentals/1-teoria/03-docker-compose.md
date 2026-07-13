@@ -328,7 +328,7 @@ services:
       - /app/node_modules
     environment:
       - VITE_API_URL=http://localhost:8080
-    command: npm run dev -- --host
+    command: pnpm dev -- --host
 
   api:
     build:
@@ -342,7 +342,7 @@ services:
     environment:
       - NODE_ENV=development
       - DATABASE_URL=postgres://user:secret@db:5432/mydb
-    command: npm run dev
+    command: pnpm dev
 
   db:
     image: postgres:15-alpine
@@ -367,14 +367,14 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
-RUN npm install
+COPY package.json pnpm-lock.yaml ./
+RUN corepack enable pnpm && pnpm install
 
 COPY . .
 
 EXPOSE 5173
 
-CMD ["npm", "run", "dev", "--", "--host"]
+CMD ["pnpm", "dev", "--", "--host"]
 ```
 
 ---
