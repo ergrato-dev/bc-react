@@ -179,4 +179,3 @@ Luego:
 
 ---
 
-_Ver solución: [solution/Button.tsx](./solution/Button.tsx)_
